@@ -17,17 +17,38 @@
     height: 100vh;
 }
 
-.door {
+.card {
     display: inline-block;
     position: relative;
     width: 40vw;
     height: inherit;
 }
 
-.door img {
+.card .door {
     width: 20vw;
     position: absolute;
     bottom: 5.5vw;
     margin-left: 20vw;
     padding-right: 20vw;
+    z-index: 50;
+}
+
+.card .doorknob {
+    z-index: 100;
+    width: 5vw;
+    position: absolute;
+    bottom: 24.2vw;
+    margin-left: 32.2vw;
+}
+
+.elevator {
+    display: inline-block;
+    position: relative;
+    width: 40vw;
+    height: inherit;
+    border: 1px solid black;
+}
+
+.elevator h1 {
+    position: absolute;
 }

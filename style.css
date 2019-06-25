@@ -131,6 +131,10 @@ html {
 
 
 /*------------------------greetings--------------------------*/
+.greetings {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
 .greetings img {
     position: absolute;
     width: 27vw;
@@ -145,7 +149,6 @@ html {
     transform: translateY(-50%);
     left: 50%;
     font-size: 1.1vw;
-    font-family: 'Nanum Myeongjo', serif;
     line-height: 1.7em;
 }
 
@@ -157,7 +160,6 @@ html {
 
 .signature span {
     font-size: 1.1vw;
-    font-family: 'Nanum Myeongjo', serif;
     position: relative;
 }
 
