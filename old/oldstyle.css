@@ -1,0 +1,248 @@
+@charset "UTF-8"
+    
+/*basic settings*/
+html {
+    box-sizing: border-box;
+}
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
+
+
+/*intro page*/
+.intro img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mfp-hide {
+    display: none!important;
+}
+
+
+/*horizontal scrolling*/
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 100vw;
+    height: calc(100vh - 17px);
+    overflow-y: hidden;
+    display: flex;
+}
+
+/*main lobby*/
+.main-lobby {
+    background-image: url(img/lobby/Hotel%20Lobby.png);
+    background-position: top; /*중요!!!!!*/
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+}
+/***************height: 56.25vw**********************/
+/*.main-lobby .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}*/
+
+.main-lobby .story {
+    flex:25%;
+    margin-left: 10%;
+    margin-top: 21%;
+}
+
+.main-lobby .story img {
+    width: 20vw;
+}
+
+.main-lobby .cast {
+    flex:25%;
+    margin-top: 9%;
+    margin-left: 6%;
+}
+
+.main-lobby .cast img{
+    width: 20vw;
+}
+
+.main-lobby .room {
+    flex: 25%;
+    margin-top: 14%;
+    margin-left: 14%;
+}
+
+.main-lobby .room img {
+    width: 15vw;
+}
+
+.main-lobby .about {
+    flex:25%;
+    margin-top: 20%;
+    margin-left: 0%;
+}
+
+.main-lobby .about img {
+    width: 12vw;
+}
+
+/*main logo*/
+.main-logo {
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(img/main_heart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20vw auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-logo h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+
+/*single text 1*/
+.single-text-1 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*greetings*/
+/*.greetings .container {
+    display: flex;
+    height: 100vh;
+    font-size: 1.2vw;
+}*/
+
+.greetings .image {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.greetings .image img {
+    width: 30vw;
+}
+
+.greetings .text {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.2vw;
+}
+
+.greetings .text-wrap {
+    line-height: 1.7em;
+    margin-top: 12vh;
+}
+
+/*/siginature wrapper/*/
+.greetings .signature-wrap {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*frames*/
+.frames {
+    background-image: url(img/frames_wallpaper.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+
+}
+
+/*.frames .container {
+    width: 100vw;
+    height: 56.25vw;
+    display: flex;
+}*/
+
+.frames .a {
+    flex: 30%;
+}
+
+.frames .a img:nth-of-type(1) {
+    width: 20vw;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.frames .a img:nth-of-type(2) {
+    width: 18vw;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+
+.frames .b {
+    flex: 20%;
+
+}
+
+.frames .b img:nth-of-type(1) {
+    width: 16vw;
+    margin-top: 28%;
+    margin-left: 5%;
+}
+
+.frames .b img:nth-of-type(2) {
+    width: 20vw;
+    margin-top: 10%;
+
+}
+
+.frames .c {
+    flex: 30%
+}
+
+.frames .c img {
+    width: 20vw;
+    margin-top: 50%;
+    margin-left: 10%;
+}
+
+.frames .d {
+    flex: 20%;
+}
+
+.frames .d img {
+    width: 15vw;
+    margin-top: 30%;
+    margin-left: -20%;
+}
+
+/*elevator*/
+.elevator {
+
+}
+
+.elevator img:nth-last-of-type(1) {
+    width: 100vw;
+    height: 56.25vw;
+    z-index: 10;
+}
+
+.elevator img:nth-last-of-type(2) {
+    z-index: 20;
+    width: 100vw;
+    height: 56.25vw;
+
+}

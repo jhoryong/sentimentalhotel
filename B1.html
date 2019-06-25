@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>접근 제한</title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
+
+            * {
+                margin:0;
+                padding:0;
+            }
+            .password-popup {
+                text-align: center;
+                width:100vw;
+            }
+            
+            .password-popup img{
+                width: 60vh;
+                margin-top: 15vh;
+            }
+            
+            .label {
+                font-size: 1.5vw;
+                margin-top: 3vh;
+                
+                font-family: 'Nanum Myeongjo', serif;
+            }
+            
+            .textbox {
+                margin-top: 5vh;
+                width: 20vw;
+                height: 5vh;
+            }
+            
+            .button {
+                width: 15vw;
+                height: 7vh;
+                margin-top: 5vh;
+                background-color: #03004c;
+                color: #ffcc00;
+                border: none;
+                font-size: 3vh;
+                border-radius: 7px;
+                font-family: 'Nanum Myeongjo', serif;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form class="password-popup">
+            <img src="img/basement_floor/hotel_key.png">
+            <label for="password">호텔 지하층에 접근하려면 관리자 권한이 필요합니다. 비밀번호를 입력하십시오.</label>
+            <input id="password" class="textbox" type="text" name="password"><br>
+            
+            <input class="button" type="submit" value="ENTER" img="img/basement_floor/enter.png">
+        </form>
+    </body>
+</html>

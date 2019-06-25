@@ -1,0 +1,387 @@
+@charset "UTF-8";
+    
+/*basic settings*/
+html {
+    box-sizing: border-box;
+}
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
+
+
+/*-------------------------intro page--------------------------*/
+
+
+.intro img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mfp-hide {
+    display: none!important;
+}
+
+
+
+/*-----------------------lobby page--------------------------*/
+
+
+/*////horizontal scrolling//////*/
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100vh;
+}
+
+.card {
+/*  width: 100vw;
+    height: calc(100vh - 17px);*/
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: inherit;
+}
+
+
+
+/*---------------------------main lobby-----------------------*/
+.main-lobby {
+    background-image: url(img/lobby/Hotel%20Lobby.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+/*****height: 56.25vw****/
+
+.main-lobby .link {
+    position: absolute;
+}
+
+.main-lobby .story {
+    top: 20.6vw;
+    left: 12%;
+}
+
+.main-lobby .story img {
+    width: 20vw;
+}
+
+.main-lobby .cast {
+    top: 10vw;
+    left: 39%;
+}
+
+.main-lobby .cast img{
+    width: 20vw;
+}
+
+.main-lobby .room {
+    top: 15vw;
+    left: 70%;
+}
+
+.main-lobby .room img {
+    width: 15vw;
+}
+
+.main-lobby .about {
+    top: 22vw;
+    left: 88%;
+}
+
+.main-lobby .about img {
+    width: 12vw;
+}
+
+
+/*------------------------main logo----------------------*/
+.main-logo {    
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(img/main_heart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15vw;
+}
+
+.main-logo h1 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.5em;
+}
+
+
+/*-----------------------single-text-1--------------------------*/
+.single-text-1 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+/*------------------------greetings--------------------------*/
+.greetings img {
+    position: absolute;
+    width: 27vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17%;
+}
+
+.greetings p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    font-size: 1.1vw;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.7em;
+}
+
+.signature {
+    position: absolute;
+    top: 85vh;
+    left: 70%;
+}
+
+.signature span {
+    font-size: 1.1vw;
+    font-family: 'Nanum Myeongjo', serif;
+    position: relative;
+}
+
+.signature span:nth-of-type(1) {
+    left: -55%;
+}
+
+.signature span:nth-of-type(2) {
+    left: 65%;
+}
+
+.signature img {
+    width: 7vw;
+}
+
+
+/*--------------------------frames--------------------------*/
+.frames {
+    background-image: url(img/frames/frames_wallpaper.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    }
+
+.frames img {
+    position: absolute;
+}
+
+.frames .junghwa {
+    width: 20vw;
+    top: 5vw;
+    left: 7%;
+}
+
+.frames .junghwa:hover {
+    
+}
+
+.frames .little-master {
+    width: 18vw;
+    top: 5vw;
+    left: 32%;
+}
+
+.frames .master {
+    width: 22vw;
+    top: 15vw;
+    left: 54%;
+}
+
+.frames .sunhyun {
+    width: 15vw;
+    top: 8vw;
+    left: 78%;
+}
+
+.frames .star {
+    width: 18vw;
+    top: 24vw;
+    left: 8%;
+}
+
+.frames .engineer {
+    width: 20vw;
+    top: 32vw;
+    left: 30%;
+}
+
+
+/*------------------elevator--------------------*/
+
+/*-----static images----*/
+.elevator .entrance {
+    position: absolute;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.elevator .inside {
+    position: absolute;
+    width: 100vw;
+    z-index: 100;
+}
+
+.elevator .bellboy {
+    position: absolute;
+    height: 100vh;
+    z-index: 1500;
+    left: 70%;
+}
+
+.elevator .up-balloon, .elevator .down-balloon{
+    width: 10vw;
+}
+
+.elevator .up-balloon {
+    position: absolute;
+    top: 9vw;
+    left: 37%;
+    z-index: 1100;
+    animation-duration: 0.75s;
+    animation-name: bounceIn;
+    animation-play-state: paused;
+}
+
+.elevator .down-balloon {
+    position: absolute;
+    top: 17vw;
+    left: 52%;
+    z-index: 1100;
+    animation-duration: 0.75s;
+    animation-name: bounceIn;
+    animation-play-state: paused;
+}
+
+/*----doors----/*/
+.elevator .door {
+    position: absolute;
+    width: 11.8vw;
+    z-index: 500;
+    top: 15vw;
+}
+
+.elevator .up-left {
+    left: 19.1%;
+    transition: left 5s ease-in-out 200ms;
+}
+
+.elevator .up-right {
+    left: 30.7%;
+    transition: left 5s ease-in-out 200ms;
+}
+
+.elevator .down-left {
+    left: 55%;
+    transition: left 5s ease-in-out 200ms;
+}
+
+.elevator .down-right {
+    left: 66.7%;
+    transition: left 5s ease-in-out 200ms;
+}
+
+
+/*-----links-----*/
+
+.elevator .block {
+    z-index: 2000;
+    width: 28vw;
+    height: 39vw;
+    top: 13vw;
+    position: absolute;
+}
+
+.elevator .left {
+    left: 17%;
+}
+
+.elevator .right {
+    left: 53%;
+}
+
+/*///transtion on hover///*/
+.left-block-link:hover ~ .up-left{
+    left: 8.9%;
+}
+
+.left-block-link:hover ~ .up-right {
+    left: 40.9%;
+}
+
+.right-block-link:hover ~ .down-left {
+    left: 44.8%;
+}
+
+.right-block-link:hover ~ .down-right {
+    left: 76.9%;
+}
+
+.left-block-link:hover ~ .up-balloon, .right-block-link:hover ~ .down-balloon {
+    animation-play-state: running;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

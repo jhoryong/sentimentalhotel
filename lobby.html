@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" lang="ko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>MAIN LOBBY</title>
+</head>
+
+<body>
+<div class="scrolling-wrapper">
+    <section class="main-lobby card">
+        <div class="story link">
+            <a href="#story"><img src="img/lobby/STORY%20MENU.png"></a>
+        </div>
+        <div class="cast link">
+            <a href="#cast"><img src="img/lobby/CAST%20MENU.png"></a>
+        </div>
+        <div class="room link">
+            <a href="#elevator"><img src="img/lobby/ROOM%20MENU.png"></a>
+        </div>
+        <div class="about link">
+            <a href="#"><img src="img/lobby/ABOUT%20MENU.png"></a>
+        </div>
+    </section>
+
+    <section class="main-logo card" id="story">
+        <h1>SENTIMENTAL<br>HOTEL</h1>
+    </section>
+    
+    <section class="single-text-1 card">
+        <h1>우리는 타인을 애정에 따라 다르게 대합니다.</h1>
+    </section>
+
+    <section class="greetings card">
+        <img src="img/writing_person.png">
+        <p>타인을 만나 관계를 맺는 모든 행위를 다른것에 비유한다면,<br>
+        저는 사람과 사람 간의 관계를 호텔이라고 생각합니다.<br><br>
+        사람의 마음속에 호텔이 있다면,<br>
+        제가 운영하는 호텔에선<br>
+        가벼운 이야기나 잠시 만나는 사람들은 카페테리아에서 다과와 함께 이야기를 나누고<br>
+        친한 친구는 장기간 방을 내어주며,<br>
+        가장 소중한 사람은 스위트룸으로 초대하겠죠.<br><br>
+        저는 가장 소중한 사람을 대하는 방식을 볼 때<br>
+        그 사람을 가장 잘 알 수 있다고 생각합니다.<br><br>
+        저희 호텔은 최선을 다해 여러분을 모실 예정입니다.<br>
+        최상의 서비스를 통해 총지배인인 저의 마음을 보여드리겠습니다.<br><br>
+        부디 이곳에서 행복한 시간 보내시길 바랍니다.
+        </p>
+        <div class="signature">
+            <span>총지배인</span>
+            <img src="img/signature.png">
+            <span>드림.</span>
+        </div>
+    </section>
+    
+    <section class="frames card" id="cast">
+        <img class="junghwa" src="img/frames/junghwa_frame.png">
+        <img class="little-master" src="img/frames/little_master_frame.png">
+        <img class="master" src="img/frames/master_frame.png">
+        <img class="sunhyun" src="img/frames/suhyun_frame.png">
+        <img class="star" src="img/frames/star_frame.png">
+        <img class="engineer" src="img/frames/engineer_frame.png">
+    </section>
+    
+    <section class="elevator card" id="elevator">
+        
+        <!--links-->
+        <a class="left-block-link" href="2F.html"><div class="left block"></div></a>
+        <a class="right-block-link" href="#"><div class="right block"></div></a>
+        
+        <!--static images-->
+        <img class="entrance" src="img/elevator/elevator_entrance.png">
+        <img class="inside" src="img/elevator/elevator_inside.png">
+        <img class="bellboy" src="img/elevator/bellboy.png">
+        <img class="up-balloon" src="img/elevator/up.png">
+        <img class="down-balloon" src="img/elevator/down.png">
+
+        <!--doors-->
+        <img class="up-left door" src="img/elevator/elevator_leftdoor.png">
+        <img class="up-right door" src="img/elevator/elevator_rightdoor.png">
+        <img class="down-left door" src="img/elevator/elevator_leftdoor.png">
+        <img class="down-right door" src="img/elevator/elevator_rightdoor.png">
+        
+    </section>
+    
+</div>
+    
+
+<script>
+    function passWord() {
+        var testV = 1;
+        var pass1 = prompt('지하로 내려가려면 암호가 필요합니다.', ' ');
+        while (testV < 3) {
+/*            if (!pass1)
+                history.go(-1);*/
+            if (pass1.toLowerCase() == "password") {
+                alert('You Got it Right!');
+                window.open('http://www.google.com');
+                break;
+            }
+            testV += 1;
+            var pass1 =
+                prompt('Access Denied - Password Incorrect, Please Try Again.', 'Password');
+        }
+        if (pass1.toLowerCase() != "password" & testV == 3)
+            history.go(-1);
+        return " ";
+    }
+</script>
+
+
+    
+</body>
+</html>
