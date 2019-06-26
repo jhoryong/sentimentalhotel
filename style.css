@@ -1,9 +1,9 @@
 @charset "UTF-8";
     
 /*basic settings*/
-html {
+/*html {
     box-sizing: border-box;
-}
+}*/
 
 /*fonts*/
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
@@ -176,55 +176,52 @@ html {
 }
 
 
-/*--------------------------frames--------------------------*/
-.frames {
+/*--------------------------guests--------------------------*/
+.guests {
     background-image: url(img/frames/frames_wallpaper.png);
     background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
     }
 
-.frames img {
+.guests img {
     position: absolute;
 }
 
-.frames .junghwa {
+.junghwa {
     width: 20vw;
-    top: 5vw;
+    top: 7vw;
     left: 7%;
 }
 
-.frames .junghwa:hover {
-    
-}
-
-.frames .little-master {
+.masterjr {
     width: 18vw;
-    top: 5vw;
+    top: 7vw;
     left: 32%;
 }
 
-.frames .master {
+.master {
     width: 22vw;
     top: 15vw;
     left: 54%;
 }
 
-.frames .sunhyun {
+.suhyun {
     width: 15vw;
     top: 8vw;
-    left: 78%;
+    left: 80%;
 }
 
-.frames .star {
+.star {
     width: 18vw;
-    top: 24vw;
+    top: 26vw;
     left: 8%;
 }
 
-.frames .engineer {
+.engineer {
     width: 20vw;
-    top: 32vw;
+    top: 34vw;
     left: 30%;
 }
 

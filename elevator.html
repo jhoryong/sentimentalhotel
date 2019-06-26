@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <title>Elevator</title>
+</head>
+
+<body>
+    <div class="scrolling-wrapper">
+    <section class="elevator card" id="elevator">
+
+        <!--links-->
+        <a class="left-block-link" href="2F.html">
+            <div class="left block"></div>
+        </a>
+        <a class="right-block-link" href="#">
+            <div class="right block"></div>
+        </a>
+
+        <!--static images-->
+        <img class="entrance" src="img/elevator/elevator_entrance.png">
+        <img class="inside" src="img/elevator/elevator_inside.png">
+        <img class="bellboy" src="img/elevator/bellboy.png">
+        <img class="up-balloon" src="img/elevator/up.png">
+        <img class="down-balloon" src="img/elevator/down.png">
+
+        <!--doors-->
+        <img class="up-left door" src="img/elevator/elevator_leftdoor.png">
+        <img class="up-right door" src="img/elevator/elevator_rightdoor.png">
+        <img class="down-left door" src="img/elevator/elevator_leftdoor.png">
+        <img class="down-right door" src="img/elevator/elevator_rightdoor.png">
+
+    </section>
+    </div>
+
+
+    <script>
+        function passWord() {
+            var testV = 1;
+            var pass1 = prompt('지하로 내려가려면 암호가 필요합니다.', ' ');
+            while (testV < 3) {
+                /*            if (!pass1)
+                                history.go(-1);*/
+                if (pass1.toLowerCase() == "password") {
+                    alert('You Got it Right!');
+                    window.open('http://www.google.com');
+                    break;
+                }
+                testV += 1;
+                var pass1 =
+                    prompt('Access Denied - Password Incorrect, Please Try Again.', 'Password');
+            }
+            if (pass1.toLowerCase() != "password" & testV == 3)
+                history.go(-1);
+            return " ";
+        }
+
+    </script>
+</body>
+
+</html>
