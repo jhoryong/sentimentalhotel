@@ -1,12 +1,7 @@
 @charset "UTF-8";
-    
-/*basic settings*/
-/*html {
-    box-sizing: border-box;
-}*/
 
 /*fonts*/
-@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
+
 
 
 /*-------------------------intro page--------------------------*/
@@ -20,7 +15,7 @@
 }
 
 .mfp-hide {
-    display: none!important;
+    display: none !important;
 }
 
 
@@ -37,7 +32,7 @@
 }
 
 .card {
-/*  width: 100vw;
+    /*  width: 100vw;
     height: calc(100vh - 17px);*/
     display: inline-block;
     position: relative;
@@ -48,12 +43,15 @@
 
 
 /*---------------------------main lobby-----------------------*/
+
+
 .main-lobby {
-    background-image: url(img/lobby/Hotel%20Lobby.png);
+    background-image: url(img/main_lobby/main_lobby.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100vw;
 }
+
 /*****height: 56.25vw****/
 
 .main-lobby .link {
@@ -74,7 +72,7 @@
     left: 39%;
 }
 
-.main-lobby .cast img{
+.main-lobby .cast img {
     width: 20vw;
 }
 
@@ -98,8 +96,8 @@
 
 
 /*------------------------main logo----------------------*/
-.main-logo {    
-    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(img/main_heart.png);
+.main-logo {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/main_heart.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 15vw;
@@ -177,52 +175,197 @@
 
 
 /*--------------------------guests--------------------------*/
-.guests {
-    background-image: url(img/frames/frames_wallpaper.png);
+.guest-frames {
+    background-image: url(img/guests/frames_wallpaper.png);
     background-position: top;
     background-repeat: round;
     background-size: 100%;
     height: 56.25vw;
-    }
+}
 
-.guests img {
+.guest-frame {
     position: absolute;
 }
 
-.junghwa {
-    width: 20vw;
+.guest-frame--junghwa {
     top: 7vw;
     left: 7%;
 }
 
-.masterjr {
-    width: 18vw;
+.guest-frame--junghwa img {
+    width: 20vw;
+}
+
+.guest-frame--small-hyun {
     top: 7vw;
     left: 32%;
 }
 
-.master {
-    width: 22vw;
+.guest-frame--small-hyun img {
+    width: 18vw;
+}
+
+.guest-frame--big-hyun {
     top: 15vw;
     left: 54%;
 }
 
-.suhyun {
-    width: 15vw;
+.guest-frame--big-hyun img {
+    width: 22vw;
+}
+
+.guest-frame--suhyun {
     top: 8vw;
     left: 80%;
 }
 
-.star {
-    width: 18vw;
+.guest-frame--suhyun img {
+    width: 15vw;
+}
+
+.guest-frame--star {
     top: 26vw;
     left: 8%;
 }
 
-.engineer {
-    width: 20vw;
+.guest-frame--star img {
+    width: 18vw;
+
+}
+
+.guest-frame--engineer {
     top: 34vw;
     left: 30%;
+}
+
+.guest-frame--engineer img {
+    width: 20vw;
+}
+
+/*modals for frames*/
+
+/*background for modals*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*the actual modal box*/
+
+:root {
+    --modal-width: 70vw;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #888;
+    width: var(--modal-width);
+    height: calc(var(--modal-width)*9/16);
+}
+
+.modal-content__text {
+    position: absolute;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.8;
+    font-size: 2.2vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-content__text--junghwa {
+    left: 55%;
+}
+
+.modal-content__text--small-hyun {
+    left: 49%;
+}
+
+.modal-content__text--big-hyun {
+    left: 25%;
+}
+
+.modal-content__text--suhyun {
+    left: 7%;
+    text-align: center;
+}
+
+.modal-content__text--star {
+    left: 20%;
+    font-size: 8vw;
+}
+
+.modal-content__text--engineer {
+    left: 60%;
+}
+
+.modal-content__portrait {
+    height: calc(var(--modal-width)*9/16);
+    position: absolute;
+}
+
+.modal-content__portrait--junghwa {
+    left: 0;
+}
+
+.modal-content__portrait--small-hyun {
+    left: 10%;
+    height: 35vw;
+    bottom: 0;
+}
+
+.modal-content__portrait--big-hyun {
+    height: 35vw;
+    right: 20%;
+    bottom: 0;
+}
+
+.modal-content__portrait--suhyun {
+    height: 35vw;
+    bottom: 0;
+    right: 10%;
+}
+
+.modal-content__portrait--star {
+    right: 0;
+}
+
+.modal-content__portrait--engineer {
+    left: 10%;
+}
+
+
+/*the close button*/
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 5vw;
+    z-index: 10;
+    line-height: 0.5;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+    display: inline;
 }
 
 
@@ -248,7 +391,8 @@
     left: 70%;
 }
 
-.elevator .up-balloon, .elevator .down-balloon{
+.elevator .up-balloon,
+.elevator .down-balloon {
     width: 10vw;
 }
 
@@ -320,7 +464,7 @@
 }
 
 /*///transtion on hover///*/
-.left-block-link:hover ~ .up-left{
+.left-block-link:hover ~ .up-left {
     left: 8.9%;
 }
 
@@ -336,51 +480,57 @@
     left: 76.9%;
 }
 
-.left-block-link:hover ~ .up-balloon, .right-block-link:hover ~ .down-balloon {
+.left-block-link:hover ~ .up-balloon,
+.right-block-link:hover ~ .down-balloon {
     animation-play-state: running;
 }
 
 @keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
 
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
 
-  20% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
 
-  40% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
 
-  80% {
-    -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    transform: scale3d(0.97, 0.97, 0.97);
-  }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
 
-  to {
-    opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }
+
+h1 {}
+
+
