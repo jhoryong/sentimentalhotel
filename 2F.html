@@ -1,53 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" lang="ko">
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-        <link rel="stylesheet" type="text/css" href="2F.css">
-        <link rel="stylesheet" type="text/css" href="reset.css">
-        <title>2nd Floor</title>
-        <style>
-            
-        </style>
-    </head>
+
+<head>
     
-    <body>
-        <div class="hallway">
-            <div class="elevator up"><div class="elevatorimage">위로가는 엘베</div></div>
-            <div class="elevator down"><div class="elevatorimage">아래로가는 엘베</div></div>
-            <div class="card room201">
-                <img class="door" src="img/2F/201.png">
-                <img class="doorknob" src="img/2F/doorknob.png">
+    <meta charset="UTF-8" lang="ko">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="2F.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="preloader.js"></script>
+    <title>센티멘탈 호텔 2층</title>
+
+</head>
+
+<body>
+
+    <!--        <div id="preloader" class="preloader">
+            <div class="preloader__circle"></div>
+            <div id="preloader_animation" class="preloader__chain">
+                <img src="img/loading/chain2.png">
             </div>
-            <div class="card room202">
-                <img class="door" src="img/2F/202.png">
-                <img class="doorknob" src="img/2F/doorknob.png">
+            <div class="preloader__elevator">
+                <img src="img/loading/elevator_inside.png">
             </div>
-            <div class="card room203">
-                <img class="door" src="img/2F/203.png">
-                <img class="doorknob" src="img/2F/doorknob.png">
+            <div class="preloader__text">
+                <p>Loading...</p>
             </div>
-<!--            <div class="card room204">
-                <img class="door" src="img/2F/204.png">
+        </div>-->
+
+
+    <section class="hallway">
+        
+        <div class="hallway-container">
+            
+            <div class="hallway-block elevator">
+                
+                <img class="elevator__exterior" src="img/2F/2f_elevator.png">
+                
+                <img class="elevator__interior" src="img/2F/elevator_interior.png">
+                
+                <img class="elevator__door elevator__door_up_left" src="img/2F/elevator_door.png">
+                
+                <img class="elevator__door elevator__door_up_right" src="img/2F/elevator_door.png">
+                
+                <img class="elevator__door elevator__door_down_left" src="img/2F/elevator_door.png">
+                
+                <img class="elevator__door elevator__door_down_right" src="img/2F/elevator_door.png">
+
             </div>
-            <div class="card room205">
-                <img class="door" src="img/2F/205.png">
+            
+            <div class="hallway-block info">
+                
+                <img class="info__sign" src="img/2F/2f_info.png">
+                
             </div>
-            <div class="card room206">
-                <img class="door" src="img/2F/206.png">
+            
+            <!--Rooms-->
+            
+            <div class="hallway-block room room201">
+                <img class="room__door" src="img/2F/201.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
             </div>
-            <div class="card room207">
-                <img class="door" src="img/2F/207.png">
+
+            <div class="hallway-block room room202">
+                <img class="room__door" src="img/2F/202.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
             </div>
-            <div class="card room208">
-                <img class="door" src="img/2F/208.png">
+
+            <div class="hallway-block room room203">
+                <img class="room__door" src="img/2F/203.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
             </div>
-            <div class="card room209">
-                <img class="door" src="img/2F/209.png">
+            
+            <div class="hallway-block room room204">
+                <img class="room__door" src="img/2F/204.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
             </div>
-            <div class="card room210">
-                <img class="door" src="img/2F/210.png">
-            </div>-->
+            
+            <div class="hallway-block room room205">
+                <img class="room__door" src="img/2F/205.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+            
+            <div class="hallway-block room room206">
+                <img class="room__door" src="img/2F/206.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+            
+            <div class="hallway-block room room207">
+                <img class="room__door" src="img/2F/207.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+            
+            <div class="hallway-block room room208">
+                <img class="room__door" src="img/2F/208.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+            
+            <div class="hallway-block room room209">
+                <img class="room__door" src="img/2F/209.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+            
+            <div class="hallway-block room room210">
+                <img class="room__door" src="img/2F/210.png">
+                <img class="room__doorknob" src="img/2F/doorknob.png">
+                <img class="room__hanger" src="img/2F/hanger.png">
+            </div>
+                
         </div>
-    </body>
+        
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('body').addClass('loaded');
+            }, 3000);
+        });
+
+    </script>
+</body>
+
 </html>

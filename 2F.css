@@ -3,55 +3,210 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean');
 
+
+
+
+/*preloader*/
+
+.loaded #preloader {
+    visibility: hidden;
+}
+
+.loaded #preloader_animation {
+    opacity: 0;
+}
+
+.preloader {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.preloader__circle {
+    position: absolute;
+    margin: 0 auto;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.preloader__circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    width: 35vw;
+    height: 35vw;
+    box-shadow: 0px 0px 0px 1000px #000000;
+}
+
+.preloader__elevator {
+    z-index: 1001;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.preloader__elevator img {
+    width: 15vw;
+}
+
+.preloader__text {
+    position: absolute;
+    bottom: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.preloader__text p {
+    color: #cccccc;
+    font-size: 5vh;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.preloader__chain {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: falling;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.preloader__chain img {
+    width: 28vw;
+}
+
+@keyframes falling {
+
+    0% {
+        bottom: 10vw;
+    }
+
+    100% {
+        bottom: -100vw;
+    }
+
+}
+
+
+
+
+
+
+
+/*2F Hallway*/
 :root {
---between-doors: 30vw;
+    --between-doors: 30vw;
 }
 
 .hallway {
-    background: url(img/2F/background.png) no-repeat bottom;
-    background-size: 100vw;
-    background-attachment: fixed;
+    background: url(img/2F/background.png) no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: 100vw 56.25vw;
+    height: 100%;
+}
+
+.hallway-container {
+    position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     height: 100vh;
 }
 
-.card {
+.hallway-block {
     display: inline-block;
     position: relative;
-    width: 40vw;
     height: inherit;
-}
-
-.card .door {
-    width: 20vw;
-    position: absolute;
-    bottom: 5.8vw;
-    margin-left: 20vw;
-    padding-right: 20vw;
-    z-index: 50;
-}
-
-.card .doorknob {
-    z-index: 100;
-    width: 5vw;
-    position: absolute;
-    bottom: 24.5vw;
-    margin-left: 32.2vw;
 }
 
 .elevator {
-    display: inline-block;
-    position: relative;
-    width: 40vw;
-    height: inherit;
+    width: 100vw;
 }
 
-.elevatorimage {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 80vh;
-    bottom: 6vw;
+.info {
+    width: 55vw;
 }
+
+.room {
+    width: 50vw;
+}
+
+.elevator__exterior {
+    position: absolute;
+    width: 100vw;
+    z-index: 30;
+}
+
+.elevator__interior {
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+}
+
+.elevator__door {
+    position: absolute;
+    width: 12.8vw;
+    z-index: 20;
+    top: 9.4vw;
+}
+
+.elevator__door_up_left {
+    left: 16.6vw;
+}
+
+.elevator__door_up_right {
+    left: 29.3vw;
+}
+
+.elevator__door_down_left {
+    left: 57.6vw;
+}
+
+.elevator__door_down_right {
+    left: 70.3vw;
+}
+
+.info__sign {
+    position: absolute;
+    width: 25vw;
+    top: 15vw;
+    left: 25vw;
+}
+
+.room__door {
+    position: absolute;
+    z-index: 10;
+    width: 20vw;
+    top: 9vw;
+    left: 20vw;
+}
+
+.room__doorknob {
+    position: absolute;
+    z-index: 30;
+    width: 5vw;
+    top: 31.3vw;
+    left: 32.2vw;
+}
+
+.room__hanger {
+    position: absolute;
+    z-index: 20;
+    width: 3.5vw;
+    top: 30vw;
+    left: 34.9vw;
+    
+}
+

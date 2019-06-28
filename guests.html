@@ -2,16 +2,21 @@
 <html>
 
 <head>
+    
     <meta charset="UTF-8" lang="ko">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean" rel="stylesheet">
-    <title>Guests</title>
+    
+    <title>주요 고객 정보</title>
+    
 </head>
 
 <body>
+    <section class="guests">
+        
     <div class="guest-frames">
         
         <div class="button guest-frame guest-frame--junghwa" data-modal="#modalOne">
@@ -103,8 +108,11 @@
         </div>
         
     </div>
+        
+    </section>
     
 <script>
+    
     $(".button").on("click", function() {
         var modal = $(this).data("modal");
         $(modal).show();
@@ -116,6 +124,7 @@
             $(this).closest(".modal").hide();
         }
     });
+    
 </script>
 </body>
 </html>

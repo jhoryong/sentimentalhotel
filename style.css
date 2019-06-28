@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-/*fonts*/
-
-
-
 /*-------------------------intro page--------------------------*/
 
 
@@ -274,6 +270,9 @@
     height: calc(var(--modal-width)*9/16);
 }
 
+
+/*texts*/
+
 .modal-content__text {
     position: absolute;
     font-family: 'Nanum Myeongjo', serif;
@@ -309,6 +308,8 @@
     left: 60%;
 }
 
+/*portraits*/
+
 .modal-content__portrait {
     height: calc(var(--modal-width)*9/16);
     position: absolute;
@@ -343,7 +344,6 @@
 .modal-content__portrait--engineer {
     left: 10%;
 }
-
 
 /*the close button*/
 .close {
