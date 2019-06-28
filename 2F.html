@@ -14,20 +14,20 @@
 </head>
 
 <body>
-
-    <!--        <div id="preloader" class="preloader">
-            <div class="preloader__circle"></div>
-            <div id="preloader_animation" class="preloader__chain">
-                <img src="img/loading/chain2.png">
-            </div>
-            <div class="preloader__elevator">
-                <img src="img/loading/elevator_inside.png">
-            </div>
-            <div class="preloader__text">
-                <p>Loading...</p>
-            </div>
-        </div>-->
-
+    
+    <!--Preloader-->
+    <div id="preloader" class="preloader">
+        <div class="preloader__circle"></div>
+        <div id="preloader_animation" class="preloader__chain">
+            <img src="img/loading/chain2.png">
+        </div>
+        <div class="preloader__elevator">
+            <img src="img/loading/elevator_inside.png">
+        </div>
+        <div class="preloader__text">
+            <p>Loading...</p>
+        </div>
+    </div>
 
     <section class="hallway">
         
@@ -122,10 +122,11 @@
     </section>
 
     <script>
+        
         $(document).ready(function() {
             setTimeout(function() {
                 $('body').addClass('loaded');
-            }, 3000);
+            }, 5000);
         });
 
     </script>
