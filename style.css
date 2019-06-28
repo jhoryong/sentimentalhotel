@@ -1,13 +1,41 @@
 @charset "UTF-8";
 
-/*-------------------------intro page--------------------------*/
+/*-------------------------index page--------------------------*/
 
+.intro-container {
+    
+}
 
-.intro img {
+.hotel-exterior {
+    background: url(img/hotel_exterior.png) top no-repeat;
+    background-size: 100vw auto;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.main-entrance {
+    position: absolute;
+    top: 37.9vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 3vw 1.5vw #fff46b; /*spread, blur*/
+    transition: box-shadow 0.6s ease;
+}
+
+.main-entrance img {
+    display: table;
+    width: 6.8vw;
+    transition: width 0.6s ease;
+}
+
+.main-entrance img:hover {
+    width: 7.8vw;
+}
+
+.main-entrance:hover {
+    box-shadow: 0 0 5vw 4vw #fff46b;
 }
 
 .mfp-hide {
