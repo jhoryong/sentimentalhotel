@@ -6,7 +6,8 @@
 
 
 
-/*preloader*/
+
+/* preloader */
 
 .loaded #preloader {
     visibility: hidden;
@@ -89,15 +90,14 @@
 }
 
 @keyframes falling {
-
+    
     0% {
         bottom: 10vw;
     }
-
     100% {
         bottom: -100vw;
     }
-
+    
 }
 
 
@@ -106,17 +106,15 @@
 
 
 
-/*2F Hallway*/
-:root {
-    --between-doors: 30vw;
-}
+/* 2F Hallway */
+
 
 .hallway {
-    background: url(img/2F/background.png) no-repeat;
-    /*background-attachment: fixed;*/
-    background-size: 100vw 56.25vw;
-    height: 100%;
-    overflow-y: hidden;
+    background-image: url(img/2F/background.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+/*    height: 56.25vw;*/
 }
 
 .hallway-container {
@@ -124,13 +122,15 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    height: 100vh;
+    height: 56.25vw;
 }
 
 .hallway-block {
     display: inline-block;
     position: relative;
-    height: inherit;
+   /* height: inherit;;*/
+    /**/height: 100%;
+    overflow-y: hidden;
 }
 
 .elevator {
@@ -138,12 +138,61 @@
 }
 
 .info {
-    width: 55vw;
+    width: 100vw;
 }
 
 .room {
     width: 50vw;
 }
+
+
+
+.elevator__link_up, .elevator__link_down {
+    z-index: 50;
+}
+
+.elevator__link_up__block, .elevator__link_down__block {
+    z-index: 40;
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    top: 9.6vw;
+}
+
+.elevator__link_up__block {
+    left: 16.7vw;
+}
+
+.elevator__link_down__block{
+    left: 57.7vw;
+}
+
+
+
+
+.elevator__balloon_up, .elevator__balloon_down {
+    width: 10vw;
+    position: absolute;
+    z-index: 40;
+    opacity: 0;
+}
+
+.elevator__balloon_up {
+    top: 12%;
+    left: 40%;
+}
+
+.elevator__balloon_down {
+    top: 19%;
+    left: 50%;
+}
+
+.elevator__link_up:hover ~ .elevator__balloon_up, .elevator__link_down:hover ~ .elevator__balloon_down {
+    opacity: 1;
+}
+
+
+
 
 .elevator__exterior {
     position: absolute;
@@ -164,27 +213,32 @@
     top: 9.4vw;
 }
 
-.elevator__door_up_left {
+.elevator__door_up-left {
     left: 16.6vw;
+    /*left: 4.5vw;*/
+    /*difference: 12.1vw*/
 }
 
-.elevator__door_up_right {
+.elevator__door_up-right {
     left: 29.3vw;
+    /*left: 41.4vw;*/
 }
 
-.elevator__door_down_left {
+.elevator__door_down-left {
     left: 57.6vw;
+    /*left: 45.3vw;*/
 }
 
-.elevator__door_down_right {
+.elevator__door_down-right {
     left: 70.3vw;
+    /*left: 82.4vw;*/
 }
 
 .info__sign {
     position: absolute;
     width: 25vw;
     top: 15vw;
-    left: 25vw;
+    left: 37.5vw;
 }
 
 .room__door {
@@ -209,6 +263,5 @@
     width: 3.5vw;
     top: 30vw;
     left: 34.9vw;
-    
 }
 

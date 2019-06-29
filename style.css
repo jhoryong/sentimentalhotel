@@ -7,11 +7,11 @@
 }
 
 .hotel-exterior {
-    background: url(img/hotel_exterior.png) top no-repeat;
-    background-size: 100vw auto;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+    background-image: url(img/hotel_exterior.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
 }
 
 .main-entrance {
@@ -46,34 +46,29 @@
 
 /*-----------------------lobby page--------------------------*/
 
-
-/*////horizontal scrolling//////*/
 .scrolling-wrapper {
+    white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
     height: 100vh;
 }
 
 .card {
-    /*  width: 100vw;
-    height: calc(100vh - 17px);*/
     display: inline-block;
     position: relative;
     width: 100vw;
     height: inherit;
 }
 
-
-
-/*---------------------------main lobby-----------------------*/
+/*---------------------------main-lobby-----------------------*/
 
 
 .main-lobby {
     background-image: url(img/main_lobby/main_lobby.png);
     background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
 }
 
 /*****height: 56.25vw****/
@@ -398,6 +393,13 @@
 
 
 /*------------------elevator--------------------*/
+.elevator {
+    background-image: url(img/elevator/elevator_entrance.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
+}
 
 /*-----static images----*/
 .elevator .entrance {
@@ -414,9 +416,9 @@
 
 .elevator .bellboy {
     position: absolute;
-    height: 100vh;
+    height: 56.25vw;
     z-index: 1500;
-    left: 70%;
+    left: 67%;
 }
 
 .elevator .up-balloon,

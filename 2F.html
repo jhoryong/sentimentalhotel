@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="2F.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="preloader.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
     <title>센티멘탈 호텔 2층</title>
 
 </head>
@@ -16,7 +16,7 @@
 <body>
     
     <!--Preloader-->
-    <div id="preloader" class="preloader">
+<!--    <div id="preloader" class="preloader">
         <div class="preloader__circle"></div>
         <div id="preloader_animation" class="preloader__chain">
             <img src="img/loading/chain2.png">
@@ -27,32 +27,38 @@
         <div class="preloader__text">
             <p>Loading...</p>
         </div>
-    </div>
+    </div>-->
 
     <section class="hallway">
         
-        <div class="hallway-container">
+        <div class="hallway-container"> <!--class="dragscroll-->
             
             <div class="hallway-block elevator">
                 
-                <img class="elevator__exterior" src="img/2F/2f_elevator.png">
+                <a href="#" class="elevator__link_up">
+                    <div class="elevator__link_up__block"></div>
+                </a>
                 
+                <a id="abcd" href="elevator.html" class="elevator__link_down">
+                    <div class="elevator__link_down__block"></div>
+                </a>
+                
+                <img class="elevator__balloon_up" src="img/elevator/up.png">
+                <img class="elevator__balloon_down" src="img/elevator/down.png">
+                
+                <img class="elevator__exterior" src="img/2F/2f_elevator.png">
                 <img class="elevator__interior" src="img/2F/elevator_interior.png">
                 
-                <img class="elevator__door elevator__door_up_left" src="img/2F/elevator_door.png">
+                <img class="elevator__door elevator__door_up-left" src="img/2F/elevator_door.png">
+                <img class="elevator__door elevator__door_up-right" src="img/2F/elevator_door.png">
                 
-                <img class="elevator__door elevator__door_up_right" src="img/2F/elevator_door.png">
-                
-                <img class="elevator__door elevator__door_down_left" src="img/2F/elevator_door.png">
-                
-                <img class="elevator__door elevator__door_down_right" src="img/2F/elevator_door.png">
+                <img id="down_left" class="elevator__door elevator__door_down-left" src="img/2F/elevator_door.png">
+                <img id="down_right" class="elevator__door elevator__door_down-right" src="img/2F/elevator_door.png">
 
             </div>
             
             <div class="hallway-block info">
-                
                 <img class="info__sign" src="img/2F/2f_info.png">
-                
             </div>
             
             <!--Rooms-->
@@ -128,7 +134,25 @@
                 $('body').addClass('loaded');
             }, 5000);
         });
-
+        
+    </script>
+    <script>
+        
+        $('#abcd').click(function(e) { 
+            e.preventDefault(); 
+            $('#down_left').animate({
+                left: ["45.3vw", "swing"]
+            }, 3000)
+            
+            $('#down_right').animate({
+                left: ['82.4vw', "swing"]
+            }, 3000)
+            
+            var linkUrl = $(this).attr('href');
+            setTimeout(function(url) { 
+                window.location = url; 
+            }, 4000, linkUrl); });
+        
     </script>
 </body>
 
