@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*-------------------------index page--------------------------*/
 
 .intro-container {
@@ -44,7 +45,7 @@
 
 
 
-/*-----------------------lobby page--------------------------*/
+/*-----------------------horizontal scrolling--------------------------*/
 
 .scrolling-wrapper {
     white-space: nowrap;
@@ -73,44 +74,68 @@
 
 /*****height: 56.25vw****/
 
-.main-lobby .link {
+.main-lobby__check-in a:hover + .main-lobby__check-in__balloon, .main-lobby__guests a:hover + .main-lobby__guests__balloon, .main-lobby__elevator a:hover + .main-lobby__elevator__balloon, .main-lobby__about a:hover + .main-lobby__about__balloon {
+    opacity: 1;
+}
+
+.main-lobby__check-in__gif {
     position: absolute;
+    width: 19vw;
+    top: 23vw;
+    left: 13vw;
 }
 
-.main-lobby .story {
-    top: 20.6vw;
-    left: 12%;
+.main-lobby__check-in__balloon {
+    position: absolute;
+    width: 8vw;
+    top: 17vw;
+    left: 6vw;
+    opacity: 0;
 }
 
-.main-lobby .story img {
-    width: 20vw;
-}
-
-.main-lobby .cast {
+.main-lobby__guests__gif {
+    position: absolute;
+    width: 19vw;
     top: 10vw;
-    left: 39%;
+    left: 39vw;
 }
 
-.main-lobby .cast img {
-    width: 20vw;
+.main-lobby__guests__balloon {
+    position: absolute;
+    width: 8vw;
+    top: 9vw;
+    left: 36vw;
+    opacity: 0;
 }
 
-.main-lobby .room {
-    top: 15vw;
-    left: 70%;
-}
-
-.main-lobby .room img {
-    width: 15vw;
-}
-
-.main-lobby .about {
+.main-lobby__elevator__gif {
+    position: absolute;
+    width: 7vw;
     top: 22vw;
-    left: 88%;
+    left: 71vw;
 }
 
-.main-lobby .about img {
-    width: 12vw;
+.main-lobby__elevator__balloon {
+    position: absolute;
+    width: 22vw;
+    top: 14.5vw;
+    left: 71vw;
+    opacity: 0;
+}
+
+.main-lobby__about__img {
+    position: absolute;
+    width: 6vw;
+    top: 27vw;
+    left: 89vw;
+}
+
+.main-lobby__about__balloon {
+    position: absolute;
+    width: 6vw;
+    top: 23.5vw;
+    left: 86vw;
+    opacity: 0;
 }
 
 
@@ -194,6 +219,15 @@
 
 
 /*--------------------------guests--------------------------*/
+
+.guests-back-btn {
+    color: white;
+    font-size: 4vw;
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+}
+
 .guest-frames {
     background-image: url(img/guests/frames_wallpaper.png);
     background-position: top;
@@ -372,8 +406,8 @@
 .close {
     color: #aaa;
     position: absolute;
-    top: 1%;
-    right: 1%;
+    top: 3%;
+    right: 2%;
     font-size: 5vw;
     z-index: 10;
     line-height: 0.5;
@@ -393,6 +427,16 @@
 
 
 /*------------------elevator--------------------*/
+
+.elevator-back-btn {
+    color: #000000;
+    font-size: 4vw;
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    z-index: 150;
+}
+
 .elevator {
     background-image: url(img/elevator/elevator_entrance.png);
     background-position: top;
@@ -405,19 +449,19 @@
 .elevator .entrance {
     position: absolute;
     width: 100vw;
-    z-index: 1000;
+    z-index: 30;
 }
 
 .elevator .inside {
     position: absolute;
     width: 100vw;
-    z-index: 100;
+    z-index: 10;
 }
 
 .elevator .bellboy {
     position: absolute;
     height: 56.25vw;
-    z-index: 1500;
+    z-index: 100;
     left: 67%;
 }
 
@@ -430,7 +474,7 @@
     position: absolute;
     top: 9vw;
     left: 37%;
-    z-index: 1100;
+    z-index: 90;
     animation-duration: 0.75s;
     animation-name: bounceIn;
     animation-play-state: paused;
@@ -440,7 +484,7 @@
     position: absolute;
     top: 17vw;
     left: 52%;
-    z-index: 1100;
+    z-index: 90;
     animation-duration: 0.75s;
     animation-name: bounceIn;
     animation-play-state: paused;
@@ -450,7 +494,7 @@
 .elevator .door {
     position: absolute;
     width: 11.8vw;
-    z-index: 500;
+    z-index: 20;
     top: 15vw;
 }
 
@@ -478,7 +522,7 @@
 /*-----links-----*/
 
 .elevator .block {
-    z-index: 2000;
+    z-index: 110;
     width: 28vw;
     height: 39vw;
     top: 13vw;
@@ -560,7 +604,3 @@
         transform: scale3d(1, 1, 1);
     }
 }
-
-h1 {}
-
-
