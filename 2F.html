@@ -9,13 +9,14 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <title>센티멘탈 호텔 2층</title>
 
 </head>
 
 <body>
     
-    <!--Preloader-->
+    <!--Preloader up-->
     <div id="preloader" class="preloader">
         <div class="preloader__circle"></div>
         <div id="preloader_animation" class="preloader__chain">
@@ -29,17 +30,22 @@
         </div>
     </div>
 
-    <section class="hallway">
+    <section  class="hallway">
         
-        <div class="hallway-container"> <!--class="dragscroll-->
+        <div id="scroll" class="hallway-container"> <!--class="dragscroll-->
             
             <div class="hallway-block elevator">
+                
+                <i class="fas fa-chevron-right check-in-right-arrow"></i>
+                <i class="fas fa-chevron-right check-in-right-arrow_2"></i>
+                
+                <div class='icon-scroll'></div>
                 
                 <a href="#" class="elevator__link_up">
                     <div class="elevator__link_up__block"></div>
                 </a>
                 
-                <a id="abcd" href="elevator.html" class="elevator__link_down">
+                <a id="elev_down" href="elevator.html" class="elevator__link_down">
                     <div class="elevator__link_down__block"></div>
                 </a>
                 
@@ -127,33 +133,51 @@
         
     </section>
 
-    <script>
-        
-        $(document).ready(function() {
-            setTimeout(function() {
-                $('body').addClass('loaded');
-            }, 5000);
-        });
-        
-    </script>
-    <script>
-        
-        $('#abcd').click(function(e) { 
-            e.preventDefault(); 
-            $('#down_left').animate({
-                left: ["45.3vw", "swing"]
-            }, 3000)
-            
-            $('#down_right').animate({
-                left: ['82.4vw', "swing"]
-            }, 3000)
-            
-            var linkUrl = $(this).attr('href');
-            setTimeout(function(url) { 
-                window.location = url; 
-            }, 4000, linkUrl); });
-        
-    </script>
+<script title="">
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('body').addClass('loaded');
+        }, 5000);
+    });
+</script>
+    
+<script title="elevator afterclick downward animation">
+$('#elev_down').click(function(e) {
+    e.preventDefault();
+    $('#down_left').animate({
+        left: ["45.3vw", "swing"]
+    }, 3500)
+
+    $('#down_right').animate({
+        left: ['82.4vw', "swing"]
+    }, 3500)
+
+    var linkUrl = $(this).attr('href');
+    setTimeout(function(url) {
+        window.location = url;
+    }, 5000, linkUrl);
+});
+</script>
+
+<script title="horizontal scrolling">
+jQuery(function($) {
+    $.fn.hScroll = function(amount) {
+        amount = amount || 120;
+        $(this).bind("DOMMouseScroll mousewheel", function(event) {
+            var oEvent = event.originalEvent,
+                direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+                position = $(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            $(this).scrollLeft(position);
+            event.preventDefault();
+        })
+    };
+});
+
+$(document).ready(function() {
+    $('#scroll').hScroll(100); // You can pass (optionally) scrolling amount
+});
+</script>
 </body>
 
 </html>
