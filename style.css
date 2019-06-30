@@ -74,8 +74,16 @@
 
 /*****height: 56.25vw****/
 
+.main-lobby__check-in__balloon, .main-lobby__guests__balloon, .main-lobby__elevator__balloon, .main-lobby__about__balloon {
+    animation-duration: 0.75s;
+    animation-name: bounceInRight;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
 .main-lobby__check-in a:hover + .main-lobby__check-in__balloon, .main-lobby__guests a:hover + .main-lobby__guests__balloon, .main-lobby__elevator a:hover + .main-lobby__elevator__balloon, .main-lobby__about a:hover + .main-lobby__about__balloon {
-    opacity: 1;
+    animation-play-state: running;
+    
 }
 
 .main-lobby__check-in__gif {
@@ -138,8 +146,55 @@
     opacity: 0;
 }
 
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
+
+  30% {
+    opacity: 1;
+    -webkit-transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(15px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  65% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 /*------------------------main logo----------------------*/
+
+.check-in-back-btn {
+    color: #404040;
+    font-size: 4vw;
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    z-index: 100;
+}
+
 .main-logo {
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/main_heart.png);
     background-position: center;
@@ -221,7 +276,7 @@
 /*--------------------------guests--------------------------*/
 
 .guests-back-btn {
-    color: white;
+    color: #ffffff;
     font-size: 4vw;
     position: fixed;
     top: 3vw;
@@ -429,7 +484,7 @@
 /*------------------elevator--------------------*/
 
 .elevator-back-btn {
-    color: #000000;
+    color: #404040;
     font-size: 4vw;
     position: fixed;
     top: 3vw;
@@ -460,9 +515,10 @@
 
 .elevator .bellboy {
     position: absolute;
-    height: 56.25vw;
+    height: 35vw;
     z-index: 100;
-    left: 67%;
+    top: 45%;
+    left: 44%;
 }
 
 .elevator .up-balloon,
