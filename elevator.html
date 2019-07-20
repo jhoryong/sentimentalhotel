@@ -6,9 +6,9 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
-    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>1층 엘리베이터</title>
 </head>
 
@@ -16,28 +16,57 @@
     
     <section class="elevator" id="elevator">
         
-        <a href="main-lobby.html" title="메인 로비로 돌아가기"><i class="fas fa-arrow-left elevator-back-btn"></i></a>
+        <a href="main-lobby.html" title="메인 로비로 돌아가기">
+            <i class="fas fa-arrow-left elevator_back-btn"></i>
+        </a>
         
         <!--links-->
-        <a class="left-block-link" href="2F.html">
-            <div class="left block"></div>
+        <a href="2F.html" class="elevator__link-container_left" >
+            <div class="elevator__link-block
+                        elevator__link-block_left"></div>
         </a>
-        <a href="#password_popup" class="right-block-link" >
-            <div class="right block"></div>
+        
+        <a href="#password_popup" class="elevator__link-container_right" >
+            <div class="elevator__link-block
+                        elevator__link-block_right"></div>
         </a>
 
         <!--static images-->
-        <img class="entrance" src="img/elevator/elevator_entrance.png">
-        <img class="inside" src="img/elevator/elevator_inside.png">
-        <img class="bellboy" src="img/elevator/bellboy.png">
-        <img class="up-balloon" src="img/elevator/up.png">
-        <img class="down-balloon" src="img/elevator/down.png">
+        <img class="elevator__entrance"
+             src="img/elevator/elevator_entrance.png">
+        
+        <img class="elevator__inside" 
+             src="img/elevator/elevator_inside.png">
+        
+        <img class="elevator__bellboy"
+             src="img/elevator/bellboy.png">
+        
+        <img class="elevator__balloon
+                    elevator__balloon_up"
+             src="img/elevator/up.png">
+        
+        <img class="elevator__balloon 
+                    elevator__balloon_down"
+             src="img/elevator/down.png">
 
+        
         <!--doors-->
-        <img class="up-left door" src="img/elevator/elevator_leftdoor.png">
-        <img class="up-right door" src="img/elevator/elevator_rightdoor.png">
-        <img class="down-left door" src="img/elevator/elevator_leftdoor.png">
-        <img class="down-right door" src="img/elevator/elevator_rightdoor.png">
+        <img class="elevator__door 
+                    elevator__door_left-left"
+             src="img/elevator/elevator_leftdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_left-right"
+             src="img/elevator/elevator_rightdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_right-left"
+             src="img/elevator/elevator_leftdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_right-right"
+             src="img/elevator/elevator_rightdoor.png">
+        
         
         <form id="password_popup" class="password-popup">
             <a href="#" class="close">×</a>
@@ -48,6 +77,31 @@
         </form>
         
     </section>
+    
+    <script>
+        $(document).ready(() => {
 
+            $('.elevator__link-container_left').on('click', (event) => {
+                event.preventDefault();
+                $('.elevator__door').addClass('open-left');
+               
+                setTimeout(() => {
+                    window.location = $(event.currentTarget).attr('href');
+                }, 4500);
+                })
+                
+            /*$('.elevator__link-container_right').on('click', (event) => {
+                event.preventDefault();
+                $('.elevator__door').addClass('open-right');
+                
+                setTimeout(() => {
+                    window.location = $(event.currentTarget).attr('href');
+                }, 4500);
+                
+                })*/
+            })
+        
+    </script>
+    
 </body>
 </html>
