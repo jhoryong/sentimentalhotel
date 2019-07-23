@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="css/floor_first.css">
+    <link rel="stylesheet" type="text/css" href="css/basement_password_popup.css">
+    <link rel="stylesheet" type="text/css" href="css/preloader1.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>1층 엘리베이터</title>
+</head>
+
+<body>
+    
+    <div class="fade"></div>
+    
+    <div class="preloader">
+        <div class="preloader__circle"></div>
+        
+        <div class="preloader__chain">
+            <img src="img/loading/chain2.png">
+        </div>
+        
+        <div class="preloader__elevator">
+            <img src="img/loading/elevator_inside.png">
+        </div>
+        
+        <div class="preloader__text">
+            <span>Loading...</span>
+        </div>
+    </div>
+    
+    <section class="elevator" id="elevator">
+        
+        <!--back button-->
+        <a href="main-lobby.html" title="메인 로비로 돌아가기">
+            <i class="fas fa-arrow-left elevator_back-btn"></i>
+        </a>
+        
+        <!--links-->
+        <a href="floor_2nd.html" class="elevator__link_up" >
+            <div class="elevator__link__div
+                        elevator__link__div_up"></div>
+        </a>
+        
+        <a href="#password_popup" class="elevator__link_down" >
+            <div class="elevator__link__div
+                        elevator__link__div_down"></div>
+        </a>
+
+        <!--static images-->
+        <img class="elevator__entrance"
+             src="img/elevator/elevator_entrance.png">
+        
+        <img class="elevator__inside" 
+             src="img/elevator/elevator_inside.png">
+        
+        <img class="elevator__bellboy"
+             src="img/elevator/bellboy.png">
+        
+        <img class="elevator__balloon
+                    elevator__balloon_up"
+             src="img/elevator/up.png">
+        
+        <img class="elevator__balloon 
+                    elevator__balloon_down"
+             src="img/elevator/down.png">
+
+        
+        <!--doors-->
+        <img class="elevator__door 
+                    elevator__door_left-left"
+             src="img/elevator/elevator_leftdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_left-right"
+             src="img/elevator/elevator_rightdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_right-left"
+             src="img/elevator/elevator_leftdoor.png">
+        
+        <img class="elevator__door 
+                    elevator__door_right-right"
+             src="img/elevator/elevator_rightdoor.png">
+        
+        
+        <!--to enter base floor-->
+        <form id="password_popup" class="password-popup">
+            
+            <a href="#" 
+               class="password_popup__close">
+                ×
+            </a>
+            <img class="password-popup__img" 
+                 src="img/basement_floor/hotel_key.png">
+            
+            <label for="password" 
+                   class="password-popup__label">
+                호텔 지하층에 접근하려면 관리자 권한이 필요합니다. 비밀번호를 입력하십시오.
+            </label>
+            
+            <input id="password" 
+                   class="password-popup__textbox" 
+                   type="text" 
+                   name="password">
+            <br>
+            
+            <input class="password-popup__button" 
+                   type="image" 
+                   src="img/basement_floor/enter.png">
+        </form>
+        
+        
+    </section>
+    
+    <script>//fade out, delay for an elevator opening animation
+        
+        $(document).ready(() => {
+
+            $('.fade').fadeOut(2000);
+            
+            $('.elevator__link_up').on('click', (event) => {
+                event.preventDefault();
+                sessionStorage.setItem("direction", "up");
+                $('.elevator__door_left-left, .elevator__door_left-right').addClass('open-left');
+                
+                setTimeout(() => {
+                    $('.fade').fadeIn(2000);
+                }, 5000)
+                
+                setTimeout(() => {
+                    window.location = $(event.currentTarget).attr('href');
+                }, 7000);
+            })
+
+        })
+        
+    </script>
+    
+    <script>
+        
+        $(document).ready(() => {
+            $('.fade').fadeOut(1000);
+            let from = sessionStorage.getItem("direction");
+            if (from === "up") {
+                $('.preloader__chain').addClass('upwards');
+                setTimeout(() => {
+                    $('.preloader').hide();
+                }, 5000)
+                setTimeout(() => {
+                    $('.fade').fadeIn(1000).fadeOut(2000);
+                }, 4000)
+                
+            } else if (from === "down") {
+                $('.preloader__chain').addClass('downwards');
+                setTimeout(() => {
+                    $('.preloader').hide();
+                }, 5000)
+                setTimeout(() => {
+                    $('.fade').fadeIn(1000).fadeOut(2000);
+                }, 4000)
+                
+            } else {
+                $('.preloader').hide();
+            }
+            
+        });
+        
+    </script>
+    
+</body>
+</html>

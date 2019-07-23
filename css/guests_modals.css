@@ -1,0 +1,129 @@
+/*modals for frames*/
+
+/*background for modals*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+    /*the actual modal box*/
+
+    :root {
+        --modal-width: 70vw;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #888;
+        width: var(--modal-width);
+        height: calc(var(--modal-width)*9/16);
+    }
+
+    /*texts*/
+
+    .modal-content__text {
+        position: absolute;
+        font-family: 'Nanum Myeongjo', serif;
+        line-height: 1.8;
+        font-size: 2.2vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+        .modal-content__text_junghwa {
+            left: 55%;
+        }
+
+        .modal-content__text_small-hyun {
+            left: 49%;
+        }
+
+        .modal-content__text_big-hyun {
+            left: 25%;
+        }
+
+        .modal-content__text_suhyun {
+            left: 7%;
+            text-align: center;
+        }
+
+        .modal-content__text_star {
+            left: 20%;
+            font-size: 8vw;
+        }
+
+        .modal-content__text_engineer {
+            left: 60%;
+        }
+
+    /*portraits*/
+
+    .modal-content__portrait {
+        height: calc(var(--modal-width)*9/16);
+        position: absolute;
+    }
+
+        .modal-content__portrait_junghwa {
+            left: 0;
+        }
+
+        .modal-content__portrait_small-hyun {
+            left: 10%;
+            height: 35vw;
+            bottom: 0;
+        }
+
+        .modal-content__portrait_big-hyun {
+            height: 35vw;
+            right: 20%;
+            bottom: 0;
+        }
+
+        .modal-content__portrait_suhyun {
+            height: 35vw;
+            bottom: 0;
+            right: 10%;
+        }
+
+        .modal-content__portrait_star {
+            right: 0;
+        }
+
+        .modal-content__portrait_engineer {
+            left: 10%;
+        }
+
+    /*the close button*/
+    .close {
+        color: #aaa;
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        font-size: 5vw;
+        z-index: 10;
+        line-height: 0.5;
+        text-decoration: none;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .button {
+        cursor: pointer;
+        display: inline;
+    }

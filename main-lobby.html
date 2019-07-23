@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" lang="ko">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="css/floor_first.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -16,7 +16,7 @@
 
     <section class="main-lobby">
 
-        <a href="check-in.html" title="체크인 하기">
+        <a href="main-lobby_check-in.html" title="체크인 하기">
             <img class="main-lobby__gif 
                         main-lobby__gif_check-in" src="img/main_lobby/check_in.gif">
             
@@ -24,7 +24,7 @@
                         main-lobby__balloon_check-in" src="img/main_lobby/check_in_word.png">
         </a>
 
-        <a href="guests.html" title="투숙객 보기">
+        <a href="main-lobby_guests.html" title="투숙객 보기">
             <img class="main-lobby__gif 
                         main-lobby__gif_guests" src="img/main_lobby/guests.gif">
             
@@ -32,7 +32,7 @@
                         main-lobby__balloon_guests" src="img/main_lobby/guests_balloon.png">
         </a>
 
-        <a href="elevator.html" title="2층으로 가기">
+        <a href="main-lobby_elevator.html" title="2층으로 가기">
             <img class="main-lobby__gif 
                         main-lobby__gif_elevator" src="img/main_lobby/elevator.gif">
             
@@ -49,25 +49,6 @@
         </a>
 
     </section>
-
-    <!--<script>
-        
-    $(document).ready(() => {
-     $('.main-lobby__gif').on('mouseenter', (event) => {
-        let $balloon = $(event.currentTarget).next();
-         $balloon.css('opacity', '1');
-         $balloon.addClass('bounce');
-     })
-        
-     $('.main-lobby__gif').on('mouseleave', (event) => {
-         let $balloon = $(event.currentTarget).next();
-         $balloon.css('opacity', '0');
-         $balloon.removeClass('bounce');
-     })
-        
-    })
-        
-    </script>-->
 
 </body>
 

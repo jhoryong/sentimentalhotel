@@ -1,0 +1,472 @@
+.fade {
+    position: absolute;
+    width: 100vw;
+    height: 56.25vw;
+    background-color: black;
+    z-index: 2000;
+}
+
+/*-------------------------index page--------------------------*/
+
+.hotel-exterior {
+    background-image: url(../img/hotel_exterior.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
+}
+
+.main-entrance_link {
+    position: absolute;
+    top: 37.9vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /*box-shadow: 0 0 3vw 1.5vw rgba(255, 244, 107, 0.86);*/ /*spread, blur*/
+    animation: glow 5s infinite;
+    transition: box-shadow 0.6s ease;
+}
+
+    .main-entrance_door {
+        display: table;
+        width: 6.8vw;
+        transition: width 0.6s ease;
+    }
+
+    .main-entrance_door:hover {
+        width: 7.8vw;
+    }
+
+    .main-entrance_link:hover {
+        box-shadow: 0 0 4vw 2.5vw rgba(255, 244, 107, 0.86);
+    }
+
+.mfp-hide {
+    display: none !important;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px -5px rgba(255, 244, 107, 0.86); }
+    40% { box-shadow: 0 0 20px 20px rgba(255, 244, 107, 0.86); }
+    60% { box-shadow: 0 0 20px 20px rgba(255, 244, 107, 0.86); }
+    100% { box-shadow: 0 0 20px -5px rgba(255, 244, 107, 0.86); }
+}
+
+/*-----------------------horizontal scrolling--------------------------*/
+
+.scrolling-wrapper {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: inherit;
+}
+
+/*---------------------------main-lobby-----------------------*/
+
+.main-lobby {
+    background-image: url(../img/main_lobby/main_lobby.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
+}
+
+    .main-lobby__gif {
+        position: absolute;
+    }
+
+        .main-lobby__gif_check-in {
+            width: 19vw;
+            top: 23vw;
+            left: 13vw;
+        }
+
+        .main-lobby__gif_guests{
+            width: 19vw;
+            top: 10vw;
+            left: 39vw;
+        }
+
+        .main-lobby__gif_elevator {
+            width: 7vw;
+            top: 22vw;
+            left: 71vw;
+        }       
+
+        .main-lobby__gif_about {
+            width: 6vw;
+            top: 27vw;
+            left: 89vw;
+        }
+
+
+    .main-lobby__balloon {
+        position: absolute;
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+        transition: transform 800ms ease-in-out 100ms;
+    }
+
+        .main-lobby__balloon_check-in {
+            width: 8vw;
+            top: 17vw;
+            left: 6vw;
+        }
+
+        .main-lobby__balloon_guests {
+            width: 8vw;
+            top: 9vw;
+            left: 36vw;
+        }
+
+        .main-lobby__balloon_elevator {
+            width: 22vw;
+            top: 14.5vw;
+            left: 71vw;
+        }
+
+        .main-lobby__balloon_about {
+            width: 6vw;
+            top: 23.5vw;
+            left: 86vw;
+        }
+
+    .main-lobby__gif_check-in:hover + .main-lobby__balloon_check-in, .main-lobby__gif_guests:hover + .main-lobby__balloon_guests, .main-lobby__gif_elevator:hover + .main-lobby__balloon_elevator, .main-lobby__gif_about:hover + .main-lobby__balloon_about {
+        transform: rotateX(0);
+    }
+
+
+/*------------------------main logo----------------------*/
+
+.check-in-back-btn {
+    color: #404040;
+    font-size: 4vw;
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    z-index: 100;
+}
+
+.check-in-right-arrow, .check-in-right-arrow_2 {
+    color: #909090;
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    left: 94vw;
+}
+
+.check-in-right-arrow_2 {
+    left: 95.2vw;
+}
+
+.main-logo {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/main_heart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15vw;
+}
+
+.main-logo h1 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.5em;
+}
+
+
+.single-text-1 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+.greetings {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.greetings img {
+    position: absolute;
+    width: 27vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17%;
+}
+
+.greetings p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    font-size: 1.1vw;
+    line-height: 1.7em;
+}
+
+.signature {
+    position: absolute;
+    top: 85vh;
+    left: 70%;
+}
+
+.signature span {
+    font-size: 1.1vw;
+    position: relative;
+}
+
+.signature span:nth-of-type(1) {
+    left: -55%;
+}
+
+.signature span:nth-of-type(2) {
+    left: 65%;
+}
+
+.signature img {
+    width: 7vw;
+}
+
+
+/*--------------------------guests--------------------------*/
+
+.guest-frames {
+    background-image: url(../img/guests/frames_wallpaper.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
+}
+
+    .guests-back-btn {
+        color: #ffffff;
+        font-size: 4vw;
+        position: fixed;
+        top: 3vw;
+        left: 3vw;
+    }
+
+    .guest-frame {
+        position: absolute;
+    }
+
+        .guest-frame_junghwa {
+            top: 7vw;
+            left: 7%;
+        }
+
+        .guest-frame_small-hyun {
+            top: 7vw;
+            left: 32%;
+        }
+
+        .guest-frame_big-hyun {
+            top: 15vw;
+            left: 54%;
+        }
+
+        .guest-frame_suhyun {
+            top: 8vw;
+            left: 80%;
+        }
+
+        .guest-frame_star {
+            top: 26vw;
+            left: 8%;
+        }
+
+        .guest-frame_engineer {
+            top: 34vw;
+            left: 30%;
+        }
+
+
+        .guest-frame_junghwa img {
+            width: 20vw;
+        }
+
+        .guest-frame_small-hyun img {
+            width: 18vw;
+        }
+
+        .guest-frame_big-hyun img {
+            width: 22vw;
+        }
+
+        .guest-frame_suhyun img {
+            width: 15vw;
+        }
+
+        .guest-frame_star img {
+            width: 18vw;
+        }
+
+        .guest-frame_engineer img {
+            width: 20vw;
+        }
+
+/*------------------elevator--------------------*/
+
+
+.elevator {
+    background-image: url(../img/elevator/elevator_entrance.png);
+    background-position: top;
+    background-repeat: round;
+    background-size: 100%;
+    height: 56.25vw;
+}
+
+    .elevator_back-btn {
+        color: #404040;
+        font-size: 4vw;
+        position: fixed;
+        top: 3vw;
+        left: 3vw;
+        z-index: 150;
+    }
+
+    /*links*/
+
+    .elevator__link__div {
+        z-index: 110;
+        width: 28vw;
+        height: 39vw;
+        top: 13vw;
+        position: absolute;
+    }
+
+        .elevator__link__div_up {
+            left: 17%;
+        }
+
+        .elevator__link__div_down {
+            left: 53%;
+        }
+
+
+    /*static images*/
+
+    .elevator__entrance {
+        position: absolute;
+        width: 100vw;
+        z-index: 30;
+    }
+
+    .elevator__inside {
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+    }
+
+    .elevator__bellboy {
+        position: absolute;
+        height: 35vw;
+        z-index: 100;
+        top: 21vw;
+        left: 44%;
+    }
+
+    .elevator__balloon {
+        width: 10vw;
+        position: absolute;
+        z-index: 90;
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+        transition: transform 800ms ease-in-out 100ms;
+    }
+
+        .elevator__balloon_up {
+            top: 9vw;
+            left: 37%;
+        }
+
+        .elevator__balloon_down {
+            top: 17vw;
+            left: 52%;
+        }
+
+    /*doors
+*/
+    .elevator__door {
+        position: absolute;
+        width: 11.8vw;
+        z-index: 20;
+        top: 15vw;
+        transition: left 5s ease-in-out 200ms;
+    }
+
+        .elevator__door_left-left {
+            left: 19.5%;
+        }
+
+        .elevator__door_left-right {
+            left: 31.2%;
+        }
+
+        .elevator__door_right-left {
+            left: 55.5%;
+        }
+
+        .elevator__door_right-right {
+            left: 67.2%;
+        }
+
+
+    /*animations*/
+
+    .elevator__link_up:hover ~ .elevator__balloon_up,
+    .elevator__link_down:hover ~ .elevator__balloon_down {
+        transform: rotateX(0);  
+    }
+
+    .elevator__door_left-left.open-left {
+        animation: left-left 5s ease-in-out forwards;
+    }
+
+    .elevator__door_left-right.open-left {
+        animation: left-right 5s ease-in-out forwards;
+    }
+
+    .elevator__door_right-left.open-right {
+        animation: right-left 5s ease-in-out forwards;
+    }
+
+    .elevator__door_right-right.open-right {
+        animation: right-right 5s ease-in-out forwards;
+    }
+
+    @keyframes left-left {
+        0% {left: 19.5%;}
+        100% {left: 9.1%;}
+    }
+
+    @keyframes left-right {
+        0% {left: 31.2%;}
+        100% {left: 41.6%;}
+    }
+
+    @keyframes right-left {
+        0% {left: 55.5%;}
+        100% {left: 44.8%;}
+    }
+
+    @keyframes right-right {
+        0% {left: 67.2%;}
+        100% {left: 77.9%;}
+    }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title> Keat </title>
+    </head>
+    
+    <body>
+        <h1>3층입니당.</h1>
+        <button type="button">3층으로 저장</button>
+        <a href="floor_2nd.html">2층으로 ㄱㄱ</a>
+        <p id="test"></p>
+        
+        <script>
+            $(document).ready(() => {
+                $('button').on('click', () => {
+                    sessionStorage.setItem("direction", "down");
+                    let session = sessionStorage.getItem("direction");
+                    $('#test').html(session);
+                })
+                $('a').on('click', () => {
+                    sessionStorage.setItem("direction", "down");
+                })
+            })
+        
+        </script>
+    </body>
+</html>

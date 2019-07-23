@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>로딩중</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+    .preloader__circle {
+        position: absolute;
+        margin: 0 auto;
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+        z-index: 1010;
+    }
+
+        .preloader__circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            width: 35vw;
+            height: 35vw;
+            box-shadow: 0px 0px 0px 1000px #000000;
+        }
+    
+    /* delete 'infinite' at use*/
+        
+    .preloader__chain {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1005;
+    }
+        
+        .preloader__chain_upwards {
+            animation: chain-falling 20s linear infinite;
+        }
+        
+        .preloader__chain_downwards {
+            animation: chain-rising 20s linear infinite;
+        }
+
+        .preloader__chain img {
+            width: 28vw;
+        }
+        
+    .preloader__elevator {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1005;
+    }
+        
+        .preloader__elevator_upwards {
+            animation: elev-rising 6s infinite cubic-bezier(0,.9,1,.1);
+        }
+        
+        .preloader__elevator_downwards {
+            animation: elev-falling 6s infinite cubic-bezier(0,.9,1,.1);
+        }
+
+        .preloader__elevator img {
+            width: 15vw;
+        }
+
+    .preloader__text {
+        position: absolute;
+        top: 87vh;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+
+        .preloader__text span {
+            color: #cccccc;
+            font-size: 5vh;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        
+    /*animations*/
+        
+    @keyframes chain-falling {
+        0% { bottom: 0; }
+        100% { bottom: -100vw; }
+    }
+
+    @keyframes chain-rising {
+        0% { bottom: -100vw; }
+        100% { bottom: 0; }
+    }
+        
+    @keyframes elev-falling {
+        0% {bottom: 100vw;}
+        100% {bottom: -115vw;}
+    }
+        
+    @keyframes elev-rising {
+        0% {bottom: -115vw;}
+        100% {bottom: 100vw;}
+    }
+        
+    </style>
+    
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader__circle"></div>
+        
+        <div class="preloader__chain 
+                    preloader__chain_upwards 
+                    preloader__chain_downwards">
+            <img src="../img/loading/chain2.png">
+        </div>
+        
+        <div class="preloader__elevator 
+                    preloader__elevator_upwards 
+                    preloader__elevator_downwards">
+            <img src="../img/loading/elevator_inside.png">
+        </div>
+        
+        <div class="preloader__text">
+            <span>Loading...</span>
+        </div>
+    </div>
+</body>
+
+</html>

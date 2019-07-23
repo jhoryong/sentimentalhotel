@@ -5,8 +5,9 @@
     
     <meta charset="UTF-8" lang="ko">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="css/floor_first.css">
+    <link rel="stylesheet" type="text/css" href="css/guests_modals.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700&display=swap&subset=korean" rel="stylesheet">
@@ -16,33 +17,34 @@
 </head>
 
 <body>
+    
     <section class="guests">
         
         <a href="main-lobby.html" title="메인 로비로 돌아가기"><i class="fas fa-arrow-left guests-back-btn"></i></a>
         
     <div class="guest-frames">
         
-        <div class="button guest-frame guest-frame--junghwa" data-modal="#modalOne">
+        <div class="button guest-frame guest-frame_junghwa" data-modal="#modalOne">
             <img src="img/guests/junghwa_frame.png">
         </div>
         
-        <div class="button guest-frame guest-frame--small-hyun" data-modal="#modalTwo">
+        <div class="button guest-frame guest-frame_small-hyun" data-modal="#modalTwo">
             <img src="img/guests/masterjr_frame.png">
         </div>
         
-        <div class="button guest-frame guest-frame--big-hyun" data-modal="#modalThree">
+        <div class="button guest-frame guest-frame_big-hyun" data-modal="#modalThree">
             <img src="img/guests/master_frame.png">
         </div>
         
-        <div class="button guest-frame guest-frame--suhyun" data-modal="#modalFour">
+        <div class="button guest-frame guest-frame_suhyun" data-modal="#modalFour">
             <img src="img/guests/suhyun_frame.png">
         </div>
         
-        <div class="button guest-frame guest-frame--star" data-modal="#modalFive">
+        <div class="button guest-frame guest-frame_star" data-modal="#modalFive">
             <img src="img/guests/star_frame.png">
         </div>
 
-        <div class="button guest-frame guest-frame--engineer" data-modal="#modalSix">
+        <div class="button guest-frame guest-frame_engineer" data-modal="#modalSix">
             <img src="img/guests/engineer_frame.png">
         </div>
 
@@ -53,60 +55,60 @@
         <div id="modalOne" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--junghwa">
+                <h1 class="modal-content__text modal-content__text_junghwa">
                     &ldquo;너 약간 변했어.<br>예전과는 달라.&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--junghwa" src="img/guests/junghwa.png">
+                <img class="modal-content__portrait modal-content__portrait_junghwa" src="img/guests/junghwa.png">
             </div>
         </div>
     
         <div id="modalTwo" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--small-hyun">
+                <h1 class="modal-content__text modal-content__text_small-hyun">
                     &ldquo;날 안아줘,<br>이렇게 하루 종일 울고 싶단 말이야.&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--small-hyun" src="img/guests/master_jr.png">
+                <img class="modal-content__portrait modal-content__portrait_small-hyun" src="img/guests/master_jr.png">
             </div>
         </div>
     
         <div id="modalThree" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--big-hyun">
+                <h1 class="modal-content__text modal-content__text_big-hyun">
                     &ldquo;어서오세요...<br>센티멘탈 호텔에.&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--big-hyun" src="img/guests/master.png">
+                <img class="modal-content__portrait modal-content__portrait_big-hyun" src="img/guests/master.png">
             </div>
         </div>
         
         <div id="modalFour" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--suhyun">
+                <h1 class="modal-content__text modal-content__text_suhyun">
                     &ldquo;똑같아도 짜증나는 건 짜증나지.<br>말해봐.&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--suhyun" src="img/guests/suhyun.png">
+                <img class="modal-content__portrait modal-content__portrait_suhyun" src="img/guests/suhyun.png">
             </div>
         </div>
         
         <div id="modalFive" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--star">
+                <h1 class="modal-content__text modal-content__text_star">
                     &ldquo;&colon;&rpar;&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--star" src="img/guests/star.png">
+                <img class="modal-content__portrait modal-content__portrait_star" src="img/guests/star.png">
             </div>
         </div>
     
         <div id="modalSix" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="modal-content__text modal-content__text--engineer">
+                <h1 class="modal-content__text modal-content__text_engineer">
                     &ldquo;수리도 중독이죠.<br>모든 건 중독이에요.&rdquo;
                 </h1>
-                <img class="modal-content__portrait modal-content__portrait--engineer" src="img/guests/engineer.png">
+                <img class="modal-content__portrait modal-content__portrait_engineer" src="img/guests/engineer.png">
             </div>
         </div>
         
@@ -114,20 +116,21 @@
         
     </section>
     
-<script>
-    
-    $(".button").on("click", function() {
-        var modal = $(this).data("modal");
-        $(modal).show();
-    });
+    <script>
 
-    $(".modal").on("click", function(e) {
-        var className = e.target.className;
-        if (className === "modal" || className === "close") {
-            $(this).closest(".modal").hide();
-        }
-    });
+        $(".button").on("click", function() {
+            var modal = $(this).data("modal");
+            $(modal).show();
+        });
+
+        $(".modal").on("click", function(e) {
+            var className = e.target.className;
+            if (className === "modal" || className === "close") {
+                $(this).closest(".modal").hide();
+            }
+        });
+
+    </script>
     
-</script>
 </body>
 </html>
