@@ -32,7 +32,7 @@
                         main-lobby__balloon_guests" src="img/main_lobby/guests_balloon.png">
         </a>
 
-        <a href="main-lobby_elevator.html" title="2층으로 가기">
+        <a id="elevator" href="main-lobby_elevator.html" title="2층으로 가기">
             <img class="main-lobby__gif 
                         main-lobby__gif_elevator" src="img/main_lobby/elevator.gif">
             
@@ -49,7 +49,16 @@
         </a>
 
     </section>
-
+    
+    <script>
+        
+        $(document).ready(() => {
+            $('#elevator').on("click", () => {
+                sessionStorage.setItem("direction", "none");
+            })
+        })
+        
+    </script>
 </body>
 
 </html>
