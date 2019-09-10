@@ -15,69 +15,10 @@
 </head>
 
 <body>
-
-    <a href="main-lobby.html" title="메인 로비로 돌아가기"><i class="fas fa-arrow-left check-in-back-btn"></i></a>
-    
-    
-    <div id="box" class="scrolling-wrapper">
-
-        <section class="main-logo card">
-            <h1>SENTIMENTAL<br>HOTEL</h1>
-            <a href="#single_text"><i class="fas fa-chevron-right check-in-right-arrow"></i></a>
-            <a href="#single_text"><i class="fas fa-chevron-right check-in-right-arrow_2"></i></a>
-        </section>
-
-        <section id="single_text" class="single-text-1 card">
-            <h1>우리는 타인을 애정에 따라 각각 다르게 대합니다.</h1>
-            
-            <a href="#greetings"><i class="fas fa-chevron-right check-in-right-arrow"></i></a>
-            <a href="#greetings"><i class="fas fa-chevron-right check-in-right-arrow_2"></i></a>
-            
-        </section>
-
-        <section id="greetings" class="greetings card">
-            
-            <img src="img/writing_person.png">
-            <p>타인을 만나 관계를 맺는 모든 행위를 다른것에 비유한다면,<br>
-                저는 사람과 사람 간의 관계를 호텔이라고 생각합니다.<br><br>
-                사람의 마음속에 호텔이 있다면,<br>
-                제가 운영하는 호텔에선<br>
-                가벼운 이야기나 잠시 만나는 사람들은 카페테리아에서 다과와 함께 이야기를 나누고<br>
-                친한 친구는 장기간 방을 내어주며,<br>
-                가장 소중한 사람은 스위트룸으로 초대하겠죠.<br><br>
-                저는 가장 소중한 사람을 대하는 방식을 볼 때<br>
-                그 사람을 가장 잘 알 수 있다고 생각합니다.<br><br>
-                저희 호텔은 최선을 다해 여러분을 모실 예정입니다.<br>
-                최상의 서비스를 통해 총지배인인 저의 마음을 보여드리겠습니다.<br><br>
-                부디 이곳에서 행복한 시간 보내시길 바랍니다.
-            </p>
-            <div class="signature">
-                <span>총지배인</span>
-                <img src="img/signature.png">
-                <span>드림.</span>
-            </div>
-        </section>
-    </div>
-
-    <script title="horizontal scolling">
-    jQuery(function($) {
-        $.fn.hScroll = function(amount) {
-            amount = amount || 120;
-            $(this).bind("DOMMouseScroll mousewheel", function(event) {
-                var oEvent = event.originalEvent,
-                    direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
-                    position = $(this).scrollLeft();
-                position += direction > 0 ? -amount : amount;
-                $(this).scrollLeft(position);
-                event.preventDefault();
-            })
-        };
-    });
-
-    $(document).ready(function() {
-        $('#box').hScroll(60); // You can pass (optionally) scrolling amount
-    });
-    </script>
+    <section>
+        <div >
+        </div>
+    </section>
 </body>
 
 </html>
