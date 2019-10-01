@@ -1,0 +1,127 @@
+body {
+    background-color: #000000;
+}
+
+.dialogue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+    .dialogue-1 {
+        display: block;
+    }
+
+    .dialogue-2 {
+        display: none;
+    }
+
+    .dialogue-3 {
+        display: none;
+    }
+
+.line {
+    text-align: center;
+    color: #fff;
+    font-size: 2vw;
+    margin-bottom: 1em;
+    opacity: 0;
+    font-family: 'Noto Serif KR', serif;
+}
+
+    .line-1 {animation: fadein 1s 3s forwards;}
+
+    .line-2 {animation: fadein 1s 5s forwards;}
+
+    .line-3 {animation: fadein 1s 7s forwards;}
+
+    .line-4 {animation: fadein 1s 1s forwards;}
+
+    .line-5 {animation: fadein 1s 3s forwards;}
+
+    .line-6 {animation: fadein 1s 1s forwards;}
+
+    .line-7 {animation: fadein 1s 3s forwards;}
+
+.arrow {
+    opacity: 0;
+    color: #fff;
+    float: right;
+}
+
+.arrow-1 {
+    animation: fadein 1s 7.5s infinite alternate;
+}
+
+.arrow-2 {
+    animation: fadein 1s 4.5s infinite alternate;
+}
+
+.clicker {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+}
+
+.clicker:hover {
+    cursor: pointer;
+}
+
+    .clicker-1 {display: none;}
+
+    .clicker-2 {display: none;}
+
+.linkbox {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    text-decoration: none;
+    animation: fadein 2s 5s forwards;
+    display: none;
+    opacity: 0;
+}
+
+    .linkbox:hover {
+    text-decoration: underline;
+    color: #fff;
+    }
+
+    .linkbox__logo {
+        width: 7vw;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    .linkbox__text {
+        color: #fff;
+        opacity: 1;
+        font-size: 1.7vw;
+    }
+
+.fade-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    opacity: 0;
+    animation: fadein 3s linear both;
+    z-index: 50;
+}
+
+a {z-index: 0;}
+    
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+

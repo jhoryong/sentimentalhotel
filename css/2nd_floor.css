@@ -1,0 +1,189 @@
+/* global elements */
+
+/* 
+npc 라인: 3초
+플레이어 라인: 2초
+애니메이션 딜레이: 0.5초
+*/
+
+a:link, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.fade-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    z-index: 1000;
+}
+
+    .fade-in-start/* used for the very start */ {
+        opacity: 1;
+        animation: fadein 4s both;
+    }
+
+    .fade-in {
+        opacity: 1;
+        animation: fadein 2s both;
+    }
+
+    .fade-out {
+        opacity: 0;
+        animation: fadeout 2s both;
+    }
+
+
+@keyframes fadein {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.container {
+    background-image: url("../image/2nd_floor/2층-배경.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    height: 56.25vw;
+}
+
+.gif {
+    position: absolute;
+    z-index: 0;
+}
+
+    .gif:hover {
+        cursor: pointer;
+    }
+
+.avatar {
+    position: absolute;
+    z-index: 20;
+}
+
+.clicker {
+    color: blue;
+    font-family: 'Noto Serif KR', serif;
+    font-size: var(--player-font-size);
+}
+    
+    .clicker:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.transparent-background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 10;
+}
+
+.dialogue {
+    display: none;
+    z-index: 10;
+}
+
+    .dialogue-box {
+        position: absolute;
+        top: 36.5vw;
+        left: 24vw;
+        width: 62vw;
+        height: 18vw;
+        background-color: #FFF;
+        border: #000000 3px solid;
+        border-radius: 20px;
+        z-index: 10;
+    }
+
+    .name {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.7vw;
+        margin: 1.5vw 0 0 6vw;
+        font-weight: bold;
+    }
+
+    
+
+    /* line */
+    :root {
+        --font-size: 1.2vw;
+        --first-line: 0.7vw 0 0 6vw;
+        --bottom-line-single: 9vw 0 0 6vw;
+        --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
+        --bottom-line-triple: 5.7vw 0 0 6vw;
+        --bottom-line-quadruple: 4.1vw 0 0 6vw;
+        --bottom-line-quintuple: 2.6vw 0 0 6vw;
+        --bottom-line-sextuple: 1vw 0 0 6vw;
+        --line-height: 1.5;
+    }
+
+    .line {
+        font-family: 'Noto Serif KR', serif;
+        overflow: hidden; 
+        white-space: nowrap;
+        display: none;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        max-width: 55vw;
+    }
+
+        .npc-line {
+            margin: var(--first-line);
+        }
+
+        .player-line {
+            margin: var(--bottom-line-single);
+        }
+
+        @keyframes typing {
+            from {width: 0;}
+            to {width: 100%;}
+        }
+
+    strong { font-weight: bold; }
+
+
+/* reception */
+
+    .reception__gif {
+        width: 20vw;
+        top: 28.7vw;
+        left: 12.5vw;
+    }
+
+    .room {
+        position: absolute;
+        top: 3vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40vw;
+        display: none;
+    }
+
+
+/* lines */
+
+    .line-1 {animation: typing 2s 0.5s linear backwards;}
+
+    .line-1-1 {animation: typing 3s 1.5s linear backwards; margin-top: 0vw;}
+
+    .line-1-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
+
+    .line-1-3 {animation: typing 2s 3s linear backwards; margin-top: 0vw;}
+
+    .line-1-4 {animation: typing 2s 3.5s linear backwards; margin: var(--bottom-line-quintuple);}
+    

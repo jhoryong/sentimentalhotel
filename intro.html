@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/intro.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+
+    <title>Intro - Sentimental Hotel</title>
+</head>
+<body>
+    
+    <div class="dialogue dialogue-1">
+        <p class="line line-1">축하합니다.</p>
+        <p class="line line-2">오랜 기간의 취업 준비 끝에,</p>
+        <p class="line line-3">당신은 센티멘탈 호텔 채용에 합격하셨습니다.</p>
+        <i class="fas fa-sort-down arrow arrow-1"></i>
+    </div>
+    <div class="clicker clicker-1"></div>
+    <div class="dialogue dialogue-2">
+        <p class="line line-4">귀하의 노고에 감사드리며,</p>
+        <p class="line line-5">귀하는 오늘부터 센티멘탈 호텔의 직원이자, 가족입니다.</p>
+        <span class="fas fa-sort-down arrow arrow-2"></span>
+    </div>
+    <div class="clicker clicker-2"></div>
+    <div class="dialogue dialogue-3">
+        <p class="line line-6">오늘은 당신의 첫 출근 날입니다.</p>
+        <p class="line line-7">먼저 당신은 센티멘탈 호텔의 직원이 되기 위한 교육을 수료할 예정입니다.</p>
+    </div>
+    <div class="link">
+    <a href="1st_floor_lobby.html">
+        <div class="linkbox">
+            <img class="linkbox__logo" src="image/intro/logo.png">
+            <span class="line linkbox__text">센티멘탈 호텔 입장하기</span>
+        </div>
+    </a>
+    </div>
+    <div class="fade-box"></div>
+
+    <script>
+        const clicker_1 = document.querySelector('.clicker-1');
+        const clicker_2 = document.querySelector('.clicker-2');
+    
+        setTimeout(()=>{clicker_1.style.display = 'block';}, 7500);
+    
+        clicker_1.addEventListener('click', () => {
+            clicker_1.style.display = 'none';
+            document.querySelector('.dialogue-1').style.display = 'none';
+            document.querySelector('.dialogue-2').style.display = 'block';
+
+            setTimeout(() => {clicker_2.style.display = 'block'}, 4500);
+        });
+    
+        clicker_2.addEventListener('click', () => {
+            clicker_2.style.display = 'none';
+            document.querySelector('.dialogue-2').style.display = 'none';
+            document.querySelector('.dialogue-3').style.display = 'block';
+            document.querySelector('.linkbox').style.display = 'block';
+        });
+
+        document.querySelector(".link").addEventListener('click', (event)=> {
+            event.preventDefault();
+            sessionStorage.setItem("visited", "true");
+            document.querySelector('.fade-box').style.display = 'block';
+            setTimeout(()=> {
+               window.location.assign('1st_floor_lobby.html')}, 5000);
+        })
+        
+
+
+        // 이미 방문한 상태일때 마지막 장면이 나오는 기능:
+
+        function hasVisited() {
+            if (sessionStorage.getItem("visited") === "true") {
+                document.querySelector('.dialogue-1').style.display = "none";
+                document.querySelector('.dialogue-3').style.display = "block";
+                document.querySelector('.linkbox').style.display = "block";
+            }
+        }
+        hasVisited();
+        
+    </script>
+        
+</body>
+
+</html>

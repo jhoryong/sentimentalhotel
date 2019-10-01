@@ -1,0 +1,476 @@
+/* global elements */
+
+a:link, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.fade-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    z-index: 1000;
+}
+
+    .fade-in-start {
+        opacity: 1;
+        animation: fadein 4s linear both;
+    }
+
+    .fade-in {
+        opacity: 1;
+        animation: fadein 2s both;
+    }
+
+    .fade-out {
+        opacity: 0;
+        animation: fadeout 2s both;
+    }
+
+
+@keyframes fadein {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+.container {
+    background-image: url("../image/1st_floor_lobby/로비-배경.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    height: 56.25vw;
+}
+
+.gif {
+    position: absolute;
+    z-index: 0;
+}
+
+.gif:hover {
+    cursor: pointer;
+}
+
+.dialogue {
+    display: none;
+    z-index:10;
+}
+
+.avatar {
+    position: absolute;
+    z-index: 20;
+}
+
+.dialogue-box {
+    position: absolute;
+    top: 36.5vw;
+    left: 24vw;
+    width: 62vw;
+    height: 18vw;
+    background-color: #FFF;
+    border: #000000 3px solid;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.transparent-background {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 10;
+}
+
+.name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.7vw;
+    margin: 1.5vw 0 0 6vw;
+    font-weight: bold;
+}
+
+.clicker {
+    color: blue;
+    font-family: 'Noto Serif KR', serif;
+    font-size: var(--player-font-size);
+    text-decoration: none;
+}
+
+    .clicker:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: blue;
+    }
+
+strong { font-weight: bold; }
+
+/* lines */
+:root {
+    --font-size: 1.2vw;
+    --first-line: 0.7vw 0 0 6vw;
+    --bottom-line-single: 9vw 0 0 6vw;
+    --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
+    --bottom-line-triple: 5.7vw 0 0 6vw;
+    --line-height: 1.5;
+}
+
+.line {
+    font-family: 'Noto Serif KR', serif;
+    overflow: hidden; 
+    white-space: nowrap;
+    display: none;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    max-width: 55vw;
+}
+
+    .npc-line {
+        margin: var(--first-line);
+    }
+
+    .player-line {
+        margin: var(--bottom-line-single);
+    }
+
+
+
+
+
+/* small-hyun elements*/
+
+    .small-hyun__gif {
+        width: 11vw;
+        top: 26.3vw;
+        left: 17vw;
+    }
+
+    .small-hyun__avatar {
+        width: 18vw;
+        top: 33.8vw;
+        left: 11vw;
+    }
+
+    input[type=text] {
+        height: 2.2vw;
+        width: 12vw;
+        vertical-align: 4px;
+        padding: 2px 4px;
+        margin-left: 0.5vw;
+        border-radius: 4px;
+        border: 1px solid #cccccc;
+        font-family: 'Noto Serif KR', serif;   
+
+    }
+
+    input[type=submit] {
+        margin-left: 0.3vw;
+        background-color: #FFF;
+        border: none;
+    }
+
+
+
+
+/* big-hyun elements */
+
+    .big-hyun__gif {
+        width: 10vw;
+        top: 21vw;
+        left: 53vw;
+    }
+
+    .big-hyun__avatar {
+        width: 15.4vw;
+        top: 33.8vw;
+        left: 14vw;
+    }
+
+    /* .big-hyun__map-box {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 35vw;
+        height: 37vw;
+        background-color: #fff;
+        z-index: 10;
+        opacity: 0.9;
+    } */
+
+    .big-hyun__map {
+        display: none;
+    }
+
+    .big-hyun__mapimg {
+        position: absolute;
+        top: 1vw;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 34vw;
+        z-index: 10;
+    }
+
+        .big-hyun__mapimg__1-3 {
+            animation: flash 0.5s 0.5s linear 2 backwards; 
+            display: none;}
+
+        .big-hyun__mapimg__4-7 {
+            animation: flash 0.5s 0.5s linear 2 backwards; 
+            display: none;}
+
+
+    
+/* gold-plate elements*/
+
+    .gold-plate__gif {
+        width: 8vw;
+        top: 9.6vw;
+        left: 64.2vw;
+        z-index: 0;
+    }
+
+    .gold-plate__mission-box {
+        top: 6vw;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30vw;
+        border: none;
+        border-radius: 0;
+        background-color: #000000;
+        opacity: 0.8;
+    }
+
+    .gold-plate__line {
+        opacity: 1; 
+        color:white;
+        line-height: 3;
+        max-width: 52vw;
+        position: absolute;
+    }
+
+    .gold-plate__dialogue-box {
+        display: none;
+    }
+
+    #gold-plate-hyun-avatar {
+        display: none;
+        top:-2.7vw; left: -11vw
+    }
+
+
+
+/* link to lounge */
+
+    .lounge-link__clicker {
+        position: absolute;
+        top: 21vw;
+        left: 40vw;
+        width: 7vw;
+        height: 12vw;
+    }
+
+    .clicker-12-1 {
+    }
+
+
+/*lines */
+
+    /* 
+    애니메이션 타임
+    npc라인: 3초, 0.5초
+    player라인: 2초, 3.5(+)
+    */
+
+    /* small-hyun lines */
+
+    .line-0 {animation: typing 3s 0.5s linear backwards; margin-top: 3.7vw;}
+
+    .line-0-1 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+
+    .line-0-2 {animation: typing 3s 6.5s linear backwards; margin-top: 0vw;}
+
+    .line-1 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-2 {animation: typing 2s 2.5s linear backwards;}
+
+    .line-3 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-4 {animation: typing 2s 2.5s linear backwards;}
+
+    .line-5 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-6 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+
+    .line-7 {animation: typing 2s 6.5s linear backwards; margin: var(--bottom-line-double);}
+
+    .line-8 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-9 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+
+    .line-10 {animation: typing 2s 6.5s linear backwards; margin: var(--bottom-line-double);}
+
+    /* big-hyun lines */
+    .line-11 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-12 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+
+    .line-13 {animation: typing 3s 6.5s linear backwards; margin-top: 0vw;}
+
+    .line-14 {animation: typing 2s 9.5s linear backwards; margin: var(--bottom-line-triple);}
+
+    .line-15 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-16 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+
+    .line-17 {animation: typing 2s 6.5s linear backwards; margin: var(--bottom-line-double);}
+
+    .line-18 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-19 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-20 {animation: typing 3s 3.5s linear backwards; margin-top: 0;}
+
+    .line-21 {animation: typing 3s 2.5s linear backwards; margin-top: 0;}
+
+    .line-22 {animation: typing 3s 2.5s linear backwards; margin-top: 0; margin: var(--bottom-line-triple);}
+
+    .line-23 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-23-1 {animation: typing 3s 3.5s linear backwards; margin-top: 0;}
+
+    .line-23-2 {animation: typing 3s 6.5s linear backwards; margin-top: 0;}
+
+
+
+
+    /* gold-plate lines */
+    /* --> mission statement */
+    .gold-plate__name {
+        margin: 3vw 0 2vw 30vw;
+        color: white;
+        max-width: 5vw;
+        overflow: hidden; 
+        white-space: nowrap;
+        animation: typing 6s 1s linear backwards;}
+
+    .line-24 {
+        margin: 0 0 0 6vw;
+        max-width: 3vw;
+        animation: typing 2.5s 2.5s linear backwards;}
+
+    .line-25 {
+        margin: 0 0 0 9vw;
+        max-width: 50vw;
+        animation: typing 2.5s 4s linear backwards}
+
+    .line-26 {
+        margin: 4vw 0 0 6vw;
+        max-width: 3vw;
+        animation: typing 2.5s 7.5s linear backwards}
+
+    .line-27 {
+        margin: 4vw 0 0 7.9vw;
+        max-width: 50vw;
+        animation: typing 2.5s 9s linear backwards}
+
+    .line-28 {
+        margin: 8vw 0 0 7.9vw;
+        max-width: 50vw;
+        animation: typing 2.5s 11.3s linear backwards}
+
+    .line-29 {
+        margin: 12vw 0 0 6vw;
+        max-width: 3vw;
+        animation: typing 2.5s 14s linear backwards}
+
+    .line-30 {
+        margin: 12vw 0 0 7.9vw;
+        max-width: 50vw;
+        animation: typing 2.5s 16s linear backwards}
+
+    .line-31 {
+        margin: 16vw 0 0 7.9vw;
+        max-width: 50vw;
+        animation: typing 2.5s 18.3s linear backwards}
+
+    /* --> dialogue lines */
+    .line-32 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-33 {animation: typing 2s 3.5s linear backwards;}
+
+    .line-34 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-35 {animation: typing 2s 3.5s linear backwards;}
+
+    .line-36 {animation: typing 3s 0.5s linear backwards;}
+
+    .line-36-1 {animation: typing 2s 2.5s linear backwards; margin: var(--bottom-line-double);}
+
+    .line-36-2 {animation: typing 2s 3.5s linear backwards; margin-top: 0;}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+/* @keyframes overflow {
+    from {overflow: hidden;}
+    to {overflow: visible;}
+} */
+
+@keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* gif animation elements */
+
+    /* employee */
+    .employee {
+        width: 8.5vw;
+        position: absolute;
+        top: 22.5vw;
+        left: 27.4vw;}
+
+        .employee1 {display: block;} 
+        .employee2 {display: none;} 
+        .employee3 {display: none;}
+
+    /* boy */
+    .boy {
+        width: 7vw;
+        position: absolute;
+        top: 24.5vw;
+        left: 47vw;}
+
+        .boy1 {display: block;} 
+        .boy2 {display: none;} 
+
+
+    /* arrow */
+    .arrow {
+        width: 5vw;
+        position: absolute;
+        top: 7vw;
+        left: 92vw;}
+
+        .arrow1 {display: block;} 
+        .arrow2 {display: none;} 
+        .arrow3 {display: none;}
+
+
+
+

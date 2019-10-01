@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/1st_floor_lobby.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+
+    <title>로비 - 센티멘탈 호텔</title>
+</head>
+<body>
+    <div class="fade-box"></div>
+    <div class="container">
+        
+        <div class="start">
+            <div class="dialogue dialogue__start">
+                <div class="dialogue-box">
+                    <p class="line npc-line line-0">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
+                    <p class="line npc-line line-0-1">그나저나 어디로 가야 하지? 음...</p>
+                    <p class="line npc-line line-0-2">일단 리셉션 직원과 이야기해봐야겠다. <span class="clicker clicker-0">(리셉션 데스크 안의 직원과 이야기해 보자.)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-hyun">
+            <img class="gif small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
+            <div class="dialogue small-hyun__dialogue">
+                <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
+                <div class="dialogue-box">
+                    <h1 class="name">작은 현</h1>
+                    <p class="line npc-line line-1">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
+                    <p class="line player-line line-2">- (어린 아이가 나에게 반말을 하지만... 첫날이니 그러려니 해야지.) <span class="clicker clicker-1">네, 그렇습니다!</span></p>
+                    <p class="line npc-line line-3">너 이름이 뭐야?</p>
+                    <p class="line player-line line-4 ">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="이름을 입력하세요! (최대 5자)" maxlength="5"><input class="clicker clicker-2" type="submit" value="입니다!"></p>
+                    <p class="line npc-line line-5">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
+                    <p class="line npc-line line-6">날 부를 때는 그냥 '작은 지배인'님이라고 불러.</p>
+                    <p class="line player-line line-7">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-3">작은 지배인님.</span></p>
+                    <p class="line npc-line line-8">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
+                    <p class="line npc-line line-9">큰 현이한테 가봐.</p>
+                    <p class="line player-line line-10">(로비를 보니 큰 현이 서 있다. <span class="clicker clicker-4">큰 현에게 가보자.</span>)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="big-hyun">
+            <img class="gif big-hyun__gif" src="image/1st_floor_lobby/큰현.gif">
+            
+            <div class="dialogue big-hyun__dialogue">
+                <div class="big-hyun__map">
+                    <div class="transparent-background"></div>
+                    <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
+                    <img class="big-hyun__mapimg big-hyun__mapimg__1-3" src="image/1st_floor_lobby/1-3.png">
+                    <img class="big-hyun__mapimg big-hyun__mapimg__4-7" src="image/1st_floor_lobby/4-7.png">
+                </div>
+                <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
+                <div class="dialogue-box">
+                    <h1 class="name">큰 현</h1>
+                    <p class="line npc-line line-11">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요? 얘기 많이 들었어요.</p>
+                    <p class="line npc-line line-12">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
+                    <p class="line npc-line line-13"><span class="player-name"></span>씨가 저를 부를 때는 ‘큰 지배인님’이라고 부르면 되요.</p>
+                    <p class="line player-line line-14">- (이 호텔은 지배인이 두 명인가...?) <span class="clicker clicker-5">네, 큰 지배인님!</span></p>
+                    <p class="line npc-line line-15">오늘 <span class="player-name"></span>씨는 저와 함께 호텔을 다니면서 호텔의 구조와 서비스에 대해 배울 예정이에요.</p>
+                    <p class="line npc-line line-16">신입 직원의 교육 태도는 직원 평가 점수에 반영이 되기 때문에, 적극적으로 참여해주시는 것이 좋겠죠?</p>
+                    <p class="line player-line line-17">- 네! <span class="clicker clicker-6">최선을 다하겠습니다!</span></p>
+                    <p class="line npc-line line-18">좋아요. 그럼 먼저 이 호텔의 <span class="clicker clicker-9">구조</span>에 대해 간략히 알려 드릴게요.</p>
+                    <p class="line npc-line line-19">센티멘탈 호텔은 총 7층으로 이루어져 있어요.</p> 
+                    <p class="line npc-line line-20"><span class="clicker clicker-9-1">1층부터 3층</span>에는 리셉션, 회의실, 레스토랑, 수영장 등 고객 편의를 위한 시설이 있죠.</p>
+                    <p class="line npc-line line-21"><span class="clicker clicker-9-2">4층부터 7층</span>에는 객실이 있어요. 위로 올라갈수록 전망과 서비스가 좋아지고, 그만큼 가격도 비싸지죠.</p>
+                    <p class="line player-line line-22">그럼 <span class="clicker clicker-10">1층부터 둘러 볼까요?</span></p>
+                    <p class="line npc-line line-23">먼저 이곳은 센티멘탈 호텔의 로비예요. 로비에는 체크인을 위한 리셉션이 있죠.</p>
+                    <p class="line npc-line line-23-1">로비에는 클릭할 수 있는 요소들이 여러가지 있습니다. 로비의 이곳 저곳을 눌러 보세요! </p>
+                    <p class="line npc-line line-23-2">다 둘러보셨다면 중앙에 있는 통로를 눌러 호텔 <span class="clicker clicker-11">라운지로 이동해 주세요.</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gold-plate">
+            <img class="gif gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
+            <div class="dialogue gold-plate__dialogue">
+                <div class="transparent-background"></div>
+                <div class="dialogue-box gold-plate__mission-box">
+                    <h1 class="name gold-plate__name">미션</h1>
+                    <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
+                    <span class="line gold-plate__line line-25">우리는 모든 고객이 호텔의 서비스를 통해 센티멘탈 호텔만의 섬세함을 경험케 한다.</span>
+                    <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
+                    <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
+                    <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
+                    <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
+                    <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때 묻지 않은 순수한 마음을 통해 현이 더 나은</span>
+                    <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
+                </div>
+                <div class="dialogue-box gold-plate__dialogue-box">
+                    <h1 id="gold-plate-dialogue" class="name"><span class="player-name"></span></h1>
+                    <p class="line npc-line line-32">(잠깐, 현이 더 나은 삶을 누릴 수 있도록 기여한다고? 무언가 이상하다.)</p>
+                    <p class="line player-line line-33">저기… 큰 지배인님. 저 미션에서 세 번째 문장은 <span class="clicker clicker-7">무슨 의미인가요?</span></p>
+                    <img id="gold-plate-hyun-avatar" class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
+                    <p  class="line npc-line line-34">아 그거요... 차차 알게 되실 겁니다. 걱정하실 것 없어요~</p>
+                    <p class="line player-line line-35"><span class="clicker clicker-8">(그녀는 의미심장한 미소를 지었다...)</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="lounge-link">
+            <div class="clicker lounge-link__clicker" title="라운지로 가기"></div>
+            <div class="dialogue lounge-link__dialogue">
+                <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
+                <div class="dialogue-box">
+                    <h1 class="name">큰 현</h1>
+                    <p class="line npc-line line-36">로비를 다 둘러보셨나요? 그럼 라운지로 가죠.</p>
+                    <p class="line player-line line-36-1">- 네, <a href="1st-floor-lounge.html"><span class="clicker clicker-12-1">가시죠.</span></a></p>
+                <p class="line player-line line-36-2">- 아니요, <span class="clicker clicker-12-2">조금 더 둘러보겠습니다.</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="employee-gif">
+            <img class="gif employee employee1" src="image/1st_floor_lobby/employee1.png">
+            <img class="gif employee employee3" src="image/1st_floor_lobby/employee3.png">
+        </div>
+        <div class="boy-gif">
+            <img class="gif boy boy1" src="image/1st_floor_lobby/boy1.png">
+            <img class="gif boy boy2" src="image/1st_floor_lobby/boy2.png">
+        </div>
+        <div class="arrow-gif">
+            <img class="gif arrow arrow1" src="image/1st_floor_lobby/arrow1.png">
+            <img class="gif arrow arrow2" src="image/1st_floor_lobby/arrow2.png">
+            <img class="gif arrow arrow3" src="image/1st_floor_lobby/arrow3.png">
+        </div>
+        
+        
+    </div>
+    <script>
+
+    // save user name to sessionStorage and bring it out
+
+        let playerName = function() {
+            let inputVal = document.getElementById("playerName").value;
+            sessionStorage.setItem("playerName", inputVal);
+            let nameBlockArray = document.querySelectorAll('.player-name');
+            nameBlockArray.forEach(putName);
+        }
+        
+        function putName(value, index) {
+            document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
+        }
+
+
+    // add fade in (main start version), disappear fade-in box
+        document.querySelector('.fade-box').classList.add('fade-in-start');
+        setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 4000);
+    
+
+    //start dialogue
+
+        setTimeout(()=> {
+            document.querySelector('.dialogue__start').style.display = 'block';
+            document.querySelector('.line-0').style.display = 'block';
+            document.querySelector('.line-0-1').style.display = 'block';
+            document.querySelector('.line-0-2').style.display = 'block';
+        }, 5000);
+        document.querySelector('.clicker-0').addEventListener('click', ()=> {
+            document.querySelector('.dialogue__start').style.display = 'none';
+        })
+        
+
+    
+    // small hyun
+        let hasClickedSmallHyun = false;
+        document.querySelector('.small-hyun__gif').addEventListener('click', () => {
+            if (hasClickedSmallHyun === true) {
+                document.querySelector('.small-hyun__dialogue').style.display = 'block';
+                document.querySelector('.line-8').style.display = 'block';
+                document.querySelector('.line-9').style.display = 'block';
+                document.querySelector('.line-10').style.display = 'block';
+            } else {
+                document.querySelector('.small-hyun__dialogue').style.display = 'block';
+                document.querySelector('.line-1').style.display = 'block';
+                document.querySelector('.line-2').style.display = 'block';
+            }
+        });
+        document.querySelector('.clicker-1').addEventListener('click', () => {
+            document.querySelector('.line-1').style.display = 'none';
+            document.querySelector('.line-2').style.display = 'none';
+            document.querySelector('.line-3').style.display = 'block';
+            document.querySelector('.line-4').style.display = 'block';
+        })
+        document.querySelector('.clicker-2').addEventListener('click', () => {
+            playerName();
+            document.querySelector('.line-3').style.display = 'none';
+            document.querySelector('.line-4').style.display = 'none';
+            document.querySelector('.line-5').style.display = 'block';
+            document.querySelector('.line-6').style.display = 'block';
+            document.querySelector('.line-7').style.display = 'block';
+        })
+        document.querySelector('#playerName').addEventListener('keyup', (event) => {
+            if (event.keyCode === 13) {
+                playerName();
+            document.querySelector('.line-3').style.display = 'none';
+            document.querySelector('.line-4').style.display = 'none';
+            document.querySelector('.line-5').style.display = 'block';
+            document.querySelector('.line-6').style.display = 'block';
+            document.querySelector('.line-7').style.display = 'block';
+            }
+        })
+        document.querySelector('.clicker-3').addEventListener('click', () => {
+            document.querySelector('.line-5').style.display = 'none';
+            document.querySelector('.line-6').style.display = 'none';
+            document.querySelector('.line-7').style.display = 'none';
+            document.querySelector('.line-8').style.display = 'block';
+            document.querySelector('.line-9').style.display = 'block';
+            document.querySelector('.line-10').style.display = 'block';
+        })
+        document.querySelector('.clicker-4').addEventListener('click', () => {
+            hasClickedSmallHyun = true;
+            document.querySelector('.line-8').style.display = 'none';
+            document.querySelector('.line-9').style.display = 'none';
+            document.querySelector('.line-10').style.display = 'none';
+            document.querySelector('.small-hyun__dialogue').style.display = 'none';
+        })
+
+
+
+
+
+    //big hyun
+
+        let hasClickedBigHyun = false;
+        document.querySelector('.big-hyun__gif').addEventListener('click', () => {
+            document.querySelector('.big-hyun__dialogue').style.display = 'block';
+            document.querySelector('.line-11').style.display = 'block';
+            document.querySelector('.line-12').style.display = 'block';
+            document.querySelector('.line-13').style.display = 'block';
+            document.querySelector('.line-14').style.display = 'block';
+        })
+        document.querySelector('.clicker-5').addEventListener('click', () => {
+            document.querySelector('.line-11').style.display = 'none';
+            document.querySelector('.line-12').style.display = 'none';
+            document.querySelector('.line-13').style.display = 'none';
+            document.querySelector('.line-14').style.display = 'none';
+            document.querySelector('.line-15').style.display = 'block';
+            document.querySelector('.line-16').style.display = 'block';
+            document.querySelector('.line-17').style.display = 'block';
+        })
+        document.querySelector('.clicker-6').addEventListener('click', () => {
+            document.querySelector('.line-15').style.display = 'none';
+            document.querySelector('.line-16').style.display = 'none';
+            document.querySelector('.line-17').style.display = 'none';
+            document.querySelector('.line-18').style.display = 'block';
+        })
+        document.querySelector('.clicker-9').addEventListener('click', ()=> {
+            document.querySelector('.line-18').style.display = 'none';
+            document.querySelector('.big-hyun__map').style.display = 'block';
+            document.querySelector('.line-19').style.display = 'block';
+            document.querySelector('.line-20').style.display = 'block';
+        })
+        document.querySelector('.clicker-9-1').addEventListener('click', ()=> {
+            document.querySelector('.big-hyun__mapimg__1-3').style.display = 'block';
+            document.querySelector('.line-21').style.display = 'block';
+        })
+        document.querySelector('.clicker-9-2').addEventListener('click', ()=> {
+            document.querySelector('.big-hyun__mapimg__4-7').style.display = 'block';
+            document.querySelector('.line-22').style.display = 'block';
+        })
+        document.querySelector('.clicker-10').addEventListener('click', ()=> {
+            document.querySelector('.big-hyun__map').style.display = 'none';
+            document.querySelector('.line-19').style.display = 'none';
+            document.querySelector('.line-20').style.display = 'none';
+            document.querySelector('.big-hyun__mapimg__1-3').style.display = 'none';
+            document.querySelector('.line-21').style.display = 'none';
+            document.querySelector('.big-hyun__mapimg__4-7').style.display = 'none';
+            document.querySelector('.line-22').style.display = 'none';
+            document.querySelector('.line-23').style.display = 'block';
+            document.querySelector('.line-23-1').style.display = 'block';
+            document.querySelector('.line-23-2').style.display = 'block';
+        })
+        document.querySelector('.clicker-11').addEventListener('click', ()=> {
+            hasClickedBigHyun = true;
+            document.querySelector('.big-hyun__dialogue').style.display = 'none';
+        })
+
+
+
+
+    //gold plate
+
+        document.querySelector('.gold-plate__gif').addEventListener('click', ()=> {
+            document.querySelector('.gold-plate__dialogue').style.display = 'block';
+            document.querySelector('.transparent-background').style.display = 'block';
+            document.querySelector('.gold-plate__mission-box').style.display = 'block';
+            document.querySelector('.line-24').style.display = 'inline-block';
+            document.querySelector('.line-25').style.display = 'inline-block';
+            document.querySelector('.line-26').style.display = 'inline-block';
+            document.querySelector('.line-27').style.display = 'inline-block';
+            document.querySelector('.line-28').style.display = 'inline-block';
+            document.querySelector('.line-29').style.display = 'inline-block';
+            document.querySelector('.line-30').style.display = 'inline-block';
+            document.querySelector('.line-31').style.display = 'inline-block';
+            setTimeout(()=> {document.querySelector('.gold-plate__dialogue-box').style.display = 'block';}, 21000);
+            document.querySelector('.line-32').style.display = 'block';
+            document.querySelector('.line-33').style.display = 'block';
+        })
+        document.querySelector('.clicker-7').addEventListener('click', ()=> {
+            document.querySelector('.line-32').style.display = 'none';
+            document.querySelector('.line-33').style.display = 'none';
+            document.querySelector('#gold-plate-dialogue').textContent = '큰 현';
+            document.querySelector('#gold-plate-hyun-avatar').style.display = 'block';
+            document.querySelector('.line-34').style.display = 'block';
+            document.querySelector('.line-35').style.display = 'block';
+        })
+
+        document.querySelector('.clicker-8').addEventListener('click', ()=> {
+            document.querySelector('.gold-plate__dialogue').style.display = 'none';
+        })
+
+
+    //link to lounge
+
+        document.querySelector('.lounge-link__clicker').addEventListener('click', ()=> {
+            document.querySelector('.lounge-link__dialogue').style.display = 'block';
+            document.querySelector('.line-36').style.display = 'block';
+            document.querySelector('.line-36-1').style.display = 'block';
+            document.querySelector('.line-36-2').style.display = 'block';
+        })
+        document.querySelector(".clicker-12-1").addEventListener('click', (event)=> {
+            event.preventDefault();
+            document.querySelector('.fade-box').classList.add('fade-out');
+            document.querySelector('.fade-out').style.display = 'block';
+            setTimeout(()=> {
+               window.location.assign('1st_floor_lounge.html')}, 3000);
+        })
+        document.querySelector('.clicker-12-2').addEventListener('click', ()=> {
+            document.querySelector('.lounge-link__dialogue').style.display = 'none';
+        })
+
+        
+
+    // gif animation script
+
+        //employee
+
+            let employee1 = document.querySelector('.employee1');
+            let employee3 = document.querySelector('.employee3');
+
+            employee1.addEventListener('click', ()=> {
+                let employeegif = ()=> {
+                setTimeout(function(){employee1.style.display = 'none';}, 200)
+                setTimeout(function(){employee3.style.display = 'block';}, 200)
+                setTimeout(function(){employee3.style.display = 'none';}, 400)
+                setTimeout(function(){employee1.style.display = 'block';}, 400)
+                }
+                let repeat = setInterval(employeegif, 400);
+                setTimeout(function() {clearInterval(repeat);}, 800)
+            })
+
+
+
+        //boy
+
+            let boy1 = document.querySelector('.boy1');
+            let boy2 = document.querySelector('.boy2');
+
+            boy1.addEventListener('click', ()=> {
+                let boygif = ()=> {
+                setTimeout(function(){boy1.style.display = 'none';}, 400)
+                setTimeout(function(){boy2.style.display = 'block';}, 400)
+                setTimeout(function(){boy2.style.display = 'none';}, 2000)
+                setTimeout(function(){boy1.style.display = 'block';}, 2000)
+                }
+                boygif();
+            })
+
+
+
+        // arrow
+
+            let arrow1 = document.querySelector('.arrow1');
+            let arrow2 = document.querySelector('.arrow2');
+            let arrow3 = document.querySelector('.arrow3');
+
+            arrow1.addEventListener('click', ()=> {
+                let arrowgif = ()=> {
+                setTimeout(function(){arrow1.style.display = 'none';}, 100)
+                setTimeout(function(){arrow2.style.display = 'block';}, 100)
+                setTimeout(function(){arrow2.style.display = 'none';}, 300)
+                setTimeout(function(){arrow3.style.display = 'block';}, 300)
+                setTimeout(function(){arrow3.style.display = 'none';}, 500)
+                setTimeout(function(){arrow1.style.display = 'block';}, 500)
+                }
+                let repeat = setInterval(arrowgif, 500);
+                setTimeout(function() {clearInterval(repeat);}, 1800)
+            })
+    </script>
+</body>
+
+    
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/2nd_floor.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+
+    <title>비즈니스 센터 - 센티멘탈 호텔</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="reception">
+            <img class="gif reception__gif" src="image/2nd_floor/직원.gif">
+            <div id="reception__dialogue" class="dialogue">
+                <div class="dialogue-box">
+                    <h1 id="reception-name" class="name">비즈니스 센터</h1>
+                    <p class="line npc-line line-1">어디를 둘러보시겠습니까?</p><br>
+                    <p class="line npc-line line-1-1">&bull; <span class="clicker clicker-1-1">회의실 1</span>&nbsp;&nbsp;&bull; <span class="clicker clicker-1-2">회의실 2</span>&nbsp;&nbsp;&bull; <span class="clicker clicker-1-3">회의실 3</span></p>
+                    <p class="line npc-line line-1-2">&bull; <span class="clicker clicker-1-4">강의실</span></p>
+                    <p class="line npc-line line-1-3">&bull; <span class="clicker clicker-1-5">연회장</span></p>
+                    <p class="line player-line line-1-4">- <span class="clicker clicker-1-6">충분히 둘러 보았습니다.</span></p>
+                </div>
+            </div>
+
+            <div id="dialogue__conference-room-1" class="dialogue">
+                <div class="transparent-background"></div>
+                <img class="room conference-room-1" src="image/2nd_floor/회의실1.png">
+                <div class="dialogue-box">
+                    <p class="line npc-line line-2-1">엇... 저건 작은 지배인님이잖아?</p>
+                    <p class="line npc-line line-2-2">막 데핀 호빵 같은 볼은 터지기라도 할 듯 빵빵하게 부풀어 올랐고.</p>
+                    <p class="line npc-line line-2-3">초롱초롱한 눈은 상대방을 뚫을 기세로 쳐다보고 있으며,</p>
+                    <p class="line npc-line line-2-4">오리처럼 짤막한 다리는 물에서 헤엄치듯 신나게 흔들리고 있군...</p>
+                    <p class="line npc-line line-2-5">저 남자는 누굴까?</p>
+                </div>
+            </div>
+
+            <div id="dialogue__conference-room-2" class="dialogue">
+                <div class="transparent-background"></div>
+                <img class="room conference-room-2" src="image/2nd_floor/회의실3.png">
+                <div class="dialogue-box">
+                    <p class="line npc-line line-3-1">누가 봐도 작업하다 블루스크린이 떠서 모든 데이터가 날라가서 멘탈이 나가서</p>
+                    <p class="line npc-line line-3-2">욕을 퍼붓다가 지쳐 쓰러져 지금까지의 인생을 되돌아보는 듯한 표정이군...</p>
+                </div>
+            </div>
+
+            <div id="dialogue__lecture-room" class="dialogue">
+                <div class="transparent-background"></div>
+                <img class="room conference-room-2" src="image/2nd_floor/강의실.png">
+                <div class="dialogue-box">
+                    <p class="line npc-line line-4-1">넌 나의 비올레타</p>
+                    <p class="line npc-line line-4-2">나에게 다 ah ah ah ah </p>
+                    <p class="line npc-line line-4-3">(역사 강의를 하고 있는 것 같다).</p>
+                </div>
+            </div>
+
+            <div id="dialogue__banquet-room" class="dialogue">
+                <div class="transparent-background"></div>
+                <img class="room banquet-room" src="image/2nd_floor/연회장.png">
+                <div class="dialogue-box">
+                    <p class="line npc-line line-5-1">자 여러분! 드디어 새 학기가 시작되었습니다. 모두 멋진 한 한기를 만들어 봅시다!</p>
+                    <p class="line npc-line line-5-2">그럼, 오늘 한번 달려 볼까요? 먼저 교수님의 건배사가 있겠습니다.</p>
+                    <p class="line npc-line line-5-3">교수님 나와주세요~!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+        //reception
+
+            document.querySelector('.reception__gif').addEventListener('click', ()=> {
+                document.querySelector('#reception__dialogue').style.display = 'block';
+                document.querySelector('.line-1').style.display = 'block';
+                document.querySelector('.line-1-1').style.display = 'block';
+                document.querySelector('.line-1-2').style.display = 'block';
+                document.querySelector('.line-1-3').style.display = 'block';
+                document.querySelector('.line-1-4').style.display = 'block';
+            })
+
+            let disappearText = () => {
+                document.querySelector('.line-1').style.display = 'none';
+                document.querySelector('.line-1-1').style.display = 'none';
+                document.querySelector('.line-1-2').style.display = 'none';
+                document.querySelector('.line-1-3').style.display = 'none';
+                document.querySelector('.line-1-4').style.display = 'none';
+            };
+
+                document.querySelector('.clicker-1-1').addEventListener('click', ()=> {
+                    disappearText();
+                    document.querySelector('#dialogue__conference-room-1').style.display = 'block';
+                    document.querySelector('.line-2-1').style.display = 'block';
+                    document.querySelector('.line-2-2').style.display = 'block';
+                    document.querySelector('.line-2-3').style.display = 'block';
+                    document.querySelector('.line-2-4').style.display = 'block';
+                    document.querySelector('.line-2-5').style.display = 'block';
+                    setTimeout(()=>{
+                        document.querySelector('#dialogue__conference-room-1').style.display = 'none';}, 
+                    7000);
+                });
+
+                document.querySelector('.clicker-1-2').addEventListener('click', ()=> {});
+                document.querySelector('.clicker-1-3').addEventListener('click', ()=> {});
+                document.querySelector('.clicker-1-4').addEventListener('click', ()=> {});
+                document.querySelector('.clicker-1-5').addEventListener('click', ()=> {});
+                document.querySelector('.clicker-1-6').addEventListener('click', ()=> {});
+
+    </script>
+</body>
+</html>
