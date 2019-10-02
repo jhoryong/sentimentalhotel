@@ -81,15 +81,15 @@ a:link, a:visited {
     }
 
 .transparent-background {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
     height: 56.25vw;
     background-color: #000000;
-    opacity: 0.6;
-    z-index: 10;
+    opacity: 0.85;
+    z-index: 5;
 }
 
 .dialogue {
@@ -157,33 +157,135 @@ a:link, a:visited {
     strong { font-weight: bold; }
 
 
+
+/* clock */
+
+    .clock {
+        width: 15vw;
+        position: absolute;
+        top: 10.4vw;
+        left: 6.2vw;}
+
+        .clock1 {display: block;} 
+        .clock2 {display: none;} 
+        .clock3 {display: none;} 
+        .clock4 {display: none;} 
+        .clock5 {display: none;} 
+        .clock6 {display: none;} 
+        .clock7 {display: none;} 
+        .clock8 {display: none;} 
+        .clock9 {display: none;} 
+        .clock10 {display: none;} 
+        .clock11 {display: none;} 
+        .clock12 {display: none;} 
+
 /* reception */
 
     .reception__gif {
-        width: 20vw;
-        top: 28.7vw;
-        left: 12.5vw;
+        width: 22vw;
+        top: 26.7vw;
+        left: 13.5vw;
     }
 
     .room {
         position: absolute;
-        top: 3vw;
+        top: 3.5vw;
         left: 50%;
         transform: translateX(-50%);
         width: 40vw;
-        display: none;
+        z-index: 10;
+        /* display: none; */
     }
 
+/* handshake */
+
+    .handshake {
+        width: 16vw;
+        position: absolute;
+        top: 26vw;
+        left: 49vw;}
+
+        .handshake1 {display: block;} 
+        .handshake2 {display: none;} 
+        .handshake3 {display: none;} 
+
+
+
+/* copier */
+
+    .copier {
+        width: 7vw;
+        position: absolute;
+        top: 29vw;
+        left: 66vw;
+    }
+
+    .paper {
+        width: 6vw;
+        position: absolute;
+        top: 27vw;
+        left: 65.5vw;}
+
+        .paper1 {display: none;} 
+        .paper2 {display: none;} 
+        .paper3 {display: none;} 
+        .paper4 {display: none;} 
+        .paper5 {display: none;} 
+        .paper6 {display: none;} 
+        .paper7 {display: none;}   
+
+/* big-hyun */
+
+    .big-hyun__gif {
+        width: 12vw;
+        top: 25vw;
+        left: 77vw;
+    }
+
+    .big-hyun__avatar {
+        width: 15.4vw;
+        top: 33.8vw;
+        left: 14vw;
+    }
 
 /* lines */
 
     .line-1 {animation: typing 2s 0.5s linear backwards;}
-
     .line-1-1 {animation: typing 3s 1.5s linear backwards; margin-top: 0vw;}
-
     .line-1-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
     .line-1-3 {animation: typing 2s 3s linear backwards; margin-top: 0vw;}
-
     .line-1-4 {animation: typing 2s 3.5s linear backwards; margin: var(--bottom-line-quintuple);}
+
+    /* conference room 1 */
+    .line-1-1-1 {animation: typing 2s 0.5s linear backwards;}
+    .line-1-1-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+    .line-1-1-3 {animation: typing 2s 3.5s linear backwards; margin-top: 0vw;}
+    .line-1-1-4 {animation: typing 2s 5s linear backwards; margin-top: 0vw;}
+    .line-1-1-5 {animation: typing 2s 6.5s linear backwards; margin-top: 0vw;}
+    .line-1-1-6 {animation: typing 2s 8s linear backwards; margin: var(--bottom-line-quintuple);}
+   
+    /* conference room 2 */
+    .line-1-2-1 {animation: typing 2s 0.5s linear backwards;}
+    .line-1-2-2 {animation: typing 2s 2s linear backwards; margin: var(--bottom-line-single);}
+
+    /* conference room 3 */
+    .line-1-3-1 {animation: typing 3s 0.5s linear backwards;}
+    .line-1-3-2 {animation: typing 3s 3s linear backwards; margin-top: 0vw;}
+    .line-1-3-3 {animation: typing 2s 5.5s linear backwards; margin: var(--bottom-line-double);}
     
+    /* lecture room */
+    .line-2-1 {animation: typing 3s 0.5s linear backwards;}
+    .line-2-2 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
+    .line-2-3 {animation: typing 2s 6.5s linear backwards; margin: var(--bottom-line-triple);}
+    .line-2-4 {animation: typing 2s 7.5s linear backwards; margin-top: 0vw;}
+
+    /* banquet hall */
+    .line-3-1 {animation: typing 2s 0.5s linear backwards;}
+    .line-3-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
+    .line-3-3 {animation: typing 2s 4.5s linear backwards; margin-top: 0vw;}
+    .line-3-4 {animation: typing 2s 6s linear backwards; margin: var(--bottom-line-triple);}
+
+    /* big hyun */
+    .line-4-1 {animation: typing 3s 0.5s linear backwards;}
+    .line-4-2 {animation: typing 2s 2.5s linear backwards; margin: var(--bottom-line-double);}
+    .line-4-3 {animation: typing 2s 3s linear backwards; margin-top: 0vw;}
