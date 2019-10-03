@@ -13,7 +13,23 @@
     <title>비즈니스 센터 - 센티멘탈 호텔</title>
 </head>
 <body>
+    <div class="fade-box"></div>
+
+    
+
     <div class="container">
+
+        <div class="start">
+            <div class="dialogue dialogue__start">
+                <img class="avatar big-hyun__avatar" src="image/2nd_floor/큰현.png">
+                <div class="dialogue-box">
+                    <h1 id="big-hyun__start" class="name">큰 현</h1>
+                    <p class="line npc-line line-0-1">센티멘탈 호텔의 2층은 비즈니스를 위한 공간입니다. 
+                    <p class="line npc-line line-0-2">소규모 혹은 대규모 회의, 강의, 행사를 가질 수 있는 공간을 제공하고 있죠.</p>
+                    <p class="line npc-line line-0-3">2층의 여러 시설들을 <span class="clicker clicker-0">둘러보고 오세요.</span></p>
+                </div>
+            </div>
+        </div>
 
         <div class="clock-gif">
             <img class="gif clock clock1" src="image/2nd_floor/시계1.png">
@@ -140,7 +156,12 @@
         </div>
 
     </div>
-
+    <div class="loader">
+            <img class="chain-1" src="image/loader/chain.png">
+            <img class="chain-2" src="image/loader/chain.png">
+            <img class="frame" src="image/loader/frame.svg">
+            <img class="elevator" src="image/loader/elevator.png">
+        </div>
     <script>
 
         //input player name 
@@ -152,7 +173,21 @@
         let playerNameArray = document.querySelectorAll('.player-name');
         playerNameArray.forEach(insertName);
         
-        
+
+        // star dialogue
+
+            document.querySelector('.fade-box').classList.add('fade-in');
+            setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
+            setTimeout(()=> {
+                document.querySelector('.dialogue__start').style.display = 'block';
+                document.querySelector('.line-0-1').style.display = 'block';
+                document.querySelector('.line-0-2').style.display = 'block';
+                document.querySelector('.line-0-3').style.display = 'block';
+            }, 3000);
+            document.querySelector('.clicker-0').addEventListener('click', ()=> {
+                document.querySelector('.dialogue__start').style.display = 'none';
+            })
+
         // clock
 
             let clock1 = document.querySelector('.clock1');

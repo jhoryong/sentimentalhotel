@@ -74,6 +74,7 @@
                     <p class="line npc-line line-23">먼저 이곳은 센티멘탈 호텔의 로비예요. 로비에는 체크인을 위한 리셉션이 있죠.</p>
                     <p class="line npc-line line-23-1">로비에는 클릭할 수 있는 요소들이 여러가지 있습니다. 로비의 이곳 저곳을 눌러 보세요! </p>
                     <p class="line npc-line line-23-2">다 둘러보셨다면 중앙에 있는 통로를 눌러 호텔 <span class="clicker clicker-11">라운지로 이동해 주세요.</span></p>
+                    <p class="line npc-line line-23-3">다 둘러보셨다면 중앙에 있는 통로를 눌러 호텔 <span class="clicker clicker-11-1">라운지로 이동해 주세요.</span></p>
                 </div>
             </div>
         </div>
@@ -235,10 +236,17 @@
         let hasClickedBigHyun = false;
         document.querySelector('.big-hyun__gif').addEventListener('click', () => {
             document.querySelector('.big-hyun__dialogue').style.display = 'block';
-            document.querySelector('.line-11').style.display = 'block';
-            document.querySelector('.line-12').style.display = 'block';
-            document.querySelector('.line-13').style.display = 'block';
-            document.querySelector('.line-14').style.display = 'block';
+            if (hasClickedBigHyun === true) {
+                document.querySelector('.line-23').style.display = 'none';
+                document.querySelector('.line-23-1').style.display = 'none';
+                document.querySelector('.line-23-2').style.display = 'none';
+                document.querySelector('.line-23-3').style.display = 'block';
+            } else {
+                document.querySelector('.line-11').style.display = 'block';
+                document.querySelector('.line-12').style.display = 'block';
+                document.querySelector('.line-13').style.display = 'block';
+                document.querySelector('.line-14').style.display = 'block';
+            }
         })
         document.querySelector('.clicker-5').addEventListener('click', () => {
             document.querySelector('.line-11').style.display = 'none';
@@ -283,6 +291,9 @@
         })
         document.querySelector('.clicker-11').addEventListener('click', ()=> {
             hasClickedBigHyun = true;
+            document.querySelector('.big-hyun__dialogue').style.display = 'none';
+        })
+        document.querySelector('.clicker-11-1').addEventListener('click', ()=> {
             document.querySelector('.big-hyun__dialogue').style.display = 'none';
         })
 

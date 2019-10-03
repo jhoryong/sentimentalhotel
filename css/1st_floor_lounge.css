@@ -174,43 +174,33 @@ npc 라인: 3초
 
 /* lines */
 
-    .line-0-1 {animation: typing 3s 0.5s linear backwards;}
-
-    .line-0-2 {animation: typing 3s 3.5s linear backwards; margin-top: 0vw;}
-
+    .line-0-1 {animation: typing 2s 0.5s linear backwards;}
+    .line-0-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
+    :root {
+        --speed: 1s;
+        --diff: 0.3s;
+        --start: 1.5s;
+    }
     .line-1 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-1-1 {animation: typing 2s 1.5s linear backwards; margin-top: 0vw;}
-
-    .line-1-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
-
-    .line-1-3 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
-    .line-1-4 {animation: typing 2s 3s linear backwards; margin-top: 0vw;}
-
-    .line-1-5 {animation: typing 2s 3.5s linear backwards; margin: var(--bottom-line-quintuple);}
+    .line-1-1 {animation: typing var(--speed) var(--start) linear backwards; margin-top: 0vw;}
+    .line-1-2 {animation: typing var(--speed) calc(var(--start) + var(--diff)) linear backwards; margin-top: 0vw;}
+    .line-1-3 {animation: typing var(--speed) calc(var(--start) + var(--diff)*2) linear backwards; margin-top: 0vw;}
+    .line-1-4 {animation: typing var(--speed) calc(var(--start) + var(--diff)*3) linear backwards; margin-top: 0vw;}
+    .line-1-5 {animation: typing var(--speed) calc(var(--start) + var(--diff)*4) linear backwards; margin: var(--bottom-line-quintuple);}
 
 
     .line-2-1 {animation: typing 5s 0.5s linear backwards;}
-
     .line-2-2 {animation: typing 5s 0.5s linear backwards;}
-
     .line-2-3 {animation: typing 5s 0.5s linear backwards;}
-
     .line-2-4-1 {animation: typing 3s 1s linear backwards;}
-
     .line-2-4-2 {animation: typing 5s 4s linear backwards; margin-top: 0vw;}
-
-    .line-2-4-3 {animation: typing 5s 9s linear backwards; margin-top: 0vw;}
-
-    .line-2-4-4 {animation: typing 14s 14s linear backwards; margin-top: 0vw;}
+    .line-2-4-3 {animation: typing 5s 7s linear backwards; margin-top: 0vw;}
+    .line-2-4-4 {animation: typing 14s 11s linear backwards; margin-top: 0vw;}
 
 
-    .line-3 {animation: typing 3s 0.5s linear backwards;}
-
-    .line-3-1 {animation: typing 2s 2.5s linear backwards; margin: var(--bottom-line-double);}
-
-    .line-3-2 {animation: typing 2s 3.5s linear backwards; margin-top: 0vw;}
+    .line-3 {animation: typing 2s 0.5s linear backwards;}
+    .line-3-1 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
+    .line-3-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
 
 @keyframes typing {
     from {width: 0;}

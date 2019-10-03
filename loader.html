@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>올라가는 중</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+    .circle {
+        position: absolute;
+        margin: 0 auto;
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+        z-index: 1010;
+    }
+
+    .circle::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        width: 35vw;
+        height: 35vw;
+        box-shadow: 0px 0px 0px 1000px #000000;
+    }
+
+    /* delete 'infinite' at use*/
+        
+    .chain {
+        position: absolute;
+        z-index: 1000;
+        width: 1vw;
+        animation: chain-falling 20s linear infinite;
+    }
+        
+        .chain__upwards {
+            animation: chain-falling 20s linear infinite;
+        }
+        
+        .chain__downwards {
+            animation: chain-rising 20s linear infinite;
+        }
+
+        .chain-1 {left: 40%}
+
+        .chain-2 {left: 59%}
+    
+    .elevator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        width: 15vw;
+    }
+        
+    /*animations*/
+        
+    @keyframes chain-falling {
+        0% { bottom: 0; }
+        100% { bottom: -100vw; }
+    }
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="circle"></div>
+        
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
+</body>
+
+</html>
