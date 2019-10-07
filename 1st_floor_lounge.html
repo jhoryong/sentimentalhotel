@@ -47,25 +47,25 @@
             </div>
             <div id="applecidar" class="dialogue">
                 <div class="dialogue-box">
-                    <h1 class="player-name"></h1>
+                    <h1 class="name"><span class="player-name"></span></h1>
                     <p class="line npc-line line-2-1">음... 신선한 사과와 톡 쏘는 탄산의 조합이 나의 갈증을 해소시키는군...</p>
                 </div>
             </div>
             <div id="earlgray" class="dialogue">
                 <div class="dialogue-box">
-                    <h1 class="player-name"></h1>
+                    <h1 class="name"><span class="player-name"></span></h1>
                     <p class="line npc-line line-2-2">음... 얼그레이의 진하면서도 달콤한 향이 첫 출근날의 긴장을 풀어주는군...</p>
                 </div>
             </div>
             <div id="americano" class="dialogue">
                 <div class="dialogue-box">
-                    <h1 class="player-name"></h1>
+                    <h1 class="name"><span class="player-name"></span></h1>
                     <p class="line npc-line line-2-3">음... 아메리카노의 씁쓸하면서도 그윽한 향이 졸음을 달아나게 만드는군...</p>
                 </div>
             </div>
             <div id="sexonthebeach" class="dialogue">
                 <div class="dialogue-box">
-                    <h1 class="player-name"></h1>
+                    <h1 class="name"><span class="player-name"></span></h1>
                     <p class="line npc-line line-2-4-1">교육중에 음주하면 안될 것 같지만… 지배인님 몰래 살짝 마셔야지 히힛.</p>
                     <p class="line npc-line line-2-4-2">음... 상큼한 과일향과 보드카의 조화가 예술이군... </p>
                     <p class="line npc-line line-2-4-3">앗, 맛이 너무 좋아 <span style="color:red;">원. 샷. </span>해버리고 말았다..!</p>
@@ -98,144 +98,144 @@
         </div>
 
     </div>
-    <script>
+<script>
 
-    // player name
+// player name
 
-        let playerNameArray = document.querySelectorAll('.player-name');
-        playerNameArray.forEach(insertName);
-        function insertName(value, index) {
-            document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
-        }
+    let playerNameArray = document.querySelectorAll('.player-name');
+    playerNameArray.forEach(insertName);
+    function insertName(value, index) {
+        document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
+    }
 
-    // start
-    
-        document.querySelector('.fade-box').classList.add('fade-in');
-        setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
+// start
+
+    document.querySelector('.fade-box').classList.add('fade-in');
+    setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
+    setTimeout(()=> {
+            document.querySelector('.dialogue__start').style.display = 'block';
+            document.querySelector('.line-0-1').style.display = 'block';
+            document.querySelector('.line-0-2').style.display = 'block';
+        }, 3000);
+        document.querySelector('.clicker-0').addEventListener('click', ()=> {
+            document.querySelector('.dialogue__start').style.display = 'none';
+        })
+
+// bartender
+
+    document.querySelector('.bartender__gif').addEventListener('click', ()=> {
+        document.querySelector('.bartender__dialogue').style.display = 'block';
+        document.querySelector('#bartender-name').textContent = '바텐더';
+        document.querySelector('.line-1').style.display = 'block';
+        document.querySelector('.line-1-1').style.display = 'block';
+        document.querySelector('.line-1-2').style.display = 'block';
+        document.querySelector('.line-1-3').style.display = 'block';
+        document.querySelector('.line-1-4').style.display = 'block';
+        document.querySelector('.line-1-5').style.display = 'block';
+    })
+
+    document.querySelector('.clicker-1-1').addEventListener('click', ()=> {
+        document.querySelector('#applecidar').style.display = 'block';
+        document.querySelector('.line-2-1').style.display = 'block';
         setTimeout(()=> {
-                document.querySelector('.dialogue__start').style.display = 'block';
-                document.querySelector('.line-0-1').style.display = 'block';
-                document.querySelector('.line-0-2').style.display = 'block';
-            }, 3000);
-            document.querySelector('.clicker-0').addEventListener('click', ()=> {
-                document.querySelector('.dialogue__start').style.display = 'none';
-            })
+            document.querySelector('#applecidar').style.display = 'none';
+        }, 5000);
+    })
     
-    // bartender
+    document.querySelector('.clicker-1-2').addEventListener('click', ()=> {
+        document.querySelector('#earlgray').style.display = 'block';
+        document.querySelector('.line-2-2').style.display = 'block';
+        setTimeout(()=> {
+            document.querySelector('#earlgray').style.display = 'none';
+        }, 5000);
+    })
+    document.querySelector('.clicker-1-3').addEventListener('click', ()=> {
+        document.querySelector('#americano').style.display = 'block';
+        document.querySelector('.line-2-3').style.display = 'block';
+        setTimeout(()=> {
+            document.querySelector('#americano').style.display = 'none';
+        }, 5000);
+    })
+    document.querySelector('.clicker-1-4').addEventListener('click', ()=> {
+        document.querySelector('#sexonthebeach').style.display = 'block';
+        document.querySelector('.line-2-4-1').style.display = 'block';
+        document.querySelector('.line-2-4-2').style.display = 'block';
+        document.querySelector('.line-2-4-3').style.display = 'block';
+        document.querySelector('.line-2-4-4').style.display = 'block';
+        setTimeout(()=> {
+            document.querySelector('#sexonthebeach').style.display = 'none';
+        }, 18000);
+    })
+    document.querySelector('.clicker-1-5').addEventListener('click', ()=> {
+        document.querySelector('.bartender__dialogue').style.display = 'none';
+    })
 
-        document.querySelector('.bartender__gif').addEventListener('click', ()=> {
-            document.querySelector('.bartender__dialogue').style.display = 'block';
-            document.querySelector('#bartender-name').textContent = '바텐더';
-            document.querySelector('.line-1').style.display = 'block';
-            document.querySelector('.line-1-1').style.display = 'block';
-            document.querySelector('.line-1-2').style.display = 'block';
-            document.querySelector('.line-1-3').style.display = 'block';
-            document.querySelector('.line-1-4').style.display = 'block';
-            document.querySelector('.line-1-5').style.display = 'block';
-        })
 
-        document.querySelector('.clicker-1-1').addEventListener('click', ()=> {
-            document.querySelector('#applecidar').style.display = 'block';
-            document.querySelector('.line-2-1').style.display = 'block';
-            setTimeout(()=> {
-                document.querySelector('#applecidar').style.display = 'none';
-            }, 5000);
-        })
-        
-        document.querySelector('.clicker-1-2').addEventListener('click', ()=> {
-            document.querySelector('#earlgray').style.display = 'block';
-            document.querySelector('.line-2-2').style.display = 'block';
-            setTimeout(()=> {
-                document.querySelector('#earlgray').style.display = 'none';
-            }, 5000);
-        })
-        document.querySelector('.clicker-1-3').addEventListener('click', ()=> {
-            document.querySelector('#americano').style.display = 'block';
-            document.querySelector('.line-2-3').style.display = 'block';
-            setTimeout(()=> {
-                document.querySelector('#americano').style.display = 'none';
-            }, 5000);
-        })
-        document.querySelector('.clicker-1-4').addEventListener('click', ()=> {
-            document.querySelector('#sexonthebeach').style.display = 'block';
-            document.querySelector('.line-2-4-1').style.display = 'block';
-            document.querySelector('.line-2-4-2').style.display = 'block';
-            document.querySelector('.line-2-4-3').style.display = 'block';
-            document.querySelector('.line-2-4-4').style.display = 'block';
-            setTimeout(()=> {
-                document.querySelector('#sexonthebeach').style.display = 'none';
-            }, 18000);
-        })
-        document.querySelector('.clicker-1-5').addEventListener('click', ()=> {
-            document.querySelector('.bartender__dialogue').style.display = 'none';
-        })
+
+
+
+
+// big hyun 
+
+    document.querySelector('.big-hyun__gif').addEventListener('click', ()=> {
+        document.querySelector('.big-hyun__dialogue').style.display = 'block';
+        document.querySelector('.line-3').style.display = 'block';
+        document.querySelector('.line-3-1').style.display = 'block';
+        document.querySelector('.line-3-2').style.display = 'block';
+    })
+    document.querySelector('.clicker-2-1').addEventListener('click', ()=> {
+        event.preventDefault();
+        document.querySelector('.fade-box').classList.add('fade-out');
+        document.querySelector('.fade-out').style.display = 'block';
+        setTimeout(()=> {
+            window.location.assign('2nd_floor.html')}, 3000);
+    })
+    document.querySelector('.clicker-2-2').addEventListener('click', ()=> {
+        document.querySelector('.big-hyun__dialogue').style.display = 'none';
+    })
     
 
 
 
 
+// gif
+    
+    // coffee machine
 
-    // big hyun 
+    document.querySelector('.coffee').addEventListener('click', ()=> {
+        document.querySelector('#coffee').play();
+    })
 
-        document.querySelector('.big-hyun__gif').addEventListener('click', ()=> {
-            document.querySelector('.big-hyun__dialogue').style.display = 'block';
-            document.querySelector('.line-3').style.display = 'block';
-            document.querySelector('.line-3-1').style.display = 'block';
-            document.querySelector('.line-3-2').style.display = 'block';
-        })
-        document.querySelector('.clicker-2-1').addEventListener('click', ()=> {
-            event.preventDefault();
-            document.querySelector('.fade-box').classList.add('fade-out');
-            document.querySelector('.fade-out').style.display = 'block';
-            setTimeout(()=> {
-               window.location.assign('2nd_floor.html')}, 3000);
-        })
-        document.querySelector('.clicker-2-2').addEventListener('click', ()=> {
-            document.querySelector('.big-hyun__dialogue').style.display = 'none';
-        })
-        
+    // lightbulb
 
+    let lightbulb1 = document.querySelector('.lightbulb1');
+    let lightbulb2 = document.querySelector('.lightbulb2');
 
+    lightbulb1.addEventListener('click', ()=> {
+        lightbulb1.style.display = 'none';
+        lightbulb2.style.display = 'block';
+    })
+    lightbulb2.addEventListener('click', ()=> {
+        lightbulb2.style.display = 'none';
+        lightbulb1.style.display = 'block';
+    })
 
+    // people
 
-    // gif
-        
-        // coffee machine
+    let people1 = document.querySelector('.people1');
+    let people2 = document.querySelector('.people2');
 
-        document.querySelector('.coffee').addEventListener('click', ()=> {
-            document.querySelector('#coffee').play();
-        })
-
-        // lightbulb
-
-        let lightbulb1 = document.querySelector('.lightbulb1');
-        let lightbulb2 = document.querySelector('.lightbulb2');
-
-        lightbulb1.addEventListener('click', ()=> {
-            lightbulb1.style.display = 'none';
-            lightbulb2.style.display = 'block';
-        })
-        lightbulb2.addEventListener('click', ()=> {
-            lightbulb2.style.display = 'none';
-            lightbulb1.style.display = 'block';
+        people1.addEventListener('click', ()=> {
+            let peoplegif = ()=> {
+            setTimeout(function(){people1.style.display = 'none';}, 250)
+            setTimeout(function(){people2.style.display = 'block';}, 250)
+            setTimeout(function(){people2.style.display = 'none';}, 500)
+            setTimeout(function(){people1.style.display = 'block';}, 500)
+            }
+            let repeat = setInterval(peoplegif, 500);
+            setTimeout(function() {clearInterval(repeat);}, 1500);
         })
 
-        // people
-
-        let people1 = document.querySelector('.people1');
-        let people2 = document.querySelector('.people2');
-
-            people1.addEventListener('click', ()=> {
-                let peoplegif = ()=> {
-                setTimeout(function(){people1.style.display = 'none';}, 250)
-                setTimeout(function(){people2.style.display = 'block';}, 250)
-                setTimeout(function(){people2.style.display = 'none';}, 500)
-                setTimeout(function(){people1.style.display = 'block';}, 500)
-                }
-                let repeat = setInterval(peoplegif, 500);
-                setTimeout(function() {clearInterval(repeat);}, 1500);
-            })
-
-    </script>
+</script>
 </body>
 </html>

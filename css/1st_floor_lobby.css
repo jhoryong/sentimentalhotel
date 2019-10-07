@@ -223,12 +223,18 @@ strong { font-weight: bold; }
     }
 
         .big-hyun__mapimg__1-3 {
-            animation: flash 0.5s 0.5s linear 2 backwards; 
+            animation: flash 1.5s 0.5s both; 
             display: none;}
 
         .big-hyun__mapimg__4-7 {
-            animation: flash 0.5s 0.5s linear 2 backwards; 
+            animation: flash 1.5s 0.5s both; 
             display: none;}
+
+        @keyframes flash {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        
 
 
     
@@ -422,11 +428,6 @@ strong { font-weight: bold; }
     to {overflow: visible;}
 } */
 
-@keyframes flash {
-    0% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 0;}
-}
 
 /* gif animation elements */
 
