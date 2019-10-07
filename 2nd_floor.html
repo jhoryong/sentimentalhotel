@@ -26,7 +26,7 @@
                     <h1 id="big-hyun__start" class="name">큰 현</h1>
                     <p class="line npc-line line-0-1">센티멘탈 호텔의 2층은 비즈니스를 위한 공간입니다. 
                     <p class="line npc-line line-0-2">소규모 혹은 대규모 회의, 강의, 행사를 가질 수 있는 공간을 제공하고 있죠.</p>
-                    <p class="line npc-line line-0-3">2층의 여러 시설들을 <span class="clicker clicker-0">둘러보고 오세요.</span></p>
+                    <p class="line npc-line line-0-3">리셉션을 통해 2층의 여러 시설들을 <span class="clicker clicker-0">둘러보고 오세요.</span></p>
                 </div>
             </div>
         </div>
@@ -145,241 +145,240 @@
         <div class="big-hyun">
             <img class="gif big-hyun__gif" src="image/2nd_floor/큰현.gif">
             <div class="dialogue big-hyun__dialogue">
-                <img class="avatar big-hyun__avatar">
+                <img class="avatar big-hyun__avatar" src="image/2nd_floor/큰현.png">
                 <div class="dialogue-box">
                     <h1 class="name">큰 현</h1>
                     <p class="line npc-line line-4-1">2층을 충분히 둘러보셨나요? 그럼 3층으로 올라가죠.</p>
-                    <p class="line player-line line-4-2">- 네, <span class="clicker clicker-2-1">올라가시죠.</span></p>
+                    <p class="line player-line line-4-2">- 네, <a href="3rd_floor.html"><span class="clicker clicker-2-1">올라가시죠.</span></a></p>
                     <p class="line player-line line-4-3">- 아니요, <span class="clicker clicker-2-2">조금 더 둘러보겠습니다.</span></p>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="loader">
-            <img class="chain-1" src="image/loader/chain.png">
-            <img class="chain-2" src="image/loader/chain.png">
-            <img class="frame" src="image/loader/frame.svg">
-            <img class="elevator" src="image/loader/elevator.png">
-        </div>
-    <script>
 
-        //input player name 
+<script>
 
-        function insertName(value, index) {
-            document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
-        }
+    //input player name 
 
-        let playerNameArray = document.querySelectorAll('.player-name');
-        playerNameArray.forEach(insertName);
-        
+    function insertName(value, index) {
+        document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
+    }
 
-        // star dialogue
+    let playerNameArray = document.querySelectorAll('.player-name');
+    playerNameArray.forEach(insertName);
+    
 
-            document.querySelector('.fade-box').classList.add('fade-in');
-            setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
-            setTimeout(()=> {
-                document.querySelector('.dialogue__start').style.display = 'block';
-                document.querySelector('.line-0-1').style.display = 'block';
-                document.querySelector('.line-0-2').style.display = 'block';
-                document.querySelector('.line-0-3').style.display = 'block';
-            }, 3000);
-            document.querySelector('.clicker-0').addEventListener('click', ()=> {
-                document.querySelector('.dialogue__start').style.display = 'none';
-            })
+    // start dialogue
 
-        // clock
+        document.querySelector('.fade-box').classList.add('fade-in');
+        setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
+        setTimeout(()=> {
+            document.querySelector('.dialogue__start').style.display = 'block';
+            document.querySelector('.line-0-1').style.display = 'block';
+            document.querySelector('.line-0-2').style.display = 'block';
+            document.querySelector('.line-0-3').style.display = 'block';
+        }, 3000);
+        document.querySelector('.clicker-0').addEventListener('click', ()=> {
+            document.querySelector('.dialogue__start').style.display = 'none';
+        })
 
-            let clock1 = document.querySelector('.clock1');
-            let clock2 = document.querySelector('.clock2');
-            let clock3 = document.querySelector('.clock3');
-            let clock4 = document.querySelector('.clock4');
-            let clock5 = document.querySelector('.clock5');
-            let clock6 = document.querySelector('.clock6');
-            let clock7 = document.querySelector('.clock7');
-            let clock8 = document.querySelector('.clock8');
-            let clock9 = document.querySelector('.clock9');
-            let clock10 = document.querySelector('.clock10');
-            let clock11 = document.querySelector('.clock11');
-            let clock12 = document.querySelector('.clock12');
+    // clock
 
-            clock1.addEventListener('click', ()=> {
-                // let clockgif = ()=> {
-                let t = 100
-                setTimeout(function(){clock1.style.display = 'none';}, t);
-                setTimeout(function(){clock2.style.display = 'block';}, t);
-                setTimeout(function(){clock2.style.display = 'none';}, t*2);
-                setTimeout(function(){clock3.style.display = 'block';}, t*2);
-                setTimeout(function(){clock3.style.display = 'none';}, t*3);
-                setTimeout(function(){clock4.style.display = 'block';}, t*3);
-                setTimeout(function(){clock4.style.display = 'none';}, t*4);
-                setTimeout(function(){clock5.style.display = 'block';}, t*4);
-                setTimeout(function(){clock5.style.display = 'none';}, t*5);
-                setTimeout(function(){clock6.style.display = 'block';}, t*5);
-                setTimeout(function(){clock6.style.display = 'none';}, t*6);
-                setTimeout(function(){clock7.style.display = 'block';}, t*6);
-                setTimeout(function(){clock7.style.display = 'none';}, t*7);
-                setTimeout(function(){clock8.style.display = 'block';}, t*7);
-                setTimeout(function(){clock8.style.display = 'none';}, t*8);
-                setTimeout(function(){clock9.style.display = 'block';}, t*8);
-                setTimeout(function(){clock9.style.display = 'none';}, t*9);
-                setTimeout(function(){clock10.style.display = 'block';}, t*9);
-                setTimeout(function(){clock10.style.display = 'none';}, t*10);
-                setTimeout(function(){clock11.style.display = 'block';}, t*10);
-                setTimeout(function(){clock11.style.display = 'none';}, t*11);
-                setTimeout(function(){clock12.style.display = 'block';}, t*11);
-                setTimeout(function(){clock12.style.display = 'none';}, t*12);
+        let clock1 = document.querySelector('.clock1');
+        let clock2 = document.querySelector('.clock2');
+        let clock3 = document.querySelector('.clock3');
+        let clock4 = document.querySelector('.clock4');
+        let clock5 = document.querySelector('.clock5');
+        let clock6 = document.querySelector('.clock6');
+        let clock7 = document.querySelector('.clock7');
+        let clock8 = document.querySelector('.clock8');
+        let clock9 = document.querySelector('.clock9');
+        let clock10 = document.querySelector('.clock10');
+        let clock11 = document.querySelector('.clock11');
+        let clock12 = document.querySelector('.clock12');
 
-                setTimeout(function(){clock1.style.display = 'block';}, t*12);
-                // }
-                // let repeat = setInterval(clockgif, 1600);
-                // setTimeout(function() {clearInterval(repeat);}, 1500);
-            })
+        clock1.addEventListener('click', ()=> {
+            // let clockgif = ()=> {
+            let t = 100
+            setTimeout(function(){clock1.style.display = 'none';}, t);
+            setTimeout(function(){clock2.style.display = 'block';}, t);
+            setTimeout(function(){clock2.style.display = 'none';}, t*2);
+            setTimeout(function(){clock3.style.display = 'block';}, t*2);
+            setTimeout(function(){clock3.style.display = 'none';}, t*3);
+            setTimeout(function(){clock4.style.display = 'block';}, t*3);
+            setTimeout(function(){clock4.style.display = 'none';}, t*4);
+            setTimeout(function(){clock5.style.display = 'block';}, t*4);
+            setTimeout(function(){clock5.style.display = 'none';}, t*5);
+            setTimeout(function(){clock6.style.display = 'block';}, t*5);
+            setTimeout(function(){clock6.style.display = 'none';}, t*6);
+            setTimeout(function(){clock7.style.display = 'block';}, t*6);
+            setTimeout(function(){clock7.style.display = 'none';}, t*7);
+            setTimeout(function(){clock8.style.display = 'block';}, t*7);
+            setTimeout(function(){clock8.style.display = 'none';}, t*8);
+            setTimeout(function(){clock9.style.display = 'block';}, t*8);
+            setTimeout(function(){clock9.style.display = 'none';}, t*9);
+            setTimeout(function(){clock10.style.display = 'block';}, t*9);
+            setTimeout(function(){clock10.style.display = 'none';}, t*10);
+            setTimeout(function(){clock11.style.display = 'block';}, t*10);
+            setTimeout(function(){clock11.style.display = 'none';}, t*11);
+            setTimeout(function(){clock12.style.display = 'block';}, t*11);
+            setTimeout(function(){clock12.style.display = 'none';}, t*12);
 
-        //reception
+            setTimeout(function(){clock1.style.display = 'block';}, t*12);
+            // }
+            // let repeat = setInterval(clockgif, 1600);
+            // setTimeout(function() {clearInterval(repeat);}, 1500);
+        })
 
-            document.querySelector('.reception__gif').addEventListener('click', ()=> {
-                document.querySelector('#reception__dialogue').style.display = 'block';
-                document.querySelector('.line-1').style.display = 'block';
-                document.querySelector('.line-1-1').style.display = 'block';
-                document.querySelector('.line-1-2').style.display = 'block';
-                document.querySelector('.line-1-3').style.display = 'block';
-                document.querySelector('.line-1-4').style.display = 'block';
-            })
+    //reception
 
-            // conference room 1
+        document.querySelector('.reception__gif').addEventListener('click', ()=> {
+            document.querySelector('#reception__dialogue').style.display = 'block';
+            document.querySelector('.line-1').style.display = 'block';
+            document.querySelector('.line-1-1').style.display = 'block';
+            document.querySelector('.line-1-2').style.display = 'block';
+            document.querySelector('.line-1-3').style.display = 'block';
+            document.querySelector('.line-1-4').style.display = 'block';
+        })
 
-                document.querySelector('.clicker-1-1').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-1').style.display = 'block';
-                    document.querySelector('.line-1-1-1').style.display = 'block';
-                    document.querySelector('.line-1-1-2').style.display = 'block';
-                    document.querySelector('.line-1-1-3').style.display = 'block';
-                    document.querySelector('.line-1-1-4').style.display = 'block';
-                    document.querySelector('.line-1-1-5').style.display = 'block';
-                    document.querySelector('.line-1-1-6').style.display = 'block';
-                });
-                document.querySelector('.clicker-1-7').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-1').style.display = 'none';
-                })
+        // conference room 1
 
-            //conference room 2
-
-                document.querySelector('.clicker-1-2').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-2').style.display = 'block';
-                    document.querySelector('.line-1-2-1').style.display = 'block';
-                    document.querySelector('.line-1-2-2').style.display = 'block';
-                });
-                document.querySelector('.clicker-1-8').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-2').style.display = 'none';
-                })
-
-            //conference room 3
-
-                document.querySelector('.clicker-1-3').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-3').style.display = 'block';
-                    document.querySelector('.line-1-3-1').style.display = 'block';
-                    document.querySelector('.line-1-3-2').style.display = 'block';
-                    document.querySelector('.line-1-3-3').style.display = 'block';
-                });
-                document.querySelector('.clicker-1-9').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__conference-room-3').style.display = 'none';
-                })
-
-            //lecture room
-
-                document.querySelector('.clicker-1-4').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__lecture-room').style.display = 'block';
-                    document.querySelector('.line-2-1').style.display = 'block';
-                    document.querySelector('.line-2-2').style.display = 'block';
-                    document.querySelector('.line-2-3').style.display = 'block';
-                    document.querySelector('.line-2-4').style.display = 'block';
-                });
-                document.querySelector('.clicker-1-10').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__lecture-room').style.display = 'none';
-                })
-
-            //banquet room
-
-                document.querySelector('.clicker-1-5').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__banquet-room').style.display = 'block';
-                    document.querySelector('.line-3-1').style.display = 'block';
-                    document.querySelector('.line-3-2').style.display = 'block';
-                    document.querySelector('.line-3-3').style.display = 'block';
-                    document.querySelector('.line-3-4').style.display = 'block';
-                });
-                document.querySelector('.clicker-1-11').addEventListener('click', ()=> {
-                    document.querySelector('#dialogue__banquet-room').style.display = 'none';
-                })
-
-            // close reception dialogue
-                
-                document.querySelector('.clicker-1-6').addEventListener('click', ()=> {
-                    document.querySelector('#reception__dialogue').style.display = 'none';
-                });
-        
-
-        // handshake
-
-            let handshake1 = document.querySelector('.handshake1');
-            let handshake2 = document.querySelector('.handshake2');
-            let handshake3 = document.querySelector('.handshake3');     
-            document.querySelector('.handshake1').addEventListener('click', ()=> {
-                let t = 150;
-                let handshakegif = () => {
-                setTimeout(function(){handshake1.style.display = 'none';}, t);
-                setTimeout(function(){handshake2.style.display = 'block';}, t);
-                setTimeout(function(){handshake2.style.display = 'none';}, t*2);
-                setTimeout(function(){handshake3.style.display = 'block';}, t*2);
-                setTimeout(function(){handshake3.style.display = 'none';}, t*3);
-                setTimeout(function(){handshake1.style.display = 'block';}, t*3);
-                };
-                let repeat = setInterval(handshakegif, t*3);
-                setTimeout(function() {clearInterval(repeat);}, t*3*3);
+            document.querySelector('.clicker-1-1').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-1').style.display = 'block';
+                document.querySelector('.line-1-1-1').style.display = 'block';
+                document.querySelector('.line-1-1-2').style.display = 'block';
+                document.querySelector('.line-1-1-3').style.display = 'block';
+                document.querySelector('.line-1-1-4').style.display = 'block';
+                document.querySelector('.line-1-1-5').style.display = 'block';
+                document.querySelector('.line-1-1-6').style.display = 'block';
             });
+            document.querySelector('.clicker-1-7').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-1').style.display = 'none';
+            })
 
-        // copier
-            let copier = document.querySelector('.copier');
-            let paper1 = document.querySelector('.paper1');
-            let paper2 = document.querySelector('.paper2');
-            let paper3 = document.querySelector('.paper3');
-            let paper4 = document.querySelector('.paper4');
-            let paper5 = document.querySelector('.paper5');
-            let paper6 = document.querySelector('.paper6');
-            let paper7 = document.querySelector('.paper7');
+        //conference room 2
+
+            document.querySelector('.clicker-1-2').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-2').style.display = 'block';
+                document.querySelector('.line-1-2-1').style.display = 'block';
+                document.querySelector('.line-1-2-2').style.display = 'block';
+            });
+            document.querySelector('.clicker-1-8').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-2').style.display = 'none';
+            })
+
+        //conference room 3
+
+            document.querySelector('.clicker-1-3').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-3').style.display = 'block';
+                document.querySelector('.line-1-3-1').style.display = 'block';
+                document.querySelector('.line-1-3-2').style.display = 'block';
+                document.querySelector('.line-1-3-3').style.display = 'block';
+            });
+            document.querySelector('.clicker-1-9').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__conference-room-3').style.display = 'none';
+            })
+
+        //lecture room
+
+            document.querySelector('.clicker-1-4').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__lecture-room').style.display = 'block';
+                document.querySelector('.line-2-1').style.display = 'block';
+                document.querySelector('.line-2-2').style.display = 'block';
+                document.querySelector('.line-2-3').style.display = 'block';
+                document.querySelector('.line-2-4').style.display = 'block';
+            });
+            document.querySelector('.clicker-1-10').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__lecture-room').style.display = 'none';
+            })
+
+        //banquet room
+
+            document.querySelector('.clicker-1-5').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__banquet-room').style.display = 'block';
+                document.querySelector('.line-3-1').style.display = 'block';
+                document.querySelector('.line-3-2').style.display = 'block';
+                document.querySelector('.line-3-3').style.display = 'block';
+                document.querySelector('.line-3-4').style.display = 'block';
+            });
+            document.querySelector('.clicker-1-11').addEventListener('click', ()=> {
+                document.querySelector('#dialogue__banquet-room').style.display = 'none';
+            })
+
+        // close reception dialogue
             
-            document.querySelector('.copier').addEventListener('click', ()=> {
-                let t = 150;
-                setTimeout(function(){paper1.style.display = 'none';}, t);
-                setTimeout(function(){paper2.style.display = 'block';}, t);
-                setTimeout(function(){paper2.style.display = 'none';}, t*2);
-                setTimeout(function(){paper3.style.display = 'block';}, t*2);
-                setTimeout(function(){paper3.style.display = 'none';}, t*3);
-                setTimeout(function(){paper4.style.display = 'block';}, t*3);
-                setTimeout(function(){paper4.style.display = 'none';}, t*4);
-                setTimeout(function(){paper5.style.display = 'block';}, t*4);
-                setTimeout(function(){paper5.style.display = 'none';}, t*5);
-                setTimeout(function(){paper6.style.display = 'block';}, t*5);
-                setTimeout(function(){paper6.style.display = 'none';}, t*6);
-                setTimeout(function(){paper7.style.display = 'block';}, t*6);
-                setTimeout(function(){paper7.style.display = 'none';}, t*20);
-            })
+            document.querySelector('.clicker-1-6').addEventListener('click', ()=> {
+                document.querySelector('#reception__dialogue').style.display = 'none';
+            });
+    
+
+    // handshake
+
+        let handshake1 = document.querySelector('.handshake1');
+        let handshake2 = document.querySelector('.handshake2');
+        let handshake3 = document.querySelector('.handshake3');     
+        document.querySelector('.handshake1').addEventListener('click', ()=> {
+            let t = 150;
+            let handshakegif = () => {
+            setTimeout(function(){handshake1.style.display = 'none';}, t);
+            setTimeout(function(){handshake2.style.display = 'block';}, t);
+            setTimeout(function(){handshake2.style.display = 'none';}, t*2);
+            setTimeout(function(){handshake3.style.display = 'block';}, t*2);
+            setTimeout(function(){handshake3.style.display = 'none';}, t*3);
+            setTimeout(function(){handshake1.style.display = 'block';}, t*3);
+            };
+            let repeat = setInterval(handshakegif, t*3);
+            setTimeout(function() {clearInterval(repeat);}, t*3*3);
+        });
+
+    // copier
+        let copier = document.querySelector('.copier');
+        let paper1 = document.querySelector('.paper1');
+        let paper2 = document.querySelector('.paper2');
+        let paper3 = document.querySelector('.paper3');
+        let paper4 = document.querySelector('.paper4');
+        let paper5 = document.querySelector('.paper5');
+        let paper6 = document.querySelector('.paper6');
+        let paper7 = document.querySelector('.paper7');
         
+        document.querySelector('.copier').addEventListener('click', ()=> {
+            let t = 150;
+            setTimeout(function(){paper1.style.display = 'none';}, t);
+            setTimeout(function(){paper2.style.display = 'block';}, t);
+            setTimeout(function(){paper2.style.display = 'none';}, t*2);
+            setTimeout(function(){paper3.style.display = 'block';}, t*2);
+            setTimeout(function(){paper3.style.display = 'none';}, t*3);
+            setTimeout(function(){paper4.style.display = 'block';}, t*3);
+            setTimeout(function(){paper4.style.display = 'none';}, t*4);
+            setTimeout(function(){paper5.style.display = 'block';}, t*4);
+            setTimeout(function(){paper5.style.display = 'none';}, t*5);
+            setTimeout(function(){paper6.style.display = 'block';}, t*5);
+            setTimeout(function(){paper6.style.display = 'none';}, t*6);
+            setTimeout(function(){paper7.style.display = 'block';}, t*6);
+            setTimeout(function(){paper7.style.display = 'none';}, t*20);
+        })
+    
 
-        // big-hyun
+    // big-hyun
 
-            document.querySelector('.big-hyun__gif').addEventListener('click', ()=> {
-                document.querySelector('.big-hyun__dialogue').style.display = 'block';
-                document.querySelector('.line-4-1').style.display = 'block';
-                document.querySelector('.line-4-2').style.display = 'block';
-                document.querySelector('.line-4-3').style.display = 'block';
-            })
-            document.querySelector('.clicker-2-1').addEventListener('click', ()=> {
+        document.querySelector('.big-hyun__gif').addEventListener('click', ()=> {
+            document.querySelector('.big-hyun__dialogue').style.display = 'block';
+            document.querySelector('.line-4-1').style.display = 'block';
+            document.querySelector('.line-4-2').style.display = 'block';
+            document.querySelector('.line-4-3').style.display = 'block';
+        })
+        document.querySelector('.clicker-2-1').addEventListener('click', ()=> {
+            event.preventDefault();
+            document.querySelector('.fade-box').classList.add('fade-out');
+            document.querySelector('.fade-out').style.display = 'block';
+            setTimeout(()=> {
+               window.location.assign('3rd_floor.html')}, 3000);
+        })
+        document.querySelector('.clicker-2-2').addEventListener('click', ()=> {
+            document.querySelector('.big-hyun__dialogue').style.display = 'none';
+        })
 
-            })
-            document.querySelector('.clicker-2-2').addEventListener('click', ()=> {
-                document.querySelector('.big-hyun__dialogue').style.display = 'none';
-            })
-
-    </script>
+</script>
 </body>
 </html>

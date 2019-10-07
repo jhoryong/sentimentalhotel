@@ -91,7 +91,7 @@
                 <div class="dialogue-box">
                     <h1 id="big-hyun" class="name">큰 현</h1>
                     <p class="line npc-line line-3">1층을 다 둘러보셨나요? 그럼 2층으로 올라가죠.</p>
-                    <p class="line player-line line-3-1">- 네, <span class="clicker clicker-2-1">올라가시죠.</span></p>
+                    <p class="line player-line line-3-1">- 네, <a href="2nd_floor.html"><span class="clicker clicker-2-1">올라가시죠.</span></a></p>
                     <p class="line player-line line-3-2">- 아니요, <span class="clicker clicker-2-2">조금 더 둘러보겠습니다.</span></p>
                 </div>
             </div>
@@ -99,6 +99,14 @@
 
     </div>
     <script>
+
+    // player name
+
+        let playerNameArray = document.querySelectorAll('.player-name');
+        playerNameArray.forEach(insertName);
+        function insertName(value, index) {
+            document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
+        }
 
     // start
     

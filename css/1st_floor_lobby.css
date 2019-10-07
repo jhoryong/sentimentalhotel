@@ -293,42 +293,32 @@ strong { font-weight: bold; }
     player라인: 2초, 3.5(+)
     */
 
-    /* small-hyun lines */
+    
 
     .line-0 {animation: typing 2s 0.5s linear backwards; margin-top: 3.7vw;}
-
     .line-0-1 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
     .line-0-2 {animation: typing 2s 4s linear backwards; margin-top: 0vw;}
 
+    /* small-hyun lines */
     .line-1 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-2 {animation: typing 2s 2s linear backwards;}
+    .line-2 {animation: typing 2s 1.5s linear backwards;}
 
     .line-3 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-4 {animation: typing 2s 2s linear backwards;}
+    .line-4 {animation: typing 2s 1.5s linear backwards;}
 
     .line-5 {animation: typing 2s 0.5s linear backwards;}
-
     .line-6 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
     .line-7 {animation: typing 2s 4s linear backwards; margin: var(--bottom-line-double);}
 
     .line-8 {animation: typing 2s 0.5s linear backwards;}
-
     .line-9 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
-    .line-10 {animation: typing 2s 4s linear backwards; margin: var(--bottom-line-double);}
+    .line-10 {animation: typing 2s 3.5s linear backwards; margin: var(--bottom-line-double);}
 
     /* big-hyun lines */
     .line-11 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-12 {animation: typing 2s 2.3s linear backwards; margin-top: 0vw;}
-
-    .line-13 {animation: typing 2s 4.3s linear backwards; margin-top: 0vw;}
-
-    .line-14 {animation: typing 2s 6s linear backwards; margin: var(--bottom-line-triple);}
+    .line-12 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+    .line-13 {animation: typing 2s 4s linear backwards; margin-top: 0vw;}
+    .line-14 {animation: typing 2s 5.5s linear backwards; margin: var(--bottom-line-triple);}
 
     .line-15 {animation: typing 2s 0.5s linear backwards;}
 

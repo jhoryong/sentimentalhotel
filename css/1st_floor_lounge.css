@@ -6,6 +6,11 @@ npc 라인: 3초
 애니메이션 딜레이: 0.5초
 */
 
+a:link, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
 .container {
     background-image: url("../image/1st_floor_lounge/라운지-배경.png");
     background-position: 0 0;
