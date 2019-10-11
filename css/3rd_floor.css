@@ -49,7 +49,7 @@ a:link, a:visited {
 }
 
 .container {
-    background-image: url("../image/3rd_floor/3rd_background.png");
+    background-image: url("../image/3rd_floor/3rd_background.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100vw auto;
@@ -265,11 +265,11 @@ a:link, a:visited {
 
 /* couple */
 
-.couple {
-    position: absolute;
-    width: 15vw;
-    top: 12vw;
-    left: 24vw;}
+    .couple {
+        position: absolute;
+        width: 15vw;
+        top: 12vw;
+        left: 24vw;}
 
     .couple1 {display: block;} 
     .couple2 {display: none;} 

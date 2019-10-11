@@ -1,0 +1,340 @@
+/* global elements */
+
+/* 
+npc 라인: 3초
+플레이어 라인: 2초
+애니메이션 딜레이: 0.5초
+*/
+
+a:link, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.fade-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    z-index: 1000;
+}
+
+    .fade-in-start/* used for the very start */ {
+        opacity: 1;
+        animation: fadein 4s both;
+    }
+
+    .fade-in {
+        opacity: 1;
+        animation: fadein 2s linear both;
+    }
+
+    .fade-out {
+        opacity: 0;
+        animation: fadeout 2s both;
+    }
+
+@keyframes fadein {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.container {
+    background-image: url("../image/4th_floor/background.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    height: 56.25vw;
+}
+
+.gif {
+    position: absolute;
+    z-index: 0;
+}
+
+    .gif:hover {
+        cursor: pointer;
+    }
+
+.avatar {
+    position: absolute;
+    z-index: 20;
+}
+
+.clicker {
+    color: blue;
+    font-family: 'Noto Serif KR', serif;
+    font-size: var(--player-font-size);
+}
+    
+    .clicker:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.arrow {
+    animation: flash 0.6s 4.5s infinite alternate;
+}
+
+    .arrow:hover {
+        cursor: pointer;
+    }
+
+    @keyframes flash {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+.transparent-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    background-color: #000000;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+.dialogue {
+    display: none;
+    z-index: 10;
+}
+
+    .dialogue-box {
+        position: absolute;
+        top: 36.5vw;
+        left: 24vw;
+        width: 62vw;
+        height: 18vw;
+        background-color: #FFF;
+        border: #000000 3px solid;
+        border-radius: 20px;
+        z-index: 10;
+    }
+
+    .dialogue-opacity-1 {
+        position: absolute;
+        top: 36.5vw;
+        left: 24vw;
+        width: 62vw;
+        height: 18vw;
+        z-index: 15;
+        opacity: 1;
+    }
+
+    .name {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.7vw;
+        margin: 1.5vw 0 0 6vw;
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    
+
+    /* line */
+    :root {
+        --font-size: 1.2vw;
+        --first-line: 0.7vw 0 0 6vw;
+        --bottom-line-single: 9vw 0 0 6vw;
+        --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
+        --bottom-line-triple: 5.7vw 0 0 6vw;
+        --bottom-line-quadruple: 4.1vw 0 0 6vw;
+        --bottom-line-quintuple: 2.6vw 0 0 6vw;
+        --bottom-line-sextuple: 1vw 0 0 6vw;
+        --line-height: 1.5;
+    }
+
+    .line {
+        font-family: 'Noto Serif KR', serif;
+        overflow: hidden; 
+        white-space: nowrap;
+        display: none;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        max-width: 55vw;
+        opacity: 2;
+    }
+
+        .npc-line {
+            margin: var(--first-line);
+        }
+
+        .player-line {
+            margin: var(--bottom-line-single);
+        }
+
+        @keyframes typing {
+            from {width: 0;}
+            to {width: 100%;}
+        }
+
+    strong { font-weight: bold; }
+
+
+/* rooms */
+    
+    .door {position: absolute;}
+
+    .room {
+        position: absolute;
+        top: 0vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+        z-index: 10;
+    }
+
+    /* 401 */
+
+        .door__401 {
+            top: 30.1vw;
+            left: 9.6vw;
+            width: 5.5vw;
+        }
+
+        .avatar__401 {
+            width: 18vw;
+            top: 31vw;
+            left: 10vw;
+        }
+
+        .wrapper__401 {display: none;}
+
+    /* 402 */
+
+        .door__402 {
+            top: 25.1vw;
+            left: 21.6vw;
+            width: 5.5vw;
+        }
+        
+        .avatar__402 {
+            width: 20vw;
+            top: 32vw;
+            left: 10vw;
+            transform: rotateY(0deg);
+        }
+
+        .wrapper__402 {display: none;}
+
+
+    .door__403 {
+        top: 12vw;
+        left: 33.1vw;
+        width: 4.9vw;
+    }
+
+    .door__404 {
+        top: 6.8vw;
+        left: 48.6vw;
+        width: 5.4vw;
+    }
+
+    .door__405 {
+        top: 10.6vw;
+        left: 58.9vw;
+        width: 5.8vw;
+    }
+
+    .door__406 {
+        top: 23vw;
+        left: 75.9vw;
+        width: 7vw;
+    }
+
+    .door__407 {
+        top: 27vw;
+        left: 87.7vw;
+        width: 7vw;
+    }
+    
+/* lines */
+
+/* 401 */
+.line-1-1-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-1-2 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
+.line-1-1-3 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+
+.line-1-2-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-2-2 {animation: typing 2s 1.5s linear backwards;}
+
+.line-1-3-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-3-2 {animation: typing 2s 2.5s linear backwards;}
+
+.line-1-4-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-4-2 {animation: typing 2s 2.5s linear backwards;}
+
+.line-1-5-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-5-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0vw;}
+.line-1-5-3 {animation: typing 2s 4.5s linear backwards;margin-top: 0vw;}
+.line-1-5-4 {animation: typing 2s 6.5s linear backwards;margin-top: 0vw;}
+
+.line-1-5-5 {animation: typing 2s 0.5s linear backwards;}
+.line-1-5-6 {animation: typing 2s 2.5s linear backwards;margin-top: 0vw;}
+.line-1-5-7 {animation: typing 2s 4.5s linear backwards; margin: var(--bottom-line-double);}
+
+.line-1-6-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-6-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0vw;}
+.line-1-6-3 {animation: typing 2s 4.5s linear backwards;margin: var(--bottom-line-double);}
+
+.line-1-7-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-7-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0vw;}
+.line-1-7-3 {animation: typing 2s 4.5s linear backwards;margin-top: 0vw;}
+.line-1-7-4 {animation: typing 2s 6.5s linear backwards;margin-top: 0vw;}
+.line-1-7-5 {animation: typing 2s 8.5s linear backwards;margin-top: 0vw;}
+.line-1-7-6 {animation: typing 2s 10.5s linear backwards;margin: var(--bottom-line-quintuple);}
+
+.line-1-8-1 {animation: typing 2s 0.5s linear backwards;}
+.line-1-8-2 {animation: typing 2s 2.5s linear backwards;}
+
+
+/* 402 */
+.line-2-1-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-1-2 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
+.line-2-1-3 {animation: typing 2s 2s linear backwards; margin-top: 0;}
+
+.line-2-2-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-2-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0;}
+.line-2-2-3 {animation: typing 2s 4.5s linear backwards; margin: var(--bottom-line-double);}
+
+.line-2-3-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-3-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0;}
+.line-2-3-3 {animation: typing 2s 4.5s linear backwards;margin-top: 0;}
+.line-2-3-4 {animation: typing 2s 6.5s linear backwards;margin: var(--bottom-line-triple);}
+
+.line-2-4-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-4-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0;}
+.line-2-4-3 {animation: typing 2s 4.5s linear backwards;margin-top: 0;}
+.line-2-4-4 {animation: typing 2s 6.5s linear backwards;margin-top: 0;}
+.line-2-4-5 {animation: typing 2s 8.5s linear backwards;margin-top: 0;}
+.line-2-4-6 {animation: typing 2s 10.5s linear backwards;margin: var(--bottom-line-quintuple);}
+
+.line-2-4-10 {animation: typing 2s 8.5s linear backwards;}
+
+.line-2-5-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-5-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0;}
+.line-2-5-3 {animation: typing 2s 4.5s linear backwards;margin: var(--bottom-line-double);}
+
+.line-2-6-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-6-2 {animation: typing 2s 2.5s linear backwards;margin-top: 0;}
+.line-2-6-3 {animation: typing 2s 4.5s linear backwards;margin-top: 0;}
+.line-2-6-4 {animation: typing 2s 6.5s linear backwards;margin-top: 0;}
+/* arrow */
+.line-2-6-5 {animation: typing 2s 0.5s linear backwards;}
+.line-2-6-6 {animation: typing 2s 2.5s linear backwards;margin-top: 0;}
+.line-2-6-7 {animation: typing 2s 4.5s linear backwards;margin-top: 0;}
+.line-2-6-8 {animation: typing 2s 6.5s linear backwards;margin-top: 0;}
+.line-2-6-9 {animation: typing 2s 8.5s linear backwards;margin: var(--bottom-line-quintuple);}
+.line-2-6-10 {animation: typing 2s 10.5s linear backwards;margin-top: 0;}
+
+.line-2-7-1 {animation: typing 2s 0.5s linear backwards;}
+.line-2-7-2 {animation: typing 2s 2.5s linear backwards;}

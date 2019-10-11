@@ -12,7 +12,7 @@ a:link, a:visited {
 }
 
 .container {
-    background-image: url("../image/1st_floor_lounge/라운지-배경.png");
+    background-image: url("../image/1st_floor_lounge/라운지-배경.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100vw auto;
@@ -181,6 +181,7 @@ a:link, a:visited {
 
     .line-0-1 {animation: typing 2s 0.5s linear backwards;}
     .line-0-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
+    .line-0-3 {animation: typing 2s 4.5s linear backwards; margin-top: 0vw;}
     :root {
         --speed: 1s;
         --diff: 0.3s;

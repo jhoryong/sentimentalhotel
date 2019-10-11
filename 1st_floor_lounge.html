@@ -22,7 +22,9 @@
                 <div class="dialogue-box">
                     <h1 id="big-hyun__start" class="name">큰 현</h1>
                     <p class="line npc-line line-0-1">이곳은 센티멘탈 호텔의 라운지입니다. 호텔을 방문한 고객 누구나 앉아서 음료를 마시며 쉴 수 있죠.</p>
-                    <p class="line npc-line line-0-2">바에서 음료를 시켜 보세요. 센티멘탈 호텔 직원은 <span class="clicker clicker-0">무료로 이용할 수 있답니다!</span></p>
+                    <p class="line npc-line line-0-2">바에서 음료를 시켜 보세요. 센티멘탈 호텔 직원은 무료로 이용할 수 있답니다!</p>
+                    <p class="line npc-line line-0-3">로비와 마찬가지로 이곳 저곳 클릭해보며 <span class="clicker clicker-0">장소를 둘러보세요.</span></p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -116,6 +118,7 @@
             document.querySelector('.dialogue__start').style.display = 'block';
             document.querySelector('.line-0-1').style.display = 'block';
             document.querySelector('.line-0-2').style.display = 'block';
+            document.querySelector('.line-0-3').style.display = 'block';
         }, 3000);
         document.querySelector('.clicker-0').addEventListener('click', ()=> {
             document.querySelector('.dialogue__start').style.display = 'none';
