@@ -1,9 +1,44 @@
 /* global elements */
 
+/* link */
 a:link, a:visited {
     text-decoration: none;
     color: blue;
 }
+    
+
+/* arrow icon */
+.movingarrow {
+    position: absolute;
+    width: 2.5vw;
+    animation: updown 0.7s alternate ease-in-out infinite;
+    display: none;
+}
+
+    .movingarrow__small-hyun {
+        top: 21vw;
+        left: 20vw;
+    }
+    .movingarrow__big-hyun {
+        top: 15.5vw;
+        left: 57vw;
+    }
+    .movingarrow__gold-plate {
+        top: 5vw;
+        left: 67.5vw;
+    }
+    .movingarrow__link {
+        top: 16.5vw;
+        left: 45vw;
+    }
+
+    @keyframes updown {
+        from {margin-top: 1.5vw;}
+        to {margin-top: 0;}
+    }
+
+
+/* fade */
 
 .fade-box {
     position: absolute;
@@ -13,6 +48,7 @@ a:link, a:visited {
     height: 56.25vw;
     background-color: #000000;
     z-index: 1000;
+    display: none;
 }
 
     .fade-in-start {
@@ -42,6 +78,7 @@ a:link, a:visited {
 }
 
 
+/* static elements */
 
 .container {
     background-image: url("../image/1st_floor_lobby/로비-배경.jpg");
@@ -56,9 +93,12 @@ a:link, a:visited {
     z-index: 0;
 }
 
-.gif:hover {
-    cursor: pointer;
-}
+    .gif:hover {
+        cursor: pointer;
+    }
+
+    
+/* dialogue elements */
 
 .dialogue {
     display: none;
@@ -72,12 +112,12 @@ a:link, a:visited {
 
 .dialogue-box {
     position: absolute;
-    top: 36.5vw;
+    top: 35vw; /*36.5vw*/
     left: 24vw;
     width: 62vw;
-    height: 18vw;
+    height: 20vw; /*18vw */
     background-color: #FFF;
-    border: #000000 3px solid;
+    border: #000000 2px solid;
     border-radius: 20px;
     z-index: 10;
 }
@@ -90,14 +130,14 @@ a:link, a:visited {
     width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
     height: 56.25vw;
     background-color: #000000;
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 10;
 }
 
 .name {
     font-family: 'Noto Serif KR', serif;
     font-size: 1.7vw;
-    margin: 1.5vw 0 0 6vw;
+    margin: 1.5vw 0 1.5vw 6vw;
     font-weight: bold;
 }
 
@@ -116,18 +156,23 @@ a:link, a:visited {
 
 strong { font-weight: bold; }
 
-/* lines */
+
+/* lines elements */
+
 :root {
     --font-size: 1.2vw;
-    --first-line: 0.7vw 0 0 6vw;
-    --bottom-line-single: 9vw 0 0 6vw;
-    --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
-    --bottom-line-triple: 5.7vw 0 0 6vw;
+    --first-line: 0vw 0 0 6vw;
+    --one-top-line: 10vw 0 0 6vw;
+    --two-top-lines: 8.4vw 0 0 6vw;/*differnece: 1.6vw*/
+    --three-top-lines: 6.8vw 0 0 6vw;
+    --four-top-lines: 5vw 0 0 6vw;
+    --five-top-lines: 3.4vw 0 0 6vw;
     --line-height: 1.5;
 }
 
 .line {
     font-family: 'Noto Serif KR', serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
     overflow: hidden; 
     white-space: nowrap;
     display: none;
@@ -136,17 +181,48 @@ strong { font-weight: bold; }
     max-width: 55vw;
 }
 
-    .npc-line {
+    .top-line {
         margin: var(--first-line);
     }
 
-    .player-line {
-        margin: var(--bottom-line-single);
+    .bottom-line {
+        margin: var(--one-top-line);
     }
 
+    /* timing */
+    .first-line {animation: typing 1.5s 0.3s linear backwards;}
+    .second-line {animation: typing 1.5s 1.8s linear backwards;}
+    .third-line {animation: typing 1.5s 3.3s linear backwards;}
+    .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
+    .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
+    .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
+
+    .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
+    .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
+
+    /* margin */
+    .next-line {margin-top: 0;}
+    .one-topline {margin: var(--one-top-line)}
+    .two-toplines {margin: var(--two-top-lines)}
+    .three-toplines {margin: var(--three-top-lines)}
+    .four-toplines {margin: var(--four-top-lines)}
+    .five-toplines {margin: var(--five-top-lines)}
 
 
+.nextarrow {
+    animation: flash 0.6s 4.5s infinite alternate;
+}
 
+    .nextarrow:hover {
+        cursor: pointer;
+    }
+
+    @keyframes flash {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+/* 1st floor elements */
 
 /* small-hyun elements*/
 
@@ -163,15 +239,14 @@ strong { font-weight: bold; }
     }
 
     input[type=text] {
-        height: 2.2vw;
+        height: 2vw;
         width: 12vw;
-        vertical-align: 4px;
         padding: 2px 4px;
         margin-left: 0.5vw;
         border-radius: 4px;
         border: 1px solid #cccccc;
         font-family: 'Noto Serif KR', serif;   
-
+        font-size: 1.3vw;
     }
 
     input[type=submit] {
@@ -179,8 +254,6 @@ strong { font-weight: bold; }
         background-color: #FFF;
         border: none;
     }
-
-
 
 
 /* big-hyun elements */
@@ -197,46 +270,34 @@ strong { font-weight: bold; }
         left: 14vw;
     }
 
-    /* .big-hyun__map-box {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 35vw;
-        height: 37vw;
-        background-color: #fff;
-        z-index: 10;
-        opacity: 0.9;
-    } */
-
     .big-hyun__map {
         display: none;
     }
 
     .big-hyun__mapimg {
         position: absolute;
-        top: 1vw;
+        top: -6vw;
         left: 50%;
         transform: translateX(-50%);
-        height: 34vw;
+        height: 43vw;
         z-index: 10;
     }
 
         .big-hyun__mapimg__1-3 {
-            animation: flash 1.5s 0.5s both; 
-            display: none;}
+            animation: flash 0.3s 0.5s alternate ease-in both 3; 
+            display: none;
+        }
 
         .big-hyun__mapimg__4-7 {
-            animation: flash 1.5s 0.5s both; 
-            display: none;}
+            animation: flash 0.3s 0.5s alternate ease-in both 3; 
+            display: none;
+        }
 
         @keyframes flash {
             0% {opacity: 0;}
             100% {opacity: 1;}
         }
         
-
-
     
 /* gold-plate elements*/
 
@@ -248,7 +309,7 @@ strong { font-weight: bold; }
     }
 
     .gold-plate__mission-box {
-        top: 6vw;
+        top: 4vw;
         left: 50%;
         transform: translateX(-50%);
         height: 30vw;
@@ -270,13 +331,6 @@ strong { font-weight: bold; }
         display: none;
     }
 
-    #gold-plate-hyun-avatar {
-        display: none;
-        top:-2.7vw; left: -11vw
-    }
-
-
-
 /* link to lounge */
 
     .lounge-link__clicker {
@@ -287,72 +341,8 @@ strong { font-weight: bold; }
         height: 12vw;
     }
 
-    .clicker-12-1 {
-    }
-
 
 /*lines */
-
-    /* 
-    애니메이션 타임
-    npc라인: 3초, 0.5초
-    player라인: 2초, 3.5(+)
-    */
-
-    
-
-    .line-0 {animation: typing 2s 0.5s linear backwards; margin-top: 3.7vw;}
-    .line-0-1 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-    .line-0-2 {animation: typing 2s 4s linear backwards; margin-top: 0vw;}
-
-    /* small-hyun lines */
-    .line-1 {animation: typing 2s 0.5s linear backwards;}
-    .line-2 {animation: typing 2s 1.5s linear backwards;}
-
-    .line-3 {animation: typing 2s 0.5s linear backwards;}
-    .line-4 {animation: typing 2s 1.5s linear backwards;}
-
-    .line-5 {animation: typing 2s 0.5s linear backwards;}
-    .line-6 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-    .line-7 {animation: typing 2s 4s linear backwards; margin: var(--bottom-line-double);}
-
-    .line-8 {animation: typing 2s 0.5s linear backwards;}
-    .line-9 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-    .line-10 {animation: typing 2s 3.5s linear backwards; margin: var(--bottom-line-double);}
-
-    /* big-hyun lines */
-    .line-11 {animation: typing 2s 0.5s linear backwards;}
-    .line-12 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
-    .line-13 {animation: typing 2s 4s linear backwards; margin-top: 0vw;}
-    .line-14 {animation: typing 2s 5.5s linear backwards; margin: var(--bottom-line-triple);}
-
-    .line-15 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-16 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-
-    .line-17 {animation: typing 2s 4.7s linear backwards; margin: var(--bottom-line-double);}
-
-    .line-18 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-19 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-20 {animation: typing 2s 2s linear backwards; margin-top: 0;}
-
-    .line-21 {animation: typing 2s 2.5s linear backwards; margin-top: 0;}
-
-    .line-22 {animation: typing 2s 2.5s linear backwards; margin-top: 0; margin: var(--bottom-line-triple);}
-
-    .line-23 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-23-1 {animation: typing 2s 2.5s linear backwards; margin-top: 0;}
-
-    .line-23-2 {animation: typing 2s 4.5s linear backwards; margin-top: 0;}
-
-    .line-23-3 {animation: typing 2s 0.5s linear backwards;}
-
-
-
-
     /* gold-plate lines */
     /* --> mission statement */
     .gold-plate__name {
@@ -361,77 +351,58 @@ strong { font-weight: bold; }
         max-width: 5vw;
         overflow: hidden; 
         white-space: nowrap;
-        animation: typing 6s 1s linear backwards;}
+        animation: typing 1.5s 0.5s linear backwards;}
 
     .line-24 {
         margin: 0 0 0 6vw;
         max-width: 3vw;
-        animation: typing 2.5s 2.5s linear backwards;}
+        animation: typing 1.5s 2s linear backwards;}
 
     .line-25 {
         margin: 0 0 0 9vw;
         max-width: 50vw;
-        animation: typing 2.5s 4s linear backwards}
+        animation: typing 1.5s 3.5s linear backwards}
 
     .line-26 {
         margin: 4vw 0 0 6vw;
         max-width: 3vw;
-        animation: typing 2.5s 7.5s linear backwards}
+        animation: typing 1.5s 5.5s linear backwards}
 
     .line-27 {
         margin: 4vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 2.5s 9s linear backwards}
+        animation: typing 1.5s 6.5s linear backwards}
 
     .line-28 {
         margin: 8vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 2.5s 11.3s linear backwards}
+        animation: typing 1.5s 8s linear backwards}
 
     .line-29 {
         margin: 12vw 0 0 6vw;
         max-width: 3vw;
-        animation: typing 2.5s 14s linear backwards}
+        animation: typing 1.5s 9.5s linear backwards}
 
     .line-30 {
         margin: 12vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 2.5s 15.5s linear backwards}
+        animation: typing 1.5s 11s linear backwards}
 
     .line-31 {
         margin: 16vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 2.5s 18s linear backwards}
+        animation: typing 1.5s 12.5s linear backwards}
 
-    /* --> dialogue lines */
-    .line-32 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-33 {animation: typing 2s 2.5s linear backwards; margin: var(--bottom-line-single);}
-
-    .line-34 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-35 {animation: typing 2s 2s linear backwards;}
-
-    .line-36 {animation: typing 2s 0.5s linear backwards;}
-
-    .line-36-1 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
-
-    .line-36-2 {animation: typing 2s 2s linear backwards; margin-top: 0;}
-
-@keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
-}
-
-/* @keyframes overflow {
-    from {overflow: hidden;}
-    to {overflow: visible;}
-} */
+    @keyframes typing {
+        from {width: 0;}
+        to {width: 100%;}
+    }
 
 
-/* gif animation elements */
+/* gif elements */
 
     /* employee */
+
     .employee {
         width: 8.5vw;
         position: absolute;
@@ -443,6 +414,7 @@ strong { font-weight: bold; }
         .employee3 {display: none;}
 
     /* boy */
+
     .boy {
         width: 7vw;
         position: absolute;
@@ -454,6 +426,7 @@ strong { font-weight: bold; }
 
 
     /* arrow */
+
     .arrow {
         width: 5vw;
         position: absolute;
@@ -464,6 +437,61 @@ strong { font-weight: bold; }
         .arrow2 {display: none;} 
         .arrow3 {display: none;}
 
+/* item */
+
+/* map */
+    .map-icon {
+        background-color: purple;
+        width: 3vw;
+        height: 3vw;
+        position: absolute;
+        top: 20vw;
+        left: 2vw;
+        z-index: 10;
+        display: none;
+    }
+
+    .map-contents {
+        display: none;
+    }
+
+    .item-background {
+        z-index: 21;
+    }
+
+    .map-image {
+        position: absolute;
+        height: 50vw;
+        top: 5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 22;
+    }
+
+    .close-x {
+        position: absolute;
+        top: 5vw;
+        left: 80vw;
+        font-size: 4vw;
+        z-index: 20vw;
+        color:#8f8f8f;
+        z-index: 22;
+    }
+
+        .close-x:hover {
+            color: #d1d1d1;
+            cursor: pointer;
+        }
 
 
+/* score */
+.score {
+    position: absolute;
+    left: 90vw;
+    top: 5vw;
+    width: 5vw;
+    height: 5vw;
+    background-color: white;
+    z-index:10;
+}
 

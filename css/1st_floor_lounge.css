@@ -1,120 +1,209 @@
 /* global elements */
 
-/* 
-npc 라인: 3초
-플레이어 라인: 2초
-애니메이션 딜레이: 0.5초
-*/
+    /* item */
 
-a:link, a:visited {
-    text-decoration: none;
-    color: blue;
-}
+        /* map */
+        .map-icon {
+            background-color: purple;
+            width: 3vw;
+            height: 3vw;
+            position: absolute;
+            top: 20vw;
+            left: 2vw;
+            z-index: 10;
+            display: none;
+        }
 
-.container {
-    background-image: url("../image/1st_floor_lounge/라운지-배경.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    height: 56.25vw;
-}
+        .map-contents {
+            display: none;
+        }
 
+        .item-background {
+            z-index: 21;
+        }
 
-.fade-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
-    height: 56.25vw;
-    background-color: #000000;
-    z-index: 1000;
-}
+        .map-image {
+            position: absolute;
+            height: 50vw;
+            top: 5vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+        }
 
-    .fade-in-start/* used for the very start */ {
-        opacity: 1;
-        animation: fadein 4s both;
-    }
+        .close-x {
+            position: absolute;
+            top: 5vw;
+            left: 80vw;
+            font-size: 4vw;
+            z-index: 20vw;
+            color:#8f8f8f;
+            z-index: 22;
+        }
 
-    .fade-in {
-        opacity: 1;
-        animation: fadein 2s both;
-    }
-
-    .fade-out {
-        opacity: 0;
-        animation: fadeout 2s both;
-    }
-
-
-@keyframes fadein {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+            .close-x:hover {
+                color: #d1d1d1;
+                cursor: pointer;
+            }
 
 
-.gif {
-    position: absolute;
-    z-index: 0;
-}
-
-    .gif:hover {
-        cursor: pointer;
-    }
-
-.avatar {
-    position: absolute;
-    z-index: 20;
-}
-
-.clicker {
-    color: blue;
-    font-family: 'Noto Serif KR', serif;
-    font-size: var(--player-font-size);
-}
-    
-    .clicker:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-.dialogue {
-    display: none;
-    z-index: 10;
-}
-
-    .dialogue-box {
+    /* score */
+        .score {
         position: absolute;
-        top: 36.5vw;
-        left: 24vw;
-        width: 62vw;
-        height: 18vw;
-        background-color: #FFF;
-        border: #000000 3px solid;
-        border-radius: 20px;
+        left: 90vw;
+        top: 5vw;
+        width: 5vw;
+        height: 5vw;
+        background-color: white;
+        z-index:10;
+        }
+
+
+    /* arrow icon */
+        
+    .movingarrow {
+        position: absolute;
+        width: 2.5vw;
+        animation: updown 0.7s alternate ease-in-out infinite;
+        display: none;
+    }
+    
+        .movingarrow__small-hyun {
+            top: 21vw;
+            left: 20vw;
+        }
+        .movingarrow__big-hyun {
+            top: 15.5vw;
+            left: 57vw;
+        }
+        .movingarrow__gold-plate {
+            top: 5vw;
+            left: 67.5vw;
+        }
+        .movingarrow__link {
+            top: 16.5vw;
+            left: 45vw;
+        }
+    
+        @keyframes updown {
+            from {margin-top: 1.5vw;}
+            to {margin-top: 0;}
+        }
+
+    /* fade */
+    .fade-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+        height: 56.25vw;
+        background-color: #000000;
+        z-index: 1000;
+    }
+    
+        .fade-in-start/* used for the very start */ {
+            opacity: 1;
+            animation: fadein 4s both;
+        }
+    
+        .fade-in {
+            opacity: 1;
+            animation: fadein 2s both;
+        }
+    
+        .fade-out {
+            opacity: 0;
+            animation: fadeout 2s both;
+        }
+    
+    
+    @keyframes fadein {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+    
+    @keyframes fadeout {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    /* static elements */
+    .container {
+        background-image: url("../image/1st_floor_lounge/라운지-배경.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100vw auto;
+        height: 56.25vw;
+    }
+
+    .gif {
+        position: absolute;
+        z-index: 0;
+    }
+
+        .gif:hover {
+            cursor: pointer;
+        }
+
+    .avatar {
+        position: absolute;
+        z-index: 20;
+    }
+
+    .clicker {
+        color: blue;
+        font-family: 'Noto Serif KR', serif;
+        font-size: var(--player-font-size);
+    }
+        
+        .clicker:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+    .dialogue {
+        display: none;
         z-index: 10;
     }
 
-    .name {
-        font-family: 'Noto Serif KR', serif;
-        font-size: 1.7vw;
-        margin: 1.5vw 0 0 6vw;
-        font-weight: bold;
-    }
+        .dialogue-box {
+            position: absolute;
+            top: 35vw; /*36.5vw*/
+            left: 24vw;
+            width: 62vw;
+            height: 20vw; /*18vw */
+            background-color: #FFF;
+            border: #000000 2px solid;
+            border-radius: 20px;
+            z-index: 10;
+        }
 
-    /* line */
+        .name {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.7vw;
+            margin: 1.5vw 0 0 6vw;
+            font-weight: bold;
+        }
+
+        strong {font-weight: bold;}
+
+        a:link, a:visited {
+            text-decoration: none;
+            color: blue;
+        }
+
+
+
+    /* line elements */
+
     :root {
         --font-size: 1.2vw;
-        --first-line: 0.7vw 0 0 6vw;
-        --bottom-line-single: 9vw 0 0 6vw;
-        --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
-        --bottom-line-triple: 5.7vw 0 0 6vw;
-        --bottom-line-quadruple: 4.1vw 0 0 6vw;
-        --bottom-line-quintuple: 2.6vw 0 0 6vw;
+        --first-line: 0vw 0 0 6vw;
+        --one-top-line: 10vw 0 0 6vw;
+        --two-top-lines: 8.4vw 0 0 6vw;/*differnece: 1.6vw*/
+        --three-top-lines: 6.8vw 0 0 6vw;
+        --four-top-lines: 5vw 0 0 6vw;
+        --five-top-lines: 3.4vw 0 0 6vw;
         --line-height: 1.5;
     }
 
@@ -128,122 +217,161 @@ a:link, a:visited {
         max-width: 55vw;
     }
 
-        .npc-line {
+        .top-line {
             margin: var(--first-line);
         }
 
-        .player-line {
-            margin: var(--bottom-line-single);
+        .bottom-line {
+            margin: var(--one-top-line);
         }
 
-/* bartender */
+    /* timing */
+    .first-line {animation: typing 1.5s 0.3s linear backwards;}
+    .second-line {animation: typing 1.5s 1.8s linear backwards;}
+    .third-line {animation: typing 1.5s 3.3s linear backwards;}
+    .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
+    .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
+    .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
 
-    .bartender__gif {
-        width: 10vw;
-        top: 20.7vw;
-        left: 12.58vw;
+    .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
+    .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
+
+    /* margin */
+    .next-line {margin-top: 0;}
+    .one-topline {margin: var(--one-top-line)}
+    .two-toplines {margin: var(--two-top-lines)}
+    .three-toplines {margin: var(--three-top-lines)}
+    .four-toplines {margin: var(--four-top-lines)}
+    .five-toplines {margin: var(--five-top-lines)}
+
+    
+    /* dialogue arrow */
+
+    .nextarrow {
+        animation: flash 0.6s 4.5s infinite alternate;
     }
 
-    .clicker-1-1:hover {
-        color: #fdb815;
+        .nextarrow:hover {
+            cursor: pointer;
+        }
+
+        @keyframes flash {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+
+
+/* lounge elements */
+
+    /* bartender */
+
+        .bartender__gif {
+            width: 10vw;
+            top: 20.7vw;
+            left: 12.58vw;
+        }
+
+        .clicker-1-1:hover {
+            color: #fdb815;
+        }
+
+        .clicker-1-2:hover {
+            color: #c82400;
+        }
+
+        .clicker-1-3:hover {
+            color: #3d2922;
+        }
+
+        .clicker-1-4:hover {
+            background: linear-gradient(to right, #f2362d, #ffe747);
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+
+    /* big-hyun */
+
+        .big-hyun__gif {
+            width: 15vw;
+            top: 23vw;
+            left: 75vw;
+        }
+
+        .big-hyun__avatar {
+            width: 15.4vw;
+            top: 33.8vw;
+            left: 14vw;
+        }
+
+    /* lines */
+
+        .line-0-1 {animation: typing 2s 0.5s linear backwards;}
+        .line-0-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
+        .line-0-3 {animation: typing 2s 4.5s linear backwards; margin-top: 0vw;}
+        :root {
+            --speed: 1s;
+            --diff: 0.3s;
+            --start: 1.5s;
+        }
+        .line-1 {animation: typing 2s 0.5s linear backwards;}
+        .line-1-1 {animation: typing var(--speed) var(--start) linear backwards; margin-top: 0vw;}
+        .line-1-2 {animation: typing var(--speed) calc(var(--start) + var(--diff)) linear backwards; margin-top: 0vw;}
+        .line-1-3 {animation: typing var(--speed) calc(var(--start) + var(--diff)*2) linear backwards; margin-top: 0vw;}
+        .line-1-4 {animation: typing var(--speed) calc(var(--start) + var(--diff)*3) linear backwards; margin-top: 0vw;}
+        .line-1-5 {animation: typing var(--speed) calc(var(--start) + var(--diff)*4) linear backwards; margin: var(--bottom-line-quintuple);}
+
+
+        .line-2-1 {animation: typing 5s 0.5s linear backwards;}
+        .line-2-2 {animation: typing 5s 0.5s linear backwards;}
+        .line-2-3 {animation: typing 5s 0.5s linear backwards;}
+        .line-2-4-1 {animation: typing 3s 1s linear backwards;}
+        .line-2-4-2 {animation: typing 5s 4s linear backwards; margin-top: 0vw;}
+        .line-2-4-3 {animation: typing 5s 7s linear backwards; margin-top: 0vw;}
+        .line-2-4-4 {animation: typing 14s 11s linear backwards; margin-top: 0vw;}
+
+
+        .line-3 {animation: typing 2s 0.5s linear backwards;}
+        .line-3-1 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
+        .line-3-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+
+    @keyframes typing {
+        from {width: 0;}
+        to {width: 100%;}
     }
 
-    .clicker-1-2:hover {
-        color: #c82400;
-    }
+    /* gif */
 
-    .clicker-1-3:hover {
-        color: #3d2922;
-    }
+        /* coffee machine */
 
-    .clicker-1-4:hover {
-        background: linear-gradient(to right, #f2362d, #ffe747);
-        background-clip: text; 
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent;
-    }
-
-/* big-hyun */
-
-    .big-hyun__gif {
-        width: 15vw;
-        top: 23vw;
-        left: 75vw;
-    }
-
-    .big-hyun__avatar {
-        width: 15.4vw;
-        top: 33.8vw;
-        left: 14vw;
-    }
-
-/* lines */
-
-    .line-0-1 {animation: typing 2s 0.5s linear backwards;}
-    .line-0-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-    .line-0-3 {animation: typing 2s 4.5s linear backwards; margin-top: 0vw;}
-    :root {
-        --speed: 1s;
-        --diff: 0.3s;
-        --start: 1.5s;
-    }
-    .line-1 {animation: typing 2s 0.5s linear backwards;}
-    .line-1-1 {animation: typing var(--speed) var(--start) linear backwards; margin-top: 0vw;}
-    .line-1-2 {animation: typing var(--speed) calc(var(--start) + var(--diff)) linear backwards; margin-top: 0vw;}
-    .line-1-3 {animation: typing var(--speed) calc(var(--start) + var(--diff)*2) linear backwards; margin-top: 0vw;}
-    .line-1-4 {animation: typing var(--speed) calc(var(--start) + var(--diff)*3) linear backwards; margin-top: 0vw;}
-    .line-1-5 {animation: typing var(--speed) calc(var(--start) + var(--diff)*4) linear backwards; margin: var(--bottom-line-quintuple);}
+        .coffee {
+            width: 12vw;
+            position: absolute;
+            top: 24vw;
+            left: 0vw;
+        }
 
 
-    .line-2-1 {animation: typing 5s 0.5s linear backwards;}
-    .line-2-2 {animation: typing 5s 0.5s linear backwards;}
-    .line-2-3 {animation: typing 5s 0.5s linear backwards;}
-    .line-2-4-1 {animation: typing 3s 1s linear backwards;}
-    .line-2-4-2 {animation: typing 5s 4s linear backwards; margin-top: 0vw;}
-    .line-2-4-3 {animation: typing 5s 7s linear backwards; margin-top: 0vw;}
-    .line-2-4-4 {animation: typing 14s 11s linear backwards; margin-top: 0vw;}
+        /* lightbulb */
+
+        .lightbulb {
+            width: 27vw;
+            position: absolute;
+            top: 0vw;
+            left: 11vw;}
+
+            .lightbulb1 {display: block;} 
+            .lightbulb2 {display: none;} 
 
 
-    .line-3 {animation: typing 2s 0.5s linear backwards;}
-    .line-3-1 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
-    .line-3-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+        /* people */
 
-@keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
-}
+        .people {
+            width: 27vw;
+            position: absolute;
+            top: 22vw;
+            left: 30vw;}
 
-/* gif */
-
-    /* coffee machine */
-
-    .coffee {
-        width: 12vw;
-        position: absolute;
-        top: 24vw;
-        left: 0vw;
-    }
-
-
-    /* lightbulb */
-
-    .lightbulb {
-        width: 27vw;
-        position: absolute;
-        top: 0vw;
-        left: 11vw;}
-
-        .lightbulb1 {display: block;} 
-        .lightbulb2 {display: none;} 
-
-
-    /* people */
-
-    .people {
-        width: 27vw;
-        position: absolute;
-        top: 22vw;
-        left: 30vw;}
-
-        .people1 {display: block;} 
-        .people2 {display: none;} 
+            .people1 {display: block;} 
+            .people2 {display: none;} 

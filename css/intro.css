@@ -49,7 +49,7 @@ body {
 .arrow {
     opacity: 0;
     color: #fff;
-    float: right;
+    font-size: 1.5vw;
 }
 
 .arrow-1 {
