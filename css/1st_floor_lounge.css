@@ -1,96 +1,109 @@
-/* global elements */
+
+
+/*//// global elements ////*/
+
 
     /* item */
 
-        /* map */
-        .map-icon {
-            background-color: purple;
-            width: 3vw;
-            height: 3vw;
-            position: absolute;
-            top: 20vw;
-            left: 2vw;
-            z-index: 10;
-            display: none;
+    .icon:hover {
+        cursor: pointer;
+    }
+
+    /* map */
+
+    .map-icon {
+        height: 6vw;
+        position: absolute;
+        top: 20vw;
+        left: 2vw;
+        z-index: 10;
+    }
+
+    .map-contents {
+        display: none;
+    }
+
+    #item-background {
+        z-index: 21;
+    }
+
+    .map-image {
+        position: absolute;
+        height: 50vw;
+        top: 5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 22;
+    }
+
+    .close-x {
+        position: absolute;
+        top: 5vw;
+        left: 80vw;
+        font-size: 4vw;
+        z-index: 20vw;
+        color:#8f8f8f;
+        z-index: 22;
+    }
+
+        .close-x:hover {
+            color: #d1d1d1;
+            cursor: pointer;
         }
 
-        .map-contents {
-            display: none;
-        }
-
-        .item-background {
-            z-index: 21;
-        }
-
-        .map-image {
-            position: absolute;
-            height: 50vw;
-            top: 5vw;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 22;
-        }
-
-        .close-x {
-            position: absolute;
-            top: 5vw;
-            left: 80vw;
-            font-size: 4vw;
-            z-index: 20vw;
-            color:#8f8f8f;
-            z-index: 22;
-        }
-
-            .close-x:hover {
-                color: #d1d1d1;
-                cursor: pointer;
-            }
 
 
     /* score */
-        .score {
+
+    .scores {
         position: absolute;
+        font-family: 'Noto Serif KR', serif;
         left: 90vw;
-        top: 5vw;
-        width: 5vw;
-        height: 5vw;
-        background-color: white;
-        z-index:10;
-        }
+        top: 2vw;
+        z-index: 10;
+    }
+
+    .scoreboard {
+        height: 8vw;
+    }
+
+    .score__text {
+        font-size: 1vw;
+        position: absolute;
+        top: 2vw;
+        left: 2.2vw;
+        /* text-align: center; */
+    }
+    .score {
+        font-size: 2.4vw;
+        position: absolute;
+        top: 3.4vw;
+        left: -0.7vw;
+        text-align: center;
+        width: 100%;
+    }
+
+
+
 
 
     /* arrow icon */
-        
+
     .movingarrow {
         position: absolute;
         width: 2.5vw;
         animation: updown 0.7s alternate ease-in-out infinite;
         display: none;
     }
-    
-        .movingarrow__small-hyun {
-            top: 21vw;
-            left: 20vw;
-        }
-        .movingarrow__big-hyun {
-            top: 15.5vw;
-            left: 57vw;
-        }
-        .movingarrow__gold-plate {
-            top: 5vw;
-            left: 67.5vw;
-        }
-        .movingarrow__link {
-            top: 16.5vw;
-            left: 45vw;
-        }
-    
+
         @keyframes updown {
             from {margin-top: 1.5vw;}
             to {margin-top: 0;}
         }
 
+
     /* fade */
+
     .fade-box {
         position: absolute;
         top: 0;
@@ -98,42 +111,21 @@
         width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
         height: 56.25vw;
         background-color: #000000;
-        z-index: 1000;
-    }
-    
-        .fade-in-start/* used for the very start */ {
-            opacity: 1;
-            animation: fadein 4s both;
-        }
-    
-        .fade-in {
-            opacity: 1;
-            animation: fadein 2s both;
-        }
-    
-        .fade-out {
-            opacity: 0;
-            animation: fadeout 2s both;
-        }
-    
-    
-    @keyframes fadein {
-        from {opacity: 1;}
-        to {opacity: 0;}
-    }
-    
-    @keyframes fadeout {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        z-index: 2000;
+        /* display: none; */
     }
 
-    /* static elements */
+
+
+    /* graphic elements */
+
     .container {
         background-image: url("../image/1st_floor_lounge/라운지-배경.jpg");
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 100vw auto;
         height: 56.25vw;
+        overflow: hidden;
     }
 
     .gif {
@@ -145,21 +137,10 @@
             cursor: pointer;
         }
 
-    .avatar {
-        position: absolute;
-        z-index: 20;
-    }
 
-    .clicker {
-        color: blue;
-        font-family: 'Noto Serif KR', serif;
-        font-size: var(--player-font-size);
-    }
+
         
-        .clicker:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
+    /* dialogue elements */
 
     .dialogue {
         display: none;
@@ -178,19 +159,31 @@
             z-index: 10;
         }
 
-        .name {
-            font-family: 'Noto Serif KR', serif;
-            font-size: 1.7vw;
-            margin: 1.5vw 0 0 6vw;
-            font-weight: bold;
-        }
+    .avatar {
+        position: absolute;
+        z-index: 20;
+    }
 
-        strong {font-weight: bold;}
+    .transparent-background {
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+        height: 56.25vw;
+        background-color: #000000;
+        opacity: 0.8;
+        z-index: 10;
+    }
 
-        a:link, a:visited {
-            text-decoration: none;
-            color: blue;
-        }
+    .name {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.7vw;
+        margin: 1.5vw 0 1.5vw 6vw;
+        font-weight: bold;
+    }
+
+
 
 
 
@@ -209,6 +202,7 @@
 
     .line {
         font-family: 'Noto Serif KR', serif;
+        /* font-family: 'Noto Sans KR', sans-serif; */
         overflow: hidden; 
         white-space: nowrap;
         display: none;
@@ -225,27 +219,43 @@
             margin: var(--one-top-line);
         }
 
-    /* timing */
-    .first-line {animation: typing 1.5s 0.3s linear backwards;}
-    .second-line {animation: typing 1.5s 1.8s linear backwards;}
-    .third-line {animation: typing 1.5s 3.3s linear backwards;}
-    .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
-    .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
-    .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
+        /* timing */
+        .first-line {animation: typing 1.5s 0.3s linear backwards;}
+        .second-line {animation: typing 1.5s 1.8s linear backwards;}
+        .third-line {animation: typing 1.5s 3.3s linear backwards;}
+        .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
+        .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
+        .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
 
-    .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
-    .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
+        .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
+        .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
 
-    /* margin */
-    .next-line {margin-top: 0;}
-    .one-topline {margin: var(--one-top-line)}
-    .two-toplines {margin: var(--two-top-lines)}
-    .three-toplines {margin: var(--three-top-lines)}
-    .four-toplines {margin: var(--four-top-lines)}
-    .five-toplines {margin: var(--five-top-lines)}
+        @keyframes typing {
+            from {width: 0;}
+            to {width: 100%;}
+        }
 
-    
-    /* dialogue arrow */
+        /* margin */
+        .next-line {margin-top: 0;}
+        .one-topline {margin: var(--one-top-line)}
+        .two-toplines {margin: var(--two-top-lines)}
+        .three-toplines {margin: var(--three-top-lines)}
+        .four-toplines {margin: var(--four-top-lines)}
+        .five-toplines {margin: var(--five-top-lines)}
+
+    .clicker {
+        color: blue;
+        font-family: 'Noto Serif KR', serif;
+        font-size: var(--player-font-size);
+        text-decoration: none;
+    }
+
+        .clicker:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+
 
     .nextarrow {
         animation: flash 0.6s 4.5s infinite alternate;
@@ -260,11 +270,25 @@
             to {opacity: 1;}
         }
 
+    strong { font-weight: bold; }
 
+    a:link, a:visited {
+        text-decoration: none;
+        color: blue;
+    }
+
+
+
+        
 
 /* lounge elements */
 
     /* bartender */
+
+        .movingarrow__bartender {
+            top: 16vw;
+            left: 16vw;
+        }
 
         .bartender__gif {
             width: 10vw;
@@ -272,74 +296,83 @@
             left: 12.58vw;
         }
 
-        .clicker-1-1:hover {
-            color: #fdb815;
+        .clicker-1-1, .clicker-1-1:hover {
+            color: #c54f02;
         }
 
-        .clicker-1-2:hover {
-            color: #c82400;
+        .clicker-1-2, .clicker-1-2:hover {
+            color: #eac38e;
         }
 
-        .clicker-1-3:hover {
+        .clicker-1-3, .clicker-1-3:hover {
             color: #3d2922;
         }
 
-        .clicker-1-4:hover {
+        .clicker-1-4, .clicker-1-4:hover {
             background: linear-gradient(to right, #f2362d, #ffe747);
             background-clip: text; 
-            -webkit-background-clip: text; 
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .clicker-1-4:hover {
+            text-decoration: none;
+            border-bottom: 0.15vw solid transparent;
+            border-image: linear-gradient(to right, #f2362d, #ffe747);
+            border-image-slice: 1;
+            line-height: 1.2vw;
+            display: inline-block;
+        }
+
 
     /* big-hyun */
 
         .big-hyun__gif {
-            width: 15vw;
-            top: 23vw;
+            width: 14vw;
+            top: 24vw;
             left: 75vw;
+            z-index: 1;
         }
 
         .big-hyun__avatar {
             width: 15.4vw;
             top: 33.8vw;
-            left: 14vw;
+            left: 13vw;
         }
+
+
+    /* elevator */
+
+        .movingarrow__elevator {
+            top: 21.5vw;
+            left: 83.3vw;
+        }
+
+        .elevator__button {
+            width: 3vw;
+            top: 27vw;
+            left: 83vw;
+        }   
+
+        .button-on {display: none;}
+
+        .elevator__alarm {
+            position: absolute;
+            width: 7vw;
+            top: 14vw;
+            left: 81vw;
+        }
+
+        .alarm-on {
+            animation: flash 0.6s 400ms ease-out infinite alternate backwards;
+            display: none;
+        }
+
+
 
     /* lines */
 
-        .line-0-1 {animation: typing 2s 0.5s linear backwards;}
-        .line-0-2 {animation: typing 2s 2.5s linear backwards; margin-top: 0vw;}
-        .line-0-3 {animation: typing 2s 4.5s linear backwards; margin-top: 0vw;}
-        :root {
-            --speed: 1s;
-            --diff: 0.3s;
-            --start: 1.5s;
-        }
-        .line-1 {animation: typing 2s 0.5s linear backwards;}
-        .line-1-1 {animation: typing var(--speed) var(--start) linear backwards; margin-top: 0vw;}
-        .line-1-2 {animation: typing var(--speed) calc(var(--start) + var(--diff)) linear backwards; margin-top: 0vw;}
-        .line-1-3 {animation: typing var(--speed) calc(var(--start) + var(--diff)*2) linear backwards; margin-top: 0vw;}
-        .line-1-4 {animation: typing var(--speed) calc(var(--start) + var(--diff)*3) linear backwards; margin-top: 0vw;}
-        .line-1-5 {animation: typing var(--speed) calc(var(--start) + var(--diff)*4) linear backwards; margin: var(--bottom-line-quintuple);}
-
-
-        .line-2-1 {animation: typing 5s 0.5s linear backwards;}
-        .line-2-2 {animation: typing 5s 0.5s linear backwards;}
-        .line-2-3 {animation: typing 5s 0.5s linear backwards;}
-        .line-2-4-1 {animation: typing 3s 1s linear backwards;}
-        .line-2-4-2 {animation: typing 5s 4s linear backwards; margin-top: 0vw;}
-        .line-2-4-3 {animation: typing 5s 7s linear backwards; margin-top: 0vw;}
-        .line-2-4-4 {animation: typing 14s 11s linear backwards; margin-top: 0vw;}
-
-
-        .line-3 {animation: typing 2s 0.5s linear backwards;}
-        .line-3-1 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
-        .line-3-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
-
-    @keyframes typing {
-        from {width: 0;}
-        to {width: 100%;}
-    }
+    
 
     /* gif */
 
@@ -347,7 +380,6 @@
 
         .coffee {
             width: 12vw;
-            position: absolute;
             top: 24vw;
             left: 0vw;
         }
@@ -357,7 +389,6 @@
 
         .lightbulb {
             width: 27vw;
-            position: absolute;
             top: 0vw;
             left: 11vw;}
 
@@ -369,7 +400,6 @@
 
         .people {
             width: 27vw;
-            position: absolute;
             top: 22vw;
             left: 30vw;}
 

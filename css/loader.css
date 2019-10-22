@@ -1,20 +1,11 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-    <title>로딩 중 - 센티멘탈 호텔</title>
-    <style>
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .preloader {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 56.25vw;
     overflow: hidden;
-    background-color:#ffffff;
+
+
+    /* display: none; */
 }
 
     .circle {
@@ -23,7 +14,8 @@
         width: inherit;
         height: inherit;
         overflow: hidden;
-        z-index: 1010;
+        z-index: 1000;
+        background-color:#ffffff;
     }
 
     .circle::after {
@@ -42,7 +34,7 @@
         
     .chain {
         position: absolute;
-        z-index: 1000;
+        z-index: 1005;
         width: 1.5vw;
         /* left: 50%;
         transform: translateX(-50%); */
@@ -57,7 +49,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 1000;
+        z-index: 1005;
         width: 20vw;
     }
         
@@ -67,20 +59,3 @@
         0% { bottom: 0vw; }
         100% { bottom: -50vw; }
     }
-
-    </style>
-    
-</head>
-
-<body>
-    <div class="preloader">
-        <div class="circle"></div>
-        <div class="chain__upwards">
-            <img class="chain chain-1" src="image/loader/chain.png">
-            <img class="chain chain-2" src="image/loader/chain.png">
-        </div>
-        <img class="elevator" src="image/loader/elevator.png">
-    </div>
-</body>
-
-</html>

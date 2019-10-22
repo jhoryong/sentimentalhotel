@@ -1,497 +1,504 @@
-/* global elements */
 
-/* link */
-a:link, a:visited {
-    text-decoration: none;
-    color: blue;
-}
+
+/*//// global elements ////*/
+
+
+    /* item */
+
+        .icon:hover {
+            cursor: pointer;
+        }
+
+        /* map */
+
+        .map-icon {
+            height: 6vw;
+            position: absolute;
+            top: 20vw;
+            left: 2vw;
+            z-index: 10;
+            display: none;
+        }
+
+        .map-contents {
+            display: none;
+        }
+
+        #item-background {
+            z-index: 21;
+        }
+
+        .map-image {
+            position: absolute;
+            height: 50vw;
+            top: 5vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+        }
+
+        .close-x {
+            position: absolute;
+            top: 5vw;
+            left: 80vw;
+            font-size: 4vw;
+            z-index: 20vw;
+            color:#8f8f8f;
+            z-index: 22;
+        }
+
+            .close-x:hover {
+                color: #d1d1d1;
+                cursor: pointer;
+            }
+
+
+
+    /* score */
+
+    .scores {
+        position: absolute;
+        font-family: 'Noto Serif KR', serif;
+        left: 90vw;
+        top: 2vw;
+        z-index:10;
+    }
+
+    .scoreboard {
+        height: 8vw;
+    }
+
+    .score__text {
+        font-size: 1vw;
+        position: absolute;
+        top: 2vw;
+        left: 2.2vw;
+        /* text-align: center; */
+    }
+    .score {
+        font-size: 2.4vw;
+        position: absolute;
+        top: 3.4vw;
+        left: -0.7vw;
+        text-align: center;
+        width: 100%;
+    }
+
+
+
     
 
-/* arrow icon */
-.movingarrow {
-    position: absolute;
-    width: 2.5vw;
-    animation: updown 0.7s alternate ease-in-out infinite;
-    display: none;
-}
+    /* arrow icon */
 
-    .movingarrow__small-hyun {
-        top: 21vw;
-        left: 20vw;
-    }
-    .movingarrow__big-hyun {
-        top: 15.5vw;
-        left: 57vw;
-    }
-    .movingarrow__gold-plate {
-        top: 5vw;
-        left: 67.5vw;
-    }
-    .movingarrow__link {
-        top: 16.5vw;
-        left: 45vw;
-    }
-
-    @keyframes updown {
-        from {margin-top: 1.5vw;}
-        to {margin-top: 0;}
-    }
-
-
-/* fade */
-
-.fade-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
-    height: 56.25vw;
-    background-color: #000000;
-    z-index: 1000;
-    display: none;
-}
-
-    .fade-in-start {
-        opacity: 1;
-        animation: fadein 4s linear both;
-    }
-
-    .fade-in {
-        opacity: 1;
-        animation: fadein 2s both;
-    }
-
-    .fade-out {
-        opacity: 0;
-        animation: fadeout 2s both;
-    }
-
-
-@keyframes fadein {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-
-/* static elements */
-
-.container {
-    background-image: url("../image/1st_floor_lobby/로비-배경.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    height: 56.25vw;
-}
-
-.gif {
-    position: absolute;
-    z-index: 0;
-}
-
-    .gif:hover {
-        cursor: pointer;
-    }
-
-    
-/* dialogue elements */
-
-.dialogue {
-    display: none;
-    z-index:10;
-}
-
-.avatar {
-    position: absolute;
-    z-index: 20;
-}
-
-.dialogue-box {
-    position: absolute;
-    top: 35vw; /*36.5vw*/
-    left: 24vw;
-    width: 62vw;
-    height: 20vw; /*18vw */
-    background-color: #FFF;
-    border: #000000 2px solid;
-    border-radius: 20px;
-    z-index: 10;
-}
-
-.transparent-background {
-    /* display: none; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
-    height: 56.25vw;
-    background-color: #000000;
-    opacity: 0.8;
-    z-index: 10;
-}
-
-.name {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 1.7vw;
-    margin: 1.5vw 0 1.5vw 6vw;
-    font-weight: bold;
-}
-
-.clicker {
-    color: blue;
-    font-family: 'Noto Serif KR', serif;
-    font-size: var(--player-font-size);
-    text-decoration: none;
-}
-
-    .clicker:hover {
-        cursor: pointer;
-        text-decoration: underline;
-        color: blue;
-    }
-
-strong { font-weight: bold; }
-
-
-/* lines elements */
-
-:root {
-    --font-size: 1.2vw;
-    --first-line: 0vw 0 0 6vw;
-    --one-top-line: 10vw 0 0 6vw;
-    --two-top-lines: 8.4vw 0 0 6vw;/*differnece: 1.6vw*/
-    --three-top-lines: 6.8vw 0 0 6vw;
-    --four-top-lines: 5vw 0 0 6vw;
-    --five-top-lines: 3.4vw 0 0 6vw;
-    --line-height: 1.5;
-}
-
-.line {
-    font-family: 'Noto Serif KR', serif;
-    /* font-family: 'Noto Sans KR', sans-serif; */
-    overflow: hidden; 
-    white-space: nowrap;
-    display: none;
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    max-width: 55vw;
-}
-
-    .top-line {
-        margin: var(--first-line);
-    }
-
-    .bottom-line {
-        margin: var(--one-top-line);
-    }
-
-    /* timing */
-    .first-line {animation: typing 1.5s 0.3s linear backwards;}
-    .second-line {animation: typing 1.5s 1.8s linear backwards;}
-    .third-line {animation: typing 1.5s 3.3s linear backwards;}
-    .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
-    .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
-    .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
-
-    .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
-    .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
-
-    /* margin */
-    .next-line {margin-top: 0;}
-    .one-topline {margin: var(--one-top-line)}
-    .two-toplines {margin: var(--two-top-lines)}
-    .three-toplines {margin: var(--three-top-lines)}
-    .four-toplines {margin: var(--four-top-lines)}
-    .five-toplines {margin: var(--five-top-lines)}
-
-
-.nextarrow {
-    animation: flash 0.6s 4.5s infinite alternate;
-}
-
-    .nextarrow:hover {
-        cursor: pointer;
-    }
-
-    @keyframes flash {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-/* 1st floor elements */
-
-/* small-hyun elements*/
-
-    .small-hyun__gif {
-        width: 11vw;
-        top: 26.3vw;
-        left: 17vw;
-    }
-
-    .small-hyun__avatar {
-        width: 18vw;
-        top: 33.8vw;
-        left: 11vw;
-    }
-
-    input[type=text] {
-        height: 2vw;
-        width: 12vw;
-        padding: 2px 4px;
-        margin-left: 0.5vw;
-        border-radius: 4px;
-        border: 1px solid #cccccc;
-        font-family: 'Noto Serif KR', serif;   
-        font-size: 1.3vw;
-    }
-
-    input[type=submit] {
-        margin-left: 0.3vw;
-        background-color: #FFF;
-        border: none;
-    }
-
-
-/* big-hyun elements */
-
-    .big-hyun__gif {
-        width: 10vw;
-        top: 21vw;
-        left: 53vw;
-    }
-
-    .big-hyun__avatar {
-        width: 15.4vw;
-        top: 33.8vw;
-        left: 14vw;
-    }
-
-    .big-hyun__map {
+    .movingarrow {
+        position: absolute;
+        width: 2.5vw;
+        animation: updown 0.7s alternate ease-in-out infinite;
         display: none;
     }
 
-    .big-hyun__mapimg {
+        .movingarrow__small-hyun {
+            top: 21vw;
+            left: 20vw;
+        }
+        .movingarrow__big-hyun {
+            top: 15.5vw;
+            left: 57vw;
+        }
+        .movingarrow__gold-plate {
+            top: 5vw;
+            left: 67.5vw;
+        }
+        .movingarrow__link {
+            top: 16.5vw;
+            left: 45vw;
+        }
+
+        @keyframes updown {
+            from {margin-top: 1.5vw;}
+            to {margin-top: 0;}
+        }
+
+
+    /* fade */
+
+    .fade-box {
         position: absolute;
-        top: -6vw;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 43vw;
-        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+        height: 56.25vw;
+        background-color: #000000;
+        z-index: 2000;
+        /* display: none; */
     }
 
-        .big-hyun__mapimg__1-3 {
-            animation: flash 0.3s 0.5s alternate ease-in both 3; 
-            display: none;
-        }
 
-        .big-hyun__mapimg__4-7 {
-            animation: flash 0.3s 0.5s alternate ease-in both 3; 
-            display: none;
-        }
 
-        @keyframes flash {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-        
-    
-/* gold-plate elements*/
+    /* graphic elements */
 
-    .gold-plate__gif {
-        width: 8vw;
-        top: 9.6vw;
-        left: 64.2vw;
+    .container {
+        background-image: url("../image/1st_floor_lobby/로비-배경.jpg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100vw auto;
+        height: 56.25vw;
+        overflow: hidden;
+    }
+
+    .gif {
+        position: absolute;
         z-index: 0;
     }
 
-    .gold-plate__mission-box {
-        top: 4vw;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 30vw;
-        border: none;
-        border-radius: 0;
-        background-color: #000000;
-        opacity: 0.8;
-    }
-
-    .gold-plate__line {
-        opacity: 1; 
-        color:white;
-        line-height: 3;
-        max-width: 52vw;
-        position: absolute;
-    }
-
-    .gold-plate__dialogue-box {
-        display: none;
-    }
-
-/* link to lounge */
-
-    .lounge-link__clicker {
-        position: absolute;
-        top: 21vw;
-        left: 40vw;
-        width: 7vw;
-        height: 12vw;
-    }
-
-
-/*lines */
-    /* gold-plate lines */
-    /* --> mission statement */
-    .gold-plate__name {
-        margin: 3vw 0 2vw 30vw;
-        color: white;
-        max-width: 5vw;
-        overflow: hidden; 
-        white-space: nowrap;
-        animation: typing 1.5s 0.5s linear backwards;}
-
-    .line-24 {
-        margin: 0 0 0 6vw;
-        max-width: 3vw;
-        animation: typing 1.5s 2s linear backwards;}
-
-    .line-25 {
-        margin: 0 0 0 9vw;
-        max-width: 50vw;
-        animation: typing 1.5s 3.5s linear backwards}
-
-    .line-26 {
-        margin: 4vw 0 0 6vw;
-        max-width: 3vw;
-        animation: typing 1.5s 5.5s linear backwards}
-
-    .line-27 {
-        margin: 4vw 0 0 7.9vw;
-        max-width: 50vw;
-        animation: typing 1.5s 6.5s linear backwards}
-
-    .line-28 {
-        margin: 8vw 0 0 7.9vw;
-        max-width: 50vw;
-        animation: typing 1.5s 8s linear backwards}
-
-    .line-29 {
-        margin: 12vw 0 0 6vw;
-        max-width: 3vw;
-        animation: typing 1.5s 9.5s linear backwards}
-
-    .line-30 {
-        margin: 12vw 0 0 7.9vw;
-        max-width: 50vw;
-        animation: typing 1.5s 11s linear backwards}
-
-    .line-31 {
-        margin: 16vw 0 0 7.9vw;
-        max-width: 50vw;
-        animation: typing 1.5s 12.5s linear backwards}
-
-    @keyframes typing {
-        from {width: 0;}
-        to {width: 100%;}
-    }
-
-
-/* gif elements */
-
-    /* employee */
-
-    .employee {
-        width: 8.5vw;
-        position: absolute;
-        top: 22.5vw;
-        left: 27.4vw;}
-
-        .employee1 {display: block;} 
-        .employee2 {display: none;} 
-        .employee3 {display: none;}
-
-    /* boy */
-
-    .boy {
-        width: 7vw;
-        position: absolute;
-        top: 24.5vw;
-        left: 47vw;}
-
-        .boy1 {display: block;} 
-        .boy2 {display: none;} 
-
-
-    /* arrow */
-
-    .arrow {
-        width: 5vw;
-        position: absolute;
-        top: 7vw;
-        left: 92vw;}
-
-        .arrow1 {display: block;} 
-        .arrow2 {display: none;} 
-        .arrow3 {display: none;}
-
-/* item */
-
-/* map */
-    .map-icon {
-        background-color: purple;
-        width: 3vw;
-        height: 3vw;
-        position: absolute;
-        top: 20vw;
-        left: 2vw;
-        z-index: 10;
-        display: none;
-    }
-
-    .map-contents {
-        display: none;
-    }
-
-    .item-background {
-        z-index: 21;
-    }
-
-    .map-image {
-        position: absolute;
-        height: 50vw;
-        top: 5vw;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 22;
-    }
-
-    .close-x {
-        position: absolute;
-        top: 5vw;
-        left: 80vw;
-        font-size: 4vw;
-        z-index: 20vw;
-        color:#8f8f8f;
-        z-index: 22;
-    }
-
-        .close-x:hover {
-            color: #d1d1d1;
+        .gif:hover {
             cursor: pointer;
         }
 
 
-/* score */
-.score {
-    position: absolute;
-    left: 90vw;
-    top: 5vw;
-    width: 5vw;
-    height: 5vw;
-    background-color: white;
-    z-index:10;
-}
+
+        
+    /* dialogue elements */
+
+    .dialogue {
+        display: none;
+        z-index:10;
+    }
+
+        .dialogue-box {
+            position: absolute;
+            top: 35vw; /*36.5vw*/
+            left: 24vw;
+            width: 62vw;
+            height: 20vw; /*18vw */
+            background-color: #FFF;
+            border: #000000 2px solid;
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+    .avatar {
+        position: absolute;
+        z-index: 20;
+    }
+
+    .transparent-background {
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+        height: 56.25vw;
+        background-color: #000000;
+        opacity: 0.8;
+        z-index: 10;
+    }
+
+    .name {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.7vw;
+        margin: 1.5vw 0 1.5vw 6vw;
+        font-weight: bold;
+    }
+
+    
+    
+
+
+    /* line elements */
+
+    :root {
+        --font-size: 1.2vw;
+        --first-line: 0vw 0 0 6vw;
+        --one-top-line: 10vw 0 0 6vw;
+        --two-top-lines: 8.4vw 0 0 6vw;/*differnece: 1.6vw*/
+        --three-top-lines: 6.8vw 0 0 6vw;
+        --four-top-lines: 5vw 0 0 6vw;
+        --five-top-lines: 3.4vw 0 0 6vw;
+        --line-height: 1.5;
+    }
+
+    .line {
+        font-family: 'Noto Serif KR', serif;
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        overflow: hidden; 
+        white-space: nowrap;
+        display: none;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        max-width: 55vw;
+    }
+
+        .top-line {
+            margin: var(--first-line);
+        }
+
+        .bottom-line {
+            margin: var(--one-top-line);
+        }
+
+        /* timing */
+        .first-line {animation: typing 1.5s 0.3s linear backwards;}
+        .second-line {animation: typing 1.5s 1.8s linear backwards;}
+        .third-line {animation: typing 1.5s 3.3s linear backwards;}
+        .fourth-line {animation: typing 1.5s 4.8s linear backwards;}
+        .fifth-line {animation: typing 1.5s 6.3s linear backwards;}
+        .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
+
+        .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
+        .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
+
+        /* margin */
+        .next-line {margin-top: 0;}
+        .one-topline {margin: var(--one-top-line)}
+        .two-toplines {margin: var(--two-top-lines)}
+        .three-toplines {margin: var(--three-top-lines)}
+        .four-toplines {margin: var(--four-top-lines)}
+        .five-toplines {margin: var(--five-top-lines)}
+
+    .clicker {
+        color: blue;
+        font-family: 'Noto Serif KR', serif;
+        font-size: var(--player-font-size);
+        text-decoration: none;
+    }
+
+        .clicker:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    
+
+    .nextarrow {
+        animation: flash 0.6s 4.5s infinite alternate;
+    }
+
+        .nextarrow:hover {
+            cursor: pointer;
+        }
+
+        @keyframes flash {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+    strong { font-weight: bold; }
+
+    a:link, a:visited {
+        text-decoration: none;
+        color: blue;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/*//// 1st floor elements ////*/
+
+    /* small-hyun elements*/
+
+        .small-hyun__gif {
+            width: 11vw;
+            top: 26.3vw;
+            left: 17vw;
+        }
+
+        .small-hyun__avatar {
+            width: 18vw;
+            top: 34vw;
+            left: 11vw;
+        }
+
+        input[type=text] {
+            height: 2vw;
+            width: 12vw;
+            padding: 2px 4px;
+            margin-left: 0.5vw;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            font-family: 'Noto Serif KR', serif;   
+            font-size: 1.3vw;
+        }
+
+        input[type=submit] {
+            margin-left: 0.3vw;
+            background-color: #FFF;
+            border: none;
+        }
+
+
+    /* big-hyun elements */
+
+        .big-hyun__gif {
+            width: 10vw;
+            top: 21vw;
+            left: 53vw;
+        }
+
+        .big-hyun__avatar {
+            width: 15.4vw;
+            top: 33.8vw;
+            left: 14vw;
+        }
+
+        .big-hyun__map {
+            display: none;
+        }
+
+        .big-hyun__mapimg {
+            position: absolute;
+            top: -6vw;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 43vw;
+            z-index: 10;
+        }
+          
+        
+    /* gold-plate elements*/
+
+        .gold-plate__gif {
+            width: 8vw;
+            top: 9.6vw;
+            left: 64.2vw;
+            z-index: 0;
+        }
+
+        .gold-plate__mission-box {
+            top: 4vw;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 30vw;
+            border: none;
+            border-radius: 0;
+            background-color: #000000;
+            opacity: 0.8;
+        }
+
+        .gold-plate__line {
+            opacity: 1; 
+            color:white;
+            line-height: 3;
+            max-width: 52vw;
+            position: absolute;
+        }
+
+        .gold-plate__dialogue-box {
+            display: none;
+        }
+
+    /* link to lounge */
+
+        .lounge-link__clicker {
+            position: absolute;
+            top: 21vw;
+            left: 40vw;
+            width: 7vw;
+            height: 12vw;
+        }
+
+
+    /*lines */
+        /* gold-plate lines */
+        /* --> mission statement */
+        .gold-plate__name {
+            margin: 3vw 0 2vw 30vw;
+            color: white;
+            max-width: 5vw;
+            overflow: hidden; 
+            white-space: nowrap;
+            animation: typing 1.5s 0.5s linear backwards;}
+
+        .line-24 {
+            margin: 0 0 0 6vw;
+            max-width: 3vw;
+            animation: typing 1.5s 2s linear backwards;}
+
+        .line-25 {
+            margin: 0 0 0 9vw;
+            max-width: 50vw;
+            animation: typing 1.5s 3.5s linear backwards}
+
+        .line-26 {
+            margin: 4vw 0 0 6vw;
+            max-width: 3vw;
+            animation: typing 1.5s 5.5s linear backwards}
+
+        .line-27 {
+            margin: 4vw 0 0 7.9vw;
+            max-width: 50vw;
+            animation: typing 1.5s 6.5s linear backwards}
+
+        .line-28 {
+            margin: 8vw 0 0 7.9vw;
+            max-width: 50vw;
+            animation: typing 1.5s 8s linear backwards}
+
+        .line-29 {
+            margin: 12vw 0 0 6vw;
+            max-width: 3vw;
+            animation: typing 1.5s 9.5s linear backwards}
+
+        .line-30 {
+            margin: 12vw 0 0 7.9vw;
+            max-width: 50vw;
+            animation: typing 1.5s 11s linear backwards}
+
+        .line-31 {
+            margin: 16vw 0 0 7.9vw;
+            max-width: 50vw;
+            animation: typing 1.5s 12.5s linear backwards}
+
+        @keyframes typing {
+            from {width: 0;}
+            to {width: 100%;}
+        }
+
+
+    /* gif elements */
+
+        /* employee */
+
+        .employee {
+            width: 8.5vw;
+            position: absolute;
+            top: 22.5vw;
+            left: 27.4vw;}
+
+            .employee1 {display: block;} 
+            .employee2 {display: none;} 
+            .employee3 {display: none;}
+
+        /* boy */
+
+        .boy {
+            width: 7vw;
+            position: absolute;
+            top: 24.5vw;
+            left: 47vw;}
+
+            .boy1 {display: block;} 
+            .boy2 {display: none;} 
+
+
+        /* arrow */
+
+        .arrow {
+            width: 5vw;
+            position: absolute;
+            top: 7vw;
+            left: 92vw;}
+
+            .arrow1 {display: block;} 
+            .arrow2 {display: none;} 
+            .arrow3 {display: none;}
+
 

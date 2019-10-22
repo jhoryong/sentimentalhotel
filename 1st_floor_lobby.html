@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/1st_floor_lobby.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
@@ -16,22 +17,37 @@
     <title>로비 - 센티멘탈 호텔</title>
 </head>
 <body>
+
 <div class="fade-box"></div>
+
+<div class="preloader">
+    <div class="circle"></div>
+    <div class="chain__upwards">
+        <img class="chain chain-1" src="image/loader/chain.png">
+        <img class="chain chain-2" src="image/loader/chain.png">
+    </div>
+    <img class="elevator" src="image/loader/elevator.png">
+</div>
+
 <div class="container">
+
+    <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
+    
 
 <div class="items">
     <div class="item map">
-        <div class="map-icon"></div>
+        <img class="icon map-icon" src="image/icon/mapicon.png">
         <div class="map-contents">
-            <div class="transparent-background item-background"></div>
+            <div id="item-background"class="transparent-background"></div>
             <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
             <span class="close-x">&#10005;</span>
         </div>
     </div>
-    
 </div>
 
-<div class="scoreboard">
+<div class="scores">
+    <img class="scoreboard" src="image/icon/점수판.png">
+    <span class="score__text">점수</span>
     <span class="score"></span>
 </div>
  
@@ -118,13 +134,13 @@
             <div class="dialogue-2-2">
                 <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
                 <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
-                <p class="line bottom-line third-line next-line">그럼 오늘 교육에 대해 설명해 드릴게요.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-2"></i></p>
+                <p class="line bottom-line third-line next-line">그럼 오늘 교육에 대해 설명해 드리죠.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-2"></i></p>
             </div>
 
             <div class="dialogue-2-3">
-                <p class="line top-line first-line">먼저 <span class="player-name"></span>씨는 <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 잘 따라 각 층마다 있는 호텔의 주요 시설들을 공부해 주세요.</p>
-                <p class="line top-line second-line next-line">또한 제가 내는 <strong>과제</strong>를 성실히 해결해 주세요. </p>
-                <p class="line top-line third-line next-line">과제는 그렇게 어렵지 않을 꺼에요. 교육에 집중만 하신다면 충분히 해결하실 수 있을 겁니다.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-3"></i></p>
+                <p class="line top-line first-line">먼저 <span class="player-name"></span>씨는 <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 잘 따라 각 층마다 있는 호텔의 주요 시설들을 공부해 주시면 됩니다.</p>
+                <p class="line top-line second-line next-line">또한 제가 내는 <strong>과제</strong>를 성실히 해결해 주셔야 해요.</p>
+                <p class="line top-line third-line next-line">과제는 그렇게 어렵지 않을 겁니다. 교육에 집중만 하신다면 충분히 해결하실 수 있을 꺼에요.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-3"></i></p>
             </div>
 
             <div class="dialogue-2-4">
@@ -140,7 +156,7 @@
             <div class="dialogue-2-5">
                 <p class="line top-line first-line">그렇다고 너무 걱정하진 마세요. 추가로 점수를 얻을 수 있는 방법도 있으니까요.</p>
                 <p class="line top-line second-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 요소</strong>들이 있어요.</p>
-                <p class="line top-line third-line next-line">한 층에 있는 움직이는 요소를 모두 찾아내면, 알림과 함께 <strong>20점</strong>의 보너스 점수를 얻을 수 있어요.</p>
+                <p class="line top-line third-line next-line">움직이는 요소를 찾아낼 때 마다 <strong>5점</strong>을 얻을 수 있고, 모두 찾아낸다면 <strong>보너스 5점</strong>을 얻을 수 있어요.</p>
                 <p class="line top-line fourth-line next-line">부디 교육에 최선을 다하셔서 저희 센티멘탈 호텔의 정식 직원이 되기를 기대할게요!</span></p>
                 <p class="line bottom-line fifth-line four-toplines">- 네! <span class="clicker clicker-2-5">최선을 다하겠습니다!</span></p>
             </div>
@@ -191,10 +207,9 @@
         </div>
 
         <div class="dialogue-box gold-plate__dialogue-box">
-            <h1 class="name"><span class="player-name"></span></h1>
-        
+
             <div class="dialogue-3-1">
-                <h1 class="name">&nbsp;</h1>
+                <h1 class="name"><span class="player-name"></span></h1>
                 <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
                 <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
             </div>
@@ -213,7 +228,7 @@
             <div class="dialogue-4-1">
                 <h1 class="name">&nbsp;</h1>
                 <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines">- <a href="1st-floor-lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
+                <p class="line bottom-line fast-yes-line two-toplines">- <a href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
                 <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
             </div>
         </div>
@@ -235,12 +250,24 @@
         <img class="gif arrow arrow2" src="image/1st_floor_lobby/arrow2.png">
         <img class="gif arrow arrow3" src="image/1st_floor_lobby/arrow3.png">
     </div>
+
+    <div class="dialogue dialogue__foundallgif">
+        <div class="dialogue-box">
+            <h1 class="name">&nbsp;</h1>
+            <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>+5</strong>점!)</p>
+            <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
+        </div>
+    </div>
     
     <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
     <img class="movingarrow movingarrow__big-hyun" src="image/icon/arrow.png">
     <img class="movingarrow movingarrow__gold-plate" src="image/icon/arrow.png">
     <img class="movingarrow movingarrow__link" src="image/icon/arrow.png">
 </div>
+
+
+
+
 
 <script>
 
@@ -256,11 +283,13 @@
     let hasClickedBoy = false;
     let hasClickedArrow = false;
     
-    function addBonus() {
+    function alertFoundAllGif() {
         if (hasClickedEmployee === true && hasClickedBoy === true && hasClickedArrow === true) {
-        addScore(20);
-    }}
-    
+        $('.dialogue__foundallgif, .foundall').css(block);
+        addScore(5);
+        alertFoundAllGif = function(){};
+        }
+    }
     
 
 // item
@@ -279,26 +308,19 @@
 
     function addScore(number) {
         score += number;
-        $('.score').html(`점수: ${score}`);
+        $('.score').html(`${score}`);
+        sessionStorage.setItem("score", score);
     }
     addScore(0);
 
+    function addBonus(gif, score) {
+        if (gif === false) {
+            addScore(score);
+        }
+    }
 
 
 // save user name to sessionStorage and bring it out
-
-
-        // let playerName = function() {
-        //     let inputVal = document.getElementById("playerName").value;
-        //     sessionStorage.setItem("playerName", inputVal);
-        //     let nameBlockArray = document.querySelectorAll('.player-name');
-        //     nameBlockArray.forEach(putName);
-        // }
-        
-        // function putName(value, index) {
-        //     document.querySelectorAll('.player-name')[index].textContent = sessionStorage.getItem("playerName");
-        // }
-
 
         let getName = function(){
             let inputVal = $('#playerName').val();
@@ -307,11 +329,18 @@
         }
 
 
-
 // add fade in (main start version), disappear fade-in box
     // document.querySelector('.fade-box').classList.add('fade-in-start');
     // setTimeout(function() {document.querySelector('.fade-box').style.display = 'none';}, 4000);
 
+
+// fade in to loader
+    
+    // $('.fade-box').show(1000);
+    // $('.preloader').show();
+    $('.fade-box').fadeOut(1000);
+    setTimeout(function() {$('.preloader').hide();}, 4000)
+    setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
 
 
 //start dialogue
@@ -319,13 +348,14 @@
     setTimeout(function() {
         $('.dialogue__start').css(block);
         $('.dialogue-0-1').children().css(block);
-    }, 4500);
+    }, 8000);
 
     $('.clicker-0-1').on('click', function() {
         $('.dialogue__start').css(none);
         $('.movingarrow__small-hyun').css(block);
     })
 
+    //fast view
     $('.dialogue__start').click(function() {
         $('.dialogue-0-1').children().removeClass('first-line second-line third-line fourth-line fifth-line');
     }) 
@@ -524,8 +554,6 @@
         hasClickedBigHyun = true;
     })
 
-
-
 //gold plate
 
     $('.gold-plate__gif').on('click', function() {
@@ -534,17 +562,32 @@
         $('.small-hyun__dialogue, .big-hyun__dialogue').css(none);
 
         // logic 
-        if (hasClickedSmallHyun === true && hasClickedBigHyun === true) {
+        if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === false) {
             $('.movingarrow__gold-plate').css(none);
             $('.gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(block);
             $('.line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('display', 'inline-block')
+        
+        
 
             setTimeout(function() {
                 $('.gold-plate__dialogue-box').css(block);
                 $('.dialogue-3-1').children().css(block);
-            }, 14500);
+            }, 14000);
 
-        } else {}
+        } 
+        
+        if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
+            $('.gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(block);
+            $('.dialogue-3-1 .first-line').html("&nbsp;");
+            $('.dialogue-3-1 .name').html("&nbsp;");
+            
+            setTimeout(function() {
+                $('.gold-plate__dialogue-box').css(block);
+                $('.dialogue-3-1').children().css(block);
+            }, 400);
+        }
+        
+        else {}
 
         // fast view
         $('.dialogue-3-1').on('click', function() {
@@ -557,6 +600,7 @@
         $('.gold-plate__dialogue-box, .gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(none);
         $('.dialogue-3-1').children().css(none);
         $('.movingarrow__link').css(block);
+        addBonus(hasClickedGoldplate, 25);
         hasClickedGoldplate = true;
     })
 
@@ -579,15 +623,15 @@
 
     $(".clicker-4-1").on('click', function(event) {
         event.preventDefault();
-        document.querySelector('.fade-box').classList.add('fade-out');
-        document.querySelector('.fade-out').style.display = 'block';
+        $('.fade-box').fadeIn(2000);
         setTimeout(function() {
-            window.location.assign('1st_floor_lounge.html')}, 3000);
+            window.location = $('a').attr('href');
+        }, 2000);
     })
 
    $('.clicker-4-2').on('click', function() {
         $('.lounge-link__dialogue').css(none);
-        $('.dialogue-4-1').css(none);
+        $('.dialogue-4-1').children().css(none);
     })
 
     
@@ -600,8 +644,7 @@
         let employee3 = document.querySelector('.employee3');
 
         employee1.addEventListener('click', function() {
-            hasClickedEmployee = true;
-            addBonus()
+            addBonus(hasClickedEmployee, 5);
             let employeegif = function() {
             setTimeout(function(){employee1.style.display = 'none';}, 120)
             setTimeout(function(){employee3.style.display = 'block';}, 120)
@@ -610,6 +653,8 @@
             }
             let repeat = setInterval(employeegif, 240);
             setTimeout(function() {clearInterval(repeat);}, 480)
+            hasClickedEmployee = true;
+            alertFoundAllGif()
         })
 
 
@@ -619,9 +664,8 @@
         let boy1 = document.querySelector('.boy1');
         let boy2 = document.querySelector('.boy2');
 
-        boy1.addEventListener('click', function() {
-            hasClickedBoy = true;
-            addBonus()
+        boy1.addEventListener('click', function() {      
+            addBonus(hasClickedBoy, 5);
             let boygif = function() {
             setTimeout(function(){boy1.style.display = 'none';}, 400)
             setTimeout(function(){boy2.style.display = 'block';}, 400)
@@ -629,6 +673,8 @@
             setTimeout(function(){boy1.style.display = 'block';}, 2000)
             }
             boygif();
+            hasClickedBoy = true;
+            alertFoundAllGif()
         })
 
 
@@ -640,8 +686,7 @@
         let arrow3 = document.querySelector('.arrow3');
 
         arrow1.addEventListener('click', function() {
-            hasClickedArrow = true;
-            addBonus()
+            addBonus(hasClickedArrow, 5);
             let arrowgif = function() {
             setTimeout(function(){arrow1.style.display = 'none';}, 100)
             setTimeout(function(){arrow2.style.display = 'block';}, 100)
@@ -652,7 +697,14 @@
             }
             let repeat = setInterval(arrowgif, 500);
             setTimeout(function() {clearInterval(repeat);}, 1800)
+            hasClickedArrow = true;
+            alertFoundAllGif()
         })
+
+    $('.clicker-5-1').click(function() {
+        $('.dialogue__foundallgif, foundall').css(none);
+
+    })
 
 </script>
 </body>

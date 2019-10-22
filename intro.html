@@ -15,77 +15,74 @@
     <title>인트로 - 센티멘탈 호텔</title>
 </head>
 <body>
-    
+    <div class="fade-box"></div>
     <div class="dialogue dialogue-1">
         <p class="line line-1">축하합니다.</p>
         <p class="line line-2">오랜 기간의 취업 준비 끝에,</p>
         <p class="line line-3">당신은 센티멘탈 호텔 채용에 합격하셨습니다.&nbsp;<i class="fas fa-sort-down arrow arrow-1"></i></p>
-        
     </div>
-    <div class="clicker clicker-1"></div>
+
     <div class="dialogue dialogue-2">
         <p class="line line-4">귀하의 노고에 감사드리며,</p>
         <p class="line line-5">귀하는 오늘부터 센티멘탈 호텔의 직원이자, 가족입니다.&nbsp;<i class="fas fa-sort-down arrow arrow-2"></i></p>
-        
     </div>
-    <div class="clicker clicker-2"></div>
+
     <div class="dialogue dialogue-3">
         <p class="line line-6">오늘은 당신의 첫 출근 날입니다.</p>
         <p class="line line-7">먼저 당신은 센티멘탈 호텔의 직원이 되기 위한 교육을 수료할 예정입니다.</p>
     </div>
+
     <div class="link">
     <a href="1st_floor_lobby.html">
         <div class="linkbox">
-            <img class="linkbox__logo" src="image/intro/logo.png">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.51 231.47"><defs><style>.cls-1{fill:#818181;}</style></defs><title></title><path class="cls-1" d="M236.69,153.21c-19.71-27.05-62-18.94-85.92-12.34a3.22,3.22,0,0,1-3.81-4.4c8.15-18.66,29.54-65.7-.51-100.66-35.23-41-112.62-28-128.18,2.91C-9.32,93.45,27.58,241,27.58,241l157.83.5c23.85.07,50.45-12.47,57.74-35.18C248.18,190.6,248.79,169.83,236.69,153.21ZM55.16,76.55a3.31,3.31,0,0,1-6.63,0l.08-24.31a3.31,3.31,0,0,1,6.63,0ZM78.44,52.32a3.31,3.31,0,1,1,6.63,0L85,76.65a3.31,3.31,0,1,1-6.63,0Zm6.95,74.05a3.31,3.31,0,1,1-6.63,0L78.84,102a3.31,3.31,0,1,1,6.63,0Zm22.88-74a3.31,3.31,0,0,1,6.63,0l-.08,24.31a3.31,3.31,0,1,1-6.63,0Zm6.95,74.05a3.31,3.31,0,1,1-6.63,0l.08-24.31a3.31,3.31,0,1,1,6.63,0Z" transform="translate(-8.03 -9.98)"/></svg>
             <span class="line linkbox__text">센티멘탈 호텔 입장하기</span>
         </div>
     </a>
     </div>
-    <div class="fade-box"></div>
-
-    <script>
-        const clicker_1 = document.querySelector('.clicker-1');
-        const clicker_2 = document.querySelector('.clicker-2');
     
-        setTimeout(function(){clicker_1.style.display = 'block';}, 7500);
+
+<script>
     
-        clicker_1.addEventListener('click', () => {
-            clicker_1.style.display = 'none';
-            document.querySelector('.dialogue-1').style.display = 'none';
-            document.querySelector('.dialogue-2').style.display = 'block';
+    // $('.fade-box').fadeOut(2000);
 
-            setTimeout(function(){clicker_2.style.display = 'block'}, 4500);
-        });
+    setTimeout(function(){clicker_1.style.display = 'block';}, 7500);
+
+    $('.arrow-1').on('click', function() {
+        document.querySelector('.dialogue-1').style.display = 'none';
+        document.querySelector('.dialogue-2').style.display = 'block';
+
+        setTimeout(function(){clicker_2.style.display = 'block'}, 4500);
+    });
+
+    $('.arrow-2').on('click', function() {
+        document.querySelector('.dialogue-2').style.display = 'none';
+        document.querySelector('.dialogue-3').style.display = 'block';
+        setTimeout(function(){$('.linkbox').fadeIn(1000);}, 3000);
+    });
+
+    document.querySelector(".link").addEventListener('click', (event)=> {
+        event.preventDefault();
+        sessionStorage.setItem("visited", "true");
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+            window.location.assign('1st_floor_lobby.html')}, 2000);
+    })
     
-        clicker_2.addEventListener('click', () => {
-            clicker_2.style.display = 'none';
-            document.querySelector('.dialogue-2').style.display = 'none';
-            document.querySelector('.dialogue-3').style.display = 'block';
-            document.querySelector('.linkbox').style.display = 'block';
-        });
-
-        document.querySelector(".link").addEventListener('click', (event)=> {
-            event.preventDefault();
-            sessionStorage.setItem("visited", "true");
-            document.querySelector('.fade-box').style.display = 'block';
-            setTimeout(function() {
-               window.location.assign('1st_floor_lobby.html')}, 5000);
-        })
-        
 
 
-        // 이미 방문한 상태일때 마지막 장면이 나오는 기능:
+    // 이미 방문한 상태일때 마지막 장면이 나오는 기능:
 
-        function hasVisited() {
-            if (sessionStorage.getItem("visited") === "true") {
-                document.querySelector('.dialogue-1').style.display = "none";
-                document.querySelector('.dialogue-3').style.display = "block";
-                document.querySelector('.linkbox').style.display = "block";
-            }
+    function hasVisited() {
+        if (sessionStorage.getItem("visited") === "true") {
+            document.querySelector('.dialogue-1').style.display = "none";
+            document.querySelector('.dialogue-3').style.display = "block";
+            document.querySelector('.linkbox').style.display = "block";
         }
-        hasVisited();
-        
-    </script>
+    }
+    hasVisited();
+    
+</script>
         
 </body>
 
