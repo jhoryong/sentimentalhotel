@@ -1,0 +1,19 @@
+
+.container {
+    background-image: url("../image/5th_floor/background.jpg");
+}
+
+.dialogue-box2 {
+    position: absolute;
+    top: 35vw; 
+    left: 24vw;
+    width: 62vw;
+    height: 20vw; 
+    z-index: 15;
+    opacity: 1;
+    display: none;
+}
+
+.dialogue-box {
+    opacity: 0.9;
+}

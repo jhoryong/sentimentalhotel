@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-    <title>리조트 :: 센티멘탈 호텔</title>
+    <title>3층 리조트 :: 센티멘탈 호텔</title>
 </head>
 
 <body>
@@ -118,6 +118,7 @@
 
     <div class="swimming">
         <img class="gif gifhover swimming__gif" src="image/3rd_floor/swimming.gif">
+        <img class="gif-in swimming-in" src="image/3rd_floor/swimming.png">
         <audio id="swimming">
             <source src="sound/3rd_floor/swimming.mp3" type="audio/mpeg">
         </audio>
@@ -125,6 +126,7 @@
 
     <div class="fitness">
         <img class="gif gifhover fitness__gif" src="image/3rd_floor/fitness.gif">
+        <img class="gif-in fitness-in" src="image/3rd_floor/fitness.png">
         <audio id="fitness">
             <source src="sound/3rd_floor/fitness.mp3" type="audio/mpeg">
         </audio>
@@ -132,6 +134,7 @@
 
     <div class="spa">
         <img class="gif gifhover spa__gif" src="image/3rd_floor/spa.gif">
+        <img class="gif-in spa-in" src="image/3rd_floor/spa.png">
         <audio id="spa">
             <source src="sound/3rd_floor/spa.mp3" type="audio/mpeg">
         </audio>
@@ -165,6 +168,7 @@
 
     <div class="movie">
         <img class="gif gifhover movie__gif" src="image/3rd_floor/movie.gif">
+        <img class="gif-in movie-in" src="image/3rd_floor/movie.png">
         <audio id="movie">
             <source src="sound/3rd_floor/movie.mp3" type="audio/mpeg">
         </audio>
@@ -172,6 +176,7 @@
 
     <div class="restaurant">
         <img class="gif gifhover restaurant__gif" src="image/3rd_floor/restaurant.gif">
+        <img class="gif-in restaurant-in" src="image/3rd_floor/restaurant.png">
         <audio id="restaurant">
             <source src="sound/3rd_floor/restaurant.mp3" type="audio/mpeg">
         </audio>
@@ -385,9 +390,9 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.movingarrow__swimming').hide();
         hasClickedSwimmingpool = true;
 
-        fade.fadeIn(1000);
+        fade.fadeIn(1000).delay(12000).fadeOut(1000);
+        $('.swimming-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
         setTimeout(function() {$('#swimming')[0].play();}, 2000);
-        fade.delay(13000).fadeOut(1000);
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
@@ -402,9 +407,10 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.movingarrow__fitness').hide();
         hasClickedFitness = true;
 
-        fade.fadeIn(1000);
+        fade.fadeIn(1000).delay(12000).fadeOut(1000);
+        $('.fitness-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
         setTimeout(function() {$('#fitness')[0].play();}, 2000);
-        fade.delay(13000).fadeOut(1000);
+        
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
@@ -419,9 +425,10 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.movingarrow__spa').hide();
         hasClickedSpa = true;
 
-        fade.fadeIn(1000);
+        fade.fadeIn(1000).delay(12000).fadeOut(1000);
+        $('.spa-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
         setTimeout(function() {$('#spa')[0].play();}, 2000);
-        fade.delay(13000).fadeOut(1000);
+        
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
@@ -463,11 +470,12 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             hasClickedMovie = true;
             $('.movingarrow__movie').hide();
-            hasClickedMovie = true;
 
-            fade.fadeIn(1000);
+
+            fade.fadeIn(1000).delay(12000).fadeOut(1000);
+            $('.movie-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
             setTimeout(function() {$('#movie')[0].play();}, 2000);
-            fade.delay(13000).fadeOut(1000);
+            
 
             if (hasClickedMovie === true && hasClickedRestaurant === true) {
                 $('.movingarrow__elevator').show();
@@ -482,11 +490,10 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             hasClickedRestaurant = true;
             $('.movingarrow__restaurant').hide();
-            hasClickedRestaurant = true;
 
-            fade.fadeIn(1000);
+            fade.fadeIn(1000).delay(14000).fadeOut(1000);
             setTimeout(function() {$('#restaurant')[0].play();}, 2000);
-            fade.delay(15000).fadeOut(1000);
+            $('.restaurant-in').delay(2000).fadeIn(2000).delay(10000).fadeOut(1000);
             
             if (hasClickedMovie === true && hasClickedRestaurant === true) {
                 $('.movingarrow__elevator').show();

@@ -35,9 +35,6 @@
 
 /* fade out for sounds */
     
-    .fade-box__sound {
-        display: none;
-    }
 
     i {
         position: absolute;
@@ -50,6 +47,7 @@
 
     .fade-box__sound {
         background-color: #141318;
+        display: none;
     }
 
     .soundicon {
@@ -118,7 +116,15 @@
     .couple3 {display: none;} 
     .couple4 {display: none;} 
 
-
+.gif-in {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    z-index: 2001;
+}
 
 
 /* swimming */
@@ -162,6 +168,8 @@
         width: 10.5vw;
         top: 26vw;
         left: 78vw;
+        /* display: block; */
+        z-index: 1;
     }
 
     .big-hyun__avatar {
