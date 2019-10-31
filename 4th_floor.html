@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
     <link rel="stylesheet" type="text/css" href="./css/4th_floor.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
@@ -14,482 +16,1003 @@
 
     <title>4층 객실 - 센티멘탈 호텔</title>
 </head>
+
 <body>
+
 <div class="container">
+<div id="fade-box" class="fade-box"></div>
+<div class="transparent-background"></div>
+<div class="dialogue-box"></div>
+
+    <!-- preloader  -->
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
+
+    <!-- items -->
+    <div class="items">
+    <div class="item map">
+        <img class="icon map-icon" src="image/icon/mapicon.png">
+        <div class="map-contents">
+            <div id="item-background" class="transparent-background"></div>
+            <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
+            <span class="close-x">&#10005;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- scores -->
+    <div class="scores">
+        <img class="scoreboard" src="image/icon/점수판.png">
+        <span class="score__text">점수</span>
+        <span class="score"></span>
+    </div>
+
+
+
+
+
+
 
 <div class="big-hyun">
     <img class="gif big-hyun__gif" src="image/4th_floor/큰현.gif">
-    <div class="dialogue big-hyun__dialogue">
-        <img class="avatar big-hyun__avatar" src="image/4th_floor/큰현.png">
-        <div class="dialogue-box">
+    <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
 
-            <!-- start(0)-->
-            <h1 id="big-hyun" class="name">큰 현</h1>
-            <p class="line npc-line line-0-1-1">4층부터는 객실 층이에요. 4층은 <strong>총 7개의 방</strong>이 있죠.</p>
-            <p class="line npc-line line-0-1-2">이제부터 <span class="player-name"></span>씨께서 하실 일은 각 호실에 머물고 있는 고객들께 인사를 드리는 거에요.</p>
-            <p class="line npc-line line-0-1-3"><span class="clicker clicker-0-1-1">인사를... 드린다구요?</span></p>
-
-            <p class="line npc-line line-0-2-1">네. 호텔 직원이 고객의 방에 찾아가 인사를 드린다는게 조금 이상하게 들릴 수 있겠지만,</p>
-            <p class="line npc-line line-0-2-2">센티멘탈 호텔의 고객들 대부분은 장기투숙을 하고 있어요. 때문에 각 고객에게 필요한 맞춤형 </p>
-            <p class="line npc-line line-0-2-3">서비스를 제공하기 위해서는 각 호실에 어떤 고객이 투숙하고 있는지 알고 있어야 하죠.</p>
-            <p class="line player-line line-0-2-4">- <span class="clicker clicker-0-2-1">그렇군요.</span></p>
-
-            <p class="line npc-line line-0-3-1">그와 더불어, 문제가 하나 생겼어요. 센티멘탈 호텔은 모든 구역이 철저히 금연 구역임에도 불구하고,</p>
-            <p class="line npc-line line-0-3-2">최근 4층에서 나는 담배 냄새 때문에 고객으로부터 항의가 들어왔어요.</p>
-            <p class="line npc-line line-0-3-3"><span class="player-name"></span>씨는 고객들께 인사를 드리면서 담배 냄새 사건에 관한 단서를 모아 주세요.</p>
-            <p class="line player-line line-0-3-4">- 네, 알겠습니다. <span class="clicker clicker-0-3-1">(각 호실의 손님들과 대화해보자.)</span></p>
-
-            <!-- end(8) -->
-            <p class="line npc-line line-0-8-0">아직 모든 고객을 만나보지 않으셨군요. 4층의 모든 방을 방문해 주세요.</p>
-            <p class="line npc-line line-0-8-0">모든 고객을 다 만나보고 오셨군요. 수고하셨습니다. 담배를 피운 손님에 대한 정보는 많이 모으셨나요?</p>
-
-        </div>
+    <div class="dialogue-box2 dialogue-0-1">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">오셨군요. 4층은 객실 층이에요. 실제 손님들이 투숙하고 있어요.</p>
+        <p class="line top-line second-line next-line">이제부터 긴장하시고 옷매무새를 단정히 해주세요. 고객들에게 직접 인사를 드릴꺼에요.</p>
+        <p class="line bottom-line third-line two-toplines">- 고객님들께 <span class="clicker clicker-0-1-1">인사를 드린다구요?</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-0-2">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">네. 센티멘탈 호텔의 고객들 대부분은 장기투숙을 하고 있어요.</p>
+        <p class="line top-line second-line next-line">그래서 각 고객에게 필요한 맞춤형 서비스를 제공하기 위해서는,</p>
+        <p class="line top-line third-line next-line">누가 어디에 지내고 있는지 반드시 알고 있어야 합니다.</p>
+        <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-0-2-1">아, 그렇군요.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-0-3">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">그와 더불어, 문제가 하나 생겼어요.</p>
+        <p class="line top-line second-line next-line">저희 호텔은 금연구역이지만, 최근 4층에서 나는 담배 냄새 때문에 고객으로부터 항의가 들어왔어요.</p>
+        <p class="line top-line third-line next-line"><span class="player-name"></span>씨는 고객들께 인사를 드리면서 담배 냄새에 관한 단서를 모아 주세요.</p>
+        <p class="line bottom-line fourth-line three-toplines">- 네, <span class="clicker clicker-0-3-1">알겠습니다!</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-0-4">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">모든 손님을 만나고 다시 와 주세요.</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-0-4">(확인)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-1">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">모든 손님을 다 만나보고 오셨군요. 담배 냄새에 관한 단서는 많이 모으셨나요?</p>
+        <p class="line bottom-line second-line two-toplines">- 네! 손님들께 인사드리며 담배 냄새 관련 정보를 모았습니다.</p>
+        <p class="line bottom-line third-line next-line">&nbsp;&nbsp;제 머릿속엔 이미 <span class="clicker clicker-1-1">범인이 있습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-2">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">오! 좋아요. 호텔 내에서 담배를 피운 범인은 누구죠?</p>
+        <p class="line top-line second-line next-line">☛ <span class="clicker clicker-1-401">(401호) 처남 </span>  “406호는 거짓을 말하고 있습니다.” </p>
+        <p class="line top-line third-line next-line">☛ <span class="clicker clicker-1-402">(402호) 루비 </span>  “거짓말을 하는 건 402호죠.”</p>
+        <p class="line top-line fourth-line next-line">☛ <span class="clicker clicker-1-404">(404호) 희미한 별 </span>  “저는 누가 피우는지 잘 모르겠습니다. 저는 범인이 아닙니다.”</p>
+        <p class="line top-line fifth-line next-line">☛ <span class="clicker clicker-1-406">(406호) 라 & 민 </span>  “401호와 402호 둘 중 한명이에요!”</p>
+        <p class="line top-line sixth-line next-line">☛ <span class="clicker clicker-1-407">(407호) 개발자 </span>  “402호와 404호. 둘 중 한명이 범인이죠.”</p>
+        <p class="line bottom-line seventh-line six-toplines"><span class="clicker clicker-1-hint">&nbsp;&nbsp;(힌트 보기)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-3">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">4명의 말은 진실이다. 나머지 한명은 거짓말을 하고 있다.</p>
+        <p class="line top-line second-line next-line">거짓말을 한다고 해서 그 사람이 반드시 담배를 피웠다고 할 수는 없다.</p>
+        <p class="line top-line third-line next-line">하지만 누가 거짓말을 했는지 알면 범인을 알 수 있다.</p>
+        <p class="line top-line fourth-line next-line">한명이 거짓말을 하고 있다고 가정하고 다른 사람들의 말을 살펴보면 범인이 드러날 것이다...</p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-1-3">(돌아가기)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-401">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">어, 어찌 제가 "그 미천한 잎사귀"를 피웠다고 의심하실수 있습니까...!</p>
+        <p class="line top-line second-line next-line">진실로 말하건데 저는 결백(潔白)합니다...!</p>
+        <p class="line bottom-line third-line two-toplines">오답입니다. <span class="clicker clicker-1-wrong">(-10점)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-402">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">어머, 음... 사실 제가 쬐~끔 피웠어요. 헤헤. 호텔 밖까지 내려가기가 너무 귀찮아서... </p>
+        <p class="line top-line second-line next-line">근데 이렇게까지 피해가 갈줄은 몰랐네요... 죄송합니다.</p>
+        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-1-right">(+50점)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-404">
+        <h1 class="name">희미한 별</h1>
+        <p class="line top-line first-line">저는 담배를 피우지 않았습니다. 죄송하지만 잘못 짚으신것 같네요.</p>
+        <p class="line bottom-line second-line one-topline">오답입니다. <span class="clicker clicker-1-wrong">(-10점)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-406">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 에에앵~? 저희가 피웠다구요?</p>
+        <p class="line top-line second-line next-line">민) 저희는 담배를 만져본 적도 없어요! 아, 알바할 때 만져보긴 했다 헤헤. </p>
+        <p class="line top-line third-line next-line">라) 어? 그럼 너 담배 종류 다 외웠겠네?</p>
+        <p class="line top-line fourth-line next-line">민) 어? 그럼 너 담배 종류 다 외웠겠네? 라) 응 당연하지! 제일 많이 팔렸던 게...</p>
+        <p class="line bottom-line fifth-line four-toplines">오답입니다. <span class="clicker clicker-1-wrong">(-10점)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-407">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">저는 담배를 피우진 않았지만... 가끔 일하기 싫어서 몰래 게임한건 고백할게요. 헤헤.</p>
+        <p class="line bottom-line second-line one-topline">오답입니다. <span class="clicker clicker-1-wrong">(-10점)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-wrong">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">아무래도 범인을 잘못 짚은 것 같네요.</p>
+        <p class="line top-line second-line next-line">제가 조금 더 알아볼 테니, <span class="player-name"></span>씨는 먼저 5층으로 올라가 이 메모장에 적힌 대로 해 주세요.</p>
+        <p class="line bottom-line third-line two-toplines">네, <span class="clicker clicker-1-closew">알겠습니다.</span> (메모장을 얻었다.)</p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-1-right">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">이놈의 기지배, 요즘 사고 안치고 좀 잠잠하나 했더니... 으이구...</p>
+        <p class="line top-line second-line next-line">아.. 음.. 저는 루비손님과 조용히 할말이 있으니...</p>
+        <p class="line top-line third-line next-line"><span class="player-name"></span>씨는 먼저 5층으로 올라가 이 메모장에 적힌 대로 해 주세요.</p>
+        <p class="line bottom-line fourth-line three-toplines"> 네, <span class="clicker clicker-1-closer">알겠습니다.</span> (메모장을 얻었다.)</p>
+    </div>
+
 </div>
 
+
+
+
+
 <div class="room-401">
+
     <img class="gif door door__401 door401__1" src="image/4th_floor/401_1.png">
     <img class="gif door door__401 door401__2" src="image/4th_floor/401_2.png">
     <img class="gif door door__401 door401__3" src="image/4th_floor/401_3.png">
-    <div id="dialogue__room-401" class="dialogue">
-        <div class="wrapper wrapper__401">
-            <div class="transparent-background"></div>
-            <img class="room" src="image/4th_floor/부처님.jpg">
-            <img class="avatar avatar__401" src="image/4th_floor/부처님.png">
-        </div>
-        <div class="dialogue-opacity-1">
-            <h1 id="name__401" class="name">&nbsp;</h1>
-            <p class="line npc-line line-1-1-1"><strong>401호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-1-1-2">- <span id="clicker-1-1-1" class="clicker">똑똑똑!</span></p>
-            <p class="line player-line line-1-1-3">- <span id="clicker-1-1-2" class="clicker">그만둔다.</span></p>
+        
+    <img class="room room401" src="image/4th_floor/부처님.jpg">
+    <img class="avatar avatar__401" src="image/4th_floor/부처님.png">
 
-            <p class="line npc-line line-1-2-1">누구십니까?</p>
-            <p class="line player-line line-1-2-2">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span id="clicker-1-2" class="clicker">인사드리러 왔습니다.</span></p>
-
-            <p class="line npc-line line-1-3-1">아! 안녕하십니까. 말씀 많이 들었습니다. 유능하신 분이 새로 들어왔다고 들었는데 <span class="player-name"></span>씨였군요.</p>
-            <p class="line player-line line-1-3-2">- 아, 하하하! <span id="clicker-1-3" class="clicker">과찬이십니다.</span></p>
-
-            <p class="line npc-line line-1-4-1">아닙니다. 풍채가 훤칠하고 광(光)이 나는 것이 곧 손안에 천하(天下)를 품으실 상입니다.</p>
-            <p class="line player-line line-1-4-2">아... <span id="clicker-1-4" class="clicker">가, 감사합니다.</span></p>
-
-            <p class="line npc-line line-1-5-1">아, 제 소개가 늦었군요. 저는 <strong>부처님 닮은 남자</strong>, 줄여서 <strong>처남</strong>이라고 합니다.</p>
-            <p class="line npc-line line-1-5-2">제 방을 보시면 알 수 있으시다시피 저는 그림 그리는 것이 취미입니다.</p>
-            <p class="line npc-line line-1-5-3">이 호텔의 지배인도 그림이 취미인지라 함께 그림에 대한 담소(談笑)를 나누었는데,</p>
-            <p class="line npc-line line-1-5-4">그 인연으로 이 호텔까지 초대받게 되었습니다. <i id="clicker-1-5-1" class="fas fa-sort-down arrow"></i></p>
-            <!-- 화살표 -->
-            <p class="line npc-line line-1-5-5">저는 특히 불교 그림을 좋아합니다. 미적 아름다움과 동시에 수도(修道)를 추구하며,</p>
-            <p class="line npc-line line-1-5-6">중생을 향한 무연자비(無緣慈悲)가 느껴지기 때문이죠...</p>
-            <p class="line player-line line-1-5-7">- 정말 외모와 어울리는 취미를 가지고 계시는군요... 그런데 방에서 <span id="clicker-1-5-2" class="clicker">향 냄새가 나네요?</span></p>
-
-            <p class="line npc-line line-1-6-1">맞습니다. 방에 향을 피워 놓았습니다. 향냄새는 심신(心身)을 안정시키고, </p>
-            <p class="line npc-line line-1-6-2">제가 그림을 그리는데 있어 무아지경(無我之境)과 물아일체(物我一體)의 경지에 이를 수 있게 해 주죠.</p>
-            <p class="line player-line line-1-6-3">- 그렇군요... 아, 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... <span id="clicker-1-6" class="clicker">혹시 아시는거 있으세요?</span></p>
-
-            <p class="line npc-line line-1-7-1">아, 네. 어떤 미친ㄴ... 아, 아차. 어떤 불쌍한 중생이 담배를 피우는 것 같더군요. 그래서 저도</p>
-            <p class="line npc-line line-1-7-2">사람들과 이야기해 보았는데, 제 미천한 생각으로는 <strong>406호의 두 여자분</strong>이 조금 의심이 갑니다.</p>
-            <p class="line npc-line line-1-7-3">본인들은 아니라고 하시는데, 밤에 둘이 시끄럽게 떠드는 인성을 보면 저승 나락(那落)의 불지옥 맛을...</p>
-            <p class="line npc-line line-1-7-4">아, 아차. 구제가 필요한 중생들로 보입니다.</p>
-            <p class="line npc-line line-1-7-5">제가 지금까지 말한건 비밀로 해주십시오. (소곤소곤)</p>
-            <p class="line player-line line-1-7-6">- 아, 네. 비밀은 당연히 보장해 드리죠. 알려 주셔서 감사합니다. <span id="clicker-1-7" class="clicker">그럼 앞으로도 잘 부탁드립니다.</span></p>
-
-            <p class="line npc-line line-1-8-1">네. 저야말로 잘 부탁드립니다. 그럼 안녕히 가십시오.</p>
-            <p class="line player-line line-1-8-2">- 네. 편안히 쉬십시오. <span id="clicker-1-8" class="clicker">(방에서 나간다.)</span></p>
-        </div>
-        <div id="dialogue-box__401" class="dialogue-box"></div>
-
+    <div class="dialogue-box2 dialogue-401-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>401호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line second-line two-toplines">- <span class="clicker clicker-401-1-1">똑똑똑!</span></p>
+        <p class="line bottom-line third-line next-line">- <span class="clicker clicker-401-1-2">그만둔다.</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-401-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">누구십니까?</p>
+        <p class="line bottom-line second-line one-topline">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-401-2-1">인사드리러 왔습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-3">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">아! 안녕하십니까. 말씀 많이 들었습니다. 유능하신 분이 새로 들어왔다고 들었는데 <span class="player-name"></span>씨였군요.</p>
+        <p class="line bottom-line second-line one-topline">- 아, 하하하! <span id="clicker-1-3" class="clicker clicker-401-3-1">과찬이십니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-4">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">아닙니다. 풍채가 훤칠하고 광(光)이 나는 것이 곧 손안에 천하(天下)를 품으실 상입니다.</p>
+        <p class="line bottom-line second-line one-topline">아... <span id="clicker-1-4" class="clicker clicker-401-4-1">가, 감사합니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-5">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">아, 제 소개가 늦었군요. 저는 <strong>부처님 닮은 남자</strong>, 줄여서 <strong>처남</strong>이라고 합니다.</p>
+        <p class="line top-line second-line next-line">제 방을 보시면 알 수 있으시다시피 저는 그림 그리는 것이 취미입니다.</p>
+        <p class="line top-line third-line next-line">이 호텔의 지배인도 그림이 취미인지라 함께 그림에 대한 담소(談笑)를 나누었는데,</p>
+        <p class="line top-line fourth-line next-line">그 인연으로 이 호텔까지 초대받게 되었습니다.</p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-401-5-1">(다음)</span></p>
+    </div>
+    
+    <div class="dialogue-box2 dialogue-401-6">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">저는 특히 불교 그림을 좋아합니다. 미적 아름다움과 동시에 수도(修道)를 추구하며,</p>
+        <p class="line top-line second-line next-line">중생을 향한 무연자비(無緣慈悲)가 느껴지기 때문이죠...</p>
+        <p class="line bottom-line third-line two-toplines">- 정말 외모와 어울리는 취미를 가지고 계시는군요... 그런데 방에서 <span id="clicker-1-5-2" class="clicker clicker-401-6-1">향 냄새가 나네요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-7">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">맞습니다. 방에 향을 피워 놓았습니다. 향냄새는 심신(心身)을 안정시키고, </p>
+        <p class="line top-line second-line next-line">제가 그림을 그리는데 있어 무아지경(無我之境)과 물아일체(物我一體)의 경지에 이를 수 있게 해 주죠.</p>
+        <p class="line bottom-line third-line two-toplines">- 그렇군요... 아, 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... <span id="clicker-1-6" class="clicker clicker-401-7-1">혹시 아시는거 있으세요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-8">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">아, 네. 어떤 미친ㄴ... 아, 아차. 어떤 불쌍한 중생이 담배를 피우는 것 같더군요.</p>
+        <p class="line top-line second-line next-line">그래서 저도 사람들과 이야기해 보았는데... </p>
+        <p class="line top-line third-line next-line">제 미천한 생각으로는 <strong>406호의 두 여자분</strong>이 조금 의심이 갑니다.</p>
+        <p class="line top-line fourth-line next-line">본인들은 아니라고 하시는데, 밤에 둘이 시끄럽게 떠드는 인성을 보면 저승 나락(那落)의 불지옥 맛을...</p>
+        <p class="line top-line fifth-line next-line">아, 아차. 구제가 필요한 중생들로 보입니다.</p>
+        <p class="line bottom-line sixth-line five-toplines">- 알려 주셔서 감사합니다. <span class="clicker clicker-401-8-1">그럼 앞으로도 잘 부탁드립니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-401-9">
+        <h1 class="name">처남</h1>
+        <p class="line top-line first-line">네. 저야말로 잘 부탁드립니다. 그럼 안녕히 가십시오.</p>
+        <p class="line bottom-line second-line one-topline">- 네. 편안히 쉬십시오. <span class="clicker clicker-401-9-1">(방에서 나간다.)</span></p>
+    </div>
+
 </div>
 
+
+
+ 
 <div class="room-402">
     <img class="gif door door__402 door402__1" src="image/4th_floor/402_1.png">
     <img class="gif door door__402 door402__2" src="image/4th_floor/402_2.png">
     <img class="gif door door__402 door402__3" src="image/4th_floor/402_3.png">
-    <div id="dialogue__room-402" class="dialogue">
-        <div class="wrapper wrapper__402">
-            <div class="transparent-background"></div>
-            <img class="room" src="image/4th_floor/루비방.png">
-            <img class="avatar avatar__402" src="image/4th_floor/루비.png">
-        </div>
-        <div class="dialogue-opacity-1">
-            <h1 id="name__402" class="name">&nbsp;</h1>
-            <p class="line npc-line line-2-1-1"><strong>402호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-2-1-2">- <span class="clicker clicker-2-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-2-1-3">- <span class="clicker clicker-2-1-2">그만둔다.</span></p>
 
-            <p class="line npc-line line-2-2-1">왈왈왈! 왈왈! 왈왈왈왈!</p>
-            <p class="line npc-line line-2-2-2">조용히 해, 호야! 누구세요~!</p>
-            <p class="line player-line line-2-2-3">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-2-2-1">인사드리러 왔습니다.</span></p>
+    <img class="room room402" src="image/4th_floor/루비방.png">
+    <img class="avatar avatar__402" src="image/4th_floor/루비.png">
 
-            <p class="line npc-line line-2-3-1">아~~! 안녕하세요! 저는 <strong>루비</strong>라고 해요, 히히. 지배인과 오랫동안 함께한 친구죠.</p>
-            <p class="line npc-line line-2-3-2">제 방은 원래 6층에 있었는데, 제가 밤에 일하느라 낮에 자주 방을 비우다 보니 4층 방에서 살게 됐어요.</p>
-            <p class="line npc-line line-2-3-3">나쁜년, 친구 하나 이해 못해주고...</p>
-            <p class="line player-line line-2-3-4">- <span class="clicker clicker-2-3-1">밤에 일하신다구요?</span></p>
-
-            <p class="line npc-line line-2-4-1">네! 저는 춤추는 걸 너무 좋아해서 아예 클럽에서 일하고 있거든요.</p>
-            <p class="line npc-line line-2-4-2">근데 참, 남자들이 저한테 얼마나 달라붙는지 정말... 귀찮아 죽겠어요. </p>
-            <p class="line npc-line line-2-4-3">한번은요, 제가 일하고 있는데 어떤 남자가 저한테 오더니 “힘드시겠어요?” 하고 묻는 거에요.</p>
-            <p class="line npc-line line-2-4-4">그래서 제가 “제가요?” 하니까, 그 남자가</p>
-            <p class="line npc-line line-2-4-5">“네. 저의 마음속을 하루종일 뛰어다니느라...” 라는 거에요! 하, 정말 어이가 없어서~!</p>
-            <p class="line player-line line-2-4-6">- 아... 그것 참... <span class="clicker clicker-2-4-1">피곤하시겠네요.</span></p>
-
-            <p class="line npc-line line-2-5-1">그래도 제 마음을 알아주는 건 호야 뿐이에요. 클럽에서 취객들 상대하느라 만신창이가 되서 돌아와도,</p>
-            <p class="line npc-line line-2-5-2">우리 호야의 빵빵한 궁댕이만 보면 다 회복된다니까요? 꺄~~!</p>
-            <p class="line player-line line-2-5-3">- 그렇군요... 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... 혹시 <span class="clicker clicker-2-5-1">아시는거 있으세요?</span></p>
-
-            <p class="line npc-line line-2-6-1">네! 저도 들었죠. 저도 담배를 피우긴 하지만, 호텔 안에서 피운 적은 진~~~~짜 없어요.</p>
-            <p class="line npc-line line-2-6-2">근데 아마 <strong>401호</strong>에 사는 <strong>부처님 닮은 놈</strong>이 피웠을껄요? 그놈은 얼굴만 부처지, 하는 짓은 부랑자에요.</p>
-            <p class="line npc-line line-2-6-3">제가 저번에도 화단에 몰래 쓰레기 버리는 거 봤거든요!</p>
-            <p class="line npc-line line-2-6-4">저번에는 대놓고 "당신이 피운거 맞죠?!" 하고 물어봤는데...&nbsp;<i class="fas fa-sort-down arrow arrow-2-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-2-6-5">"제 어찌 그런 미천한 잎사귀를 피우겠습니까?" 라고 하는 거에요.</p>
-            <p class="line npc-line line-2-6-6"><strong>근데 왠지 거짓말 같아요.</strong></p>
-            <p class="line npc-line line-2-6-7">제가 볼땐 분명 향 피워놓는 척 하고 담배 피는 거에요.</p>
-            <p class="line npc-line line-2-6-8">어머, 혹시... 절 의심하시는건 아니죠? 히히.</p>
-            <p class="line player-line line-2-6-9">- 아...아니에요. 저도 계속 조사하고 있으니 범인을 찾으면 알려드릴게요.</p>
-            <p class="line player-line line-2-6-10">&nbsp;&nbsp;그럼, 앞으로 <span class="clicker clicker-2-6-1">잘 부탁드리겠습니다.</p>
-                
-            <p class="line npc-line line-2-7-1">네! 자주 놀러 오세요! 호야가 손님을 무척 좋아하거든요. 춤도 가르쳐 드릴게요!</p>
-            <p class="line player-line line-2-7-2">- 네, 감사합니다. <span class="clicker clicker-2-7-1">(방에서 나간다.)</span></p>
-        </div>
-        <div id="dialogue-box__402" class="dialogue-box"></div>
+        
+    <div class="dialogue-box2 dialogue-402-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>402호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-402-1-1">똑똑똑!</span></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-402-1-2">그만둔다.</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-402-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">왈왈! 왈왈왈! 왈왈왈왈!</p>
+        <p class="line top-line second-line next-line">조용히 해, 호야! 누구세요~!</p>
+        <p class="line bottom-line third-line two-toplines">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-402-2">인사드리러 왔습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-3">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">아~~! 안녕하세요! 저는 <strong>루비</strong>라고 해요, 히히. 지배인과 오랫동안 함께한 친구죠.</p>
+        <p class="line top-line second-line next-line">제 방은 원래 6층에 있었는데, 제가 밤에 일하느라 낮에 자주 방을 비우다 보니 4층 방에서 살게 됐어요.</p>
+        <p class="line top-line third-line next-line">나쁜년, 친구 하나 이해 못해주고...</p>
+        <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-402-3">밤에 일하신다구요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-4">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">네! 저는 춤추는 걸 너무 좋아해서 아예 클럽에서 일하고 있거든요.</p>
+        <p class="line top-line second-line next-line">근데 참, 남자들이 저한테 얼마나 달라붙는지 정말... 귀찮아 죽겠어요. </p>
+        <p class="line top-line third-line next-line">한번은요, 제가 일하고 있는데 어떤 남자가 저한테 오더니 “힘드시겠어요?” 하고 묻는 거에요.</p>
+        <p class="line top-line fourth-line next-line">그래서 제가 “제가요?” 하니까, 그 남자가</p>
+        <p class="line top-line fifth-line next-line">“네. 저의 마음속을 하루종일 뛰어다니느라...” 라는 거에요! 하, 정말 어이가 없어서~!</p>
+        <p class="line bottom-line sixth-line five-toplines">- 아... 그것 참... <span class="clicker clicker-402-4">피곤하시겠네요.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-5">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">그래도 제 마음을 알아주는 건 호야 뿐이에요. 클럽에서 취객들 상대하느라 만신창이가 되서 돌아와도,</p>
+        <p class="line top-line second-line next-line">우리 호야의 빵빵한 궁댕이만 보면 다 회복된다니까요? 꺄~~!</p>
+        <p class="line bottom-line third-line two-toplines">- 그렇군요... 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... 혹시 <span class="clicker clicker-402-5">아시는거 있으세요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-6">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">네! 저도 들었죠. 저도 담배를 피우긴 하지만, 호텔 안에서 피운 적은 진~~~~짜 없어요.</p>
+        <p class="line top-line second-line next-line">근데 아마 <strong>401호</strong>에 사는 <strong>부처님 닮은 놈</strong>이 피웠을껄요? 그놈은 얼굴만 부처지, 하는 짓은</p>
+        <p class="line top-line third-line next-line">그놈은 얼굴만 부처지, 하는 짓은 부랑자에요.</p>
+        <p class="line top-line fourth-line next-line">제가 저번에도 화단에 몰래 쓰레기 버리는 거 봤거든요!</p>
+        <p class="line top-line fifth-line next-line">저번에는 대놓고 "당신이 피운거 맞죠?!" 하고 물어봤는데...</p>
+        <p class="line bottom-line sixth-line five-toplines"><span class="clicker clicker-402-6">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-7">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">"제 어찌 그런 미천한 잎사귀를 피우겠습니까?" 라고 하는 거에요.</p>
+        <p class="line top-line second-line next-line"><strong>근데 왠지 거짓말 같아요.</strong></p>
+        <p class="line top-line third-line next-line">제가 볼땐 분명 향 피워놓는 척 하고 담배 피는 거에요.</p>
+        <p class="line top-line fourth-line next-line">어머, 혹시 절 의심하시는건 아니죠? 히히.</p>
+        <p class="line bottom-line fifth-line five-toplines">- 아닙니다. 저도 계속 조사하고 있으니 범인을 찾으면 알려드릴게요.</p>
+        <p class="line bottom-line sixth-line next-line">&nbsp;&nbsp;그럼, 앞으로 <span class="clicker clicker-402-7">잘 부탁드리겠습니다.</p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-402-8">
+        <h1 class="name">루비</h1>
+        <p class="line top-line first-line">네! 자주 놀러 오세요! 호야가 손님을 무척 좋아하거든요. 춤도 가르쳐 드릴게요!</p>
+        <p class="line bottom-line second-line one-topline">- 네, 감사합니다. <span class="clicker clicker-402-8">(방에서 나간다.)</span></p>
+    </div>
+    
 </div>
+
+
 
 <div class="room-403">
     <img class="gif door door__403 door403__1" src="image/4th_floor/403_1.png">
     <img class="gif door door__403 door403__2" src="image/4th_floor/403_2.png">
     <img class="gif door door__403 door403__3" src="image/4th_floor/403_3.png">
-    <div class="dialogue dialogue__room-403">
-        <div class="dialogue-box dialogue-box__403">
-            <h1 class="name name__403">&nbsp;</h1>
-            <p class="line npc-line line-3-1-1"><strong>403호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-3-1-2">- <span class="clicker clicker-3-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-3-1-3">- <span class="clicker clicker-3-1-2">그만둔다.</span></p>
-            <p class="line npc-line line-3-2-1">......</p>
-            <p class="line player-line line-3-2-2">- 빈 방인 것 같군. <span class="clicker clicker-3-2-1">(다른 방으로 가기)</span></p>
-        </div>
+
+    <div class="dialogue-box2 dialogue-403-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>403호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-403-1-1">똑똑똑!</span></p>   
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-403-1-2">그만둔다.</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-403-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">......</p>
+        <p class="line bottom-line fast-yes-line one-topline">- 빈 방인 것 같군. <span class="clicker clicker-403-2">(다른 방으로 가기)</span></p>
+    </div>
+    
 </div>
+
+
 
 <div class="room-404">
     <img class="gif door door__404 door404__1" src="image/4th_floor/404_1.png">
     <img class="gif door door__404 door404__2" src="image/4th_floor/404_2.png">
     <img class="gif door door__404 door404__3" src="image/4th_floor/404_3.png">
-    <div class="dialogue dialogue__room-404">
-        <div class="wrapper wrapper__404">
-            <div class="transparent-background"></div>
-            <img class="room" src="image/4th_floor/희미한별.jpg">
-            <img class="avatar avatar__404" src="image/4th_floor/희미한별.png">
-        </div>
-        <div class="dialogue-opacity-1">
-            <h1 class="name name__404">&nbsp;</h1>
-            <p class="line npc-line line-4-1-1"><strong>404호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-4-1-2">- <span class="clicker clicker-4-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-4-1-3">- <span class="clicker clicker-4-1-2">그만둔다.</span></p>
 
-            <p class="line npc-line line-4-2-1">누구세요?</p>
-            <p class="line player-line line-4-2-2">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-4-2-1">인사드리러 왔습니다.</span></p>
+    <img class="room room404" src="image/4th_floor/희미한별.jpg">
+    <img class="avatar avatar__404" src="image/4th_floor/희미한별.png">
 
-            <p class="line npc-line line-4-3-1">아, 안녕하세요. 저는 <strong>희미한 별</strong>이라고 합니다.</p>
-            <p class="line npc-line line-4-3-2">지배인님과는 최근에 역사 수업을 들으면서 친해진 사이에요. 같이 조별 과제를 하게 되었거든요.</p>
-            <p class="line npc-line line-4-3-3">근데 여기서 밤 늦게까지 같이 과제를 하다 보니 현씨가 빈 객실에서 쉬고 가라고 하시더군요.</p>
-            <p class="line npc-line line-4-3-4">처음엔 조금 망설이다가 한번 자고 갔는데...&nbsp;<i class="fas fa-sort-down arrow arrow-4-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-4-3-5">침대가 너~무 푹신해서... 하하.
-            </p>
-            <p class="line npc-line line-4-3-6">여기 호텔 침대를 한번 맛본 이후론 제 방에 있는 싸구려 침대에서는 잠이 안오더라구요.</p>
-            <p class="line npc-line line-4-3-7">침대 뿐만 아니라 밥도 너무 맛있고, 직원 분들도 너무 친절하셔서, 계속 머물고 있네요.</p>
-            <p class="line player-line line-4-3-8">- 아, 감사합니다. 혹시 필요한 게 있으시면 언제든지 말씀해 주세요.</p>
-            <p class="line player-line line-4-3-9">&nbsp;&nbsp;그나저나 요즘 4층에서 담배 냄새가 난다고 하던데… 혹시 <span class="clicker clicker-4-3-1">아시는거 있으세요?</span></p>
-
-            <p class="line npc-line line-4-4-1">아, 네. 저도 들었어요. 최근 들어 누가 호텔 내에서 담배를 피운다고 하더라고요.</p>
-            <p class="line npc-line line-4-4-2"><strong>하지만 저는 누가 피우는지 잘 모르겠습니다. 저는 피운적이 없구요.</strong></p>
-            <p class="line player-line line-4-4-3">그렇군요. 감사합니다. 그럼 앞으로 <span class="clicker clicker-4-4-1">잘 부탁드리겠습니다.</span></p>
-
-            <p class="line npc-line line-4-5-1">별 도움이 되지 못해 죄송하군요. 안녕히 가세요.</p>
-            <p class="line player-line line-4-5-2"><span class="clicker clicker-4-5-1">(방에서 나간다.)</span></p>
-        </div>
-        <div class="dialogue-box dialogue-box__404"></div>
+    <div class="dialogue-box2 dialogue-404-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>404호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-404-1-1">똑똑똑!</span></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-404-1-2">그만둔다.</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-404-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">누구세요?</p>
+        <p class="line bottom-line second-line one-topline">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-404-2">인사드리러 왔습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-404-3">
+        <h1 class="name">희미한 별</h1>
+        <p class="line top-line first-line">아, 안녕하세요. 저는 <strong>희미한 별</strong>이라고 합니다.</p>
+        <p class="line top-line second-line next-line">지배인님과는 최근에 역사 수업을 들으면서 알게 됬어요. 같이 조별 과제를 하게 되었거든요.</p>
+        <p class="line top-line third-line next-line">근데 여기서 밤 늦게까지 같이 과제를 하다 보니 현씨가 빈 객실에서 쉬고 가라고 하시더군요.</p>
+        <p class="line top-line fourth-line next-line">처음엔 조금 망설이다가 한번 자고 갔는데...</p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-404-3">(다음)</span></p>
+    </div>
+        
+    <div class="dialogue-box2 dialogue-404-4">
+        <h1 class="name">희미한 별</h1>
+        <p class="line top-line first-line">침대가 너~무 푹신해서... 하하.
+        </p>
+        <p class="line top-line second-line next-line">여기 호텔 침대를 한번 맛본 이후론 제 방에 있는 싸구려 침대에서는 잠이 안오더라구요.</p>
+        <p class="line top-line third-line next-line">침대 뿐만 아니라 밥도 너무 맛있고, 직원 분들도 너무 친절하셔서, 계속 머물고 있네요.</p>
+        <p class="line bottom-line fourth-line four-toplines">- 아, 감사합니다. 혹시 필요한 게 있으시면 언제든지 말씀해 주세요.</p>
+        <p class="line bottom-line fifth-line next-line">&nbsp;&nbsp;그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... 혹시 <span class="clicker clicker-404-4">아시는거 있으세요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-404-5">
+        <h1 class="name">희미한 별</h1>
+        <p class="line top-line first-line">아, 네. 저도 들었어요. 최근 들어 누가 호텔 내에서 담배를 피운다고 하더라고요.</p>
+        <p class="line top-line second-line next-line"><strong>하지만 저는 누가 피우는지 잘 모르겠습니다. 저는 피운적이 없구요.</strong></p>
+        <p class="line bottom-line third-line two-toplines">그렇군요. 감사합니다. 그럼 앞으로 <span class="clicker clicker-404-5">잘 부탁드리겠습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-404-6">
+        <h1 class="name">희미한 별</h1>
+        <p class="line top-line first-line">별 도움이 되지 못해 죄송하군요. 안녕히 가세요.</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-404-6">(방에서 나간다.)</span></p>
+    </div>
+
 </div>
+
+
 
 <div class="room-405">
     <img class="gif door door__405 door405__1" src="image/4th_floor/405_1.png">
     <img class="gif door door__405 door405__2" src="image/4th_floor/405_2.png">
     <img class="gif door door__405 door405__3" src="image/4th_floor/405_3.png">
-    <div class="dialogue dialogue__room-405">
-        <div class="dialogue-box dialogue-box__405">
-            <h1 class="name name__405">&nbsp;</h1>
-            <p class="line npc-line line-5-1-1"><strong>405호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-5-1-2">- <span class="clicker clicker-5-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-5-1-3">- <span class="clicker clicker-5-1-2">그만둔다.</span></p>
-            <p class="line npc-line line-5-2-1">......</p>
-            <p class="line player-line line-5-2-2">- 빈 방인 것 같군. <span class="clicker clicker-5-2-1">(다른 방으로 가기)</span></p>
-        </div>
+
+    <div class="dialogue-box2 dialogue-405-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>405호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-405-1-1">똑똑똑!</span></p>   
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-405-1-2">그만둔다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-405-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">......</p>
+        <p class="line bottom-line fast-yes-line one-topline">- 빈 방인 것 같군. <span class="clicker clicker-405-2">(다른 방으로 가기)</span></p>
     </div>
 </div>
+
 
 <div class="room-406">
     <img class="gif door door__406 door406__1" src="image/4th_floor/406_1.png">
     <img class="gif door door__406 door406__2" src="image/4th_floor/406_2.png">
     <img class="gif door door__406 door406__3" src="image/4th_floor/406_3.png">
-    <div class="dialogue dialogue__room-406">
-        <div class="wrapper wrapper__406">
-            <div class="transparent-background"></div>
-            <img class="room" src="image/4th_floor/라민.jpg">
-            <img class="avatar avatar__406" src="image/4th_floor/라민.png">
-        </div>
-        <div class="dialogue-opacity-1">
-            <h1 class="name name__406">&nbsp;</h1>
-            <p class="line npc-line line-6-1-1"><strong>406호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-6-1-2">- <span class="clicker clicker-6-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-6-1-3">- <span class="clicker clicker-6-1-2">그만둔다.</span></p>
 
-            <p class="line npc-line line-6-2-1">아무 반응이 없다. 어떻게 하시겠습니까?</p>
-            <p class="line player-line line-6-2-2">- <span class="clicker clicker-6-2-1">다시 노크해 본다.</span></p>
-            <p class="line player-line line-6-2-3">- <span class="clicker clicker-6-2-2">그만둔다.</span></p>
+    <img class="room room406" src="image/4th_floor/라민.jpg">
+    <img class="avatar avatar__406" src="image/4th_floor/라민.png">
 
-            <p class="line npc-line line-6-3-1">똑똑똑!</p>
-            <p class="line npc-line line-6-3-2">- ......와악!......꺄아!......꺄르륵!</p>
-            <p class="line npc-line line-6-3-3">반응이 없지만 안에서 시끄러운 소리가 난다. 다시 한번 두드려볼까?</p>
-            <p class="line player-line line-6-3-4">- <span class="clicker clicker-6-3-1">다시 한번 두드려 본다.</span></p>
-            <p class="line player-line line-6-3-5">- <span class="clicker clicker-6-3-2">그만둔다.</span></p>
-
-            <p class="line npc-line line-6-4-1">똑똑똑! 계십니까~?</p>
-            <p class="line npc-line line-6-4-2">- 엇, 누가 왔나봐! 누구세요! 현 언니야?</p>
-            <p class="line player-line line-6-4-3">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-6-4-1">인사드리러 왔습니다.</span></p>
-
-            <p class="line npc-line line-6-5-1">라) 아앗! 안녕하세요! 저희는 현 언니 친구들이에요! 왼쪽이 <strong>라</strong>, <p class="line npc-line line-6-5-2">민) 오른쪽이 <strong>민</strong>이에요!</p>
-            <p class="line npc-line line-6-5-3">라) 저희는 원래 현 언니랑 기숙사 룸메이트였는데, 현 언니가 이 호텔에 초대해 줬어요!</p>
-            <p class="line npc-line line-6-5-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기숙사 살 때 저희가 현 언니 연애상담을 찐~하게 해줬거든요. 훗.</p>
-            <p class="line npc-line line-6-5-5">민) 맞아맞아. 아, 근데 요즘 현 언니 어딘가 달라보이지 않아요? <span class="player-name"></span>씨가 보기엔 어때요?</p>
-            <p class="line player-line line-6-5-6">- 음... 전 오늘이 첫 출근날이라서... 잘 모르겠네요. 요즘 지배인님께 <span class="clicker clicker-6-5-1">무슨 일 있나요?</span></p>
-
-            <p class="line npc-line line-6-6-1">(둘이 서로 마주본다) 흐음… 히히히.</p>
-            <p class="line npc-line line-6-6-2">라) 저희가 볼 땐 <strong>404호 남자</strong>가 수상해요.</p>
-            <p class="line player-line line-6-6-3">- 404호 남자요? <span class="clicker clicker-6-6-1">404호라면...</span></p>
-
-            <p class="line npc-line line-6-7-1">라) 이름이... <strong>‘희미한 별’</strong>이였나?</p>
-            <p class="line npc-line line-6-7-2">민) 맞아. 얼마 전에 새로 들어왔는데, 그 이후로 현 언니가 이상해졌다니까요?</p>
-            <p class="line npc-line line-6-7-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;맨날 시꺼먼 유니폼만 입고 다니던 언니가 갑자기 최근 유행하는 옷이 뭔지 물어보질 않나.</p>
-            <p class="line npc-line line-6-7-4">라) 화장이라곤 선크림만 바르던 사람이 풀메이크업을 하질 않나!&nbsp;<i class="fas fa-sort-down arrow arrow-6-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-6-8-1">민) 그 남자때문이 틀림없어요. 들리는 소문에 의하면 누가 밤에 현 언니가 그 남자 방으로 들어가는걸 </p>
-            <p class="line npc-line line-6-8-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;봤다는데~ 에~? 흐~으~음~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span> 크크크크크~</p>
-            <p class="line npc-line line-6-8-3">라) 꺅~~~! 대박사건! 대박사건!</p>
-            <p class="line npc-line line-6-8-4">민) 근데 그 남자 은근 키도 크고 잘생겼던데?</p>
-            <p class="line npc-line line-6-8-5">라) 에이, 아니야~ 키가 크진 않던데? 얼굴은 뭐, 조금 봐줄만 한것 같기도 하고.</p>
-            <p class="line npc-line line-6-8-6">민) 그정도면 잘생긴거지~! 넌 애가 뭐이리 눈이 높니?&nbsp;<i class="fas fa-sort-down arrow arrow-6-2"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-6-9-1">라) 뭐래? 누가 뭐래도 내 영원한 사랑은 옆방 <strong>개발자 오빠</strong>야. 귀엽고, 잘생기고...</p>
-            <p class="line npc-line line-6-9-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;심지어 일에 열중하는 모습은 어쩜 그리 섹시한지 몰라... 헤헤.</p>
-            <p class="line npc-line line-6-9-3">민) 야, 맨날 눈에 다크서클 가득하고 우중충해 보이는 사람이 뭐가 좋냐?</p>
-            <p class="line npc-line line-6-9-4">라) 404호보단 훨씬 낫거든! 어머, 내 정신좀 봐. 앞에 <span class="player-name"></span>씨를 놔두고 저희들끼리 떠들어 버렸네요.</p>
-            <p class="line npc-line line-6-9-5">민) 죄송해요. 저희가 좀 수다쟁이거든욧! 히히.</p>
-            <p class="line player-line line-6-9-6">- 아... 하하, 괜찮습니다. 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... 혹시 <span class="clicker clicker-6-9-1">아시는거 있으세요?</span></p>
-
-            <p class="line npc-line line-6-10-1">라) 아 맞아요! 언제부턴가 복도에서 자꾸 담배 냄새가 나요. 칫, 실내에서 금연인 것도 모르나?</p>
-            <p class="line npc-line line-6-10-2">민) 요즘 실내에서 금연인거 모르는 사람이 어딨어? 분명히 아는데 나가기 귀찮아서 피는 걸꺼야.</p>
-            <p class="line npc-line line-6-10-3">라) 으~~ 무개념이야 무개념~</p>
-            <p class="line npc-line line-6-10-4">민) 근데 <strong>401호랑 402호가 조금 수상하던데?</strong> <strong>401호 아저씨</strong>는 맨날 이상한 연기 피우고... </p>
-            <p class="line npc-line line-6-10-5">라) <strong>402호 언니</strong>는 딱 봐도 남의 눈치 안보고 막 피울 것 같아. 뭔가 쎈 언니같아 보이거든.&nbsp;<i class="fas fa-sort-down arrow arrow-6-3"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-6-11-1">라) 그 언니 완~~전 걸크러시. 얼굴도 예쁘고 옷도 너무 잘입으시지 않아?</p>
-            <p class="line npc-line line-6-11-2">민) 어 완~~전. 우리 나중에 그 언니방에 놀러갈래? 그 언니 귀여운 개도 키우던데!</p>
-            <p class="line npc-line line-6-11-3">라) 어 그래! 어머. 또 우리끼리 이야기해버렸네? 히히.</p>
-            <p class="line player-line line-6-11-4">- 아, 괜찮습니다. 그럼, 앞으로 <span class="clicker clicker-6-11-1">잘 부탁드리겠습니다.</span></p>
-
-            <p class="line npc-line line-6-12-1">라, 민) 네! 안녕히 가세요!</p>
-            <p class="line player-line line-6-12-2"><span class="clicker clicker-6-12-1">(방에서 나간다.)</span></p>
-
-            <p class="line npc-line line-6-13-1">라) 야, 오늘 뭐 시켜 먹을래?</p>
-            <p class="line npc-line line-6-13-2">민) 음...... 취~ 킨~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span></p>
-            <p class="line npc-line line-6-13-3">라) 꺄아아아악! 좋아! 까르르르르르....</p>
-        </div>
-        <div class="dialogue-box dialogue-box__406"></div>
+    <div class="dialogue-box2 dialogue-406-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>406호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-406-1-1">똑똑똑!</span></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-406-1-2">그만둔다.</span></p>
     </div>
+
+    <div class="dialogue-box2 dialogue-406-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">아무 반응이 없다. 어떻게 하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-406-2-1">다시 노크해 본다.</span></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-406-2-2">그만둔다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-3">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">똑똑똑!</p>
+        <p class="line top-line second-line next-line">- ......와악!......꺄아!......꺄르륵!</p>
+        <p class="line top-line third-line next-line">반응이 없지만 안에서 시끄러운 소리가 난다. 다시 한번 두드려볼까?</p>
+        <p class="line bottom-line four-toplines" style="animation: typing 1.5s 5s linear backwards;">- <span class="clicker clicker-406-3-1">다시 한번 두드려 본다.</span></p>
+        <p class="line bottom-line next-line" style="animation: typing 1.5s 6.5s linear backwards; ">- <span class="clicker clicker-406-3-2">그만둔다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-4">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">똑똑똑! 계십니까~?</p>
+        <p class="line top-line second-line">- 엇, 누가 왔나봐! 누구세요! 현 언니야?</p>
+        <p class="line bottom-line third-line two-toplines">- 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-406-4">인사드리러 왔습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-5">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 아앗! 안녕하세요! 저희는 현 언니 친구들이에요! 왼쪽이 <strong>라</strong></p>
+        <p class="line top-line second-line next-line">민) 오른쪽이 <strong>민</strong>이에요!</p>
+        <p class="line top-line third-line next-line">라) 저희는 원래 현 언니랑 기숙사 룸메이트였는데, 현 언니가 이 호텔에 초대해 줬어요!</p>
+        <p class="line top-line fourth-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기숙사 살 때 저희가 현 언니 연애상담을 찐~하게 해줬거든요. 훗.</p>
+        <p class="line top-line fifth-line next-line">민) 맞아맞아. 아, 근데 요즘 현 언니 어딘가 달라보이지 않아요? <span class="player-name"></span>씨가 보기엔 어때요?</p>
+        <p class="line bottom-line sixth-line five-toplines">- 음... 전 오늘이 첫 출근날이라서... 잘 모르겠네요. 요즘 지배인님께 <span class="clicker clicker-406-5">무슨 일 있나요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-6">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">(둘이 서로 마주본다) 흐음… 히히히.</p>
+        <p class="line top-line second-line next-line">라) 저희가 볼 땐 <strong>404호 남자</strong>가 수상해요.</p>
+        <p class="line bottom-line third-line two-toplines">- 404호 남자요? <span class="clicker clicker-406-6">404호라면...</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-7">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 이름이... <strong>‘희미한 별’</strong>이였나?</p>
+        <p class="line top-line second-line next-line">민) 맞아. 얼마 전에 새로 들어왔는데, 그 이후로 현 언니가 이상해졌다니까요?</p>
+        <p class="line top-line third-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;맨날 시꺼먼 유니폼만 입고 다니던 언니가 갑자기 최근 유행하는 옷이 뭔지 물어보질 않나,</p>
+        <p class="line top-line fourth-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화장이라곤 선크림만 바르던 사람이 풀메이크업을 하질 않나!</p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-406-7">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-8">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">민) 그 남자때문이 틀림없어요. 들리는 소문에 의하면 누가 밤에 현 언니가 그 남자 방으로 들어가는걸 </p>
+        <p class="line top-line second-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;봤다는데~ 에~? 흐~으~음~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span> 크크크~</p>
+        <p class="line top-line third-line next-line">라, 민) 꺅~~~! 대박사건! 대박사건!</p>
+        <p class="line top-line fourth-line next-line">민) 근데 그 남자 은근 키도 크고 잘생겼던데?</p>
+        <p class="line top-line fifth-line next-line">라) 에이, 아니야~ 키가 크진 않던데? 얼굴은 뭐, 조금 봐줄만 한것 같기도 하고.</p>
+        <p class="line top-line sixth-line next-line">민) 그정도면 잘생긴거지~! 넌 애가 뭐이리 눈이 높니?</p>
+        <p class="line bottom-line seventh-line six-toplines"><span class="clicker clicker-406-8">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-9">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 뭐래? 누가 뭐래도 내 영원한 사랑은 옆방 <strong>개발자 오빠</strong>야. 귀엽고, 잘생기고...</p>
+        <p class="line top-line second-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;심지어 일에 열중하는 모습은 어쩜 그리 섹시한지 몰라... 헤헤.</p>
+        <p class="line top-line third-line next-line">민) 야, 맨날 눈에 다크서클 가득하고 우중충해 보이는 사람이 뭐가 좋냐?</p>
+        <p class="line top-line fourth-line next-line">라) 404호보단 훨씬 낫거든! 어머, 내 정신좀 봐. 앞에 <span class="player-name"></span>씨를 놔두고 저희들끼리 떠들어 버렸네요.</p>
+        <p class="line top-line fifth-line next-line">민) 죄송해요. 저희가 좀 수다쟁이거든욧! 히히.</p>
+        <p class="line bottom-line sixth-line five-toplines">- 아... 하하, 괜찮습니다. 그나저나 요즘 4층에서 담배 냄새가 난다고 하던데... 혹시 <span class="clicker clicker-406-9">아시는거 있으세요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-10">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 아 맞아요! 언제부턴가 복도에서 자꾸 담배 냄새가 나요. 칫, 실내에서 금연인 것도 모르나?</p>
+        <p class="line top-line second-line next-line">민) 요즘 실내에서 금연인거 모르는 사람이 어딨어? 분명히 아는데 나가기 귀찮아서 피는 걸꺼야.</p>
+        <p class="line top-line third-line next-line">라) 으~~ 무개념이야 무개념~</p>
+        <p class="line top-line fourth-line next-line">민) 근데 <strong>401호랑 402호가 조금 수상하던데?</strong> <strong>401호 아저씨</strong>는 맨날 이상한 연기 피우고... </p>
+        <p class="line top-line fifth-line next-line">라) <strong>402호 언니</strong>는 딱 봐도 남의 눈치 안보고 막 피울 것 같아. 뭔가 쎈 언니같아 보이거든.</p>
+        <p class="line bottom-line sixth-line five-toplines"><span class="clicker clicker-406-10">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-11">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라) 그 언니 완~~전 걸크러시. 얼굴도 예쁘고 옷도 너무 잘입으시지 않아?</p>
+        <p class="line top-line second-line next-line">민) 어 완~~전. 우리 나중에 그 언니방에 놀러갈래? 그 언니 귀여운 개도 키우던데!</p>
+        <p class="line top-line third-line next-line">라) 어 그래! 어머. 또 우리끼리 이야기해버렸네? 히히.</p>
+        <p class="line bottom-line fourth-line three-toplines">- 아, 괜찮습니다. 그럼, 앞으로 <span class="clicker clicker-406-11">잘 부탁드리겠습니다.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-12">
+        <h1 class="name">라 & 민</h1>
+        <p class="line top-line first-line">라, 민) 네! 안녕히 가세요!</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-406-12">(방에서 나간다.)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-406-13">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">라) 민아, 오늘 뭐 시켜 먹을래?</p>
+        <p class="line top-line second-line">민) 음...... 취~ 킨~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span></p>
+        <p class="line top-line third-line">라) 꺄악! 좋아! 까르르르....</p>
+        <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-406-13">(확인)</span></p>
+    </div>
+       
 </div>
+
+
 
 <div class="room-407">
     <img class="gif door door__407 door407__1" src="image/4th_floor/407_1.png">
     <img class="gif door door__407 door407__2" src="image/4th_floor/407_2.png">
     <img class="gif door door__407 door407__3" src="image/4th_floor/407_3.png">
-    <div class="dialogue dialogue__room-407">
-        <div class="wrapper wrapper__407">
-            <div class="transparent-background"></div>
-            <img class="room room__407-d" src="image/4th_floor/개발자.jpg">
-            <img class="room room__407-h" src="image/4th_floor/개발자2.jpg">
-            <img class="avatar avatar__407-d" src="image/4th_floor/개발자.png">
-            <img class="avatar avatar__407-h" src="image/4th_floor/작은현.png">
-        </div>
-        <div class="dialogue-opacity-1">
-            <h1 class="name name__407">&nbsp;</h1>
-            <p class="line npc-line line-7-1-1"><strong>407호</strong>입니다. 노크하시겠습니까?</p>
-            <p class="line player-line line-7-1-2">- <span class="clicker clicker-7-1-1">똑똑똑!</span></p>
-            <p class="line player-line line-7-1-3">- <span class="clicker clicker-7-1-2">그만둔다.</span></p>
 
-            <p class="line npc-line line-7-0-1">아직 당신은 이 방에 들어올 수 없습니다. 다른 방을 <span class="clicker clicker-7-0-1">모두 둘러본 후 오세요.</span></p>
+    <img class="room room__407d" src="image/4th_floor/개발자.jpg">
+    <img class="room room__407h" src="image/4th_floor/개발자2.jpg">
 
-            <p class="line npc-line line-7-2-1"><span class="player-name"></span>씨죠? 들어오세요. 문 열려 있어요.</p>
-            <p class="line player-line line-7-2-2">- <span class="clicker clicker-7-2-1">(문을 열고 들어간다.)</span></p>
+    <img class="avatar avatar__d" src="image/4th_floor/개발자.png">
+    <img class="avatar avatar__h" src="image/4th_floor/작은현.png">
 
-            <p class="line npc-line line-7-3-1">안녕하세요 <span class="player-name"></span>씨. 드디어 오셨군요. 기다리고 있었어요.</p>
-            <p class="line npc-line line-7-3-2">저는 센티멘탈 호텔 웹 개발 업무를 맡고 있는 <strong>개발자</strong>라고 해요. 이렇게 만나게 되서 반갑군요.</p>
-            <p class="line npc-line line-7-3-3">저는 여태껏 <span class="player-name"></span>씨를 지켜보고 있었어요. 이 호텔에 들어오는 순간부터, 일거수일투족을 말이죠.</p>
-            <p class="line player-line line-7-3-4">- 네...? 절 <span class="clicker clicker-7-3-1">지켜보고 있었다구요?</span></p>
-
-            <p class="line npc-line line-7-4-1">맞아요. 전 <span class="player-name"></span>씨가 라운지에서 무슨 음료를 마셨는지까지 알고 있죠.</p>
-            <p class="line player-line line-7-4-2">- 제가 <span class="clicker clicker-7-4-1">무슨 음료를 마셨는데요?</span></p>
-
-            <p class="line npc-line line-7-5-1"><span class="player-name"></span>씨는 라운지에서 모든 음료를 다 한번씩 마셔보지 않았나요?</p>
-            <p class="line player-line line-7-5-2">- (어... 어떻게 알았지? 정말 <span class="clicker clicker-7-5-1">날 지켜보고 있었단 말이야?</span>)</p>
-
-            <p class="line npc-line line-7-6-1">네. 하지만 뭐, 놀라지 말아요. 전 <span class="player-name"></span>씨를 해치지 않으니까.</p>
-            <p class="line npc-line line-7-6-2">전 간단히 말해, 이 호텔의 모든 전산 시스템을 책임지고 있어요.</p>
-            <p class="line npc-line line-7-6-3">시대의 흐름에 맞게 모바일도 지원하고 있죠.</p>
-            <p class="line player-line line-7-6-4">- 아니, 난 아직 믿지 못하겠어. 당신이 개발자라는걸 <span class="clicker clicker-7-6-1">증명해봐...!</span></p>
-
-            <p class="line npc-line line-7-7-1">후, 이래도 믿지 못하겠다니. 그럼 보여드리죠. 저의 능력을...!&nbsp;<i class="fas fa-sort-down arrow arrow-7-7-1"></i></p>
-
-            <p class="line npc-line line-7-8-1">.........?</p>
-            <p class="line npc-line line-7-8-2">아니, 뭐야? 난 방금까지 라운지에서 과자를 먹고 있었는데? 이게 어떻게 된거야?</p>
-            <p class="line npc-line line-7-8-3">내가 여길 어떻게 왔지?&nbsp;<i class="fas fa-sort-down arrow arrow-7-8-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-7-9-1">아, 안녕하세요, 작은 지배인님? 어디, 불편한덴 없으시죠?&nbsp;<i class="fas fa-sort-down arrow arrow-7-9-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-7-10-1">이... 이... 개발자! 너 또 코드 가지고 장난치고 있지!&nbsp;<i class="fas fa-sort-down arrow arrow-7-10-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-7-11-1">아… 뭐, 죄송해요. 하지만 이번에 새로 들어온 신입사원이 저의 대한 의심이 많아서요~&nbsp;<i class="fas fa-sort-down arrow arrow-7-11-1"></i></p>
-            <!-- arrow -->
-            <p class="line npc-line line-7-12-1">야 너! <strong><span class="player-name"></span>!</strong> 지금 당장 개발자한테 사과해! 너 때문에 내가 과자를 못먹잖아!</p>
-            <p class="line player-line line-7-12-2">- <span class="clicker clicker-7-12-1">......?</span></p>
-
-            <p class="line npc-line line-7-13-1">지금 당장 사과하지 않는다면, 널 우리 호텔 최초로 첫날 잘린 직원으로 기록해 주겠어!</p>
-            <p class="line player-line line-7-13-2">- (이 건방진 꼬마가...! 그래도 지배인이니 어쩔 수 없지.)</p>
-            <p class="line player-line line-7-13-3">&nbsp;&nbsp;자... 잘린다구요? 아.. 안되요. 어떻게 해서 취업했는데... </p>
-            <p class="line player-line line-7-13-4">&nbsp;&nbsp;개발자님 죄..죄송합니다. 이제 개발자님을 <span class="clicker clicker-7-13-1">의심하지 않겠습니다.</span></p>
-
-            <p class="line npc-line line-7-14-1">흠... 좋아. 이정도면 내 능력을 충분히 보여준 것 같군.</p>
-            <p class="line npc-line line-7-14-2">자, 꼬맹이 지배인? 이제 가도 좋아.&nbsp;<i class="fas fa-sort-down arrow arrow-7-14-1"></i></p>
-            <!-- arrow -->
-
-            <p class="line npc-line line-7-15-1">야... 너! 반말하지 말랬지! 개발자면 다야? 너 이자식 내가...</p>
-
-            <p class="line npc-line line-7-16-1">안녕~ 먹던 과자나 맛있게 먹도록 해~&nbsp;<i class="fas fa-sort-down arrow arrow-7-16-1"></i></p>
-            <p class="line npc-line line-7-16-2">그나저나 요즘 담배 냄새 때문에 호텔이 떠들썩하잖아요? <span class="player-name"></span>씨는 그걸 조사하고 있고.</p>
-            <p class="line player-line line-7-16-3">- 아 맞다. 그걸 조사하고 있었지... 개발자님은 뭐 <span class="clicker clicker-7-16-1">아시는거 있으신가요?</span></p>
-
-            <p class="line npc-line line-7-17-1">당연하죠. 저는 이 호텔에서 일어나는 모든 일들을 알고 있어요. 심지어 담배를 피운 범인도 말이죠.</p>
-            <p class="line npc-line line-7-17-2">하지만! 전 이번 기회에 <span class="player-name"></span>씨를 시험해 보겠어요.</p>
-            <p class="line npc-line line-7-17-3"><span class="player-name"></span>씨는 지금까지 401호부터 406호의 손님들과 대화를 나누며 정보를 수집했겠죠. </p>
-            <p class="line npc-line line-7-17-4">그리고 마지막. 제가 주는 <strong>이 정보</strong>로 범인을 찾을 수 있는 단서의 퍼즐이 완성시킬 수 있어요.</p>
-            <p class="line player-line line-7-17-5">- <span class="clicker clicker-7-17-1">이 정보...?</span></p>
-  
-            <p class="line npc-line line-7-18-1">네. <strong>402호의 루비님과 404호의 희미한 별님. 둘 중 한명이 범인이에요.</strong></p>
-            <p class="line npc-line line-7-18-2">하지만... 제가 말한 이 정보가 과연 진실일까요...? 아님 거짓일까요...?</p>
-            <p class="line player-line line-7-18-3">- <span class="clicker clicker-7-18-1">음... 진실!</span></p>
-            <p class="line player-line line-7-18-4">- <span class="clicker clicker-7-18-2">...거짓?</span></p>
-
-            <p class="line npc-line line-7-19-1">그건 <span class="player-name"></span>씨가 직접 알아내야 하죠. 후훗.</p>
-            <p class="line npc-line line-7-19-2">대신 힌트를 하나 드릴게요. <span class="player-name"></span>씨가 이야기를 나눈 401호부터 407호, 저를 포함한 모든 인물들 중,</strong></p>
-            <p class="line npc-line line-7-19-3"><strong>한명은 거짓말을 하고 있어요.</strong></p>
-            <p class="line npc-line line-7-19-4">거짓말을 한다고 해서, 그 사람이 반드시 담배를 피웠다는건 아니에요. </p> 
-            <p class="line npc-line line-7-19-5">심증만을 가지고 있을 수도 있고, 착각해서 의도치않게 거짓말을 할 수도 있거든요.&nbsp;<i class="fas fa-sort-down arrow arrow-7-19-1"></i></p>
-            <!-- arrow -->
-
-            <p class="line npc-line line-7-20-1">그럼 이만 복도에 서있는 <strong>큰 지배인님</strong>에게 가봐요. 전 범인을 찾는 데 필요한 모든 힌트를 드렸어요.</p>
-            <p class="line npc-line line-7-20-2">이제 이 문제를 해결하는건 <span class="player-name"></span>씨의 몫이에요.</p>
-            <p class="line npc-line line-7-20-3">그럼, 행운의 함수가 그대와 함께하길... <span class="countdown"></span></p>
-        </div>
-        <div class="dialogue-box dialogue-box__407"></div>
+    <div class="dialogue-box2 dialogue-407-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><strong>407호</strong>입니다. 노크하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-407-1-1">똑똑똑!</span></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-407-1-2">그만둔다.</span></p>
     </div>
-</div>
+
+    <div class="dialogue-box2 dialogue-407-2">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line"><span class="player-name"></span>씨죠? 들어오세요. 문 열려 있어요.</p>
+        <p class="line bottom-line second-line one-topline">- <span class="clicker clicker-407-2">(들어가기)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-3">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">안녕하세요 <span class="player-name"></span>씨. 기다리고 있었어요.</p>
+        <p class="line top-line second-line next-line">저는 센티멘탈 호텔 웹 개발 업무를 맡고 있는 <strong>개발자</strong>라고 해요. 이렇게 만나게 되서 반갑군요.</p>
+        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-407-3">(확인)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-4">
+        <h1 class="name ">개발자</h1>
+        <p class="line top-line first-line">사실 저는 여태껏 <span class="player-name"></span>씨를 지켜보고 있었어요. 이 호텔에 들어오는 순간부터 일거수일투족을 말이죠.</p>
+        <p class="line bottom-line second-line one-topline">- 네...? 절 <span class="clicker clicker-407-4">지켜보고 있었다구요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-5">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">맞아요. 전 <span class="player-name"></span>씨가 1층 라운지에서 무슨 음료를 마셨는지까지 알고 있죠.</p>
+        <p class="line bottom-line second-line one-topline">- 제가 <span class="clicker clicker-407-5">무슨 음료를 마셨는데요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-6">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line"><span class="player-name"></span>씨는 🍹애플 사이다, 🍵밀크티, ☕아메리카노, 🍸섹스 온 더 비치를 다 한번씩 마셔보지 않았나요?</p>
+        <p class="line bottom-line second-line twotoplines">- (어떻게 알았지?) 하, 하지만 네개를 다 마시지 않으면 다음으로 진행이 안되던데요...?</p>
+        <p class="line bottom-line third-line next-line"><span class="clicker clicker-407-6">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-7">
+        <h1 class="name ">개발자</h1>
+        <p class="line top-line first-line">맞아요. 사실 제가 그렇게 만들었어요. 크크크.</p>
+        <p class="line top-line second-line next-line">전 음료 뿐만 아니라, 이 호텔의 모든 전산 시스템을 책임지고 있어요.</p>
+        <p class="line top-line third-line next-line">시대의 흐름에 맞게 모바일도 지원하고 있답니다~</p>
+        <p class="line bottom-line fourth-line three-toplines">- 오... 그럼 개발자님, 마술같은것도 부릴 수 <span class="clicker clicker-407-7">있으신가요?</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-8">
+        <h1 class="name ">개발자</h1>
+        <p class="line top-line first-line">마술이요? 하하하. 그럼 오늘만 특별히 <span class="player-name"></span>씨를 위해 살짝만 보여드릴게요.</p>
+        <p class="line top-line second-line next-line">자 어디보자... 여길 이렇게 바꾸고 저길 저렇게 바꾸면......좋아! 히히. <span class="clicker clicker-407-8">소환...!</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-9">
+        <h1 class="name">작은 현</h1>
+        <p class="line top-line first-line">......?</p>
+        <p class="line top-line second-line next-line">아니, 뭐야? 난 방금까지 라운지에서 과자를 먹고 있었는데...?</p>
+        <p class="line top-line third-line next-line">내가 여길 어떻게 왔지?</p>
+        <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-407-9">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-10">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">아, 안녕하세요 작은 지배인님? 요즘 어디 불편한덴 없으시죠?</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-407-10">(다음)</span></p>
+    </div>
+        
+    <div class="dialogue-box2 dialogue-407-11">
+        <h1 class="name">작은 현</h1>
+        <p class="line top-line first-line">이... 이... 개발자! 너 또 코드 가지고 장난치고 있지!</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-407-11">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-12">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">아, 하하하. 신입 사원 교육 차원에서 제 능력좀 보여 주느라...헤헤.</p>
+        <p class="line top-line second-line next-line">다시 과자를 먹을 수 있게 보내 드릴게요~</p>
+        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-407-12">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-13">
+        <h1 class="name">작은 현</h1>
+        <p class="line top-line first-line">야 너! 개발자면 다야? 너 이자식 내가... <span class="clicker clicker-407-13">(뿅)</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-14">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">이정도면 충분히 보여 드렸죠? 헤헤.</p>
+        <p class="line top-line second-line next-line">그나저나 요즘 담배 냄새 때문에 호텔이 떠들썩하잖아요? <span class="player-name"></span>씨는 그걸 조사하고 있고.</p>
+        <p class="line bottom-line third-line two-toplines">- 아 맞다. 개발자님은 뭐 <span class="clicker clicker-407-14">아시는거 있으신가요?</span></p>
+    </div>
+
+     <div class="dialogue-box2 dialogue-407-15">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">음... 저는 제 방에만 있어서 자세히는 모르지만...</p>
+        <p class="line top-line second-line next-line">뭔가 <strong>402호</strong> 아님 <strong>404호</strong> 둘 중 한명 같아요.</p>
+        <p class="line top-line third-line next-line">딱히 이유는 없고... 그냥 담배 피울것같이 생겨서...? 헤헤.</p>
+        <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-407-15">아... 그렇군요.</span></p>
+    </div>
+
+    <div class="dialogue-box2 dialogue-407-16">
+        <h1 class="name">개발자</h1>
+        <p class="line top-line first-line">그럼 저는 다시 개발 업무를 하러 가야겠네요. 꼭 교육 합격하시길 바랄게요!</p>
+        <p class="line bottom-line second-line two-toplines">아, 감사합니다. 그럼 앞으로 잘부탁드립니다!</p>
+        <p class="line bottom-line third-line next-line"><span class="clicker clicker-407-16">(방에서 나간다)</span></p>
+    </div>
+            
 </div>
 
 <script>
-$(document).ready(()=> {
+$(document).ready(function() {
     
-$('.player-name').text('김승현');
+$('.player-name').text('호룡');
 
 
 let block = {display: 'block'};
 let none = {display: 'none'};
 let d = 100; //door opening speed
 
-let hasClickedRooms = {
-    'hasClicked401': false,
-    'hasClicked402': false,
-    'hasClicked404': false,
-    'hasClicked406': false,
-    'hasClicked407': false
-}
+let hasClicked401 = true;
+let hasClicked402 = true;
+let hasClicked404 = true;
+let hasClicked406 = true;
+let hasClicked407 = true;
+let hasClickedBigHyun = false;
+
+
+
+// fade-in to loader and fadeout
+
+$('#fade-box').fadeOut(500);
+$('.preloader').delay(4000).fadeOut(0);
+$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
+
+
+
+// item
+
+    $('.map-icon').click(function() {
+        $('.map-contents,  #item-background').show();
+    })
+    $('.close-x').click(function(){
+        $('.map-contents,  #item-background').hide();
+    })
+
+
+// score
+
+    let score = 0;
+
+    function addScore(number) {
+        score += number;
+        $('.score').html(`${score}`);
+        sessionStorage.setItem("score", score);
+    }
+    addScore(0);
+
+    function addBonus(gif, score) {
+        if (gif === false) {
+            addScore(score);
+        }
+    }
+
+
+// player name
+
+    $('.player-name').text(sessionStorage.getItem("playerName"));
+
+
+
+
+
+// start
+
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(7000).fadeIn(0);
+
+        //quick view
+        $('.dialogue-0-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-0-1-1').on('click', function() {
+        $('.dialogue-0-1, .dialogue-0-1 .line').hide();
+        $('.dialogue-0-2, .dialogue-0-2 .line').show();
+    })
+        //quick view
+        $('.dialogue-0-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-0-2-1').on('click', function() {
+        $('.dialogue-0-2, .dialogue-0-2 .line').hide();
+        $('.dialogue-0-3, .dialogue-0-3 .line').show();
+    })
+        //quick view
+        $('.dialogue-0-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+    
+        //close
+        $('.clicker-0-3-1').on('click', function() {
+            $('.dialogue-0-3, .dialogue-0-3 .line, .dialogue-box, .big-hyun__avatar').hide();
+        })
+        
+
+
+
+
+    // if not opened every door 
+    $('.big-hyun__gif').on('click', function() {
+        if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
+            $('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box, .big-hyun__avatar').show();
+        }
+        else {
+            $('.dialogue-0-4, .dialogue-0-4 .line, .dialogue-box, .big-hyun__avatar').show();
+        }
+    })
+        //quick view
+        $('.dialogue-0-4').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+        //quick view
+        $('.dialogue-1-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+    
+        //close
+        $('.clicker-0-4').on('click', function() {
+            $('.dialogue-0-4, .dialogue-0-4 .line, .dialogue-box, .big-hyun__avatar').hide();})
+
+
+
+
+
+    // QUIZ!!
+    $('.clicker-1-1').on('click', function() {
+        hasClickedBigHyun = true;
+        $('.dialogue-1-1, .dialogue-1-1 .line').hide();
+        $('.dialogue-1-2, .dialogue-1-2 .line').show();
+    })
+        //quick view
+        $('.dialogue-1-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    //힌트 보기
+    $('.clicker-1-hint').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-3, .dialogue-1-3 .line').show();
+    })
+        //quick view
+        $('.dialogue-1-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+        //return
+        $('.clicker-1-3').on('click', function() {
+            $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').show();
+            $('.dialogue-1-3, .dialogue-1-3 .line').hide();
+        })
+
+    //401
+    $('.clicker-1-401').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-401, .dialogue-1-401 .line, .avatar__401').show();
+    })
+        //quick view
+        $('.dialogue-1-401').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    //402
+    $('.clicker-1-402').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-402, .dialogue-1-402 .line, .avatar__402').show();
+    })
+        //quick view
+        $('.dialogue-1-402').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})   
+            
+    //404
+    $('.clicker-1-404').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-404, .dialogue-1-404 .line, .avatar__404').show();
+    })
+        //quick view
+        $('.dialogue-1-404').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})   
+
+    //406
+    $('.clicker-1-406').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-406, .dialogue-1-406 .line, .avatar__406').show();
+    })
+        //quick view
+        $('.dialogue-1-406').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+
+    //407
+    $('.clicker-1-407').on('click', function() {
+        $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
+        $('.dialogue-1-407, .dialogue-1-407 .line, .avatar__d').show();
+    })
+        //quick view
+        $('.dialogue-1-407').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})   
+  
+    //wrong
+    $('.clicker-1-wrong').on('click', function() {
+        addScore(-10);
+        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, avatar__407').hide();
+        $('.dialogue-1-wrong, .dialogue-1-wrong .line, .big-hyun__avatar').show();
+    })
+        //quick view
+        $('.dialogue-1-wrong').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+    
+        //close
+        $('.clicker-1-closew').on('click', function() {
+            $('.dialogue-1-wrong, .dialogue-1-wrong .line, .dialogue-box, .big-hyun__gif, .big-hyun__avatar').hide();
+        })
+
+    //right
+    $('.clicker-1-right').on('click', function() {
+        addScore(+50);
+        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, avatar__407').hide();
+        $('.dialogue-1-right, .dialogue-1-right .line, .big-hyun__avatar').show();
+    })
+        //quick view
+        $('.dialogue-1-right').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+    
+        //close
+        $('.clicker-1-closer').on('click', function() {
+            $('.dialogue-1-right, .dialogue-1-right .line, .dialogue-box, .big-hyun__gif, .big-hyun__avatar').hide();
+        })
+
+
+
+
+
+
 
 // 401
 
-let door401__1 = $('.door401__1');
-let door401__2 = $('.door401__2');
-let door401__3 = $('.door401__3');     
+    let door401__1 = $('.door401__1');
+    let door401__2 = $('.door401__2');
+    let door401__3 = $('.door401__3');     
 
-$('.door401__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door401__1.css(none)}, d);
-    setTimeout(()=> {door401__2.css(block)}, d);
-    setTimeout(()=> {door401__2.css(none)}, d*2);
-    setTimeout(()=> {door401__3.css(block)}, d*2);
-})
-$('.door401__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door401__3.css(none)}, d);
-    setTimeout(()=> {door401__2.css(block)}, d);
-    setTimeout(()=> {door401__2.css(none)}, d*2);
-    setTimeout(()=> {door401__1.css(block)}, d*2);
-})
-
-$('.door__401').on('click', ()=> {
-    $('#dialogue__room-401').css(block);
-    $('#dialogue-box__401').css('opacity', 1);
-    $('.line-1-1-1, .line-1-1-2, .line-1-1-3').css(block);
-})
-    $('#clicker-1-1-2').on('click', ()=> {
-        $('#dialogue__room-401').css(none);
-        $('.line-1-1-1, .line-1-1-2, .line-1-1-3').css(none);
+    $('.door401__1').on('mouseenter', function() {
+        setTimeout(function() {door401__1.css(none)}, d);
+        setTimeout(function() {door401__2.css(block)}, d);
+        setTimeout(function() {door401__2.css(none)}, d*2);
+        setTimeout(function() {door401__3.css(block)}, d*2);
     })
-$('#clicker-1-1-1').on('click', ()=> {
-    $('.line-1-1-1, .line-1-1-2, .line-1-1-3').css(none);
-    $('.line-1-2-1, .line-1-2-2').css(block);
-})
-$('#clicker-1-2').on('click', ()=> {
-    $('#name__401').text('처남');
-    $('#dialogue-box__401').css('opacity', 0.9);
-    $('.line-1-2-1, .line-1-2-2').css(none);
-    $('.wrapper__401, .line-1-3-1, .line-1-3-2').css(block);
-})
-$('#clicker-1-3').on('click', ()=> {
-    $('.line-1-3-1, .line-1-3-2').css(none);
-    $('.line-1-4-1, .line-1-4-2').css(block);
-})
-$('#clicker-1-4').on('click', ()=> {
-    $('.line-1-4-1, .line-1-4-2').css(none);
-    $('.line-1-5-1, .line-1-5-2, .line-1-5-3, .line-1-5-4').css(block);
-})
-$('#clicker-1-5-1').on('click', ()=> {
-    $('.line-1-5-1, .line-1-5-2, .line-1-5-3, .line-1-5-4').css(none);
-    $('.line-1-5-5, .line-1-5-6, .line-1-5-7').css(block);
-})
-$('#clicker-1-5-2').on('click', ()=> {
-    $('.line-1-5-5, .line-1-5-6, .line-1-5-7').css(none);
-    $('.line-1-6-1, .line-1-6-2, .line-1-6-3').css(block);
-})
-$('#clicker-1-6').on('click', ()=> {
-    $('.line-1-6-1, .line-1-6-2, .line-1-6-3').css(none);
-    $('.line-1-7-1, .line-1-7-2, .line-1-7-3, .line-1-7-4, .line-1-7-5, .line-1-7-6').css(block);
-})
-$('#clicker-1-7').on('click', ()=> {
-    $('.line-1-7-1, .line-1-7-2, .line-1-7-3, .line-1-7-4, .line-1-7-5, .line-1-7-6').css(none);
-    $('.line-1-8-1, .line-1-8-2').css(block);
-})
-$('#clicker-1-8').on('click', ()=> {
-    $('.line-1-8-1, .line-1-8-2, #dialogue__room-401, .wrapper__401').css(none);
-    hasClickedRooms[hasClicked401] = true;
-})
+    $('.door401__3').on('mouseleave', function() {
+        setTimeout(function() {door401__3.css(none)}, d);
+        setTimeout(function() {door401__2.css(block)}, d);
+        setTimeout(function() {door401__2.css(none)}, d*2);
+        setTimeout(function() {door401__1.css(block)}, d*2);
+    })
+
+    $('.door__401').on('click', function() {
+        $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').css(block);})
+
+        //quick view
+        $('.dialogue-401-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+        //close
+        $('.clicker-401-1-2').on('click', function() {
+            $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').hide();})
+
+
+    $('.clicker-401-1-1').on('click', function() {
+        $('.dialogue-401-1, .dialogue-401-1 .line').hide();
+        $('.dialogue-401-2, .dialogue-401-2 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-2').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+    $('.clicker-401-2-1').on('click', function() {
+        $('.dialogue-401-2, .dialogue-401-2 .line').hide();
+        $('.dialogue-401-3, .dialogue-401-3 .line, .transparent-background, .room401, .avatar__401').show();
+    })
+
+        //quick view
+        $('.dialogue-401-3').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+    $('.clicker-401-3-1').on('click', function() {
+        $('.dialogue-401-3, .dialogue-401-3 .line').hide();
+        $('.dialogue-401-4, .dialogue-401-4 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-4').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
+    $('.clicker-401-4-1').on('click', function() {
+        $('.dialogue-401-4, .dialogue-401-4 .line').hide();
+        $('.dialogue-401-5, .dialogue-401-5 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-5').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-401-5-1').on('click', function() {
+        $('.dialogue-401-5, .dialogue-401-5 .line').hide();
+        $('.dialogue-401-6, .dialogue-401-6 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-6').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-401-6-1').on('click', function() {
+        $('.dialogue-401-6, .dialogue-401-6 .line').hide();
+        $('.dialogue-401-7, .dialogue-401-7 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-7').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-401-7-1').on('click', function() {
+        $('.dialogue-401-7, .dialogue-401-7 .line').hide();
+        $('.dialogue-401-8, .dialogue-401-8 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-8').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-401-8-1').on('click', function() {
+        $('.dialogue-401-8, .dialogue-401-8 .line').hide();
+        $('.dialogue-401-9, .dialogue-401-9 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-401-9').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+        //close
+        $('.clicker-401-9-1').on('click', function() {
+            $('.dialogue-401-9, .dialogue-box, .transparent-background, .room401, .avatar__401').css(none);
+            hasClicked401 = true;
+        })
+
+
+
 
 
 // 402
@@ -498,65 +1021,106 @@ let door402__1 = $('.door402__1');
 let door402__2 = $('.door402__2');
 let door402__3 = $('.door402__3');     
 
-$('.door402__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door402__1.css(none)}, d);
-    setTimeout(()=> {door402__2.css(block)}, d);
-    setTimeout(()=> {door402__2.css(none)}, d*2);
-    setTimeout(()=> {door402__3.css(block)}, d*2);
+$('.door402__1').on('mouseenter', function() {
+    setTimeout(function() {door402__1.css(none)}, d);
+    setTimeout(function() {door402__2.css(block)}, d);
+    setTimeout(function() {door402__2.css(none)}, d*2);
+    setTimeout(function() {door402__3.css(block)}, d*2);
 })
-$('.door402__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door402__3.css(none)}, d);
-    setTimeout(()=> {door402__2.css(block)}, d);
-    setTimeout(()=> {door402__2.css(none)}, d*2);
-    setTimeout(()=> {door402__1.css(block)}, d*2);
+$('.door402__3').on('mouseleave', function() {
+    setTimeout(function() {door402__3.css(none)}, d);
+    setTimeout(function() {door402__2.css(block)}, d);
+    setTimeout(function() {door402__2.css(none)}, d*2);
+    setTimeout(function() {door402__1.css(block)}, d*2);
 })
 
- //$('#dialogue__room-402, .wrapper__402, .line-2-3-1').css(block);
-let hasClicked402 = false;
+$('.door__402').on('click', function() {
+    $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').css(block);})
 
-$('.door__402').on('click', ()=> {
-    $('#dialogue__room-402').css(block);
-    $('#dialogue-box__402').css('opacity', 1);
-    $('.line-2-1-1, .line-2-1-2, .line-2-1-3').css(block);
+    //quick view
+    $('.dialogue-402-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
+    
+    //close
+    $('.clicker-402-1-2').on('click', function() {
+        $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').hide();})
+
+
+$('.clicker-402-1-1').on('click', function() {
+    $('.dialogue-402-1, .dialogue-402-1 .line').hide();
+    $('.dialogue-402-2, .dialogue-402-2 .line').show();
 })
-    $('.clicker-2-1-2').on('click', ()=> {
-        $('#dialogue__room-402').css(none);
-        $('.line-2-1-1, .line-2-1-2, .line-2-1-3').css(none);
+
+    //quick view
+    $('.dialogue-402-2').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+$('.clicker-402-2').on('click', function() {
+    $('.dialogue-402-2, .dialogue-402-2 .line').hide();
+    $('.dialogue-402-3, .dialogue-402-3 .line, .transparent-background, .room402, .avatar__402').show();
+})
+
+    //quick view
+    $('.dialogue-402-3').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+$('.clicker-402-3').on('click', function() {
+    $('.dialogue-402-3, .dialogue-402-3 .line').hide();
+    $('.dialogue-402-4, .dialogue-402-4 .line').show();
+})
+
+    //quick view
+    $('.dialogue-402-4').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+          
+$('.clicker-402-4').on('click', function() {
+    $('.dialogue-402-4, .dialogue-402-4 .line').hide();
+    $('.dialogue-402-5, .dialogue-402-5 .line').show();
+})
+
+    //quick view
+    $('.dialogue-402-5').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+$('.clicker-402-5').on('click', function() {
+    $('.dialogue-402-5, .dialogue-402-5 .line').hide();
+    $('.dialogue-402-6, .dialogue-402-6 .line').show();
+})
+
+    //quick view
+    $('.dialogue-402-6').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+$('.clicker-402-6').on('click', function() {
+    $('.dialogue-402-6, .dialogue-402-6 .line').hide();
+    $('.dialogue-402-7, .dialogue-402-7 .line').show();
+})
+
+    //quick view
+    $('.dialogue-402-7').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+$('.clicker-402-7').on('click', function() {
+    $('.dialogue-402-7, .dialogue-402-7 .line').hide();
+    $('.dialogue-402-8, .dialogue-402-8 .line').show();
+})
+
+    //quick view
+    $('.dialogue-402-8').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    //close
+    $('.clicker-402-8').on('click', function() {
+        $('.dialogue-402-8, .dialogue-box, .transparent-background, .room402, .avatar__402').css(none);
+        hasClicked402 = true;
     })
-$('.clicker-2-1-1').on('click', ()=> {
-    $('.line-2-1-1, .line-2-1-2, .line-2-1-3').css(none);
-    $('.line-2-2-1, .line-2-2-2, .line-2-2-3').css(block);
-})
-$('.clicker-2-2-1').on('click', ()=> {
-    $('.line-2-2-1, .line-2-2-2, .line-2-2-3').css(none);
-    $('.wrapper__402, .line-2-3-1, .line-2-3-2, .line-2-3-3, .line-2-3-4').css(block);
-    $('#name__402').text('루비');
-    $('#dialogue-box__402').css('opacity', 0.9);
-})
-$('.clicker-2-3-1').on('click', ()=> {
-    $('.line-2-3-1, .line-2-3-2, .line-2-3-3, .line-2-3-4').css(none);
-    $('.line-2-4-1, .line-2-4-2, .line-2-4-3, .line-2-4-4, .line-2-4-5, .line-2-4-6').css(block);
-})
-$('.clicker-2-4-1').on('click', ()=> {
-    $('.line-2-4-1, .line-2-4-2, .line-2-4-3, .line-2-4-4, .line-2-4-5, .line-2-4-6').css(none);
-    $('.line-2-5-1, .line-2-5-2, .line-2-5-3').css(block);
-})
-$('.clicker-2-5-1').on('click', ()=> {
-    $('.line-2-5-1, .line-2-5-2, .line-2-5-3').css(none);
-    $('.line-2-6-1, .line-2-6-2, .line-2-6-3, .line-2-6-4').css(block);
-})
-$('.arrow-2-1').on('click', ()=> {
-    $('.line-2-6-1, .line-2-6-2, .line-2-6-3, .line-2-6-4').css(none);
-    $('.line-2-6-5, .line-2-6-6, .line-2-6-7, .line-2-6-8, .line-2-6-9, .line-2-6-10').css(block);
-})
-$('.clicker-2-6-1').on('click', ()=> {
-    $('.line-2-6-5, .line-2-6-6, .line-2-6-7, .line-2-6-8, .line-2-6-9, .line-2-6-10').css(none);
-    $('.line-2-7-1, .line-2-7-2').css(block);
-})
-$('.clicker-2-7-1').on('click', ()=> {
-    $('.line-2-7-1, .line-2-7-2, .wrapper__402, #dialogue__room-402').css(none);
-    hasClickedRooms[hasClicked402] = true;
-})
+
+
 
 
 // 403
@@ -565,38 +1129,47 @@ let door403__1 = $('.door403__1');
 let door403__2 = $('.door403__2');
 let door403__3 = $('.door403__3');     
 
-$('.door403__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door403__1.css(none)}, d);
-    setTimeout(()=> {door403__2.css(block)}, d);
-    setTimeout(()=> {door403__2.css(none)}, d*2);
-    setTimeout(()=> {door403__3.css(block)}, d*2);
+$('.door403__1').on('mouseenter', function() {
+    setTimeout(function() {door403__1.css(none)}, d);
+    setTimeout(function() {door403__2.css(block)}, d);
+    setTimeout(function() {door403__2.css(none)}, d*2);
+    setTimeout(function() {door403__3.css(block)}, d*2);
 })
-$('.door403__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door403__3.css(none)}, d);
-    setTimeout(()=> {door403__2.css(block)}, d);
-    setTimeout(()=> {door403__2.css(none)}, d*2);
-    setTimeout(()=> {door403__1.css(block)}, d*2);
+$('.door403__3').on('mouseleave', function() {
+    setTimeout(function() {door403__3.css(none)}, d);
+    setTimeout(function() {door403__2.css(block)}, d);
+    setTimeout(function() {door403__2.css(none)}, d*2);
+    setTimeout(function() {door403__1.css(block)}, d*2);
 })
 
-$('.door__403').on('click', ()=> {
-    $('.dialogue__room-403').css(block);
-    $('.dialogue-box__403').css('opacity', 1);
-    $('.line-3-1-1, .line-3-1-2, .line-3-1-3').css(block);
+$('.door__403').on('click', function() {
+    $('.dialogue-403-1, .dialogue-403-1 .line, .dialogue-box').css(block);
 })
+
+    //quick view
+    $('.dialogue-403-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
+    })
+        
     //close
-    $('.clicker-3-1-2').on('click', ()=> {
-        $('.dialogue__room-403').css(none);
-        $('.line-3-1-1, .line-3-1-2, .line-3-1-3').css(none);
+    $('.clicker-403-1-2').on('click', function() {
+        $('.dialogue-403-1, .dialogue-403-1 .line, .dialogue-box').hide();
     })
 
-$('.clicker-3-1-1').on('click', ()=> {
-    $('.line-3-1-1, .line-3-1-2, .line-3-1-3').css(none);
-    $('.line-3-2-1, .line-3-2-2').css(block);
+$('.clicker-403-1-1').on('click', function() {
+    $('.dialogue-403-1, .dialogue-403-1 .line').hide();
+    $('.dialogue-403-2, .dialogue-403-2 .line').show();
 })
-$('.clicker-3-2-1').on('click', ()=> {
-    $('.dialogue__room-403').css(none);
-    $('.line-3-2-1, .line-3-2-2').css(none);
-})
+
+    //quick view
+    $('.dialogue-403-2').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line');}) 
+
+    //close
+    $('.clicker-403-2').on('click', function() {
+        $('.dialogue-403-2, .dialogue-box').css(none);
+    })
+
 
 
 //404
@@ -605,58 +1178,85 @@ let door404__1 = $('.door404__1');
 let door404__2 = $('.door404__2');
 let door404__3 = $('.door404__3');     
 
-$('.door404__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door404__1.css(none)}, d);
-    setTimeout(()=> {door404__2.css(block)}, d);
-    setTimeout(()=> {door404__2.css(none)}, d*2);
-    setTimeout(()=> {door404__3.css(block)}, d*2);
+$('.door404__1').on('mouseenter', function() {
+    setTimeout(function() {door404__1.css(none)}, d);
+    setTimeout(function() {door404__2.css(block)}, d);
+    setTimeout(function() {door404__2.css(none)}, d*2);
+    setTimeout(function() {door404__3.css(block)}, d*2);
 })
-$('.door404__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door404__3.css(none)}, d);
-    setTimeout(()=> {door404__2.css(block)}, d);
-    setTimeout(()=> {door404__2.css(none)}, d*2);
-    setTimeout(()=> {door404__1.css(block)}, d*2);
+$('.door404__3').on('mouseleave', function() {
+    setTimeout(function() {door404__3.css(none)}, d);
+    setTimeout(function() {door404__2.css(block)}, d);
+    setTimeout(function() {door404__2.css(none)}, d*2);
+    setTimeout(function() {door404__1.css(block)}, d*2);
 })
 
 
-// $('.wrapper__404, .dialogue__room-404').css(block);
-$('.door__404').on('click', ()=> {
-    $('.dialogue__room-404').css(block);
-    $('.dialogue-box__404').css('opacity', 1);
-    $('.line-4-1-1, .line-4-1-2, .line-4-1-3').css(block);
-})
+$('.door__404').on('click', function() {
+    $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').css(block);})
+
+    //quick view
+    $('.dialogue-404-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
+    
     //close
-    $('.clicker-4-1-2').on('click', ()=> {
-        $('#dialogue__room-404').css(none);
-        $('.line-4-1-1, .line-4-1-2, .line-4-1-3').css(none);
-    })
+    $('.clicker-404-1-2').on('click', function() {
+        $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').hide();})
 
-$('.clicker-4-1-1').on('click', ()=> {
-    $('.line-4-1-1, .line-4-1-2, .line-4-1-3').css(none);
-    $('.line-4-2-1, .line-4-2-2').css(block);
+
+$('.clicker-404-1-1').on('click', function() {
+    $('.dialogue-404-1, .dialogue-404-1 .line').hide();
+    $('.dialogue-404-2, .dialogue-404-2 .line').show();
 })
-$('.clicker-4-2-1').on('click', ()=> {
-    $('.name__404').text('희미한 별');
-    $('.dialogue-box__404').css('opacity', 0.9);
-    $('.line-4-2-1, .line-4-2-2').css(none);
-    $('.wrapper__404, .line-4-3-1, .line-4-3-2, .line-4-3-3, .line-4-3-4').css(block);
+
+    //quick view
+    $('.dialogue-404-2').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+$('.clicker-404-2').on('click', function() {
+    $('.dialogue-404-2, .dialogue-404-2 .line').hide();
+    $('.dialogue-404-3, .dialogue-404-3 .line, .transparent-background, .room404, .avatar__404').show();
 })
-$('.arrow-4-1').on('click', ()=> {
-    $('.line-4-3-1, .line-4-3-2, .line-4-3-3, .line-4-3-4').css(none);
-    $('.line-4-3-5, .line-4-3-6, .line-4-3-7, .line-4-3-8, .line-4-3-9').css(block);
+
+    //quick view
+    $('.dialogue-404-3').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+
+$('.clicker-404-3').on('click', function() {
+    $('.dialogue-404-3, .dialogue-404-3 .line').hide();
+    $('.dialogue-404-4, .dialogue-404-4 .line').show();
 })
-$('.clicker-4-3-1').on('click', ()=> {
-    $('.line-4-3-5, .line-4-3-6, .line-4-3-7, .line-4-3-8, .line-4-3-9').css(none);
-    $('.line-4-4-1, .line-4-4-2, .line-4-4-3').css(block);
+
+    //quick view
+    $('.dialogue-404-4').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+          
+$('.clicker-404-4').on('click', function() {
+    $('.dialogue-404-4, .dialogue-404-4 .line').hide();
+    $('.dialogue-404-5, .dialogue-404-5 .line').show();
 })
-$('.clicker-4-4-1').on('click', ()=> {
-    $('.line-4-4-1, .line-4-4-2, .line-4-4-3').css(none);
-    $('.line-4-5-1, .line-4-5-2').css(block);
+
+    //quick view
+    $('.dialogue-404-5').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+$('.clicker-404-5').on('click', function() {
+    $('.dialogue-404-5, .dialogue-404-5 .line').hide();
+    $('.dialogue-404-6, .dialogue-404-6 .line').show();
 })
-$('.clicker-4-5-1').on('click', ()=> {
-    $('.line-4-5-1, .line-4-5-2, .wrapper__404, .dialogue__room-404').css(none);
-    hasClickedRooms[hasClicked404] = true;
-})
+
+    //quick view
+    $('.dialogue-404-6').click(function() {
+        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    //close
+    $('.clicker-404-6').on('click', function() {
+        $('.dialogue-404-6, .dialogue-box, .transparent-background, .room404, .avatar__404').css(none);
+        hasClicked404 = true;
+    })
 
 
 // 405
@@ -665,38 +1265,49 @@ let door405__1 = $('.door405__1');
 let door405__2 = $('.door405__2');
 let door405__3 = $('.door405__3');     
 
-$('.door405__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door405__1.css(none)}, d);
-    setTimeout(()=> {door405__2.css(block)}, d);
-    setTimeout(()=> {door405__2.css(none)}, d*2);
-    setTimeout(()=> {door405__3.css(block)}, d*2);
+$('.door405__1').on('mouseenter', function() {
+    setTimeout(function() {door405__1.css(none)}, d);
+    setTimeout(function() {door405__2.css(block)}, d);
+    setTimeout(function() {door405__2.css(none)}, d*2);
+    setTimeout(function() {door405__3.css(block)}, d*2);
 })
-$('.door405__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door405__3.css(none)}, d);
-    setTimeout(()=> {door405__2.css(block)}, d);
-    setTimeout(()=> {door405__2.css(none)}, d*2);
-    setTimeout(()=> {door405__1.css(block)}, d*2);
+$('.door405__3').on('mouseleave', function() {
+    setTimeout(function() {door405__3.css(none)}, d);
+    setTimeout(function() {door405__2.css(block)}, d);
+    setTimeout(function() {door405__2.css(none)}, d*2);
+    setTimeout(function() {door405__1.css(block)}, d*2);
 })
 
-$('.door__405').on('click', ()=> {
-    $('.dialogue__room-405').css(block);
-    $('.dialogue-box__405').css('opacity', 1);
-    $('.line-5-1-1, .line-5-1-2, .line-5-1-3').css(block);
+$('.door__405').on('click', function() {
+    $('.dialogue-405-1, .dialogue-405-1 .line, .dialogue-box').css(block);
 })
-$('.clicker-5-1-1').on('click', ()=> {
-    $('.line-5-1-1, .line-5-1-2, .line-5-1-3').css(none);
-    $('.line-5-2-1, .line-5-2-2').css(block);
-})
-    // close
-    $('.clicker-5-1-2').on('click', ()=> {
-        $('.dialogue__room-405').css(none);
-        $('.line-5-1-1, .line-5-1-2, .line-5-1-3').css(none);
+
+    //quick view
+    $('.dialogue-405-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
+    })
+        
+    //close
+    $('.clicker-405-1-2').on('click', function() {
+        $('.dialogue-405-1, .dialogue-405-1 .line, .dialogue-box').hide();
     })
 
-$('.clicker-5-2-1').on('click', ()=> {
-    $('.dialogue__room-405').css(none);
-    $('.line-5-2-1, .line-5-2-2').css(none);
+$('.clicker-405-1-1').on('click', function() {
+    $('.dialogue-405-1, .dialogue-405-1 .line').hide();
+    $('.dialogue-405-2, .dialogue-405-2 .line').show();
 })
+
+    //quick view
+    $('.dialogue-405-2').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line');}) 
+
+    //close
+    $('.clicker-405-2').on('click', function() {
+        $('.dialogue-405-2, .dialogue-box').css(none);
+    })
+
+
+
 
 
 //406
@@ -705,101 +1316,163 @@ let door406__1 = $('.door406__1');
 let door406__2 = $('.door406__2');
 let door406__3 = $('.door406__3');     
 
-$('.door406__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door406__1.css(none)}, d);
-    setTimeout(()=> {door406__2.css(block)}, d);
-    setTimeout(()=> {door406__2.css(none)}, d*2);
-    setTimeout(()=> {door406__3.css(block)}, d*2);
+$('.door406__1').on('mouseenter', function() {
+    setTimeout(function() {door406__1.css(none)}, d);
+    setTimeout(function() {door406__2.css(block)}, d);
+    setTimeout(function() {door406__2.css(none)}, d*2);
+    setTimeout(function() {door406__3.css(block)}, d*2);
 })
-$('.door406__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door406__3.css(none)}, d);
-    setTimeout(()=> {door406__2.css(block)}, d);
-    setTimeout(()=> {door406__2.css(none)}, d*2);
-    setTimeout(()=> {door406__1.css(block)}, d*2);
+$('.door406__3').on('mouseleave', function() {
+    setTimeout(function() {door406__3.css(none)}, d);
+    setTimeout(function() {door406__2.css(block)}, d);
+    setTimeout(function() {door406__2.css(none)}, d*2);
+    setTimeout(function() {door406__1.css(block)}, d*2);
 })
 
-//$('.wrapper__406, .dialogue__room-406').css(block);
+    $('.door__406').on('click', function() {
+        $('.dialogue-406-1, .dialogue-406-1 .line, .dialogue-box').css(block);})
 
-$('.door__406').on('click', ()=> {
-    $('.dialogue__room-406').css(block);
-    $('.dialogue-box__406').css('opacity', 1);
-    $('.line-6-1-1, .line-6-1-2, .line-6-1-3').css(block);
-})
-    // close
-    $('.clicker-6-1-2').on('click', ()=> {
-        $('.dialogue__room-406').css(none);
-        $('.line-6-1-1, .line-6-1-2, .line-6-1-3').css(none);
+        //quick view
+        $('.dialogue-406-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
+    
+        //close
+        $('.clicker-406-1-2').on('click', function() {
+            $('.dialogue-406-1, .dialogue-406-1 .line, .dialogue-box').hide();})
+
+
+    $('.clicker-406-1-1').on('click', function() {
+        $('.dialogue-406-1, .dialogue-406-1 .line').hide();
+        $('.dialogue-406-2, .dialogue-406-2 .line').show();
     })
-$('.clicker-6-1-1').on('click', ()=> {
-    $('.line-6-1-1, .line-6-1-2, .line-6-1-3').css(none);
-    $('.line-6-2-1, .line-6-2-2, .line-6-2-3').css(block);
-})
-$('.clicker-6-2-1').on('click', ()=> {
-    $('.line-6-2-1, .line-6-2-2, .line-6-2-3').css(none);
-    $('.line-6-3-1, .line-6-3-2, .line-6-3-3, .line-6-3-4, .line-6-3-5').css(block);
-})
-    // close
-    $('.clicker-6-2-2').on('click', ()=> {
-        $('.dialogue__room-406').css(none);
-        $('.line-6-2-1, .line-6-2-2, .line-6-2-3').css(none);
+
+        //quick view
+        $('.dialogue-406-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+        //close
+        $('.clicker-406-2-2').on('click', function() {
+            $('.dialogue-406-2, .dialogue-406-2 .line, .dialogue-box').hide();})
+
+
+    $('.clicker-406-2-1').on('click', function() {
+        $('.dialogue-406-2, .dialogue-406-2 .line').hide();
+        $('.dialogue-406-3, .dialogue-406-3 .line').show();
     })
-$('.clicker-6-3-1').on('click', ()=> {
-    $('.line-6-3-1, .line-6-3-2, .line-6-3-3, .line-6-3-4, .line-6-3-5').css(none);
-    $('.line-6-4-1, .line-6-4-2, .line-6-4-3').css(block);
-})
-    // close
-    $('.clicker-6-3-2').on('click', ()=> {
-        $('.dialogue__room-406').css(none);
-        $('.line-6-3-1, .line-6-3-2, .line-6-3-3, .line-6-3-4, .line-6-3-5').css(none);
+
+        //quick view
+        $('.dialogue-406-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');
+        })
+
+        //close
+        $('.clicker-406-3-2').on('click', function() {
+            $('.dialogue-406-3, .dialogue-406-3 .line, .dialogue-box').hide();})
+
+
+    $('.clicker-406-3-1').on('click', function() {
+        $('.dialogue-406-3, .dialogue-406-3 .line').hide();
+        $('.dialogue-406-4, .dialogue-406-4 .line').show();
     })
-$('.clicker-6-4-1').on('click', ()=> {
-    $('.line-6-4-1, .line-6-4-2, .line-6-4-3').css(none);
-    $('.name__406').text('라 & 민');
-    $('.dialogue-box__406').css('opacity', 0.9);
-    $('.wrapper__406').css(block);
-    $('.line-6-5-1, .line-6-5-2, .line-6-5-3, .line-6-5-4, .line-6-5-5, .line-6-5-6').css(block);
-})
-$('.clicker-6-5-1').on('click', ()=> {
-    $('.line-6-5-1, .line-6-5-2, .line-6-5-3, .line-6-5-4, .line-6-5-5, .line-6-5-6').css(none);
-    $('.line-6-6-1, .line-6-6-2, .line-6-6-3').css(block);
-})
-$('.clicker-6-6-1').on('click', ()=> {
-    $('.line-6-6-1, .line-6-6-2, .line-6-6-3').css(none);
-    $('.line-6-7-1, .line-6-7-2, .line-6-7-3, .line-6-7-4').css(block);
-})
-$('.arrow-6-1').on('click', ()=> {
-    $('.line-6-7-1, .line-6-7-2, .line-6-7-3, .line-6-7-4').css(none);
-    $('.line-6-8-1, .line-6-8-2, .line-6-8-3, .line-6-8-4, .line-6-8-5, .line-6-8-6').css(block);
-})
-$('.arrow-6-2').on('click', ()=> {
-    $('.line-6-8-1, .line-6-8-2, .line-6-8-3, .line-6-8-4, .line-6-8-5, .line-6-8-6').css(none);
-    $('.line-6-9-1, .line-6-9-2, .line-6-9-3, .line-6-9-4, .line-6-9-5, .line-6-9-6, .line-6-9-7').css(block);
-})
-$('.clicker-6-9-1').on('click', ()=> {
-    $('.line-6-9-1, .line-6-9-2, .line-6-9-3, .line-6-9-4, .line-6-9-5, .line-6-9-6, .line-6-9-7').css(none);
-    $('.line-6-10-1, .line-6-10-2, .line-6-10-3, .line-6-10-4, .line-6-10-5').css(block);
-})
-$('.arrow-6-3').on('click', ()=> {
-    $('.line-6-10-1, .line-6-10-2, .line-6-10-3, .line-6-10-4, .line-6-10-5').css(none);
-    $('.line-6-11-1, .line-6-11-2, .line-6-11-3, .line-6-11-4').css(block);
-})
-$('.clicker-6-11-1').on('click', ()=> {
-    $('.line-6-11-1, .line-6-11-2, .line-6-11-3, .line-6-11-4').css(none);
-    $('.line-6-12-1, .line-6-12-2').css(block);
-})
-$('.clicker-6-12-1').on('click', ()=> {
-    hasClickedRooms[hasClicked406] = true;
-    $('.line-6-12-1, .line-6-12-2').css(none);
-    $('.wrapper__406, .dialogue__room-406').css(none);
-    setTimeout(()=> {
-        $('.dialogue__room-406').css(block);
-        $('.dialogue-box__406').css('opacity', 1);
-        $('.line-6-13-1, .line-6-13-2, .line-6-13-3').css(block);
-    }, 2000)
-    setTimeout(()=> {
-        $('.dialogue__room-406, .line-6-13-1, .line-6-13-2, .line-6-13-3').css(none);
-    }, 9500)
-})
+
+        //quick view
+        $('.dialogue-406-4').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
+    $('.clicker-406-4').on('click', function() {
+        $('.dialogue-406-4, .dialogue-406-4 .line').hide();
+        $('.dialogue-406-5, .dialogue-406-5 .line, .transparent-background, .room406, .avatar__406').show();
+    })
+
+        //quick view
+        $('.dialogue-406-5').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-406-5').on('click', function() {
+        $('.dialogue-406-5, .dialogue-406-5 .line').hide();
+        $('.dialogue-406-6, .dialogue-406-6 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-6').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-406-6').on('click', function() {
+        $('.dialogue-406-6, .dialogue-406-6 .line').hide();
+        $('.dialogue-406-7, .dialogue-406-7 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-7').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-406-7').on('click', function() {
+        $('.dialogue-406-7, .dialogue-406-7 .line').hide();
+        $('.dialogue-406-8, .dialogue-406-8 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-8').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+
+    $('.clicker-406-8').on('click', function() {
+        $('.dialogue-406-8, .dialogue-406-8 .line').hide();
+        $('.dialogue-406-9, .dialogue-406-9 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-9').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    $('.clicker-406-9').on('click', function() {
+        $('.dialogue-406-9, .dialogue-406-9 .line').hide();
+        $('.dialogue-406-10, .dialogue-406-10 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-10').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+    $('.clicker-406-10').on('click', function() {
+        $('.dialogue-406-10, .dialogue-406-10 .line').hide();
+        $('.dialogue-406-11, .dialogue-406-11 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-11').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    $('.clicker-406-11').on('click', function() {
+        $('.dialogue-406-11, .dialogue-406-11 .line').hide();
+        $('.dialogue-406-12, .dialogue-406-12 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-406-12').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+        //close
+        $('.clicker-406-12').on('click', function() {
+            $('.dialogue-406-12, .dialogue-box, .transparent-background, .room406, .avatar__406').css(none);
+            $('.dialogue-406-13, .dialogue-406-13 .line, .dialogue-box').delay(1000).fadeIn(0);
+        })
+
+        //quick view
+        $('.dialogue-406-13').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+        //close
+        $('.clicker-406-13').on('click', function() {
+            $('.dialogue-406-13, .dialogue-box').css(none);
+            hasClicked406 = true;
+        })
+
+
+        
+
 
     
 // 407
@@ -808,152 +1481,178 @@ let door407__1 = $('.door407__1');
 let door407__2 = $('.door407__2');
 let door407__3 = $('.door407__3');     
 
-$('.door407__1').on('mouseenter', ()=> {
-    setTimeout(()=> {door407__1.css(none)}, d);
-    setTimeout(()=> {door407__2.css(block)}, d);
-    setTimeout(()=> {door407__2.css(none)}, d*2);
-    setTimeout(()=> {door407__3.css(block)}, d*2);
+$('.door407__1').on('mouseenter', function() {
+    setTimeout(function() {door407__1.css(none)}, d);
+    setTimeout(function() {door407__2.css(block)}, d);
+    setTimeout(function() {door407__2.css(none)}, d*2);
+    setTimeout(function() {door407__3.css(block)}, d*2);
 })
-$('.door407__3').on('mouseleave', ()=> {
-    setTimeout(()=> {door407__3.css(none)}, d);
-    setTimeout(()=> {door407__2.css(block)}, d);
-    setTimeout(()=> {door407__2.css(none)}, d*2);
-    setTimeout(()=> {door407__1.css(block)}, d*2);
+$('.door407__3').on('mouseleave', function() {
+    setTimeout(function() {door407__3.css(none)}, d);
+    setTimeout(function() {door407__2.css(block)}, d);
+    setTimeout(function() {door407__2.css(none)}, d*2);
+    setTimeout(function() {door407__1.css(block)}, d*2);
 })
 
+    $('.door__407').on('click', function() {
+        $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').css(block);})
 
-//$('.wrapper__407, .dialogue__room-407').css(block);
+        //quick view
+        $('.dialogue-407-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
+    
+        //close
+        $('.clicker-407-1-2').on('click', function() {
+            $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').hide();})
 
 
-$('.door__407').on('click', ()=> {
-    $('.dialogue__room-407').css(block);
-    $('.dialogue-box__407').css('opacity', 1);
-    $('.line-7-1-1, .line-7-1-2, .line-7-1-3').css(block);
-})
-    // close
-    $('.clicker-7-1-2').on('click', ()=> {
-        $('.dialogue__room-407').css(none);
-        $('.line-7-1-1, .line-7-1-2, .line-7-1-3').css(none);
+    $('.clicker-407-1-1').on('click', function() {
+        $('.dialogue-407-1, .dialogue-407-1 .line').hide();
+        $('.dialogue-407-2, .dialogue-407-2 .line').show();
     })
-$('.clicker-7-1-1').on('click', ()=> {
-    if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true) {
-        $('.line-7-1-1, .line-7-1-2, .line-7-1-3').css(none);
-        $('.line-7-2-1, .line-7-2-2').css(block);
-    }
-    else {
-        $('.line-7-1-1, .line-7-1-2, .line-7-1-3').css(none);
-        $('.name__407').text('???');
-        $('.name__407').css('fontFamily', 'serif')
-        $('.line-7-0-1').css(block);
-    }
-    // close
-    $('.clicker-7-0-1').on('click', ()=> {
-        $('.name__407').text(' ');
-        $('.name__407').css('fontFamily', "'Noto Serif KR', serif")
-        $('.dialogue__room-407').css(none);
-        $('..line-7-0-1').css(none);
+        //quick view
+        $('.dialogue-407-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-407-2').on('click', function() {
+        $('.dialogue-407-2, .dialogue-407-2 .line').hide();
+        $('.dialogue-407-3, .dialogue-407-3 .line, .transparent-background, .room__407d, .avatar__d').show();
     })
-})
-$('.clicker-7-2-1').on('click', ()=> {
-    $('.line-7-2-1, .line-7-2-2').css(none);
-    $('.name__407').text('개발자');
-    $('.dialogue-box__407').css('opacity', 0.9);
-    $('.wrapper__407').css(block);
-    $('.line-7-3-1, .line-7-3-2, .line-7-3-3, .line-7-3-4').css(block);
-})
-$('.clicker-7-3-1').on('click', ()=> {
-    $('.line-7-3-1, .line-7-3-2, .line-7-3-3, .line-7-3-4').css(none);
-    $('.line-7-4-1, .line-7-4-2').css(block);
-})
-$('.clicker-7-4-1').on('click', ()=> {
-    $('.line-7-4-1, .line-7-4-2').css(none);
-    $('.line-7-5-1, .line-7-5-2').css(block);
-})
-$('.clicker-7-5-1').on('click', ()=> {
-    $('.line-7-5-1, .line-7-5-2').css(none);
-    $('.line-7-6-1, .line-7-6-2, .line-7-6-3, .line-7-6-4').css(block);
-})
-$('.clicker-7-6-1').on('click', ()=> {
-    $('.line-7-6-1, .line-7-6-2, .line-7-6-3, .line-7-6-4').css(none);
-    $('.line-7-7-1').css(block);
-})
-$('.arrow-7-7-1').on('click', ()=> {
-    $('.avatar__407-d, .room__407-d, .line-7-7-1').css(none);
-    $('.avatar__407-h, .room__407-h, .line-7-8-1, .line-7-8-2, .line-7-8-3').css(block);
-    $('.name__407').text('작은 현');
-})
-$('.arrow-7-8-1').on('click', ()=> {
-    $('.avatar__407-h, .line-7-8-1, .line-7-8-2, .line-7-8-3').css(none);
-    $('.avatar__407-d, .line-7-9-1').css(block);
-    $('.name__407').text('개발자');
-})
-$('.arrow-7-9-1').on('click', ()=> {
-    $('.avatar__407-d, .line-7-9-1').css(none);
-    $('.avatar__407-h, .line-7-10-1').css(block);$('.name__407').text('작은 현');
-})
-$('.arrow-7-10-1').on('click', ()=> {
-    $('.avatar__407-h, .line-7-10-1').css(none);
-    $('.avatar__407-d, .line-7-11-1').css(block);
-    $('.name__407').text('개발자');
-})
-$('.arrow-7-11-1').on('click', ()=> {
-    $('.avatar__407-d, .line-7-11-1').css(none);
-    $('.avatar__407-h, .line-7-12-1, .line-7-12-2').css(block);
-    $('.name__407').text('작은 현');
-})
-$('.clicker-7-12-1').on('click', ()=> {
-    $('.line-7-12-1, .line-7-12-2').css(none);
-    $('.line-7-13-1, .line-7-13-2, .line-7-13-3, .line-7-13-4').css(block);
-})
-$('.clicker-7-13-1').on('click', ()=> {
-    $('.avatar__407-h, .line-7-13-1, .line-7-13-2, .line-7-13-3, .line-7-13-4').css(none);
-    $('.avatar__407-d, .line-7-14-1, .line-7-14-2').css(block);
-    $('.name__407').text('개발자');
-})
-$('.arrow-7-14-1').on('click', ()=> {
-    $('.name__407').text('작은 현');
-    $('.avatar__407-d, .line-7-14-1, .line-7-14-2').css(none);
-    $('.avatar__407-h, .line-7-15-1').css(block);
-    setTimeout(()=> {
-        $('.avatar__407-h, .room__407-h, .line-7-15-1').css(none);
-        $('.name__407').text('개발자');
-        $('.avatar__407-d, .room__407-d, .line-7-16-1').css(block);
-    }, 3500)
-})
-$('.arrow-7-16-1').on('click', ()=> {
-    $('.line-7-16-1').css(none);
-    $('.line-7-16-2, .line-7-16-3').css(block);
-})
-$('.clicker-7-16-1').on('click', ()=> {
-    $('.line-7-16-1, .line-7-16-2, .line-7-16-3').css(none);
-    $('.line-7-17-1, .line-7-17-2, .line-7-17-3, .line-7-17-4, .line-7-17-5').css(block);
-})
-$('.clicker-7-17-1').on('click', ()=> {
-    $('.line-7-17-1, .line-7-17-2, .line-7-17-3, .line-7-17-4, .line-7-17-5').css(none);
-    $('.line-7-18-1, .line-7-18-2, .line-7-18-3, .line-7-18-4').css(block);
-})
-$('.clicker-7-18-1, .clicker-7-18-2').on('click', ()=> {
-    $('.line-7-18-1, .line-7-18-2, .line-7-18-3, .line-7-18-4').css(none);
-    $('.line-7-19-1, .line-7-19-2, .line-7-19-3, .line-7-19-4, .line-7-19-5').css(block);
-})
-$('.arrow-7-19-1').on('click', ()=> {
-    hasClickedRooms[hasClicked407] = true;
-    $('.line-7-19-1, .line-7-19-2, .line-7-19-3, .line-7-19-4, .line-7-19-5').css(none);
-    $('.line-7-20-1, .line-7-20-2, .line-7-20-3').css(block);
 
-    let t = 10;
-    let countdown = setInterval(()=> {
-    t--;
-    $('.countdown').text(t)
-    if (t === 0) {
-        clearInterval(countdown);
-        $('.wrapper__407, .dialogue__room-407, .line-7-20-1, .line-7-20-2, .line-7-20-3').fadeOut(2000);
-    }
-    }, 1000)
-})
-})
+        //quick view
+        $('.dialogue-407-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');
+        })
+
+    $('.clicker-407-3').on('click', function() {
+        $('.dialogue-407-3, .dialogue-407-3 .line').hide();
+        $('.dialogue-407-4, .dialogue-407-4 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-407-4').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
+    $('.clicker-407-4').on('click', function() {
+        $('.dialogue-407-4, .dialogue-407-4 .line').hide();
+        $('.dialogue-407-5, .dialogue-407-5 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-407-5').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
 
+    $('.clicker-407-5').on('click', function() {
+        $('.dialogue-407-5, .dialogue-407-5 .line').hide();
+        $('.dialogue-407-6, .dialogue-407-6 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-407-6').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-407-6').on('click', function() {
+        $('.dialogue-407-6, .dialogue-407-6 .line').hide();
+        $('.dialogue-407-7, .dialogue-407-7 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-407-7').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+
+    $('.clicker-407-7').on('click', function() {
+        $('.dialogue-407-7, .dialogue-407-7 .line').hide();
+        $('.dialogue-407-8, .dialogue-407-8 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-407-8').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+
+    $('.clicker-407-8').on('click', function() {
+        $('.dialogue-407-8, .dialogue-407-8 .line, .room__407d, .avatar__d').hide();
+        $('.dialogue-407-9, .dialogue-407-9 .line, .room__407h, .avatar__h').show();
+    })
+        //quick view
+        $('.dialogue-407-9').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    $('.clicker-407-9').on('click', function() {
+        $('.dialogue-407-9, .dialogue-407-9 .line, .avatar__h').hide();
+        $('.dialogue-407-10, .dialogue-407-10 .line, .avatar__d').show();
+    })
+        //quick view
+        $('.dialogue-407-10').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+    $('.clicker-407-10').on('click', function() {
+        $('.dialogue-407-10, .dialogue-407-10 .line, .avatar__d').hide();
+        $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').show();
+    })
+        //quick view
+        $('.dialogue-407-11').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
+
+    $('.clicker-407-11').on('click', function() {
+        $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').hide();
+        $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').show();
+    })
+        //quick view
+        $('.dialogue-407-12').click(function() {
+            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
+
+    $('.clicker-407-11').on('click', function() {
+        $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').hide();
+        $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').show();
+    })
+        //quick view
+        $('.dialogue-407-12').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-407-12').on('click', function() {
+        $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').hide();
+        $('.dialogue-407-13, .dialogue-407-13 .line, .avatar__h').show();
+    })
+        //quick view
+        $('.dialogue-407-13').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-407-13').on('click', function() {
+        $('.dialogue-407-13, .dialogue-407-13 .line, .avatar__h, .room__407h').hide();
+        $('.dialogue-407-14, .dialogue-407-14 .line, .avatar__d, .room__407d').show();
+    })
+        //quick view
+        $('.dialogue-407-14').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-407-14').on('click', function() {
+        $('.dialogue-407-14, .dialogue-407-14 .line').hide();
+        $('.dialogue-407-15, .dialogue-407-15 .line').show();
+    })
+        //quick view
+        $('.dialogue-407-15').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-407-15').on('click', function() {
+        $('.dialogue-407-15, .dialogue-407-15 .line').hide();
+        $('.dialogue-407-16, .dialogue-407-16 .line').show();
+    })
+        //quick view
+        $('.dialogue-407-16').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+        //close
+        $('.clicker-407-16').on('click', function() {
+            $('.dialogue-407-16, .dialogue-box, .transparent-background, .room__407d, .avatar__d').css(none);
+            hasClicked407 = true;
+        })
+
+
+
+})
 </script>
 </body>
 </html>

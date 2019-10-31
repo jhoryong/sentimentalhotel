@@ -6,313 +6,525 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
     <link rel="stylesheet" type="text/css" href="./css/3rd_floor.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <title>리조트 - 센티멘탈 호텔</title>
+
+    <title>리조트 :: 센티멘탈 호텔</title>
 </head>
+
 <body>
-    <div class="container">
+<div class="container">
 
-        <div class="fade-box"></div>
-        <div class="fade-box fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
+    <div id="fade-box" class="fade-box"></div>
+    <div class="fade-box fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
 
-        <div class="start">
-            <div class="dialogue dialogue__start">
-                <img class="avatar big-hyun__avatar" src="image/3rd_floor/big-hyun_avatar.png">
-                <div class="dialogue-box">
-                    <h1 id="big-hyun__start" class="name">큰 현</h1>
-                    <p class="line npc-line line-0-1">센티멘탈 호텔의 3층은 리조트가 자리하고 있어요. 
-                    <p class="line npc-line line-0-2">호텔의 고객들이 편안하게 휴식을 취하고 여가를 즐길 수 있는 여러 시설을 제공하고 있죠.</p>
-                    <p class="line npc-line line-0-3">직원들 또한 이 시설들을 무료로 이용할 수 있답니다~</p>
-                    <p class="line npc-line line-0-4">그럼 백문이 불여일청! 각 시설을 <span class="clicker clicker-0">직접 체험해보고 오세요.</span></p>
-                </div>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
+
+     <!-- items -->
+     <div class="items">
+        <div class="item map">
+            <img class="icon map-icon" src="image/icon/mapicon.png">
+            <div class="map-contents">
+                <div id="item-background" class="transparent-background"></div>
+                <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
+                <span class="close-x">&#10005;</span>
             </div>
         </div>
+    </div>
 
-        <div class="logo-gif">
-            <img class="gif logo logo1" src="image/3rd_floor/logo1.png">
-            <img class="gif logo logo2" src="image/3rd_floor/logo2.png">
-            <img class="gif logo logo3" src="image/3rd_floor/logo3.png">
-        </div>
+    <!-- scores -->
+    <div class="scores">
+        <img class="scoreboard" src="image/icon/점수판.png">
+        <span class="score__text">점수</span>
+        <span class="score"></span>
+    </div>
 
-        <div class="swimming">
-            <img class="gif swimming__gif" src="image/3rd_floor/swimming.gif">
-            <audio id="swimming">
-                <source src="sound/3rd_floor/swimming.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    <!-- arrows -->
+    <div class="arrows">
+        <img class="movingarrow movingarrow__swimming" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__fitness" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__spa" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__movie" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__restaurant" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__elevator" src="image/icon/arrow.png">
+    </div>  
 
-        <div class="fitness">
-            <img class="gif fitness__gif" src="image/3rd_floor/fitness.gif">
-            <audio id="fitness">
-                <source src="sound/3rd_floor/fitness.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    <!-- gif -->
+    <div class="logo-gif">
+        <img class="gif gifhover logo logo1" src="image/3rd_floor/logo1.png">
+        <img class="gif gifhover logo logo2" src="image/3rd_floor/logo2.png">
+        <img class="gif gifhover logo logo3" src="image/3rd_floor/logo3.png">
+    </div>
 
-        <div class="spa">
-            <img class="gif spa__gif" src="image/3rd_floor/spa.gif">
-            <audio id="spa">
-                <source src="sound/3rd_floor/spa.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    <div class="popcorn-gif">
+        <img class="gif gifhover popcorn popcorn1" src="image/3rd_floor/popcorn1.png">
+        <img class="gif gifhover popcorn popcorn2" src="image/3rd_floor/popcorn2.png">
+        <img class="gif gifhover popcorn popcorn3" src="image/3rd_floor/popcorn3.png">
+        <img class="gif gifhover popcorn popcorn4" src="image/3rd_floor/popcorn4.png">
+        <img class="gif gifhover popcorn popcorn5" src="image/3rd_floor/popcorn5.png">
+        <img class="gif gifhover popcorn popcorn6" src="image/3rd_floor/popcorn6.png">
+    </div>
+
+    <div class="picture-gif">
+        <img class="gif gifhover picture picture1" src="image/3rd_floor/picture1.png">
+        <img class="gif gifhover picture picture2" src="image/3rd_floor/picture2.png">
+        <img class="gif gifhover picture picture3" src="image/3rd_floor/picture3.png">
+    </div>
+
+    <div class="couple">
+        <img class="gif gifhover couple couple1" src="image/3rd_floor/couple1.png">
+        <img class="gif gifhover couple couple2" src="image/3rd_floor/couple2.png">
+        <img class="gif gifhover couple couple3" src="image/3rd_floor/couple3.png">
+        <img class="gif gifhover couple couple4" src="image/3rd_floor/couple4.png">
+    </div>
 
 
-        <div class="popcorn-gif">
-            <img class="gif popcorn popcorn1" src="image/3rd_floor/popcorn1.png">
-            <img class="gif popcorn popcorn2" src="image/3rd_floor/popcorn2.png">
-            <img class="gif popcorn popcorn3" src="image/3rd_floor/popcorn3.png">
-            <img class="gif popcorn popcorn4" src="image/3rd_floor/popcorn4.png">
-            <img class="gif popcorn popcorn5" src="image/3rd_floor/popcorn5.png">
-            <img class="gif popcorn popcorn6" src="image/3rd_floor/popcorn6.png">
-        </div>
+    <div class="dialogue-box foundallgif">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">움직이는 요소를 모두 찾았다! </p>
+        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
+    </div>
 
-        <div class="movie">
-            <img class="gif movie__gif" src="image/3rd_floor/movie.gif">
-            <audio id="movie">
-                <source src="sound/3rd_floor/movie.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    
 
-        <div class="picture-gif">
-            <img class="gif picture picture1" src="image/3rd_floor/picture1.png">
-            <img class="gif picture picture2" src="image/3rd_floor/picture2.png">
-            <img class="gif picture picture3" src="image/3rd_floor/picture3.png">
-        </div>
 
-        <div class="restaurant">
-            <img class="gif restaurant__gif" src="image/3rd_floor/restaurant.gif">
-            <audio id="restaurant">
-                <source src="sound/3rd_floor/restaurant.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+    <div class="start">
 
-        <div class="couple">
-            <img class="gif couple couple1" src="image/3rd_floor/couple1.png">
-            <img class="gif couple couple2" src="image/3rd_floor/couple2.png">
-            <img class="gif couple couple3" src="image/3rd_floor/couple3.png">
-            <img class="gif couple couple4" src="image/3rd_floor/couple4.png">
-        </div>
-        
-        <div class="big-hyun">
-            <img class="gif big-hyun__gif" src="image/3rd_floor/big-hyun.gif">
-            <div class="dialogue big-hyun__dialogue">
-                <img class="avatar big-hyun__avatar" src="image/3rd_floor/big-hyun_avatar.png">
-                <div class="dialogue-box">
-                    <h1 id="big-hyun" class="name">큰 현</h1>
-                    <p class="line npc-line line-1-1">3층을 다 둘러보셨나요? 그럼 4층으로 올라가죠.</p>
-                    <p class="line player-line line-1-2">- 네, <span class="clicker clicker-6-1">올라가시죠.</span></p>
-                    <p class="line player-line line-1-3">- 아니요, <span class="clicker clicker-6-2">조금 더 둘러보겠습니다.</span></p>
-                </div>
-            </div>
+        <div class="dialogue-box dialogue-0-1">
+            <h1 id="big-hyun__start" class="name">리조트 직원</h1>
+            <p class="line top-line first-line">센티멘탈 리조트에 오신 것을 진심으로 환영합니다!</p>
+            <p class="line top-line second-line next-line">저희 센티멘탈 리조트의 멋지고 다양한 시설은 최고의 휴식과 감동을 선사합니다.</p>
+            <p class="line top-line third-line next-line">무엇을 망설이시나요? 지금 당장 체험해 보세요!</p>
+            <p class="line bottom-line fourth-line three-toplines">- 음... 지배인님이 오기 전까지 리조트나 들어가 봐야겠다. <span class="clicker clicker-0-1">(확인)</span></p>
         </div>
 
     </div>
+
+
+
+    <div class="swimming">
+        <img class="gif gifhover swimming__gif" src="image/3rd_floor/swimming.gif">
+        <audio id="swimming">
+            <source src="sound/3rd_floor/swimming.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="fitness">
+        <img class="gif gifhover fitness__gif" src="image/3rd_floor/fitness.gif">
+        <audio id="fitness">
+            <source src="sound/3rd_floor/fitness.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="spa">
+        <img class="gif gifhover spa__gif" src="image/3rd_floor/spa.gif">
+        <audio id="spa">
+            <source src="sound/3rd_floor/spa.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+
+
+    <div class="big-hyun">
+        <img class="gif gifhover big-hyun__gif" style="display: none;" src="image/3rd_floor/big-hyun.gif">
+        
+        <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
+
+        <div class="dialogue-box dialogue-1-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">아, 거기 계셨군요 <span class="player-name"></span>씨.</p>
+            <p class="line top-line second-line next-line">인사를 드리고 오느라 조금 늦었네요. 저에겐 정말 중요한 분이셔서... (지배인의 얼굴이 볼그래졌다.)</p>
+            <p class="line bottom-line third-line two-toplines">- 엇, 지배인님 얼굴이 좀 <span class="clicker clicker-1-1">빨개지신것 같은데요...?</span></p>
+        </div>
+        <div class="dialogue-box dialogue-1-2">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">...그, 그나저나 3층은 좀 둘러보셨나요? 3층엔 리조트 시설들이 많아요, 하하하.</span></p>
+            <p class="line top-line second-line next-line">아, 특히 <strong>영화관에서 상영 중인 영화 제목</strong>과 <strong>레스토랑의 오늘의 메뉴</strong>는 반드시 기억해야 해요.</p>
+            <p class="line top-line third-line next-line">지나가다가 고객님들이 물어보시거든요.</p>
+            <p class="line top-line fourth-line next-line">그, 그럼 3층을 마저 둘러보시고 4층으로 올라와 주세요.</p>
+            <p class="line bottom-line fifth-line four-toplines">지배인은 후다닥 4층으로 올라갔다... <span class="clicker clicker-1-2">(확인)</span></p>
+        </div>
+       
+    </div>
+
+
+
+    <div class="movie">
+        <img class="gif gifhover movie__gif" src="image/3rd_floor/movie.gif">
+        <audio id="movie">
+            <source src="sound/3rd_floor/movie.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="restaurant">
+        <img class="gif gifhover restaurant__gif" src="image/3rd_floor/restaurant.gif">
+        <audio id="restaurant">
+            <source src="sound/3rd_floor/restaurant.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+
+    <div class="3rdfloor-elevator">
+    
+        <img class="gif gifhover elevator__button button-off" src="image/2nd_floor/엘베버튼off.png">
+        <img class="gif gifhover elevator__button button-on" src="image/2nd_floor/엘베버튼on.png">
+        <img class="elevator__alarm alarm-off" src="image/2nd_floor/엘베알람off.png">
+        <img class="elevator__alarm alarm-on" src="image/2nd_floor/엘베알람on.png">
+
+        <div class="dialogue-box dialogue-2-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">4층으로 올라가시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a href="4th_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
+        </div>
+
+    </div>
+
+</div>
     
 <script>
 
-    let fade = document.querySelector('.fade-box__sound');
+    let fade = $('.fade-box__sound');
 
-    // start
+    let hasClickedSwimmingpool = false;
+    let hasClickedFitness = false;
+    let hasClickedSpa = false;
+    let hasClickedMovie = false;
+    let hasClickedRestaurant = false;
+    let hasClickedElevator = false;
 
-        document.querySelector('.fade-box').classList.add('fade-in');
-        setTimeout(()=> {document.querySelector('.fade-box').style.display = 'none';}, 3000);
-        setTimeout(()=> {
-            document.querySelector('.dialogue__start').style.display = 'block';
-            document.querySelector('.line-0-1').style.display = 'block';
-            document.querySelector('.line-0-2').style.display = 'block';
-            document.querySelector('.line-0-3').style.display = 'block';
-            document.querySelector('.line-0-4').style.display = 'block';
-        }, 2500);
-        document.querySelector('.clicker-0').addEventListener('click', ()=> {
-            document.querySelector('.dialogue__start').style.display = 'none';
-        })
+    let hasClickedLogo = false;
+    let hasClickedPopcorn = false;
+    let hasClickedPicture = false;
+    let hasClickedCouple = false;
+    
+    function alertFoundAllGif() {
+        if (hasClickedLogo=== true && hasClickedPopcorn === true && hasClickedPicture === true && hasClickedCouple === true) {
+            $('.foundallgif, .foundallgif .line').show();
+            alertFoundAllGif = function(){};
+        }
+    }
+    
 
+// fade-in to loader and fadeout
 
-    // logo
-
-        let logo1 = document.querySelector('.logo1');
-        let logo2 = document.querySelector('.logo2');
-        let logo3 = document.querySelector('.logo3');     
-
-        document.querySelector('.logo1').addEventListener('click', ()=> {
-            let t = 200;
-            let logogif = () => {
-            setTimeout(function(){logo1.style.display = 'none';}, t);
-            setTimeout(function(){logo2.style.display = 'block';}, t);
-            setTimeout(function(){logo2.style.display = 'none';}, t*2);
-            setTimeout(function(){logo3.style.display = 'block';}, t*2);
-            setTimeout(function(){logo3.style.display = 'none';}, t*3);
-            setTimeout(function(){logo1.style.display = 'block';}, t*3);
-            };
-            let repeat = setInterval(logogif, t*3);
-            setTimeout(function() {clearInterval(repeat);}, t*3*2);
-        });
+$('#fade-box').fadeOut(500);
+$('.preloader').delay(4000).fadeOut(0);
+$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
-// swimming
 
-    document.querySelector('.swimming__gif').addEventListener('click', ()=> {
-        fade.classList.add('fade-out');
-        fade.style.display = 'block';
-        setTimeout(()=> {document.querySelector('#swimming').play();}, 2000);
-        setTimeout(()=> {
-            fade.classList.remove('fade-out');
-            fade.classList.add('fade-in');
-        }, 13000);
-        setTimeout(()=> {
-            fade.style.display = 'none';
-        }, 15000);
+// item
+
+    $('.map-icon').click(function() {
+        $('.map-contents,  #item-background').show();
+    })
+    $('.close-x').click(function(){
+        $('.map-contents,  #item-background').hide();
     })
 
-// fitness
 
-    document.querySelector('.fitness__gif').addEventListener('click', ()=> {
-        fade.classList.add('fade-out');
-        fade.style.display = 'block';
-        setTimeout(()=> {document.querySelector('#fitness').play();}, 2000);
-        setTimeout(()=> {
-            fade.classList.remove('fade-out');
-            fade.classList.add('fade-in');
-        }, 13000);
-        setTimeout(()=> {
-            fade.style.display = 'none';
-        }, 15000);
+// score
+
+    let score = 0;
+
+    function addScore(number) {
+        score += number;
+        $('.score').html(`${score}`);
+        sessionStorage.setItem("score", score);
+    }
+    addScore(0);
+
+    function addBonus(gif, score) {
+        if (gif === false) {
+            addScore(score);
+        }
+    }
+
+
+// player name
+
+    $('.player-name').text(sessionStorage.getItem("playerName"));
+
+
+
+
+
+// gif
+
+    // found all gifs
+    $('.clicker-100').click(function() {
+        $('.foundallgif, .foundallgif .line').hide();
+        addScore(5);
     })
 
-// spa
 
-    document.querySelector('.spa__gif').addEventListener('click', ()=> {
-        fade.classList.add('fade-out');
-        fade.style.display = 'block';
-        setTimeout(()=> {document.querySelector('#spa').play();}, 2000);
-        setTimeout(()=> {
-            fade.classList.remove('fade-out');
-            fade.classList.add('fade-in');
-        }, 13000);
-        setTimeout(()=> {
-            fade.style.display = 'none';
-        }, 15000);
-    })
+     // logo     
+    $('.logo1').on('click', function() {
+        addBonus(hasClickedLogo, 5);
+        hasClickedLogo = true;
+        alertFoundAllGif();
+        let t = 200;
+        let logogif = function() {
+        setTimeout(function(){$('.logo1').hide();}, t);
+        setTimeout(function(){$('.logo2').show();}, t);
+        setTimeout(function(){$('.logo2').hide();}, t*2);
+        setTimeout(function(){$('.logo3').show();}, t*2);
+        setTimeout(function(){$('.logo3').hide();}, t*3);
+        setTimeout(function(){$('.logo1').show();}, t*3);
+        };
+        let repeat = setInterval(logogif, t*3);
+        setTimeout(function() {clearInterval(repeat);}, t*3*2);
+    });
+
 
     // popcorn
-
-        let popcorn1 = document.querySelector('.popcorn1');
-        let popcorn2 = document.querySelector('.popcorn2');
-        let popcorn3 = document.querySelector('.popcorn3');     
-        let popcorn4 = document.querySelector('.popcorn4'); 
-        let popcorn5 = document.querySelector('.popcorn5'); 
-        let popcorn6 = document.querySelector('.popcorn6'); 
-        document.querySelector('.popcorn1').addEventListener('click', ()=> {
-            let t = 150;
-            setTimeout(function(){popcorn1.style.display = 'none';}, t);
-            setTimeout(function(){popcorn2.style.display = 'block';}, t);
-            setTimeout(function(){popcorn2.style.display = 'none';}, t*2);
-            setTimeout(function(){popcorn3.style.display = 'block';}, t*2);
-            setTimeout(function(){popcorn3.style.display = 'none';}, t*3);
-            setTimeout(function(){popcorn4.style.display = 'block';}, t*3);
-            setTimeout(function(){popcorn4.style.display = 'none';}, t*4);
-            setTimeout(function(){popcorn5.style.display = 'block';}, t*4);
-            setTimeout(function(){popcorn5.style.display = 'none';}, t*5);
-            setTimeout(function(){popcorn6.style.display = 'block';}, t*5);
-            setTimeout(function(){popcorn6.style.display = 'none';}, t*6);
-            setTimeout(function(){popcorn1.style.display = 'block';}, t*6);
-        });
-
-    // movie
-
-        document.querySelector('.movie__gif').addEventListener('click', ()=> {
-            fade.classList.add('fade-out');
-            fade.style.display = 'block';
-            setTimeout(()=> {document.querySelector('#movie').play();}, 2000);
-            setTimeout(()=> {
-                fade.classList.remove('fade-out');
-                fade.classList.add('fade-in');
-            }, 13000);
-            setTimeout(()=> {
-                fade.style.display = 'none';
-            }, 15000);
-        })
+    $('.popcorn1').on('click', function() {
+        addBonus(hasClickedPopcorn, 5);
+        hasClickedPopcorn = true;
+        alertFoundAllGif();
+        let t = 150;
+        setTimeout(function(){$('.popcorn1').hide();}, t);
+        setTimeout(function(){$('.popcorn2').show();}, t);
+        setTimeout(function(){$('.popcorn2').hide();}, t*2);
+        setTimeout(function(){$('.popcorn3').show();}, t*2);
+        setTimeout(function(){$('.popcorn3').hide();}, t*3);
+        setTimeout(function(){$('.popcorn4').show();}, t*3);
+        setTimeout(function(){$('.popcorn4').hide();}, t*4);
+        setTimeout(function(){$('.popcorn5').show();}, t*4);
+        setTimeout(function(){$('.popcorn5').hide();}, t*5);
+        setTimeout(function(){$('.popcorn6').show();}, t*5);
+        setTimeout(function(){$('.popcorn6').hide();}, t*6);
+        setTimeout(function(){$('.popcorn1').show();}, t*6);
+    });
     
-    // picture
 
-        let picture1 = document.querySelector('.picture1');
-        let picture2 = document.querySelector('.picture2');
-        let picture3 = document.querySelector('.picture3');     
-
-        document.querySelector('.picture1').addEventListener('click', ()=> {
-            let t = 200;
-            setTimeout(function(){picture1.style.display = 'none';}, t*3);
-            setTimeout(function(){picture2.style.display = 'block';}, t*3);
-            setTimeout(function(){picture2.style.display = 'none';}, t*6);
-            setTimeout(function(){picture3.style.display = 'block';}, t*6);
-            setTimeout(function(){picture3.style.display = 'none';}, t*7);
-            setTimeout(function(){picture2.style.display = 'block';}, t*7);
-            setTimeout(function(){picture2.style.display = 'none';}, t*8);
-            setTimeout(function(){picture3.style.display = 'block';}, t*8);
-            setTimeout(function(){picture3.style.display = 'none';}, t*9);
-            setTimeout(function(){picture2.style.display = 'block';}, t*9);
-            setTimeout(function(){picture2.style.display = 'none';}, t*10);
-            setTimeout(function(){picture3.style.display = 'block';}, t*10);
-            setTimeout(function(){picture3.style.display = 'none';}, t*11);
-            setTimeout(function(){picture2.style.display = 'block';}, t*11);
-            setTimeout(function(){picture2.style.display = 'none';}, t*15);
-            setTimeout(function(){picture1.style.display = 'block';}, t*15);
-        });
-
-    // restaurant
-
-        document.querySelector('.restaurant__gif').addEventListener('click', ()=> {
-            fade.classList.add('fade-out');
-            fade.style.display = 'block';
-            setTimeout(()=> {document.querySelector('#restaurant').play();}, 2000);
-            setTimeout(()=> {
-                fade.classList.remove('fade-out');
-                fade.classList.add('fade-in');
-            }, 15000);
-            setTimeout(()=> {
-                fade.style.display = 'none';
-            }, 17000);
-        })
-        
-    // couple
-
-    let couple1 = document.querySelector('.couple1');
-    let couple2 = document.querySelector('.couple2');
-    let couple3 = document.querySelector('.couple3');   
-    let couple4 = document.querySelector('.couple4');    
-
-    document.querySelector('.couple1').addEventListener('click', ()=> {
+     // picture
+    $('.picture1').on('click', function() {
+        addBonus(hasClickedPicture, 5);
+        hasClickedPicture = true;
+        alertFoundAllGif();
         let t = 200;
-        let couplegif = () => {
-        setTimeout(function(){couple1.style.display = 'none';}, t);
-        setTimeout(function(){couple2.style.display = 'block';}, t);
-        setTimeout(function(){couple2.style.display = 'none';}, t*2);
-        setTimeout(function(){couple3.style.display = 'block';}, t*2);
-        setTimeout(function(){couple3.style.display = 'none';}, t*3);
-        setTimeout(function(){couple4.style.display = 'block';}, t*3);
-        setTimeout(function(){couple4.style.display = 'none';}, t*4);
-        setTimeout(function(){couple1.style.display = 'block';}, t*4);
+        setTimeout(function(){$('.picture1').hide();}, t*3);
+        setTimeout(function(){$('.picture2').show();}, t*3);
+        setTimeout(function(){$('.picture2').hide();}, t*6);
+        setTimeout(function(){$('.picture3').show();}, t*6);
+        setTimeout(function(){$('.picture3').hide();}, t*7);
+        setTimeout(function(){$('.picture2').show();}, t*7);
+        setTimeout(function(){$('.picture2').hide();}, t*8);
+        setTimeout(function(){$('.picture3').show();}, t*8);
+        setTimeout(function(){$('.picture3').hide();}, t*9);
+        setTimeout(function(){$('.picture2').show();}, t*9);
+        setTimeout(function(){$('.picture2').hide();}, t*10);
+        setTimeout(function(){$('.picture3').show();}, t*10);
+        setTimeout(function(){$('.picture3').hide();}, t*11);
+        setTimeout(function(){$('.picture2').show();}, t*11);
+        setTimeout(function(){$('.picture2').hide();}, t*15);
+        setTimeout(function(){$('.picture1').show();}, t*15);
+    });
+
+    
+    // couple 
+    $('.couple1').on('click', function() {
+        addBonus(hasClickedCouple, 5);
+        hasClickedCouple = true;
+        alertFoundAllGif();
+        let t = 200;
+        let couplegif = function() {
+        setTimeout(function(){$('.couple1').hide();}, t);
+        setTimeout(function(){$('.couple2').show();}, t);
+        setTimeout(function(){$('.couple2').hide();}, t*2);
+        setTimeout(function(){$('.couple3').show();}, t*2);
+        setTimeout(function(){$('.couple3').hide();}, t*3);
+        setTimeout(function(){$('.couple4').show();}, t*3);
+        setTimeout(function(){$('.couple4').hide();}, t*4);
+        setTimeout(function(){$('.couple1').show();}, t*4);
         };
         let repeat = setInterval(couplegif, t*4);
         setTimeout(function() {clearInterval(repeat);}, t*4*3);
     });
 
+
+
+
+//dialgue
+
+    // start
+    
+    $('.dialogue-0-1, .dialogue-0-1 .line').delay(7000).fadeIn(0);
+
+        //quick view
+        $('.dialogue-0-1').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
+
+        //close   
+        $('.clicker-0-1').on('click', function() {
+            $('.dialogue-0-1').hide();
+            $('.dialogue-0-1').children().hide();
+            $('.movingarrow__swimming, .movingarrow__fitness, .movingarrow__spa').show();})
+
+
+
+    // swimming
+
+    $('.swimming__gif').on('click', function() {
+        $('.movingarrow__swimming').hide();
+        hasClickedSwimmingpool = true;
+
+        fade.fadeIn(1000);
+        setTimeout(function() {$('#swimming')[0].play();}, 2000);
+        fade.delay(13000).fadeOut(1000);
+
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.dialogue-1-1').delay(15000).fadeIn(0);
+        }
+    })
+
+
+    // fitness
+
+    $('.fitness__gif').on('click', function() {
+        $('.movingarrow__fitness').hide();
+        hasClickedFitness = true;
+
+        fade.fadeIn(1000);
+        setTimeout(function() {$('#fitness')[0].play();}, 2000);
+        fade.delay(13000).fadeOut(1000);
+
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.dialogue-1-1').delay(15000).fadeIn(0);
+        }
+    })
+
+
+    // spa
+
+    $('.spa__gif').on('click', function() {
+        $('.movingarrow__spa').hide();
+        hasClickedSpa = true;
+
+        fade.fadeIn(1000);
+        setTimeout(function() {$('#spa')[0].play();}, 2000);
+        fade.delay(13000).fadeOut(1000);
+
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.dialogue-1-1').delay(15000).fadeIn(0);
+        }
+    })
+
+
+
     // big-hyun
 
-        document.querySelector('.big-hyun__gif').addEventListener('click', ()=> {
-            document.querySelector('.big-hyun__dialogue').style.display = 'block';
-            document.querySelector('.line-1-1').style.display = 'block';
-            document.querySelector('.line-1-2').style.display = 'block';
-            document.querySelector('.line-1-3').style.display = 'block';
-        })
-        document.querySelector('.clicker-6-1').addEventListener('click', ()=> {
+        //quick view
+        $('.dialogue-1-1').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
 
+    $('.clicker-1-1').click(function() {
+        $('.dialogue-1-1, .dialogue-1-1 .line').hide();
+        $('.dialogue-1-2, .dialogue-1-2 .line').show();})
+
+        //quick view
+        $('.dialogue-1-2').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
+        
+        //close    
+        $('.clicker-1-2').click(function() {
+            $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__gif, .big-hyun__avatar').hide();
+            $('.movingarrow__movie, .movingarrow__restaurant').show();})
+            
+
+
+        
+    
+
+
+
+    // movie
+
+    $('.movie__gif').on('click', function() {
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+            hasClickedMovie = true;
+            $('.movingarrow__movie').hide();
+            hasClickedMovie = true;
+
+            fade.fadeIn(1000);
+            setTimeout(function() {$('#movie')[0].play();}, 2000);
+            fade.delay(13000).fadeOut(1000);
+
+            if (hasClickedMovie === true && hasClickedRestaurant === true) {
+                $('.movingarrow__elevator').show();
+            }
+        } else {}
+    })
+
+
+    // restaurant
+
+    $('.restaurant__gif').on('click', function() {
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+            hasClickedRestaurant = true;
+            $('.movingarrow__restaurant').hide();
+            hasClickedRestaurant = true;
+
+            fade.fadeIn(1000);
+            setTimeout(function() {$('#restaurant')[0].play();}, 2000);
+            fade.delay(15000).fadeOut(1000);
+            
+            if (hasClickedMovie === true && hasClickedRestaurant === true) {
+                $('.movingarrow__elevator').show();
+            }
+        } else {}
+    })
+    
+
+
+    // elevator
+
+    $('.button-off').on('click', function() {
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true && hasClickedMovie === true && hasClickedRestaurant === true) {
+            $('.movingarrow__elevator').hide();
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').show();
+            addBonus(hasClickedElevator, 50);
+            hasClickedElevator = true;
+        } else {}
+    })
+
+        //quick view
+        $('.dialogue-2-1').click(function() {
+            $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
         })
-        document.querySelector('.clicker-6-2').addEventListener('click', ()=> {
-            document.querySelector('.big-hyun__dialogue').style.display = 'none';
+
+        // close
+        $('.clicker-3-2').click(function(){
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').hide();
         })
+
+    $('.clicker-3-1').click(function(){
+        addScore(50);
+        event.preventDefault();
+        $('#fade-box').fadeIn(2000);
+        setTimeout(function() {window.location = $('a').attr('href');}, 2000);
+    })
+
+
 </script>
 </body>
 </html>

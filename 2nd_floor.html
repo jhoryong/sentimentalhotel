@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
     <link rel="stylesheet" type="text/css" href="./css/2nd_floor.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -18,6 +21,18 @@
 <div class="fade-box"></div>
 
 <div class="container">
+<div id="room-bg" class="transparent-background"></div>
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
+
 
     <!-- items -->
     <div class="items">
@@ -48,211 +63,204 @@
     <!-- gifs -->
 
         <div class="clock-gif">
-            <img class="gif clock clock1" src="image/2nd_floor/시계1.png">
-            <img class="gif clock clock2" src="image/2nd_floor/시계2.png">
-            <img class="gif clock clock3" src="image/2nd_floor/시계3.png">
-            <img class="gif clock clock4" src="image/2nd_floor/시계4.png">
-            <img class="gif clock clock5" src="image/2nd_floor/시계5.png">
-            <img class="gif clock clock6" src="image/2nd_floor/시계6.png">
-            <img class="gif clock clock7" src="image/2nd_floor/시계7.png">
-            <img class="gif clock clock8" src="image/2nd_floor/시계8.png">
-            <img class="gif clock clock9" src="image/2nd_floor/시계9.png">
-            <img class="gif clock clock10" src="image/2nd_floor/시계10.png">
-            <img class="gif clock clock11" src="image/2nd_floor/시계11.png">
-            <img class="gif clock clock12" src="image/2nd_floor/시계12.png">
+            <img class="gif gifhover clock clock1" src="image/2nd_floor/시계1.png">
+            <img class="gif gifhover clock clock2" src="image/2nd_floor/시계2.png">
+            <img class="gif gifhover clock clock3" src="image/2nd_floor/시계3.png">
+            <img class="gif gifhover clock clock4" src="image/2nd_floor/시계4.png">
+            <img class="gif gifhover clock clock5" src="image/2nd_floor/시계5.png">
+            <img class="gif gifhover clock clock6" src="image/2nd_floor/시계6.png">
+            <img class="gif gifhover clock clock7" src="image/2nd_floor/시계7.png">
+            <img class="gif gifhover clock clock8" src="image/2nd_floor/시계8.png">
+            <img class="gif gifhover clock clock9" src="image/2nd_floor/시계9.png">
+            <img class="gif gifhover clock clock10" src="image/2nd_floor/시계10.png">
+            <img class="gif gifhover clock clock11" src="image/2nd_floor/시계11.png">
+            <img class="gif gifhover clock clock12" src="image/2nd_floor/시계12.png">
         </div>
 
         <div class="handshake-gif">
-            <img class="gif handshake handshake1" src="image/2nd_floor/악수1.png">
-            <img class="gif handshake handshake2" src="image/2nd_floor/악수2.png">
-            <img class="gif handshake handshake3" src="image/2nd_floor/악수3.png">
+            <img class="gif gifhover handshake handshake1" src="image/2nd_floor/악수1.png">
+            <img class="gif gifhover handshake handshake2" src="image/2nd_floor/악수2.png">
+            <img class="gif gifhover handshake handshake3" src="image/2nd_floor/악수3.png">
         </div>
     
         <div class="copier-gif">
-            <img class="gif copier" src="image/2nd_floor/복사기.png">
-            <img class="gif paper paper1" src="image/2nd_floor/복사기1.png">
-            <img class="gif paper paper2" src="image/2nd_floor/복사기2.png">
-            <img class="gif paper paper3" src="image/2nd_floor/복사기3.png">
-            <img class="gif paper paper4" src="image/2nd_floor/복사기4.png">
-            <img class="gif paper paper5" src="image/2nd_floor/복사기5.png">
-            <img class="gif paper paper6" src="image/2nd_floor/복사기6.png">
-            <img class="gif paper paper7" src="image/2nd_floor/복사기7.png">
+            <img class="gif gifhover copier" src="image/2nd_floor/복사기.png">
+            <img class="gif gifhover paper paper1" src="image/2nd_floor/복사기1.png">
+            <img class="gif gifhover paper paper2" src="image/2nd_floor/복사기2.png">
+            <img class="gif gifhover paper paper3" src="image/2nd_floor/복사기3.png">
+            <img class="gif gifhover paper paper4" src="image/2nd_floor/복사기4.png">
+            <img class="gif gifhover paper paper5" src="image/2nd_floor/복사기5.png">
+            <img class="gif gifhover paper paper6" src="image/2nd_floor/복사기6.png">
+            <img class="gif gifhover paper paper7" src="image/2nd_floor/복사기7.png">
         </div>
+
+        <div class="dialogue-box foundallgif">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">모든 움직이는 요소를 찾았다! </p>
+            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
+        </div>
+
         
 
 
     <div class="start">
-        <div class="dialogue dialogue__start">
-            <img class="avatar big-hyun__avatar" src="image/2nd_floor/큰현.png">
-            <div class="dialogue-box">
-                <h1 id="big-hyun__start" class="name">큰 현</h1>
 
-                <div class="dialogue-0-1">
-                    <p class="line top-line first-line">아, 오셨군요.
-                    <p class="line top-line second-line next-line">표정을 보니 무척 잘 쉬고 오신 것 같네요.</p>
-                    <p class="line top-line third-line next-line">그럼 이어서 교육을 진행할게요.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-0-1"></i></p>
-                </div>
-
-                <div class="dialogue-0-2">
-                    <p class="line top-line first-line">2층에는 비즈니스 센터가 자리하고 있어요.</p>
-                    <p class="line top-line second-line next-line">각종 강의와 행사를 가질 수 있는 <strong>강의실</strong>과 <strong>연회장</strong>이 있고,</p>
-                    <p class="line top-line third-line next-line">자유롭게 회의를 할 수 있는 <strong>회의실</strong>도 있습니다.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-0-2"></i></p>
-                </div>
-                
-                <div class="dialogue-0-2-1">
-                    <p class="line top-line first-line next-line">아 참, 오늘 호텔에 중요한 손님이 오신다고 해서 인사드리려 했는데, 아무리 찾아도 보이시질 않네요.</p>
-                    <p class="line top-line second-line next-line">아마 2층 비즈니스 센터 어딘가에 계실 것 같은데, <span class="player-name"></span>씨가 한번 찾아주시겠어요?</p>
-                    <p class="line bottom-line third-line five-toplines">- 네, <span class="clicker clicker-0-2">물론이죠!</span></p>
-                </div>
-
-                <div class="dialogue-0-3">
-                    <p class="line top-line first-line">2층 로비에 없으신 걸 보니 안쪽 어딘가로 들어가신 것 같아요. </p>
-                    <p class="line top-line second-line next-line">비즈니스 센터 시설 곳곳에 있는 손님들을 살펴보고, <strong>목에 점이 있는 손님</strong>을 찾아 저에게 알려 주세요.</p>
-                    <p class="line bottom-line third-line two-toplines">- 네, <span class="clicker clicker-0-3">알겠습니다!</span></p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    
-
-    <div class="reception">
-        <img class="gif reception__gif" src="image/2nd_floor/직원.gif">
-
-        <div id="reception__dialogue" class="dialogue">
-            <div class="dialogue-box">
-                <h1 class="name">비즈니스 센터</h1>
-                <p class="line top-line first-line">환영합니다. 어디로 안내해 드릴까요?</p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 1.5s linear backwards;">👩‍🏫 <span class="clicker clicker-1-1">강의실</span></p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 1.8s linear backwards;">🤵 <span class="clicker clicker-1-2">연회장</span></p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 2.1s linear backwards;">💻 <span class="clicker clicker-1-3">회의실 1</span>
-                </p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 2.4s linear backwards;">💻 <span class="clicker clicker-1-4">회의실 2</span>&nbsp;&nbsp;</p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 2.7s linear backwards;">💻 <span class="clicker clicker-1-5">회의실 3</span></p>
-                <p class="line bottom-line six-toplines" style="animation: typing 1.5s 3s linear backwards;">- <span class="clicker clicker-1-6">(대화 그만하기)</span></p>
-            </div>
-        </div>
-    
-
-        <div id="dialogue__lecture-room" class="dialogue">
-            <div class="transparent-background"></div>
-            <img class="room lecture-room" src="image/2nd_floor/강의실.jpg">
-            <div class="dialogue-box">
-                <h1 class="name">교수</span></h1>
-                <p class="line top-line first-line">"오늘은 대한민국 임시정부에 대해 알아보는 시간을 갖도록 하겠습니다.</p>
-                <p class="line top-line second-line">대한민국 임시정부는 1919년 4월 1일 중국 상하이에서 설립되어..."</p>
-                <p class="line bottom-line two-toplines"><span class="clicker clicker-1-1-1">(돌아가기)</span></p>
-            </div>
+        <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
+        <div class="dialogue-box dialogue-0-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">아, 오셨군요.
+            <p class="line top-line second-line next-line">표정을 보니 무척 잘 쉬고 오신 것 같네요.</p>
+            <p class="line top-line third-line next-line">그럼 이어서 교육을 진행할게요.</p>
+            <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-0-1">네!</span></p>
         </div>
 
-        <div id="dialogue__banquet-room" class="dialogue">
-            <div class="transparent-background"></div>
-            <img class="room banquet-room" src="image/2nd_floor/연회장.jpg">
-            <div class="dialogue-box">
-            <h1 class="name">학생회장</h1>
-                <p class="line top-line first-line">"자 여러분! 드디어 새 학기가 시작되었습니다. 모두 멋진 한 한기를 만들어 봅시다!</p>
-                <p class="line top-line second-line">그럼, 오늘 한번 달려 볼까요? 먼저 교수님의 건배사가 있겠습니다.</p>
-                <p class="line top-line third-line">교수님 나와주세요~!"</p>
-                <p class="line bottom-line three-toplines"><span class="clicker clicker-1-2-1">(돌아가기)</p>
-            </div>
+        <div class="dialogue-box dialogue-0-2">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">2층에는 비즈니스 센터가 자리하고 있어요.</p>
+            <p class="line top-line second-line next-line">각종 강의와 행사를 가질 수 있는 <strong>강의실</strong>과 <strong>연회장</strong>이 있고,</p>
+            <p class="line top-line third-line next-line">자유롭게 회의를 할 수 있는 <strong>회의실</strong>도 있습니다.</p>
+            <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-0-2">(다음)</span></p>
+        </div>
+        
+        <div class="dialogue-box dialogue-0-3">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line next-line">아 참, 오늘 호텔에 <strong>중요한 손님</strong>이 오신다고 해서 인사드리려 했는데, 아무리 찾아도 보이질 않네요.</p>
+            <p class="line top-line second-line next-line">아마 2층 비즈니스 센터 어딘가에 계실 것 같은데, <span class="player-name"></span>씨가 한번 찾아주시겠어요?</p>
+            <p class="line bottom-line third-line two-toplines">- 네, <span class="clicker clicker-0-3">물론이죠!</span></p>
         </div>
 
-        <div id="dialogue__meeting-room-1" class="dialogue">
-            <div class="transparent-background"></div>
-            <img class="room conference-room-1" src="image/2nd_floor/회의실1.jpg">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">“아, 오늘 과제하기 너무 싫지 않아?”</p>
-                <p class="line top-line second-line next-line">“응 진짜. 과제가 너무 많아… 교수님은 너무 귀찮은 과제만 많이 내주신단 말이야...”</p>
-                <p class="line top-line third-line next-line">“얘들아 근데...... 배고프지 않아?”</p>
-                <p class="line top-line fourth-line next-line">아 맞다! 내가 그저께 치킨하고 청경채하고 같이 먹었는데... 진짜 핵.꿀.맛. 오늘 치킨각...?</p>
-                <p class="line bottom-line three-toplines">- <span class="clicker clicker-1-3-1">(돌아가기)</span></p>
-            </div>
-        </div>
-    
-        <div id="dialogue__meeting-room-2" class="dialogue">
-            <div class="transparent-background"></div>
-            <img class="room conference-room-2" src="image/2nd_floor/회의실2.jpg">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">“그나저나 별아, 오늘 시간 되?”</p>
-                <p class="line top-line second-line next-line">“네. 오늘은 별 약속이 없어요. 왜요?”</p>
-                <p class="line top-line third-line next-line">“우와! 그럼 나랑 과자 먹으러 가자!! 내가 진~~~짜 맛있는 과자 파는 곳을 알거든? 흐흐흐.”</p>
-                <p class="line bottom-line three-toplines">- <span class="clicker clicker-1-4-1">(돌아가기)</span></p>
-            </div>
-        </div>
-
-        <div id="dialogue__meeting-room-3" class="dialogue">
-            <div class="transparent-background"></div>
-            <img class="room conference-room-3" src="image/2nd_floor/회의실3.jpg">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">"음... 링크를 눌렀을 때 페이지를 지연되게 띄우려면...</p>
-                <p class="line top-line second-line next-line">event.preventDefault 함수를 써서… a 태그의 href 특성을 불러온 다음에...</p>
-                <p class="line top-line third-line next-line">setTimeout 함수 안에 시간을 넣으면...! 됬다!</p>
-                <p class="line top-line fourth-line next-line">그나저나 그림작가는 언제 오려나... 이제 마감이 얼마 남지 않았는데..."</p>
-                <p class="line bottom-line four-toplines"><span class="clicker clicker-1-5-1">(돌아가기)</span></p>
-            </div>
+        <div class="dialogue-box dialogue-0-4">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">2층 로비에 없으신걸 보니 <strong>안쪽 어딘가</strong>로 들어가신 것 같아요. </p>
+            <p class="line top-line second-line next-line">비즈니스 센터 시설 곳곳에 있는 손님들을 살펴보고, <strong>목에 점이 있는 손님</strong>을 찾아 저에게 알려 주세요.</p>
+            <p class="line bottom-line third-line two-toplines">- 네, <span class="clicker clicker-0-4">알겠습니다!</span></p>
         </div>
 
     </div>
+
+    
+
+    <div class="receptions">
+        <img class="gif gifhover reception__gif" src="image/2nd_floor/직원.gif">
+
+        <div class="dialogue-box reception">
+            <h1 class="name">비즈니스 센터</h1>
+            <p class="line top-line first-line">비즈니스 센터에 오신 것을 환영합니다. 어디로 안내해 드릴까요?</p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 1.5s linear backwards;">👩‍🏫 <span class="clicker clicker-1-1">강의실</span></p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 1.8s linear backwards;">🤵 <span class="clicker clicker-1-2">연회장</span></p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 2.1s linear backwards;">💻 <span class="clicker clicker-1-3">회의실 1</span>
+            </p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 2.4s linear backwards;">💻 <span class="clicker clicker-1-4">회의실 2</span>&nbsp;&nbsp;</p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 2.7s linear backwards;">💻 <span class="clicker clicker-1-5">회의실 3</span></p>
+            <p class="line bottom-line six-toplines" style="animation: typing 1.5s 3s linear backwards;"><span class="clicker clicker-1-6">(대화 그만하기)</span></p>
+        </div>
+    
+
+        <img class="room lecture-room" src="image/2nd_floor/강의실.jpg">
+        <div class="dialogue-box lecture-room-d">
+            <h1 class="name">교수</span></h1>
+            <p class="line top-line first-line">"오늘은 대한민국 임시정부에 대해 알아보는 시간을 갖도록 하겠습니다.</p>
+            <p class="line top-line second-line">대한민국 임시정부는 1919년 4월 1일 중국 상하이에서 설립되어..."</p>
+            <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-1-1-1">(돌아가기)</span></p>
+        </div>
+
+
+        <img class="room banquet-room" src="image/2nd_floor/연회장.jpg">
+        <div class="dialogue-box banquet-room-d">
+        <h1 class="name">학생회장</h1>
+            <p class="line top-line first-line">"자 여러분! 드디어 새 학기가 시작되었습니다. 모두 멋진 한 한기를 만들어 봅시다!</p>
+            <p class="line top-line second-line">그럼, 오늘 한번 달려 볼까요? 먼저 교수님의 건배사가 있겠습니다.</p>
+            <p class="line top-line third-line">교수님 나와주세요~!"</p>
+            <p class="line bottom-line third-line three-toplines"><span class="clicker clicker-1-2-1">(돌아가기)</p>
+        </div>
+
+
+        <img class="room meeting-room-1" src="image/2nd_floor/회의실1.jpg">
+        <div class="dialogue-box meeting-room-1-d">
+            <h1 class="name">&nbsp;</span></h1>
+            <p class="line top-line first-line">“하아... 오늘 과제하기 너무 싫지 않니?”</p>
+            <p class="line top-line second-line next-line">“응 진짜. 과제가 너무 많아! 신교수님은 너무 귀찮은 과제만 많이 내주신단 말이야...”</p>
+            <p class="line top-line third-line next-line">“근데 얘들아...... 배고프지 않아?”</p>
+            <p class="line top-line fourth-line next-line">"아 맞다! 내가 그저께 치킨하고 청경채하고 같이 먹었는데... 진짜 핵.꿀.맛. 오늘... 치킨각!?!?"</p>
+            <p class="line bottom-line fourth-line four-toplines">- <span class="clicker clicker-1-3-1">(돌아가기)</span></p>
+        </div>
+
+    
+        <img class="room meeting-room-2" src="image/2nd_floor/회의실2.jpg">
+        <div class="dialogue-box meeting-room-2-d">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">“그나저나 별아, 오늘 시간 되?”</p>
+            <p class="line top-line second-line next-line">“네. 오늘은 별 약속이 없어요. 왜요?”</p>
+            <p class="line top-line third-line next-line">“우와! 그럼 나랑 과자 먹으러 가자!! 내가 진~~~짜 맛있는 과자 파는 곳을 알거든? 흐흐흐.”</p>
+            <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-1-4-1">(돌아가기)</span></p>
+        </div>
+
+
+        <img class="room meeting-room-3" src="image/2nd_floor/회의실3.jpg">
+        <div class="dialogue-box meeting-room-3-d">
+            <h1 class="name">&nbsp;</span></h1>
+            <p class="line top-line first-line">"음... 링크를 눌렀을 때 페이지를 지연되게 띄우려면...</p>
+            <p class="line top-line second-line next-line"><span class="code">event.preventDefault</span> 함수를 써서... <span class="code">a</span> 태그의 <span class="code">href</span> 특성을 불러온 다음에...</p>
+            <p class="line top-line third-line next-line"><span class="code">setTimeout</span> 함수 안에 시간을 넣으면... 됬다!</p>
+            <p class="line top-line fourth-line next-line">그나저나 그림작가는 언제 오려나... 이제 마감이 얼마 남지 않았는데..."</p>
+            <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-1-5-1">(돌아가기)</span></p>
+        </div>
+
+    </div>
+
 
     
     <div class="big-hyun">
-        <img class="gif big-hyun__gif" src="image/2nd_floor/큰현.gif">
-        <div class="dialogue big-hyun__dialogue">
-            <img class="avatar big-hyun__avatar" src="image/2nd_floor/큰현.png">
-            <div class="dialogue-box">
-                <h1 class="name">큰 현</h1>
-                <div class="dialogue-2-0">
-                    <p class="line top-line first-line">아직 모든 장소를 둘러보시지 않았군요.</p>
-                    <p class="line top-line second-line">모든 곳을 둘러보고 와 주세요.</p>
-                    <p class="line top-line second-line"><span class="clicker clicker-2-0">(확인)</span></p>
-                </div>
+        <img class="gif gifhover big-hyun__gif" src="image/2nd_floor/큰현.gif">
+        <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
 
-                <div class="dialogue-2-1">
-                    <p class="line top-line first-line">목에 점이 있는 손님은 어디 있었나요? (틀릴 시 50점이 감점됩니다.)</p>
-                    <p class="line top-line second-line">&nbsp;</p>
-                    <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;"><span class="clicker clicker-2-1">&#10146; 강의실</span></p>
-                    <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;"><span class="clicker clicker-2-2">&#10146; 연회장</span></p>
-                    <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;"><span class="clicker clicker-2-3">&#10146; 회의실 1</span></p>
-                    <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;"><span class="clicker clicker-2-4">&#10146; 회의실 2</span></p>
-                    <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;"><span class="clicker clicker-2-5">&#10146; 회의실 3</span></p>
-                </div>
-
-                <div class="dialogue-2-2">
-                    <p id="wrong1" class="line top-line first-line">음... 강의실에 있진 않은 것 같은데... (-50점)</p>
-                    <p id="wrong2" class="line top-line first-line">음... 연회장에 있진 않은 것 같은데... (-50점)</p>
-                    <p id="wrong3" class="line top-line first-line">음... 회의실 1에 있진 않은 것 같은데... (-50점)</p>
-                    <p id="right" class="line top-line first-line">아, 회의실 2에 계셨군요.</span></p>
-                    <p id="wrong4" class="line top-line first-line">음... 회의실 3에 있진 않은 것 같은데... (-50점)</p>
-                </div>
-
-                <div class="dialogue-2-3">
-                    <p id="result-wrong" class="line top-line second-line">아무래도 제가 직접 가서 찾아봐야 할것 같군요. <span class="player-name"></span>씨는 먼저 3층으로 올라가 계세요.</p>
-                    <p id="result-right" class="line top-line second-line">저는 회의실 2로 가서 인사를 드리고 올 테니, <span class="player-name"></span>씨는 먼저 3층으로 올라가 계세요.</p>
-                    <p class="line bottom-line one-topline">- 네, <span class="clicker clicker-2-6">알겠습니다.</span></p>
-                </div>
-                
-            </div>
+        <div class="dialogue-box dialogue-2-0">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">아직 모든 장소를 둘러보지 않았네요.</p>
+            <p class="line top-line second-line next-line">비즈니스 센터 내에서 <strong>목에 점이 있는 손님</strong>을 찾아 주세요.</p>
+            <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-2-0">(확인)</span></p>
         </div>
+
+        <div class="dialogue-box dialogue-2-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">목에 점이 있는 손님은 어디 있었나요?</p>
+            <p class="line top-line second-line">&nbsp;</p>
+            <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;">☞ <span class="clicker clicker-2-1">강의실</span></p>
+            <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;">☞ <span class="clicker clicker-2-2">연회장</span></p>
+            <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;">☞ <span class="clicker clicker-2-3">회의실 1</span></p>
+            <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;">☞ <span class="clicker clicker-2-4">회의실 2</span></p>
+            <p class="line top-line next-line" style="animation: typing 0s 1.5s linear backwards;">☞ <span class="clicker clicker-2-5">회의실 3</span></p>
+        </div>
+
+        <div class="dialogue-box dialogue-2-2">
+            <h1 class="name">큰 현</h1>
+            <p id="wrong1" class="line top-line first-line">음... 강의실에 있진 않은 것 같은데... (점수 획득 실패!)</p>
+            <p id="wrong2" class="line top-line first-line">음... 연회장에 있진 않은 것 같은데... (점수 획득 실패!)</p>
+            <p id="wrong3" class="line top-line first-line">음... 회의실 1에 있진 않은 것 같은데... (점수 획득 실패!)</p>
+            <p id="right" class="line top-line first-line">아, 회의실 2에 계셨군요...! (<strong>50점</strong> 획득!)</span></p>
+            <p id="wrong4" class="line top-line first-line">음... 회의실 3에 있진 않은 것 같은데... (50점 획득 실패)</p>
+
+            <p id="result-wrong" class="line top-line second-line">아무래도 제가 직접 가서 찾아봐야 할것 같군요. <span class="player-name"></span>씨는 먼저 3층을 둘러보고 계세요.</p>
+            <p id="result-right" class="line top-line second-line">저는 회의실 2로 가서 인사를 드리고 올 테니, <span class="player-name"></span>씨는 먼저 3층을 둘러보고 계세요.</p>
+            <p class="line bottom-line two-toplines">- 네, <span class="clicker clicker-2-6">알겠습니다.</span></p>
+        </div>
+
     </div>
+
+
 
     <div class="lounge-elevator">
         
-        <img class="gif elevator__button button-off" src="image/2nd_floor/엘베버튼off.png">
-        <img class="gif elevator__button button-on" src="image/2nd_floor/엘베버튼on.png">
+        <img class="gif gifhover elevator__button button-off" src="image/2nd_floor/엘베버튼off.png">
+        <img class="gif gifhover elevator__button button-on" src="image/2nd_floor/엘베버튼on.png">
         <img class="elevator__alarm alarm-off" src="image/2nd_floor/엘베알람off.png">
         <img class="elevator__alarm alarm-on" src="image/2nd_floor/엘베알람on.png">
 
-        <div class="dialogue elevator__dialogue">
-            <div class="dialogue-box">
-                <h1 class="name">&nbsp;</h1>
-                <p class="line top-line first-line">3층으로 올라가시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines">- <a href="3rd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
-                <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
-            </div>
+        <div class="dialogue-box dialogue-3-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">3층으로 올라가시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a href="3rd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
         </div>
 
     </div>
@@ -269,27 +277,28 @@
     let hasClickedMeetingRoom1 = false;
     let hasClickedMeetingRoom2 = false;
     let hasClickedMeetingRoom3 = false;
+    let hasClickedElevator = false;
 
     let hasClickedClock = false;
     let hasClickedHandshake= false;
     let hasClickedCopier = false;
     
     function alertFoundAllGif() {
-        if (hasClickedCoffee=== true && hasClickedLightbulb === true && hasClickedPeople === true) {
-            addScore(5);
-            $('.dialogue__foundallgif, .foundall').css(block);
+        if (hasClickedClock=== true && hasClickedHandshake === true && hasClickedCopier === true) {
+            $('.foundallgif, .foundallgif .line').show();
             alertFoundAllGif = function(){};
         }
     }
+    
     
 
 // item
 
     $('.map-icon').click(function() {
-        $('.map-contents').show();
+        $('.map-contents,  #item-background').show();
     })
     $('.close-x').click(function(){
-        $('.map-contents').hide();
+        $('.map-contents,  #item-background').hide();
     })
 
 
@@ -316,129 +325,119 @@
     $('.player-name').text(sessionStorage.getItem("playerName"));
 
 
+// gif
 
+    // found all gifs
+    $('.clicker-100').click(function() {
+        $('.foundallgif, .foundallgif .line').hide();
+        addScore(5);
+    })
 
     // clock
 
-        let clock1 = document.querySelector('.clock1');
-        let clock2 = document.querySelector('.clock2');
-        let clock3 = document.querySelector('.clock3');
-        let clock4 = document.querySelector('.clock4');
-        let clock5 = document.querySelector('.clock5');
-        let clock6 = document.querySelector('.clock6');
-        let clock7 = document.querySelector('.clock7');
-        let clock8 = document.querySelector('.clock8');
-        let clock9 = document.querySelector('.clock9');
-        let clock10 = document.querySelector('.clock10');
-        let clock11 = document.querySelector('.clock11');
-        let clock12 = document.querySelector('.clock12');
+    $('.clock1').on('click', function() {
+        addBonus(hasClickedClock, 5);
+        hasClickedClock = true;
+        alertFoundAllGif();
+        let t = 100;
+        setTimeout(function(){$('.clock1').hide();}, t);
+        setTimeout(function(){$('.clock2').show();}, t);
+        setTimeout(function(){$('.clock2').hide();}, t*2);
+        setTimeout(function(){$('.clock3').show();}, t*2);
+        setTimeout(function(){$('.clock3').hide();}, t*3);
+        setTimeout(function(){$('.clock4').show();}, t*3);
+        setTimeout(function(){$('.clock4').hide();}, t*4);
+        setTimeout(function(){$('.clock5').show();}, t*4);
+        setTimeout(function(){$('.clock5').hide();}, t*5);
+        setTimeout(function(){$('.clock6').show();}, t*5);
+        setTimeout(function(){$('.clock6').hide();}, t*6);
+        setTimeout(function(){$('.clock7').show();}, t*6);
+        setTimeout(function(){$('.clock7').hide();}, t*7);
+        setTimeout(function(){$('.clock8').show();}, t*7);
+        setTimeout(function(){$('.clock8').hide();}, t*8);
+        setTimeout(function(){$('.clock9').show();}, t*8);
+        setTimeout(function(){$('.clock9').hide();}, t*9);
+        setTimeout(function(){$('.clock10').show();}, t*9);
+        setTimeout(function(){$('.clock10').hide();}, t*10);
+        setTimeout(function(){$('.clock11').show();}, t*10);
+        setTimeout(function(){$('.clock11').hide();}, t*11);
+        setTimeout(function(){$('.clock12').show();}, t*11);
+        setTimeout(function(){$('.clock12').hide();}, t*12);
+        setTimeout(function(){$('.clock1').show();}, t*12);
+    })
 
-        clock1.addEventListener('click', function() {
-            let t = 100;
-            setTimeout(function(){clock1.style.display = 'none';}, t);
-            setTimeout(function(){clock2.style.display = 'block';}, t);
-            setTimeout(function(){clock2.style.display = 'none';}, t*2);
-            setTimeout(function(){clock3.style.display = 'block';}, t*2);
-            setTimeout(function(){clock3.style.display = 'none';}, t*3);
-            setTimeout(function(){clock4.style.display = 'block';}, t*3);
-            setTimeout(function(){clock4.style.display = 'none';}, t*4);
-            setTimeout(function(){clock5.style.display = 'block';}, t*4);
-            setTimeout(function(){clock5.style.display = 'none';}, t*5);
-            setTimeout(function(){clock6.style.display = 'block';}, t*5);
-            setTimeout(function(){clock6.style.display = 'none';}, t*6);
-            setTimeout(function(){clock7.style.display = 'block';}, t*6);
-            setTimeout(function(){clock7.style.display = 'none';}, t*7);
-            setTimeout(function(){clock8.style.display = 'block';}, t*7);
-            setTimeout(function(){clock8.style.display = 'none';}, t*8);
-            setTimeout(function(){clock9.style.display = 'block';}, t*8);
-            setTimeout(function(){clock9.style.display = 'none';}, t*9);
-            setTimeout(function(){clock10.style.display = 'block';}, t*9);
-            setTimeout(function(){clock10.style.display = 'none';}, t*10);
-            setTimeout(function(){clock11.style.display = 'block';}, t*10);
-            setTimeout(function(){clock11.style.display = 'none';}, t*11);
-            setTimeout(function(){clock12.style.display = 'block';}, t*11);
-            setTimeout(function(){clock12.style.display = 'none';}, t*12);
-            setTimeout(function(){clock1.style.display = 'block';}, t*12);
-            
-            
-        })
+    // handshake
 
-            // handshake
-
-            let handshake1 = document.querySelector('.handshake1');
-        let handshake2 = document.querySelector('.handshake2');
-        let handshake3 = document.querySelector('.handshake3');     
-        document.querySelector('.handshake1').addEventListener('click', function() {
-            let t = 150;
-            let handshakegif = () => {
-            setTimeout(function(){handshake1.style.display = 'none';}, t);
-            setTimeout(function(){handshake2.style.display = 'block';}, t);
-            setTimeout(function(){handshake2.style.display = 'none';}, t*2);
-            setTimeout(function(){handshake3.style.display = 'block';}, t*2);
-            setTimeout(function(){handshake3.style.display = 'none';}, t*3);
-            setTimeout(function(){handshake1.style.display = 'block';}, t*3);
-            };
-            let repeat = setInterval(handshakegif, t*3);
-            setTimeout(function() {clearInterval(repeat);}, t*3*3);
-        });
+    $('.handshake1').on('click', function() {
+        addBonus(hasClickedHandshake, 5);
+        hasClickedHandshake = true;
+        alertFoundAllGif()
+        let t = 150;
+        let handshakegif = function() {
+            setTimeout(function(){$('.handshake1').hide();}, t);
+            setTimeout(function(){$('.handshake2').show();}, t);
+            setTimeout(function(){$('.handshake2').hide();}, t*2);
+            setTimeout(function(){$('.handshake3').show();}, t*2);
+            setTimeout(function(){$('.handshake3').hide();}, t*3);
+            setTimeout(function(){$('.handshake1').show();}, t*3);
+        };
+        let repeat = setInterval(handshakegif, t*3);
+        setTimeout(function() {clearInterval(repeat);}, t*3*3);
+    });
 
     // copier
-        let copier = document.querySelector('.copier');
-        let paper1 = document.querySelector('.paper1');
-        let paper2 = document.querySelector('.paper2');
-        let paper3 = document.querySelector('.paper3');
-        let paper4 = document.querySelector('.paper4');
-        let paper5 = document.querySelector('.paper5');
-        let paper6 = document.querySelector('.paper6');
-        let paper7 = document.querySelector('.paper7');
-        
-        document.querySelector('.copier').addEventListener('click', function() {
-            let t = 150;
-            setTimeout(function(){paper1.style.display = 'none';}, t);
-            setTimeout(function(){paper2.style.display = 'block';}, t);
-            setTimeout(function(){paper2.style.display = 'none';}, t*2);
-            setTimeout(function(){paper3.style.display = 'block';}, t*2);
-            setTimeout(function(){paper3.style.display = 'none';}, t*3);
-            setTimeout(function(){paper4.style.display = 'block';}, t*3);
-            setTimeout(function(){paper4.style.display = 'none';}, t*4);
-            setTimeout(function(){paper5.style.display = 'block';}, t*4);
-            setTimeout(function(){paper5.style.display = 'none';}, t*5);
-            setTimeout(function(){paper6.style.display = 'block';}, t*5);
-            setTimeout(function(){paper6.style.display = 'none';}, t*6);
-            setTimeout(function(){paper7.style.display = 'block';}, t*6);
-            setTimeout(function(){paper7.style.display = 'none';}, t*20);
-        })
 
-
-    // start dialogue
-
-    $('.dialogue__start').show();
-    $('.dialogue-0-1').children().show();
-        //quick view
-        $('.dialogue__start').click(function() {
-            $('.dialogue-0-1').children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-
-    $('.nextarrow-0-1').click(function(){
-        $('.dialogue-0-1').children().hide();
-        $('.dialogue-0-2').children().show();
+    $('.copier').on('click', function() {
+        addBonus(hasClickedCopier, 5);
+        hasClickedCopier = true;
+        alertFoundAllGif()
+        let t = 150;
+        setTimeout(function(){$('.paper1').hide();}, t);
+        setTimeout(function(){$('.paper2').show();}, t);
+        setTimeout(function(){$('.paper2').hide();}, t*2);
+        setTimeout(function(){$('.paper3').show();}, t*2);
+        setTimeout(function(){$('.paper3').hide();}, t*3);
+        setTimeout(function(){$('.paper4').show();}, t*3);
+        setTimeout(function(){$('.paper4').hide();}, t*4);
+        setTimeout(function(){$('.paper5').show();}, t*4);
+        setTimeout(function(){$('.paper5').hide();}, t*5);
+        setTimeout(function(){$('.paper6').show();}, t*5);
+        setTimeout(function(){$('.paper6').hide();}, t*6);
+        setTimeout(function(){$('.paper7').show();}, t*6);
+        setTimeout(function(){$('.paper7').hide();}, t*20);
     })
+
+
+// fade-in to loader and fadeout
+
+$('.fade-box').fadeOut(1000);
+    setTimeout(function() {$('.preloader').hide();}, 4000)
+    setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
+
+
+
+ // start dialogue
+
+    setTimeout(function(){
+        $('.dialogue-0-1, .dialogue-0-1 .line').show();}, 7000)
+
+        //quick view
+        $('.dialogue-0-1').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
+
+    $('.clicker-0-1').click(function(){
+        $('.dialogue-0-1, .dialogue-0-1 .line').hide();
+        $('.dialogue-0-2, .dialogue-0-2 .line').show();})
+
+
         //quick view
         $('.dialogue-0-2').click(function() {
             $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
         })
 
-    $('.nextarrow-0-2').click(function(){
-        $('.dialogue-0-2-1').children().show();
-    })
-        //quick view
-        $('.dialogue-0-2-1').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-
     $('.clicker-0-2').click(function(){
-        $('.dialogue-0-2, .dialogue-0-2-1').children().hide();
-        $('.dialogue-0-3').children().show();
+        $('.dialogue-0-2, .dialogue-0-2 .line').hide();
+        $('.dialogue-0-3, .dialogue-0-3 .line').show();
     })
         //quick view
         $('.dialogue-0-3').click(function() {
@@ -446,251 +445,260 @@
         })
 
     $('.clicker-0-3').click(function(){
-        $('.dialogue__start').hide();
-        $('.dialogue-0-3').children().hide();
+        $('.dialogue-0-3, .dialogue-0-3 .line').hide();
+        $('.dialogue-0-4, .dialogue-0-4 .line').show();
+    })
+        //quick view
+        $('.dialogue-0-4').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+
+    $('.clicker-0-4').click(function(){
+        $('.dialogue-0-4, .dialogue-0-4 .line').hide();
         $('.movingarrow__businesscenter').show();
     })
 
 
 
-    //reception
+//reception
 
-        $('.reception__gif').on('click', function() {
-            $('#reception__dialogue').show();
-            $('#reception__dialogue .dialogue-box').children().show();
-            $('.movingarrow__businesscenter').hide();
-        })
+$('.reception__gif').on('click', function() {
+    $('.reception, .reception .line').show();
+    $('.movingarrow__businesscenter').hide();
+})
 
-            //close
-            $('.clicker-1-6').on('click', function() {
-                $('#reception__dialogue').hide();
-                $('#reception__dialogue .dialogue-box').children().hide();
-            })
+    //close
+    $('.clicker-1-6').on('click', function() {
+        $('.reception, .reception .line').hide();
+    })
 
-            //quick view
-            $('#reception__dialogue .dialogue-box').click(function() {
-                $(event.currentTarget).children().css('animation', 'none')
-            })
+    //quick view
+    $('.reception').click(function() {
+        $(event.currentTarget).children().css('animation', 'none')
+    })
 
 
-    
-        //lecture room
 
-        $('.clicker-1-1').on('click', function() {
-            hasClickedLectureRoom = true;
-            $('#dialogue__lecture-room').show();
-            $('#dialogue__lecture-room .dialogue-box').children().show();
-        })
+//lecture room
+
+$('.clicker-1-1').on('click', function() {
+    hasClickedLectureRoom = true;
+    $('#room-bg, .lecture-room, .lecture-room-d, .lecture-room-d .line').show();
+})
+
+    //close
+    $('.clicker-1-1-1').on('click', function() {
+        $('.lecture-room, .lecture-room-d, .lecture-room-d .line,  #room-bg').hide();
+        if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+            $('.movingarrow__big-hyun').show();
+        }
+    })
+
+    //quick view
+    $('.lecture-room-d').click(function() {
+        $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+    })
+            
+
+
+    //banquet room
+
+    $('.clicker-1-2').on('click', function() {
+        hasClickedBanquetRoom = true;
+        $('.banquet-room, .banquet-room-d, .banquet-room-d .line, #room-bg').show();
+    })
         
-            //close
-            $('.clicker-1-1-1').on('click', function() {
-                $('#dialogue__lecture-room').hide();
-                $('#dialogue__lecture-room .dialogue-box').children().hide();
-                if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                    $('.movingarrow__big-hyun').show();
-                }
-            })
-
-            //quick view
-            $('#dialogue__lecture-room .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            })
-                
-
-
-        //banquet room
-
-        $('.clicker-1-2').on('click', function() {
-            hasClickedBanquetRoom = true;
-            $('#dialogue__banquet-room').show();
-            $('#dialogue__banquet-room .dialogue-box').children().show();
-        })
-            
-            //close
-            $('.clicker-1-2-1').on('click', function() {
-                $('#dialogue__banquet-room').hide();
-                $('#dialogue__banquet-room .dialogue-box').children().hide();
-                if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                    $('.movingarrow__big-hyun').show();
-                }
-            })
-
-            //quick view
-            $('#dialogue__banquet-room .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            })
-                
-
-
-        //meeting-room-1
-
-        $('.clicker-1-3').on('click', function() {
-            hasClickedMeetingRoom1 = true;
-            $('#dialogue__meeting-room-1').show();
-            $('#dialogue__meeting-room-1 .dialogue-box').children().show();
-        })
-            
-            //close
-            $('.clicker-1-3-1').on('click', function() {
-                $('#dialogue__meeting-room-1').hide();
-                $('#dialogue__meeting-room-1 .dialogue-box').children().hide();
-                if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                    $('.movingarrow__big-hyun').show();
-                }
-            })
-
-            //quick view
-            $('#dialogue__meeting-room-1 .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            })
-                
-
-
-        //meeting-room-2
-
-        $('.clicker-1-4').on('click', function() {
-            hasClickedMeetingRoom2 = true;
-            $('#dialogue__meeting-room-2').show();
-            $('#dialogue__meeting-room-2 .dialogue-box').children().show();
-        })
-            
-            //close
-            $('.clicker-1-4-1').on('click', function() {
-                $('#dialogue__meeting-room-2').hide();
-                $('#dialogue__meeting-room-2 .dialogue-box').children().hide();
-                if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                    $('.movingarrow__big-hyun').show();
-                }
-            })
-
-            //quick view
-            $('#dialogue__meeting-room-2 .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            })
-                
-
-
-        //meeting-room-3
-
-        $('.clicker-1-5').on('click', function() {
-            hasClickedMeetingRoom3 = true;
-            $('#dialogue__meeting-room-3').show();
-            $('#dialogue__meeting-room-3 .dialogue-box').children().show();
-        })
-            
-            //close
-            $('.clicker-1-5-1').on('click', function() {
-                $('#dialogue__meeting-room-3').hide();
-                $('#dialogue__meeting-room-3 .dialogue-box').children().hide();
-                if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                    $('.movingarrow__big-hyun').show();
-                }
-            })
-
-            //quick view
-            $('#dialogue__meeting-room-3 .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            })
-                
-
-
-
-
-       
-    
-
-    // big-hyun
-
-        $('.big-hyun__gif').on('click', function() {
+        //close
+        $('.clicker-1-2-1').on('click', function() {
+            $('.banquet-room, .banquet-room-d, .banquet-room-d .line,  #room-bg').hide();
             if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                $('.movingarrow__big-hyun').hide();
-                $('.big-hyun__dialogue').show();
-                $('.dialogue-2-1').children().show();
-            } else {
-                $('.big-hyun__dialogue').show();
-                $('.dialogue-2-0').children().show();
+                $('.movingarrow__big-hyun').show();
             }
         })
 
-            //close 
-            $('.clicker-2-0').click(function(){
-                $('.big-hyun__dialogue').hide();
-                $('.dialogue-2-0').children().hide();
-            })
+        //quick view
+        $('.banquet-room-d').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+            
+
+
+    //meeting-room-1
+
+    $('.clicker-1-3').on('click', function() {
+        hasClickedMeetingRoom1 = true;
+        $('.meeting-room-1, .meeting-room-1-d, .meeting-room-1-d .line, #room-bg').show(); 
+    })
         
-        $('.clicker-2-1').click(function(){
-            $('.dialogue-2-1').children().hide();
-            $('#wrong1').show();
-            $('.dialogue-2-3 #result-wrong, .dialogue-2-3 .bottom-line').show();
+        //close
+        $('.clicker-1-3-1').on('click', function() {
+            $('.meeting-room-1, .meeting-room-1-d, .meeting-room-1-d .line, #room-bg').hide();
+            if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+                $('.movingarrow__big-hyun').show();
+            }
         })
 
-        $('.clicker-2-2').click(function(){
-            $('.dialogue-2-1').children().hide();
-            $('#wrong2').show();
-            $('.dialogue-2-3 #result-wrong, .dialogue-2-3 .bottom-line').show();
+        //quick view
+        $('.meeting-room-1-d').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+            
+
+
+    //meeting-room-2
+
+    $('.clicker-1-4').on('click', function() {
+        hasClickedMeetingRoom2 = true;
+        $('.meeting-room-2, .meeting-room-2-d, .meeting-room-2-d .line,  #room-bg').show();
+    })
+        
+        //close
+        $('.clicker-1-4-1').on('click', function() {
+            $('.meeting-room-2, .meeting-room-2-d, #room-bg').hide();
+            if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+                $('.movingarrow__big-hyun').show();
+            }
         })
 
-        $('.clicker-2-3').click(function(){
-            $('.dialogue-2-1').children().hide();
-            $('#wrong3').show();
-            $('.dialogue-2-3 #result-wrong, .dialogue-2-3 .bottom-line').show();
+        //quick view
+        $('.meeting-room-2-d').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+            
+
+
+    //meeting-room-3
+
+    $('.clicker-1-5').on('click', function() {
+        hasClickedMeetingRoom3 = true;
+        $('.meeting-room-3, .meeting-room-3-d, .meeting-room-3-d .line, #room-bg').show();
+    })
+        
+        //close
+        $('.clicker-1-5-1').on('click', function() {
+            $('.meeting-room-3, .meeting-room-3-d, .meeting-room-3-d .line, #room-bg').hide();
+            if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+                $('.movingarrow__big-hyun').show();
+            }
         })
 
-        $('.clicker-2-4').click(function(){
-            $('.dialogue-2-1').children().hide();
-            $('#right').show();
-            $('.dialogue-2-3 #result-right, .dialogue-2-3 .bottom-line').show();
+        //quick view
+        $('.meeting-room-3-d').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+            
+
+
+
+
+    
+
+// big-hyun
+
+    $('.big-hyun__gif').on('click', function() {
+        if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+            $('.movingarrow__big-hyun').hide();
+            $('.big-hyun__avatar, .dialogue-2-1, .dialogue-2-1 .line').show();
+        } else {
+            $('.big-hyun__avatar, .dialogue-2-0, .dialogue-2-0 .line').show();
+        }
+    })
+
+        //close 
+        $('.clicker-2-0').click(function(){
+            $('.big-hyun__avatar, .dialogue-2-0, .dialogue-2-0 .line').hide();
         })
 
+        //quick view
+        $('.dialogue-2-0').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+        
+    
+    $('.clicker-2-1').click(function(){
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();
+        $('#wrong1').show();
+        $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+    })
+
+        //quick view
+        $('.dialogue-2-1').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+            $(event.currentTarget).children().css('animation', 'none');
+        })
+
+
+        //quick view
+        $('.dialogue-2-2').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        })
+
+    $('.clicker-2-2').click(function(){
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();
+        $('#wrong2').show();
+        $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+    })
+
+    $('.clicker-2-3').click(function(){
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();
+        $('#wrong3').show();
+        $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+    })
+
+    $('.clicker-2-4').click(function(){
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();
+        $('#right').show();
+        $('.dialogue-2-2, .dialogue-2-2 #result-right, .dialogue-2-2 .bottom-line').show();
+        addScore(50);
+    })
+
+        //close
         $('.clicker-2-5').click(function(){
-            $('.dialogue-2-1').children().hide();   
+            $('.dialogue-2-1, .dialogue-2-1 .line').hide();   
             $('#wrong4').show();
-            $('.dialogue-2-3 #result-wrong, .dialogue-2-3 .bottom-line').show();
+            $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
         })
 
-        $('.clicker-2-6').click(function(){
-            $('.dialogue-2-3').children().hide();
-            $('.big-hyun__dialogue').hide();
-            $('.big-hyun__gif').hide();
-            $('.')
+    $('.clicker-2-6').click(function(){
+        $('.dialogue-2-2, .dialogue-2-2 .line, .big-hyun__gif, .big-hyun__avatar').hide();
+        $('.movingarrow__elevator').show();
+    })
+
+
+
+// elevator
+
+$('.button-off').on('click', function() {
+    if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+        $('.movingarrow__elevator').hide();
+        $('.button-on').show();
+        $('.dialogue-3-1, .dialogue-3-1 .line').show();
+        $('.alarm-on').show();
+        addBonus(hasClickedElevator, 50);
+        hasClickedElevator = true;
+    } else {}
+})
+
+    //quick view
+    $('.dialogue-3-1').click(function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
         })
 
+    // close
+    $('.clicker-3-2').click(function(){
+        $('.button-on').hide();
+        $('.dialogue-3-1, .dialogue-3-1 .line').hide();
+        $('.alarm-on').hide();
+    })
 
-    // elevator
-
-        $('.button-off').on('click', function() {
-            if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-                $('.movingarrow__elevator').hide();
-                $('.button-on').show();
-                $('.elevator__dialogue').show();
-                $('.elevator__dialogue .dialogue-box').children().show();
-                $('.alarm-on').show();
-                addBonus(hasClickedElevator, 50);
-                hasClickedElevator = true;
-            }
-            else {}
-        })
-
-            //quick view
-            $('.elevator__dialogue .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
-                })
-
-            // close
-            $('.clicker-3-2').click(function(){
-                $('.button-on').hide();
-                $('.elevator__dialogue').hide();
-                $('.elevator__dialogue .dialogue-box').children().hide();
-                $('.alarm-on').hide();
-            })
-
-        $('.clicker-3-1').click(function(){
-            event.preventDefault();
-            $('.fade-box').fadeIn(2000);
-            setTimeout(function() {
-                window.location = $('a').attr('href');
-            }, 2000);
-        })
+$('.clicker-3-1').click(function(){
+    event.preventDefault();
+    $('.fade-box').fadeIn(2000);
+    setTimeout(function() {
+        window.location = $('a').attr('href');
+    }, 2000);
+})
 
 </script>
 </body>

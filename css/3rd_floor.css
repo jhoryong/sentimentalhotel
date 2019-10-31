@@ -1,161 +1,37 @@
-/* global elements */
-
-/* 
-npc 라인: 3초
-플레이어 라인: 2초
-애니메이션 딜레이: 0.5초
-*/
-
-a:link, a:visited {
-    text-decoration: none;
-    color: blue;
-}
-
-.fade-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
-    height: 56.25vw;
-    background-color: #000000;
-    z-index: 1000;
-}
-
-
-    .fade-in-start/* used for the very start */ {
-        opacity: 1;
-        animation: fadein 4s both;
-    }
-
-    .fade-in {
-        opacity: 1;
-        animation: fadein 2s linear both;
-    }
-
-    .fade-out {
-        opacity: 0;
-        animation: fadeout 2s both;
-    }
-
-
-@keyframes fadein {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
 .container {
     background-image: url("../image/3rd_floor/3rd_background.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    height: 56.25vw;
 }
 
-.gif {
-    position: absolute;
-    z-index: 0;
-}
 
-    .gif:hover {
-        cursor: pointer;
+/* arrows */
+    /* .movingarrow {display: block;} */
+    .movingarrow__swimming{
+        top: 13vw;
+        left: 12.5vw;
     }
 
-.avatar {
-    position: absolute;
-    z-index: 20;
-}
-
-.clicker {
-    color: blue;
-    font-family: 'Noto Serif KR', serif;
-    font-size: var(--player-font-size);
-}
-    
-    .clicker:hover {
-        cursor: pointer;
-        text-decoration: underline;
+    .movingarrow__fitness{
+        top: 13vw;
+        left: 22.5vw;
     }
 
-.transparent-background {
-    /* display: none; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
-    height: 56.25vw;
-    background-color: #000000;
-    opacity: 0.85;
-    z-index: 5;
-}
-
-.dialogue {
-    display: none;
-    z-index: 10;
-}
-
-    .dialogue-box {
-        position: absolute;
-        top: 36.5vw;
-        left: 24vw;
-        width: 62vw;
-        height: 18vw;
-        background-color: #FFF;
-        border: #000000 3px solid;
-        border-radius: 20px;
-        z-index: 10;
+    .movingarrow__spa{
+        top: 13vw;
+        left: 29vw;
     }
 
-    .name {
-        font-family: 'Noto Serif KR', serif;
-        font-size: 1.7vw;
-        margin: 1.5vw 0 0 6vw;
-        font-weight: bold;
+    .movingarrow__movie {
+        top: 9vw;
+        left: 51vw;
     }
 
-    
-
-    /* line */
-    :root {
-        --font-size: 1.2vw;
-        --first-line: 0.7vw 0 0 6vw;
-        --bottom-line-single: 9vw 0 0 6vw;
-        --bottom-line-double: 7.3vw 0 0 6vw;/*differnece: 1.6vw*/
-        --bottom-line-triple: 5.7vw 0 0 6vw;
-        --bottom-line-quadruple: 4.1vw 0 0 6vw;
-        --bottom-line-quintuple: 2.6vw 0 0 6vw;
-        --bottom-line-sextuple: 1vw 0 0 6vw;
-        --line-height: 1.5;
+    .movingarrow__restaurant {
+        top: 24vw;
+        left: 66vw;
     }
 
-    .line {
-        font-family: 'Noto Serif KR', serif;
-        overflow: hidden; 
-        white-space: nowrap;
-        display: none;
-        font-size: var(--font-size);
-        line-height: var(--line-height);
-        max-width: 55vw;
-    }
 
-        .npc-line {
-            margin: var(--first-line);
-        }
-
-        .player-line {
-            margin: var(--bottom-line-single);
-        }
-
-        @keyframes typing {
-            from {width: 0;}
-            to {width: 100%;}
-        }
-
-    strong { font-weight: bold; }
 
 /* fade out for sounds */
     
@@ -186,8 +62,12 @@ a:link, a:visited {
         color: rgba(255, 255, 255, 0.562); */
     }
 
-/* logo */
 
+
+
+/* gif */
+    
+    /* logo */
     .logo {
         position: absolute;
         width: 7vw;
@@ -197,6 +77,48 @@ a:link, a:visited {
     .logo1 {display: block;} 
     .logo2 {display: none;} 
     .logo3 {display: none;} 
+
+
+    /* popcorn */
+    .popcorn {
+        position: absolute;
+        width: 9vw;
+        top: 27.5vw;
+        left: 38vw;}
+
+        .popcorn1 {display: block;} 
+        .popcorn2 {display: none;} 
+        .popcorn3 {display: none;} 
+        .popcorn4 {display: none;} 
+        .popcorn5 {display: none;} 
+        .popcorn6 {display: none;} 
+
+    
+    /* picture */
+    .picture {
+        position: absolute;
+        width: 6vw;
+        top: 17vw;
+        left: 67vw;}
+
+        .picture1 {display: block;} 
+        .picture2 {display: none;} 
+        .picture3 {display: none;} 
+
+    
+    /* couple */
+    .couple {
+        position: absolute;
+        width: 15vw;
+        top: 12vw;
+        left: 24vw;}
+
+    .couple1 {display: block;} 
+    .couple2 {display: none;} 
+    .couple3 {display: none;} 
+    .couple4 {display: none;} 
+
+
 
 
 /* swimming */
@@ -220,61 +142,19 @@ a:link, a:visited {
         left: 28vw;
     }
 
-/* popcorn */
-
-    .popcorn {
-        position: absolute;
-        width: 9vw;
-        top: 27.5vw;
-        left: 38vw;}
-
-        .popcorn1 {display: block;} 
-        .popcorn2 {display: none;} 
-        .popcorn3 {display: none;} 
-        .popcorn4 {display: none;} 
-        .popcorn5 {display: none;} 
-        .popcorn6 {display: none;} 
-
-/* movie */
-
-    .movie__gif {
-        width: 13.5vw;
-        top: 12vw;
-        left: 46vw;
-    }
-
-/* picture */
-
-    .picture {
-        position: absolute;
-        width: 6vw;
-        top: 17vw;
-        left: 67vw;}
-
-        .picture1 {display: block;} 
-        .picture2 {display: none;} 
-        .picture3 {display: none;} 
-
 /* restaurant */
-
     .restaurant__gif {
         width: 8vw;
         top: 28vw;
         left: 63vw;
     }
 
-/* couple */
-
-    .couple {
-        position: absolute;
-        width: 15vw;
+/* movie */
+    .movie__gif {
+        width: 13.5vw;
         top: 12vw;
-        left: 24vw;}
-
-    .couple1 {display: block;} 
-    .couple2 {display: none;} 
-    .couple3 {display: none;} 
-    .couple4 {display: none;} 
+        left: 46vw;
+    }
 
 /* big-hyun */
     
@@ -290,15 +170,30 @@ a:link, a:visited {
         left: 14vw;
     }
 
-/* lines */
+/* elevator */
 
-    /* start */
-    .line-0-1 {animation: typing 2s 0.5s linear backwards;}
-    .line-0-2 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
-    .line-0-3 {animation: typing 2s 4s linear backwards; margin-top: 0vw;}
-    .line-0-4 {animation: typing 2s 5.5s linear backwards; margin-top: 0vw;}
+    .movingarrow__elevator {
+        top: 23.5vw;
+        left: 83.5vw;
+    }
 
-    /* big hyun */
-    .line-1-1 {animation: typing 2s 0.5s linear backwards;}
-    .line-1-2 {animation: typing 2s 1.5s linear backwards; margin: var(--bottom-line-double);}
-    .line-1-3 {animation: typing 2s 2s linear backwards; margin-top: 0vw;}
+    .elevator__button {
+        width: 2.5vw;
+        top: 29vw;
+        left: 83.5vw;
+    }   
+
+    .button-on {display: none;}
+
+    .elevator__alarm {
+        position: absolute;
+        width: 5.5vw;
+        top: 16.5vw;
+        left: 82vw;
+        z-index: 0;
+    }
+
+    .alarm-on {
+        animation: flash 0.6s 400ms ease-out infinite alternate backwards;
+        display: none;
+    }

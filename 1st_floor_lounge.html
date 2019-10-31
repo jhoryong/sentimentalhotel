@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/1st_floor_lounge.css">
     <link rel="stylesheet" type="text/css" href="./css/loader.css">
 
@@ -43,113 +44,93 @@
 
     <!-- gifs -->
     <div class="coffee-gif">
-        <img class="gif coffee" src="image/1st_floor_lounge/커피머신.png">
+        <img class="gif gifhover coffee" src="image/1st_floor_lounge/커피머신.png">
         <audio id="coffee">
             <source src="sound/1st_floor_lounge/coffeesound.mp3" type="audio/mpeg">
         </audio>
     </div>
     
     <div class="lightbulb-gif">
-        <img class="gif lightbulb lightbulb1" src="image/1st_floor_lounge/전구1.png">
-        <img class="gif lightbulb lightbulb2" src="image/1st_floor_lounge/전구2.png">
+        <img class="gif gifhover lightbulb lightbulb1" src="image/1st_floor_lounge/전구1.png">
+        <img class="gif gifhover lightbulb lightbulb2" src="image/1st_floor_lounge/전구2.png">
     </div>
 
     <div class="people-gif">
-        <img class="gif people people1" src="image/1st_floor_lounge/people1.png">
-        <img class="gif people people2" src="image/1st_floor_lounge/people2.png">
+        <img class="gif gifhover people people1" src="image/1st_floor_lounge/people1.png">
+        <img class="gif gifhover people people2" src="image/1st_floor_lounge/people2.png">
     </div>
 
-    <div class="dialogue dialogue__foundallgif">
-        <div class="dialogue-box">
-            <h1 class="name">&nbsp;</h1>
-            <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>+5</strong>점!)</p>
-            <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
-        </div>
+    <div class="dialogue-box foundallgif">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">모든 움직이는 요소를 찾았다! </p>
+        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
     </div>
-        
 
     <div class="start">
-        <img class="gif big-hyun__gif" src="image/1st_floor_lounge/큰현.gif">
-        <div class="dialogue dialogue__start">
-            
-            <img class="avatar big-hyun__avatar" src="image/1st_floor_lounge/큰현.png">
-            <div class="dialogue-box">
-                <h1 id="big-hyun__start" class="name">큰 현</h1>
-                <div class="dialogue-0-1">
-                <p class="line top-line first-line">오셨군요.</p>
-                <p class="line top-line second-line next-line">여기는 <strong>센티멘탈 호텔 라운지</strong>에요. 호텔 방문객 누구나 음료를 마시며 쉴 수 있죠.</p>
-                <p class="line top-line third-line next-line">환영의 의미로 바텐더에게 부탁해 <span class="player-name"></span>씨를 위한 음료를 준비해 달라고 했어요.</p>
-                <p class="line top-line fourth-line next-line"><strong>왼쪽 바의 바텐더</strong>에게 가 보세요.</p>
-                <p class="line top-line fifth-line next-line">그럼 저는 먼저 2층으로 올라가 있을테니 라운지를 천천히 둘러본 후 2층으로 올라와 주세요.</p>
-                <p class="line bottom-line sixth-line five-toplines">- <span class="clicker clicker-0-1">네 알겠습니다!</span></p>
-            </div>
-            </div>
+        <img class="gif gifhover big-hyun__gif" src="image/1st_floor_lounge/큰현.gif">
+        <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
+        <div class="dialogue-box dialogue-0-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">오셨군요.</p>
+            <p class="line top-line second-line next-line">여기는 <strong>센티멘탈 호텔 라운지</strong>에요. 호텔 방문객 누구나 음료를 마시며 쉴 수 있죠.</p>
+            <p class="line top-line third-line next-line">환영의 의미로 <span class="player-name"></span>씨를 위한 음료를 준비해 달라고 했으니, <strong>바텐더</strong>에게 가 보세요.</p>
+            <p class="line top-line fourth-line next-line">그럼 저는 일이 있어 2층으로 올라가 있을테니, 라운지를 천천히 둘러본 후 올라와 주세요~</p>
+            <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-0-1">네 알겠습니다!</span></p>
         </div>
-    </div>
+    </div>  
 
 
     <div class="bartender">
-        <img class="gif bartender__gif" src="image/1st_floor_lounge/바텐더.gif">
-
-        <div class="dialogue bartender__dialogue">
+        <img class="gif gifhover bartender__gif" src="image/1st_floor_lounge/바텐더.gif">
             
-            <div id="menu" class="dialogue-box">
-                <h1 class="name">바텐더</h1>
-                <p class="line top-line first-line">허허허, 어서 오세요 <span class="player-name"></span>씨. 자, 어떤 음료로 하실텐가요?</p>
-                <p class="line top-line next-line" style="animation: typing 0 0 linear backwards">&nbsp;</p>
-                <p id="menu1" class="line top-line next-line" style="animation: typing 1.5s 1.5s linear backwards;">&#127865; <span class="clicker clicker-1-1">애플 사이다</span></p>
-                <p id="menu2" class="line top-line next-line" style="animation: typing 1.5s 1.8s linear backwards;">&#127861; <span class="clicker clicker-1-2">밀크티</span></p>
-                <p id="menu3" class="line top-line next-line" style="animation: typing 1.5s 2.1s linear backwards">&#9749; <span class="clicker clicker-1-3">아메리카노</span></p>
-                <p id="menu4" class="line top-line next-line" style="animation: typing 1.5s 2.4s linear backwards;">&#127864; <span class="clicker clicker-1-4">섹스 온 더 비치</span></p>
-                <p class="line top-line next-line" style="animation: typing 0 0 linear backwards">&nbsp;</p>
-                <p class="line top-line next-line" style="animation: typing 1.5s 2.7s linear backwards;"><span class="clicker clicker-1-5">대화 그만하기</span></p>
-            </div>
-
+        <div id="menu" class="dialogue-box menu">
+            <h1 class="name">바텐더</h1>
+            <p class="line top-line first-line">허허허, 어서 오세요 <span class="player-name"></span>씨. 자, 어떤 음료로 하실텐가요?</p>
+            <p class="line top-line next-line" style="animation: typing 0 0 linear backwards">&nbsp;</p>
+            <p id="menu1" class="line top-line next-line" style="animation: typing 1.5s 1.5s linear backwards;">&#127865; <span class="clicker clicker-1-1">애플 사이다</span></p>
+            <p id="menu2" class="line top-line next-line" style="animation: typing 1.5s 1.8s linear backwards;">&#127861; <span class="clicker clicker-1-2">밀크티</span></p>
+            <p id="menu3" class="line top-line next-line" style="animation: typing 1.5s 2.1s linear backwards">&#9749; <span class="clicker clicker-1-3">아메리카노</span></p>
+            <p id="menu4" class="line top-line next-line" style="animation: typing 1.5s 2.4s linear backwards;">&#127864; <span class="clicker clicker-1-4">섹스 온 더 비치</span></p>
+            <p class="line top-line next-line" style="animation: typing 0 0 linear backwards">&nbsp;</p>
+            <p class="line top-line next-line" style="animation: typing 1.5s 2.7s linear backwards;"><span class="clicker clicker-1-5">대화 그만하기</span></p>
         </div>
 
-        <div id="applecidar" class="dialogue">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">음...</p>
-                <p class="line top-line second-line next-line">신선한 사과와 톡 쏘는 탄산의 조합이...</p>
-                <p class="line top-line third-line next-line">나의 갈증을 해소시켰다...</p>
-                <p class="line bottom-line fourth-line three-toplines">갈증이 해소되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-1">(오예!)</span></p>
-            </div>
-        </div>
-        
-        <div id="milktea" class="dialogue">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">음...</p>
-                <p class="line top-line second-line next-line">밀크티의 부드럽고 달콤한 맛이...</p>
-                <p class="line top-line third-line next-line">첫 출근날의 긴장을 풀어주었다...</p>
-                <p class="line bottom-line fourth-line three-toplines">긴장이 완화되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-2">(오예!)</span></p>
-            </div>
+        <div class="dialogue-box applecidar">
+            <h1 class="name"><span class="player-name"></span></h1>
+            <p class="line top-line first-line">음...</p>
+            <p class="line top-line second-line next-line">신선한 사과와 톡 쏘는 탄산의 조합이...</p>
+            <p class="line top-line third-line next-line">나의 갈증을 해소시켰다...</p>
+            <p class="line bottom-line fourth-line three-toplines">갈증이 해소되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-1">(오예!)</span></p>
         </div>
 
-        <div id="americano" class="dialogue">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">음... </p>
-                <p class="line top-line second-line next-line">아메리카노의 씁쓸하면서도 그윽한 향이...</p>
-                <p class="line top-line third-line next-line">졸음을 달아나게 만든다...</p>
-                <p class="line bottom-line fourth-line three-toplines">졸음에서 깨어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-3">(오예!)</span></p>
-            </div>
+        <div class="dialogue-box milktea">
+            <h1 class="name"><span class="player-name"></span></h1>
+            <p class="line top-line first-line">음...</p>
+            <p class="line top-line second-line next-line">밀크티의 부드럽고 달콤한 맛이...</p>
+            <p class="line top-line third-line next-line">첫 출근날의 긴장을 풀어주었다...</p>
+            <p class="line bottom-line fourth-line three-toplines">긴장이 완화되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-2">(오예!)</span></p>
+        </div>
+    
+        <div class="dialogue-box americano">
+            <h1 class="name"><span class="player-name"></span></h1>
+            <p class="line top-line first-line">음... </p>
+            <p class="line top-line second-line next-line">아메리카노의 씁쓸하면서도 그윽한 향이...</p>
+            <p class="line top-line third-line next-line">졸음을 달아나게 만든다...</p>
+            <p class="line bottom-line fourth-line three-toplines">졸음에서 깨어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-3">(오예!)</span></p>
         </div>
 
-        <div id="sexonthebeach" class="dialogue">
-            <div class="dialogue-box">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">교육중에 음주하면 안될 것 같지만... 지배인님 몰래 살짝 마셔야지. 히힛.</p>
-                <p class="line top-line second-line next-line">음... 상큼한 과일향과 보드카의 조화가 예술이다... </p>
-                <p class="line top-line third-line next-line">앗, 맛이 너무 좋아 <span style="color:red;">원. 샷. </span>해버리고 말았다...!</p>
-                <p class="line top-line fourth-line next-line">어... 갑자기 기분이 좋아진다... 헤헤헤...</p>
-                <p class="line bottom-line fifth-line four-toplines">헤롱헤롱한 모습에 <strong>15점</strong>을 잃었다...&nbsp;<span class="clicker clicker-2-4">(아... 이런...)</span></p>
-            </div>
-        </div>  
+        <div class="dialogue-box sexonthebeach">
+            <h1 class="name"><span class="player-name"></span></h1>
+            <p class="line top-line first-line">교육중에 음주하면 안될 것 같지만... 지배인님 몰래 살짝 마셔야지. 히힛.</p>
+            <p class="line top-line second-line next-line">음... 상큼한 과일향과 보드카의 조화가 예술이다... </p>
+            <p class="line top-line third-line next-line">앗, 맛이 너무 좋아 <span style="color:red;">원. 샷. </span>해버리고 말았다...!</p>
+            <p class="line top-line fourth-line next-line">어... 갑자기 기분이 좋아진다... 헤헤헤...</p>
+            <p class="line bottom-line fifth-line four-toplines">헤롱헤롱한 모습에 <strong>15점</strong>을 잃었다...&nbsp;<span class="clicker clicker-2-4">(아... 이런...)</span></p>
+        </div>
+
     </div>
 
-    
+
 
     <div class="lounge-elevator">
         
@@ -158,14 +139,13 @@
         <img class="elevator__alarm alarm-off" src="image/1st_floor_lounge/엘베알람off.png">
         <img class="elevator__alarm alarm-on" src="image/1st_floor_lounge/엘베알람on.png">
 
-        <div class="dialogue elevator__dialogue">
-            <div class="dialogue-box">
-                <h1 class="name">&nbsp;</h1>
-                <p class="line top-line first-line">2층으로 올라가시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines">- <a href="2nd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
-                <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
-            </div>
+        <div class="dialogue-box dialogue-2">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">2층으로 올라가시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a href="2nd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
         </div>
+
     </div>
 
 </div>
@@ -186,8 +166,7 @@
     
     function alertFoundAllGif() {
         if (hasClickedCoffee=== true && hasClickedLightbulb === true && hasClickedPeople === true) {
-            addScore(5);
-            $('.dialogue__foundallgif, .foundall').css(block);
+            $('.foundallgif, .foundallgif .line').show();
             alertFoundAllGif = function(){};
         }
     }
@@ -196,10 +175,10 @@
 // item
 
     $('.map-icon').click(function() {
-        $('.map-contents').show();
+        $('.map-contents, #item-background').show();
     })
     $('.close-x').click(function(){
-        $('.map-contents').hide();
+        $('.map-contents, #item-background').hide();
     })
 
 
@@ -276,9 +255,9 @@
 
 
     // found all gifs
-
-    $('.clicker-5-1').click(function() {
-        $('.dialogue__foundallgif, foundall').css(none);
+    $('.clicker-100').click(function() {
+        $('.foundallgif, .foundallgif .line').hide();
+        addScore(5);
     })
 
 
@@ -287,20 +266,16 @@
 // start
     $('.fade-box').delay(2000).fadeOut(2000);
     setTimeout(function() {
-        $('.dialogue__start').show();
-        $('.dialogue-0-1').children().show();
-
+        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line').show();
     }, 4500);
 
     $('.clicker-0-1').on('click', function() {
-        $('.dialogue__start').hide();
+        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .big-hyun__gif').hide();
         $('.movingarrow__bartender').show();
-        $('.big-hyun__gif').hide();
-        $('.dialogue-0-1').children().hide();
     })
 
     //quick view
-    $('.dialogue__start').click(function() {
+    $('.dialogue-0-1').click(function() {
         $('.dialogue-0-1').children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
     })
 
@@ -308,124 +283,110 @@
 
     //bartender
 
-        $('.bartender__gif').on('click', function() {
-            $('.movingarrow__bartender').hide();
-            $('.bartender__dialogue').show();
-            $('#menu').children().show();
+    $('.bartender__gif').on('click', function() {
+        $('.movingarrow__bartender').hide();
+        $('.menu, .menu .line').show();
+    })
+
+        //quick view
+        $('.menu').click(function() {
+           $(event.currentTarget).children().css('animation', '').removeClass('first-line');
         })
 
-            //quick view
-            $('#menu').click(function() {
-                $('#menu').children().css('animation', '').removeClass('first-line');
-            })
-
-            //close
-            $('.clicker-1-5').click(function() {
-                if (hasClickedApplecidar === true && hasClickedMilktea === true && hasClickedAmericano === true && hasClickedSexonthebeach === true) {
-                    $('.movingarrow__elevator').show();
-                    $('.bartender__dialogue').hide();
-                    $('#menu').children().hide();
-                } else {
-                    $('.bartender__dialogue').hide();
-                    $('#menu').children().hide();
-                }
-            })
+        //close
+        $('.clicker-1-5').click(function() {
+            if (hasClickedApplecidar === true && hasClickedMilktea === true && hasClickedAmericano === true && hasClickedSexonthebeach === true) {
+                $('.movingarrow__elevator').show();
+                $('.menu, .menu .line').hide();
+            } else {
+                $('.menu, .menu .line').hide();
+            }
+        })
             
     
 
     // applecidar
 
-        $('.clicker-1-1').on('click', function() {
-            addBonus(hasClickedApplecidar, 5);
-            hasClickedApplecidar = true;
-            $('#applecidar').show();
-            $('#applecidar .dialogue-box').children().show();
-            $('#menu #menu1').html("&nbsp;");
+    $('.clicker-1-1').on('click', function() {
+        addBonus(hasClickedApplecidar, 5);
+        hasClickedApplecidar = true;
+        $('.applecidar, .applecidar .line').show();
+        $('.menu #menu1').html("&nbsp;");
+    })
+
+        //close
+        $('.clicker-2-1').on('click', function() {
+            $('.applecidar, .applecidar .line').hide();
+            $('.menu #menu1').hide();
         })
 
-            //close
-            $('.clicker-2-1').on('click', function() {
-                $('#applecidar').hide();
-                $('#applecidar .dialogue-box').children().hide();
-                $('#menu #menu1').hide();
-            })
-
-            //quick view
-            $('#applecidar .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-            })
+        //quick view
+        $('.applecidar').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+        })
 
 
     // milktea
 
-        $('.clicker-1-2').on('click', function() {
-            addBonus(hasClickedMilktea, 5);
-            hasClickedMilktea = true;
-            $('#milktea').show();
-            $('#milktea .dialogue-box').children().show();
-            $('#menu #menu2').html("&nbsp;");
+    $('.clicker-1-2').on('click', function() {
+        addBonus(hasClickedMilktea, 5);
+        hasClickedMilktea = true;
+        $('.milktea, .milktea .line').show();
+        $('.menu #menu2').html("&nbsp;");
+    })
+
+        //close
+        $('.clicker-2-2').on('click', function() {
+            $('.milktea, .milktea .line').hide();
+            $('#milktea .dialogue-box').children().hide();
         })
 
-            //close
-            $('.clicker-2-2').on('click', function() {
-                $('#milktea').hide();
-                $('#milktea .dialogue-box').children().hide();
-            })
-
-            //quick view
-            $('#milktea .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-            })
+        //quick view
+        $('.milktea').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+        })
 
 
     // americano
 
-        $('.clicker-1-3').on('click', function() {
-            addBonus(hasClickedAmericano, 5);
-            hasClickedAmericano = true;
-            $('#americano').show();
-            $('#americano .dialogue-box').children().show();
-            $('#menu #menu3').html("&nbsp;");
+    $('.clicker-1-3').on('click', function() {
+        addBonus(hasClickedAmericano, 5);
+        hasClickedAmericano = true;
+        $('.americano, .americano .line').show();
+        $('.menu #menu3').html("&nbsp;");
+    })
+
+        //close
+        $('.clicker-2-3').on('click', function() {
+            $('.americano, .americano .line').hide();
         })
 
-            //close
-            $('.clicker-2-3').on('click', function() {
-                $('#americano').hide();
-                $('#americano .dialogue-box').children().hide();
-            })
-
-            //quick view
-            $('#americano .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-            })
+        //quick view
+        $('.americano').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+        })
 
 
     // sex on the beach
 
-        $('.clicker-1-4').on('click', function() {
-            addBonus(hasClickedSexonthebeach, -15);
-            hasClickedSexonthebeach = true;
-            $('#sexonthebeach').show();
-            $('#sexonthebeach .dialogue-box').children().show();
-            $('#menu #menu4').html("&nbsp;");
+    $('.clicker-1-4').on('click', function() {
+        addBonus(hasClickedSexonthebeach, -15);
+        hasClickedSexonthebeach = true;
+        $('.sexonthebeach, .sexonthebeach .line').show();
+        $('.menu #menu4').html("&nbsp;");
+    })
+    
+        //close
+        $('.clicker-2-4').on('click', function() {
+            $('.sexonthebeach, .sexonthebeach .line').hide();
         })
-        
-            //close
-            $('.clicker-2-4').on('click', function() {
-                $('#sexonthebeach').hide();
-                $('#sexonthebeach .dialogue-box').children().hide();
-            })
 
-            //quick view
-            $('#sexonthebeach .dialogue-box').click(function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-            })
+        //quick view
+        $('.sexonthebeach').click(function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+        })
 
     
-
-
-
-
 
 // elevator
 
@@ -433,25 +394,22 @@
         if (hasClickedApplecidar === true && hasClickedMilktea === true && hasClickedAmericano === true && hasClickedSexonthebeach === true) {
             $('.movingarrow__elevator').hide();
             $('.button-on').show();
-            $('.elevator__dialogue').show();
-            $('.elevator__dialogue .dialogue-box').children().show();
+            $('.dialogue-2, .dialogue-2 .line').show();
             $('.alarm-on').show();
             addBonus(hasClickedElevator, 25);
             hasClickedElevator = true;
-        }
-        else {}
+        } else {}
     })
 
         //quick view
-        $('.elevator__dialogue .dialogue-box').click(function() {
+        $('.dialogue-2, .dialogue-2 .line').click(function() {
             $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
             })
 
         // close
         $('.clicker-3-2').click(function(){
             $('.button-on').hide();
-            $('.elevator__dialogue').hide();
-            $('.elevator__dialogue .dialogue-box').children().hide();
+            $('.dialogue-2, .dialogue-2 .line').hide();
             $('.alarm-on').hide();
         })
 
@@ -462,23 +420,6 @@
             window.location = $('a').attr('href');
         }, 2000);
     })
-
-    // document.querySelector('.clicker-112-1').addEventListener('click', function() {
-    //     event.preventDefault();
-    //     document.querySelector('.fade-box').classList.add('fade-out');
-    //     document.querySelector('.fade-out').style.display = 'block';
-    //     setTimeout(function() {
-    //         window.location.assign('2nd_floor.html')}, 3000);
-    // })
-    // document.querySelector('.clicker-112-2').addEventListener('click', function() {
-    //     document.querySelector('.big-hyun__dialogue').style.display = 'none';
-    // })
-    
-
-
-
-
-
 
 </script>
 </body>

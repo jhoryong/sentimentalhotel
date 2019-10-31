@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/1st_floor_lobby.css">
     <link rel="stylesheet" type="text/css" href="./css/loader.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/2964z06b34b.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>로비 :: 센티멘탈 호텔</title>
@@ -30,225 +31,199 @@
 </div>
 
 <div class="container">
+    <div id="dialogue-bg" class="transparent-background"></div>
 
     <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
     
 
-<div class="items">
-    <div class="item map">
-        <img class="icon map-icon" src="image/icon/mapicon.png">
-        <div class="map-contents">
-            <div id="item-background"class="transparent-background"></div>
-            <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
-            <span class="close-x">&#10005;</span>
+    <div class="items">
+        <div class="item map">
+            <img class="icon map-icon" src="image/icon/mapicon.png">
+            <div class="map-contents">
+                <div id="item-background" class="transparent-background"></div>
+                <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
+                <span class="close-x">&#10005;</span>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="scores">
-    <img class="scoreboard" src="image/icon/점수판.png">
-    <span class="score__text">점수</span>
-    <span class="score"></span>
-</div>
- 
-<div class="start">
-    <div class="dialogue dialogue__start">
-        <div class="dialogue-box">
+    <div class="scores">
+        <img class="scoreboard" src="image/icon/점수판.png">
+        <span class="score__text">점수</span>
+        <span class="score"></span>
+    </div>
+    
+    <div class="start">
+        <div class="dialogue-box dialogue-0">
             <h1 class="name">&nbsp;</h1>
-            <div class="dialogue-0-1">
-                <span class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</span>
-                <span class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</span>
-                <span class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. <span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span></span>
-                <span class="line top-line fourth-line next-line"><br>(Tip: 텍스트 주변을 클릭하면 텍스트를 한번에 볼 수 있습니다.)</span>
-            </div>
+            <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
+            <p class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</p>
+            <p class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. <span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span></p>
+            <p class="line top-line fourth-line next-line">&nbsp;</p>
+            <p class="line top-line fifth-line next-line">* tip) 대화상자를 클릭하여 대사를 빠르게 넘길 수 있습니다.</p>
         </div>
     </div>
-</div>
 
 
 
 
-<div class="small-hyun">
-    <img class="gif small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
+    <div class="small-hyun">
 
-    <div class="dialogue small-hyun__dialogue">
-        <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
+        <img class="gif gifhover small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
+            <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
 
-        <div class="dialogue-box">
-
+        <div class="dialogue-box dialogue-1-1">
             <h1 class="name">작은 현</h1>
-
-            <div class="dialogue-1-1">
-                <p class="line top-line first-line">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
-                <p class="line bottom-line second-line one-topline">- (어린 아이가 나에게 반말을 하네...? 뭐, 첫날이니 그러려니 해야지.) <span class="clicker clicker-1-1">네, 그렇습니다!</span></p>
-            </div>
-
-            <div class="dialogue-1-2">
-                <p class="line top-line first-line">너 이름이 뭐야?</p>
-                <p class="line bottom-line second-line one-topline">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"><input class="clicker clicker-1-2" type="submit" value="입니다!"></p>
-            </div>
-
-            <div class="dialogue-1-3">
-                <p class="line top-line first-line">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
-                <p class="line top-line second-line next-line">날 부를 때는 그냥 <strong>'작은 지배인님'</strong>이라고 불러.</p>
-                <p class="line bottom-line third-line two-toplines">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-1-3">작은 지배인님.</span></p>
-            </div>
-
-            <div class="dialogue-1-4">
-                <p class="line top-line first-line">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
-                <p class="line top-line second-line next-line">큰 현이한테 가봐.</p>
-                <p class="line bottom-line third-line two-toplines">(로비를 보니 큰 현이 서 있다. <span class="clicker clicker-1-4">큰 현에게 가보자.</span>)</p>
-            </div>
-
+            <p class="line top-line first-line">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
+            <p class="line bottom-line second-line one-topline">- (어린 아이가 나에게 반말을 하네...? 뭐, 첫날이니 그러려니 해야지.) <span class="clicker clicker-1-1">네, 그렇습니다!</span></p>
         </div>
+
+        <div class="dialogue-box dialogue-1-2">
+            <h1 class="name">작은 현</h1>
+            <p class="line top-line first-line">너 이름이 뭐야?</p>
+            <p class="line bottom-line second-line one-topline">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"><input class="clicker clicker-1-2" type="submit" value="입니다!"></p>
+        </div>
+
+        <div class="dialogue-box dialogue-1-3">
+            <h1 class="name">작은 현</h1>
+            <p class="line top-line first-line">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
+            <p class="line top-line second-line next-line">날 부를 때는 그냥 <strong>'작은 지배인님'</strong>이라고 불러.</p>
+            <p class="line bottom-line third-line two-toplines">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-1-3">작은 지배인님.</span></p>
+        </div>
+
+        <div class="dialogue-box dialogue-1-4">
+            <h1 class="name">작은 현</h1>
+            <p class="line top-line first-line">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
+            <p class="line top-line second-line next-line">큰 현이한테 가봐.</p>
+            <p class="line bottom-line third-line two-toplines">(로비를 보니 큰 현이 서 있다. <span class="clicker clicker-1-4">큰 현에게 가보자.</span>)</p>
+        </div>
+        
     </div>
-</div>
 
 
 
 
 <div class="big-hyun">
-    <img class="gif big-hyun__gif" src="image/1st_floor_lobby/큰현.gif">
-    
-    <div class="dialogue big-hyun__dialogue">
+    <img class="gif gifhover big-hyun__gif" src="image/1st_floor_lobby/큰현.gif">
+    <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
+    <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
 
-        <div class="big-hyun__map">
-            <div class="transparent-background"></div>
-            <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
-            <!-- <img class="big-hyun__mapimg big-hyun__mapimg__1-3" src="image/1st_floor_lobby/1-3.png">
-            <img class="big-hyun__mapimg big-hyun__mapimg__4-7" src="image/1st_floor_lobby/4-7.png"> -->
-        </div>
-
-        <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
-
-        <div class="dialogue-box">
-            <h1 class="name">큰 현</h1>
-
-            <div class="dialogue-2-1">
-                <p class="line top-line first-line">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요? 얘기 많이 들었어요.</p>
-                <p class="line top-line second-line next-line">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
-                <p class="line top-line third-line next-line"><span class="player-name"></span>씨가 저를 부를 때는 <strong>‘큰 지배인님’</strong>이라고 부르면 되요.</p>
-                <p class="line bottom-line fourth-line three-toplines">- (이 호텔은 지배인이 두 명인가...?) 네 알겠습니다, <span class="clicker clicker-2-1">큰 지배인님!</span></p>
-            </div>
-
-            <div class="dialogue-2-2">
-                <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
-                <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
-                <p class="line bottom-line third-line next-line">그럼 오늘 교육에 대해 설명해 드리죠.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-2"></i></p>
-            </div>
-
-            <div class="dialogue-2-3">
-                <p class="line top-line first-line">먼저 <span class="player-name"></span>씨는 <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 잘 따라 각 층마다 있는 호텔의 주요 시설들을 공부해 주시면 됩니다.</p>
-                <p class="line top-line second-line next-line">또한 제가 내는 <strong>과제</strong>를 성실히 해결해 주셔야 해요.</p>
-                <p class="line top-line third-line next-line">과제는 그렇게 어렵지 않을 겁니다. 교육에 집중만 하신다면 충분히 해결하실 수 있을 꺼에요.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-3"></i></p>
-            </div>
-
-            <div class="dialogue-2-4">
-                <p class="line top-line first-line">저는 <span class="player-name"></span>씨의 참여도와 집중도에 따라 평가 점수를 매기게 됩니다.</p>
-                <p class="line top-line second-line next-line">한 층을 완료하게 되면 <strong>50점</strong>을 얻게 되요. 하지만 문제를 틀리면 <strong>50점</strong>이 차감되죠.</p>
-                <p class="line top-line third-line next-line">점수가 <strong>0점</strong>이 될 경우 교육 태도 불량으로 교육이 조기 종료되고, 정식 채용에 불합격하게 되니 주의해</p>
-                <p class="line top-line fourth-line next-line">주세요.</p>
-                <p class="line top-line fifth-line next-line">평가 점수는 화면 우측 상단에서 확인하실 수 있어요.</span></p>
-                <p class="line bottom-line sixth-line five-toplines">- <span class="clicker clicker-2-4">헉...!</span></p>
-                
-            </div>
-
-            <div class="dialogue-2-5">
-                <p class="line top-line first-line">그렇다고 너무 걱정하진 마세요. 추가로 점수를 얻을 수 있는 방법도 있으니까요.</p>
-                <p class="line top-line second-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 요소</strong>들이 있어요.</p>
-                <p class="line top-line third-line next-line">움직이는 요소를 찾아낼 때 마다 <strong>5점</strong>을 얻을 수 있고, 모두 찾아낸다면 <strong>보너스 5점</strong>을 얻을 수 있어요.</p>
-                <p class="line top-line fourth-line next-line">부디 교육에 최선을 다하셔서 저희 센티멘탈 호텔의 정식 직원이 되기를 기대할게요!</span></p>
-                <p class="line bottom-line fifth-line four-toplines">- 네! <span class="clicker clicker-2-5">최선을 다하겠습니다!</span></p>
-            </div>
-
-            <div class="dialogue-2-6-1">
-                <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔의 구조에 대해 간략히 알려 드릴게요.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-6-1"></i></p>
-            </div>
-            
-            <div class="dialogue-2-6-2">
-                <p class="line top-line first-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
-                <p class="line top-line second-line next-line"><strong>1층 ~ 3층</strong>은 리셉션, 라운지, 비즈니스 센터, 리조트 등 고객 편의를 위한 시설이 있죠.</p>
-                <p class="line top-line third-line next-line"><strong>4층 ~ 7층</strong>은 객실이 있어요. </p>
-                <p class="line top-line fourth-line next-line">객실의 경우 높은 층일수록 전망과 서비스가 좋아지고, 그만큼 가격도 비싸지죠.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-6-2"></i></p>
-            </div>
-
-            <div class="dialogue-2-6-3">
-                <p class="line top-line first-line">이 지도는 <span clsss="player-name"></span>씨께 드릴 테니 필요할 때 참고해 주세요.</p>
-                <p class="line top-line second-line next-line">지도는 화면 왼쪽의 아이콘을 클릭하면 언제든지 볼 수 있답니다.&nbsp;<i class="fas fa-sort-down nextarrow nextarrow-2-6-3"></i></p>
-            </div>
-
-            <div class="dialogue-2-7">
-                <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
-                <p class="line top-line second-line next-line">로비에는 체크인을 위한 리셉션과 누구나 자유롭게 휴식할 수 있는 공간이 있어요.</p>
-                <p class="line top-line third-line next-line">저는 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, 로비를 둘러보고 나서 라운지로 와 주세요.</p>
-                <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</p>
-            </div>
-        </div>
+    <div class="dialogue-box dialogue-2-1">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요?</p>
+        <p class="line top-line second-line next-line">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
+        <p class="line top-line third-line next-line"><span class="player-name"></span>씨가 저를 부를 때는 <strong>‘큰 지배인님’</strong>이라고 부르면 되요.</p>
+        <p class="line bottom-line fourth-line three-toplines">- (이 호텔은 지배인이 두 명인가...?) 네 알겠습니다, <span class="clicker clicker-2-1">큰 지배인님!</span></p>
     </div>
+
+    <div class="dialogue-box dialogue-2-2">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
+        <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
+        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-2-2"><strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>이요...?</span></p>
+    </div>
+
+    <div class="dialogue-box dialogue-2-3">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">네. 너무 걱정하진 마세요. <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 따라 각 층을 체험하면 되니까요.</p>
+        <p class="line top-line second-line next-line">또한 제가 내는 <strong>문제</strong>를 잘 맞추시면 되요.</p>
+        <p class="line top-line third-line next-line">문제는 스토리를 잘 읽는다면 충분히 맞출 수 있어요.</p>
+        <p class="line bottom-line fourth-line four-toplines">화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
+    </div>
+
+    <div class="dialogue-box dialogue-2-4">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">아, 저건 교육 평가 점수에요. 점수는 다음과 같이 매겨집니다.</p>
+        <p class="line top-line second-line next-line">문제를 맞추고 한 층 통과: <strong>+50점</strong></p>
+        <p class="line top-line third-line next-line">문제 오답시: <strong>-10점</strong></p>
+        <p class="line top-line fourth-line next-line">0점에 다다를시: <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사 실패</span></p>
+        <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></span></p>
+    </div>
+
+    <div class="dialogue-box dialogue-2-5">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">하하하. 점수를 얻는 팁을 살짝 드리면...</p>
+        <p class="line top-line second-line next-line">------</p>
+        <p class="line top-line third-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 오브젝트</strong>들이 있다. (위에 마우스를 갖다대면 투명해진다.)</p>
+        <p class="line top-line fourth-line next-line">오브젝트를 클릭하면 <strong>5점</strong>씩 얻을 수 있고, 모두 찾아내면 <strong>보너스 5점</strong>을 얻을 수 있다.</p>
+        <p class="line top-line fifth-line">------</p>
+        <p class="line top-line sixth-line next-line">쉿! 이건 <span class="player-name"></span>씨를 위해 제가 특별히 알려 드린 거에요. 알겠죠?</p>
+        <p class="line bottom-line seventh-line six-toplines">- 네 <span class="clicker clicker-2-5">감사합니다!</span></p>
+    </div>
+
+    <div class="dialogue-box dialogue-2-6">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔에 대해 간략히 알아보겠습니다.</p>
+        <p class="line top-line second-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
+        <p class="line top-line third-line next-line">1층 ~ 3층은 리셉션, 라운지 등 고객 편의를 위한 시설이 있습니다.</p>
+        <p class="line top-line fourth-line next-line">4층 부터는 객실이 있어요.</p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-2-6">(다음)</span></p>
+    </div>
+
+    <div class="dialogue-box dialogue-2-7">
+        <h1 class="name">큰 현</h1>
+        <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
+        <p class="line top-line second-line next-line">로비에는 리셉션과 누구나 자유로운 휴식 공간이 있어요.</p>
+        <p class="line top-line third-line next-line">저는 옆 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, 로비를 둘러보고 나서 라운지로 와 주세요.</p>
+        <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</p>
+    </div>
+
 </div>
 
+
+
+
 <div class="gold-plate">
-    <img class="gif gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
+    <img class="gif gifhover gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
 
-    <div class="dialogue gold-plate__dialogue">
-
-        <div class="transparent-background"></div>
-
-        <div class="dialogue-box gold-plate__mission-box">
-            <h1 class="name gold-plate__name">미션</h1>
-            <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
-            <span class="line gold-plate__line line-25">우리는 모든 고객이 호텔의 서비스를 통해 센티멘탈 호텔만의 섬세함을 경험케 한다.</span>
-            <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
-            <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
-            <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
-            <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
-            <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때 묻지 않은 순수한 마음을 통해 현이 더 나은</span>
-            <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
-        </div>
-
-        <div class="dialogue-box gold-plate__dialogue-box">
-
-            <div class="dialogue-3-1">
-                <h1 class="name"><span class="player-name"></span></h1>
-                <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
-                <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
-            </div>
-
-        </div>
-
+    <div class="dialogue-box gold-plate__mission-box">
+        <h1 class="name gold-plate__name">미션</h1>
+        <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
+        <span class="line gold-plate__line line-25">우리는 모든 고객이 호텔의 서비스를 통해 센티멘탈 호텔만의 섬세함을 경험케 한다.</span>
+        <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
+        <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
+        <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
+        <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
+        <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때 묻지 않은 순수한 마음을 통해 현이 더 나은</span>
+        <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
     </div>
+
+    <div class="dialogue-box dialogue-3-1">
+        <h1 class="name"><span class="player-name"></span></h1>
+        <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
+        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
+    </div>
+
 </div>
 
 
 
 <div class="lounge-link">
-    <div class="clicker lounge-link__clicker" title="라운지로 가기"></div>
-    <div class="dialogue lounge-link__dialogue">
-        <div class="dialogue-box">
-            <div class="dialogue-4-1">
-                <h1 class="name">&nbsp;</h1>
-                <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines">- <a href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
-                <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
-            </div>
-        </div>
+    <div class="clicker gifhover lounge-link__clicker" title="라운지로 가기"></div>
+
+    <div class="dialogue-box dialogue-4-1">
+        <h1 class="name">&nbsp;</h1>
+        <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <a href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
+        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
     </div>
+
 </div>
 
 
 
     <div class="employee-gif">
-        <img class="gif employee employee1" src="image/1st_floor_lobby/employee1.png">
-        <img class="gif employee employee3" src="image/1st_floor_lobby/employee3.png">
+        <img class="gif employee employee1 gifhover" src="image/1st_floor_lobby/employee1.png">
+        <img class="gif employee employee3 gifhover" src="image/1st_floor_lobby/employee3.png">
     </div>
     <div class="boy-gif">
-        <img class="gif boy boy1" src="image/1st_floor_lobby/boy1.png">
-        <img class="gif boy boy2" src="image/1st_floor_lobby/boy2.png">
+        <img class="gif boy boy1 gifhover" src="image/1st_floor_lobby/boy1.png">
+        <img class="gif boy boy2 gifhover" src="image/1st_floor_lobby/boy2.png">
     </div>
     <div class="arrow-gif">
-        <img class="gif arrow arrow1" src="image/1st_floor_lobby/arrow1.png">
-        <img class="gif arrow arrow2" src="image/1st_floor_lobby/arrow2.png">
-        <img class="gif arrow arrow3" src="image/1st_floor_lobby/arrow3.png">
+        <img class="gif arrow arrow1 gifhover" src="image/1st_floor_lobby/arrow1.png">
+        <img class="gif arrow arrow2 gifhover" src="image/1st_floor_lobby/arrow2.png">
+        <img class="gif arrow arrow3 gifhover" src="image/1st_floor_lobby/arrow3.png">
     </div>
 
     <div class="dialogue dialogue__foundallgif">
@@ -285,7 +260,7 @@
     
     function alertFoundAllGif() {
         if (hasClickedEmployee === true && hasClickedBoy === true && hasClickedArrow === true) {
-        $('.dialogue__foundallgif, .foundall').css(block);
+            $('.foundallgif, .foundallgif .line').show();
         addScore(5);
         alertFoundAllGif = function(){};
         }
@@ -295,10 +270,10 @@
 // item
 
     $('.map-icon').click(function() {
-        $('.map-contents').show();
+        $('.map-contents, #item-background').show();
     })
     $('.close-x').click(function(){
-        $('.map-contents').hide();
+        $('.map-contents, #item-background').hide();
     })
 
 
@@ -322,11 +297,11 @@
 
 // save user name to sessionStorage and bring it out
 
-        let getName = function(){
-            let inputVal = $('#playerName').val();
-            sessionStorage.setItem("playerName", inputVal);
-            $('.player-name').text(sessionStorage.getItem("playerName"));
-        }
+    let getName = function(){
+        let inputVal = $('#playerName').val();
+        sessionStorage.setItem("playerName", inputVal);
+        $('.player-name').text(sessionStorage.getItem("playerName"));
+    }
 
 
 // add fade in (main start version), disappear fade-in box
@@ -334,10 +309,8 @@
     // setTimeout(function() {document.querySelector('.fade-box').style.display = 'none';}, 4000);
 
 
-// fade in to loader
-    
-    // $('.fade-box').show(1000);
-    // $('.preloader').show();
+// fade-in to loader and fadeout
+
     $('.fade-box').fadeOut(1000);
     setTimeout(function() {$('.preloader').hide();}, 4000)
     setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
@@ -346,18 +319,18 @@
 //start dialogue
 
     setTimeout(function() {
-        $('.dialogue__start').css(block);
-        $('.dialogue-0-1').children().css(block);
-    }, 8000);
+        $('.dialogue-0, .dialogue-0 .line').show();
+    }, 7000);
 
+    //close
     $('.clicker-0-1').on('click', function() {
-        $('.dialogue__start').css(none);
+        $('.start').hide();
         $('.movingarrow__small-hyun').css(block);
     })
 
     //fast view
-    $('.dialogue__start').click(function() {
-        $('.dialogue-0-1').children().removeClass('first-line second-line third-line fourth-line fifth-line');
+    $('.dialogue-0').click(function() {
+        $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
     }) 
 
 
@@ -369,9 +342,9 @@
         $('.small-hyun__dialogue').css(block);
         $('.big-hyun__dialogue, .gold-plate__dialogue').css(none);
         if (hasClickedSmallHyun === true) {
-            $('.dialogue-1-4').children().css(block);
+            $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar').children().css(block);
         } else {
-            $('.dialogue-1-1').children().css(block);
+            $('.dialogue-1-1, .dialogue-1-1 .line, .small-hyun__avatar').show();
             $('.movingarrow__small-hyun').css(none);
         }
 
@@ -382,8 +355,8 @@
     })
 
     $('.clicker-1-1').on('click', function() {
-        $('.dialogue-1-1').children().css(none);
-        $('.dialogue-1-2').children().css(block);
+        $('.dialogue-1-1, .dialogue-1-1 .line').hide();
+        $('.dialogue-1-2, .dialogue-1-2 .line').show();
 
         // fast view
         $('.dialogue-1-2').on('click', function() {
@@ -393,8 +366,8 @@
 
     $('.clicker-1-2').on('click', function() {
         getName();
-        $('.dialogue-1-2').children().css(none);
-        $('.dialogue-1-3').children().css(block);
+        $('.dialogue-1-2, .dialogue-1-2 .line').hide();
+        $('.dialogue-1-3, .dialogue-1-3 .line').show();
 
         // fast view
         $('.dialogue-1-3').on('click', function() {
@@ -406,8 +379,8 @@
         $('#playerName').on('keyup', function (event) {
             if (event.keyCode === 13) {
                 getName();
-                $('.dialogue-1-2').children().css(none);
-                $('.dialogue-1-3').children().css(block);
+                $$('.dialogue-1-2, .dialogue-1-2 .line').hide();
+                $('.dialogue-1-3, .dialogue-1-3 .line').show();
 
                 // fast view
                 $('.dialogue 1-3').on('click', function() {
@@ -417,8 +390,8 @@
         })
 
     $('.clicker-1-3').on('click', function() {
-        $('.dialogue-1-3').children().css(none);
-        $('.dialogue-1-4').children().css(block);
+        $('.dialogue-1-3, .dialogue-1-3 .line').hide();
+        $('.dialogue-1-4, .dialogue-1-4 .line').show();
 
         // fast view
         $('.dialogue-1-4').on('click', function() {
@@ -426,10 +399,10 @@
         })
     })
 
+    //close
     $('.clicker-1-4').on('click', function() {
         hasClickedSmallHyun = true;
-        $('.dialogue-1-4').children().css(none);
-        $('.small-hyun__dialogue').css(none);
+        $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar').hide();
         $('.movingarrow__small-hyun').css(none);
         $('.movingarrow__big-hyun').css(block);
     })
@@ -443,14 +416,13 @@
     $('.big-hyun__gif').click(function() {
 
         // prevent interception
-        $('.small-hyun__dialogue, .gold-plate__dialogue').css(none);
+        $('.small-hyun .dialogue-box').css(none);
 
         // disappear arrow
         $('.movingarrow__big-hyun').css(none);
         
         if (hasClickedSmallHyun === true) {
-            $('.big-hyun__dialogue').css(block);
-            $('.dialogue-2-1').children().css(block);
+            $('.dialogue-2-1, .dialogue-2-1 .line, .big-hyun__avatar').css(block);
         
             // fast view
             $('.dialogue-2-1').on('click', function() {
@@ -461,8 +433,8 @@
     })
 
     $('.clicker-2-1').click(function() {
-        $('.dialogue-2-1').children().css(none);
-        $('.dialogue-2-2').children().css(block);
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();
+        $('.dialogue-2-2, .dialogue-2-2 .line').show();
 
         // fast view
         $('.dialogue-2-2').on('click', function() {
@@ -470,9 +442,9 @@
         })
     })
 
-    $('.nextarrow-2-2').click(function() {
-        $('.dialogue-2-2').children().css(none);
-        $('.dialogue-2-3').children().css(block);
+    $('.clicker-2-2').click(function() {
+        $('.dialogue-2-2, .dialogue-2-2 .line').hide();
+        $('.dialogue-2-3, .dialogue-2-3 .line').show();
 
         // fast view
         $('.dialogue-2-3').on('click', function() {
@@ -480,9 +452,9 @@
         })
     })
 
-    $('.nextarrow-2-3').click(function() {
-        $('.dialogue-2-3').children().css(none);
-        $('.dialogue-2-4').children().css(block);
+    $('.clicker-2-3').click(function() {
+        $('.dialogue-2-3, .dialogue-2-3 .line').hide();
+        $('.dialogue-2-4, .dialogue-2-4 .line').show();
 
         // fast view
         $('.dialogue-2-4').on('click', function() {
@@ -491,51 +463,28 @@
     })
 
     $('.clicker-2-4').click(function() {
-        $('.dialogue-2-4').children().css(none);
-        $('.dialogue-2-5').children().css(block);
+        $('.dialogue-2-4, .dialogue-2-4 .line').hide();
+        $('.dialogue-2-5, .dialogue-2-5 .line').show();
 
         // fast view
         $('.dialogue-2-5').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line seventh-line');
         })
     })
 
     $('.clicker-2-5').click(function() {
-        $('.dialogue-2-5').children().css(none);
-        $('.dialogue-2-6-1').children().css(block);
+        $('.dialogue-2-5, .dialogue-2-5 .line').hide();
+        $('.dialogue-2-6, .dialogue-2-6 .line, .big-hyun__mapimg, #dialogue-bg').show();
         
         // fast view
-        $('.dialogue-2-6-1').on('click', function() {
+        $('.dialogue-2-6').on('click', function() {
             $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
         })
     })
 
-    $('.nextarrow-2-6-1').click(function() {
-        $('.dialogue-2-6-2').children().css(block);
-        $('.big-hyun__map').css(block);
-        $('.nextarrow-2-6-1').css(none);
-
-        // fast view
-        $('.dialogue-2-6-2').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
-    })
-
-    $('.nextarrow-2-6-2').click(function() {
-        $('.dialogue-2-6-1').children().css(none);
-        $('.dialogue-2-6-2').children().css(none);
-        $('.dialogue-2-6-3').children().css(block);
-        $('.map-icon').css(block);
-        // fast view
-        $('.dialogue-2-6-3').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
-    })
-
-    $('.nextarrow-2-6-3').click(function() {
-        $('.dialogue-2-6-3').children().css(none);
-        $('.dialogue-2-7').children().css(block);
-        $('.big-hyun__map').css(none);
+    $('.clicker-2-6').click(function() {
+        $('.dialogue-2-6, .dialogue-2-6 .line, .big-hyun__map').hide();
+        $('.dialogue-2-7, .dialogue-2-7 .line').show();
 
         // fast view
         $('.dialogue-2-7').on('click', function() {
@@ -543,47 +492,46 @@
         })
     })
 
-    //close button
-    $('.clicker-2-7').click(function() {
-        $('.dialogue-2-7').children().css(none);
-        $('.big-hyun__dialogue, .big-hyun__gif').css(none);
+        //close button
+        $('.clicker-2-7').click(function() {
+            $('.dialogue-2-7, .dialogue-2-7 .line, .big-hyun__gif, .big-hyun__avatar, .big-hyun__mapimg, #dialogue-bg').hide();
 
-        //appear arrow to lounge
-        $('.movingarrow__gold-plate').css(block);
-        
-        hasClickedBigHyun = true;
-    })
+            //appear arrow to lounge
+            $('.movingarrow__gold-plate').css(block);
+            
+            hasClickedBigHyun = true;
+        })
+
+
+
+
 
 //gold plate
 
     $('.gold-plate__gif').on('click', function() {
 
         // prevent interception
-        $('.small-hyun__dialogue, .big-hyun__dialogue').css(none);
+        $('.small-hyun .dialogue-box, .big-hyun .dialogue-box').css(none);
 
         // logic 
         if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === false) {
             $('.movingarrow__gold-plate').css(none);
-            $('.gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(block);
+            $('#dialogue-bg, .gold-plate__mission-box').css(block);
             $('.line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('display', 'inline-block')
-        
-        
 
             setTimeout(function() {
-                $('.gold-plate__dialogue-box').css(block);
-                $('.dialogue-3-1').children().css(block);
+                $('.dialogue-3-1, .dialogue-3-1 .line').css(block);
             }, 14000);
-
         } 
         
         if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-            $('.gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(block);
-            $('.dialogue-3-1 .first-line').html("&nbsp;");
-            $('.dialogue-3-1 .name').html("&nbsp;");
+           
+            $('.gold-plate__dialogue, #dialogue-bg, .gold-plate__mission-box').css(block);
+            $('.gold-plate__name, .line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('animation', 'none');
             
+
             setTimeout(function() {
-                $('.gold-plate__dialogue-box').css(block);
-                $('.dialogue-3-1').children().css(block);
+                $('.dialogue-3-1, .dialogue-3-1 .line').css(block);
             }, 400);
         }
         
@@ -594,14 +542,20 @@
             $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
         })
 
+        // // fast view
+        // $('.gold-plate__mission-box').on('click', function() {
+        //     $(event.currentTarget).children().css('animation', 'none');
+        // })
+
     })
 
+    //close
     $('.clicker-3-1').click(function() {
-        $('.gold-plate__dialogue-box, .gold-plate__dialogue, .transparent-background, .gold-plate__mission-box').css(none);
-        $('.dialogue-3-1').children().css(none);
+        $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-1').css(none);
         $('.movingarrow__link').css(block);
         addBonus(hasClickedGoldplate, 25);
         hasClickedGoldplate = true;
+        $('.dialogue-3-1 .first-line, .dialogue-3-1 .name').html("&nbsp;");
     })
 
 
@@ -609,12 +563,11 @@
 
     $('.lounge-link__clicker').on('click', function() {
         if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-            $('.lounge-link__dialogue').css(block);
-            $('.dialogue-4-1').children().css(block);
+            $('.dialogue-4-1, .dialogue-4-1 .line').css(block);
 
             // fast view
             $('.dialogue-4-1').on('click', function() {
-                $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
+                $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line fourth-line fifth-line');
             })
 
         } else {}
@@ -629,10 +582,10 @@
         }, 2000);
     })
 
-   $('.clicker-4-2').on('click', function() {
-        $('.lounge-link__dialogue').css(none);
-        $('.dialogue-4-1').children().css(none);
-    })
+        //close
+        $('.clicker-4-2').on('click', function() {
+            $('.dialogue-4-1, .dialogue-4-1 .line').css(none);
+        })
 
     
 
