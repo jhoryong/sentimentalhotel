@@ -69,9 +69,9 @@
         <img class="elevator__alarm alarm-off" src="image/common/객실_엘베알람off.png">
         <img class="elevator__alarm alarm-on" src="image/common/객실_엘베알람on.png">
     
-        <div class="dialogue-box dialogue-2-1">
+        <div class="dialogue-box2 dialogue-2-1">
             <h1 class="name">&nbsp;</h1>
-            <p class="line top-line first-line">4층으로 올라가시겠습니까?</p>
+            <p class="line top-line first-line">5층으로 올라가시겠습니까?</p>
             <p class="line bottom-line fast-yes-line two-toplines">- <a href="5th_floor.html"><span class="clicker clicker-2-1">올라간다</span></a></p>
             <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-2-2">더 둘러본다</span></p>
         </div>
@@ -284,7 +284,7 @@
     <img class="gif gifhover door door__402 door402__2" src="image/4th_floor/402_2.png">
 
 
-    <img class="room room402" src="image/4th_floor/루비방.png">
+    <img class="room room402" src="image/4th_floor/루비방.jpg">
     <img class="avatar avatar__402" src="image/4th_floor/루비.png">
 
         
@@ -578,7 +578,6 @@
     <img class="gif gifhover door door__407 door407__1" src="image/4th_floor/407_1.png">
     <img class="gif gifhover door door__407 door407__2" src="image/4th_floor/407_2.png">
 
-
     <img class="room room__407d" src="image/4th_floor/개발자.jpg">
     <img class="room room__407h" src="image/4th_floor/개발자2.jpg">
 
@@ -619,8 +618,8 @@
 
     <div class="dialogue-box2 dialogue-407-6">
         <h1 class="name">개발자</h1>
-        <p class="line top-line first-line"><span class="player-name"></span>씨는 🍹애플 사이다, 🍵밀크티, ☕아메리카노, 🍸섹스 온 더 비치를 다 한번씩 마셔보지 않았나요?</p>
-        <p class="line bottom-line second-line twotoplines">- (어떻게 알았지?) 하, 하지만 네개를 다 마시지 않으면 다음으로 진행이 안되던데요...?</p>
+        <p class="line top-line first-line"><span class="player-name"></span>씨는 🍹애플 사이다, 🍵밀크티, ☕아메리카노, 🍸섹스 온 더 비치를 다 마셔보지 않았나요?</p>
+        <p class="line bottom-line second-line two-toplines">- (어떻게 알았지?) 하, 하지만 네개를 다 마시지 않으면 다음으로 진행이 안되던데요...?</p>
         <p class="line bottom-line third-line next-line"><span class="clicker clicker-407-6">(다음)</span></p>
     </div>
 
@@ -704,11 +703,11 @@ let block = {display: 'block'};
 let none = {display: 'none'};
 let d = 100; //door opening speed
 
-let hasClicked401 = false;
-let hasClicked402 = false;
-let hasClicked404 = false;
-let hasClicked406 = false;
-let hasClicked407 = false;
+let hasClicked401 = true;
+let hasClicked402 = true;
+let hasClicked404 = true;
+let hasClicked406 = true;
+let hasClicked407 = true;
 let hasClickedBigHyun = false;
 
 
@@ -889,7 +888,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     //wrong
     $('.clicker-1-wrong').on('click', function() {
         addScore(-10);
-        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, avatar__407').hide();
+        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, .avatar__d').hide();
         $('.dialogue-1-wrong, .dialogue-1-wrong .line, .big-hyun__avatar').show();
     })
         //quick view
@@ -905,7 +904,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     //right
     $('.clicker-1-right').on('click', function() {
         addScore(+50);
-        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, avatar__407').hide();
+        $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, .avatar__d').hide();
         $('.dialogue-1-right, .dialogue-1-right .line, .big-hyun__avatar').show();
     })
         //quick view
@@ -923,8 +922,8 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 // elevator
     $('.button-off').on('click', function() {
         
-            $('.movingarrow__elevator').hide();
-            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').show();
+        $('.movingarrow__elevator').hide();
+        $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
 
     })
 
@@ -935,7 +934,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
         // close
         $('.clicker-2-2').click(function(){
-            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').hide();
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').hide();
         })
 
     $('.clicker-2-1').click(function(){
