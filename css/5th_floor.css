@@ -17,3 +17,18 @@
 .dialogue-box {
     opacity: 0.9;
 }
+
+
+/* rooms */
+    
+.door {position: absolute;}
+    
+.room {
+    position: absolute;
+    top: 0vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    z-index: 12;
+    display: none;
+}
