@@ -116,15 +116,15 @@
     .couple3 {display: none;} 
     .couple4 {display: none;} 
 
-.gif-in {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20vw;
-    z-index: 2001;
-}
+    .gif-in {
+        display: none;
+        position: absolute;
+        top: 20vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+        z-index: 2001;
+    }
 
 
 /* swimming */
