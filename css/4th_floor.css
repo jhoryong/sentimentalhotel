@@ -15,7 +15,7 @@
 }
 
 .dialogue-box {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 
@@ -35,18 +35,19 @@
 
 
 /* big-hyun */
-    
-        .big-hyun__gif {
-            width: 6vw;
-            top: 37vw;
-            left: 38vw;
-        }
 
-        .big-hyun__avatar {
-            width: 15.4vw;
-            top: 33.8vw;
-            left: 14vw;
-        }
+    .big-hyun__gif {
+        width: 6vw;
+        top: 37vw;
+        left: 38vw;
+        /* display: none; */
+    }
+
+    .big-hyun__avatar {
+        width: 15.4vw;
+        top: 33.8vw;
+        left: 14vw;
+    }
 
 /* rooms */
     
