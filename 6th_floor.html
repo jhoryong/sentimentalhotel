@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
+    <link rel="stylesheet" type="text/css" href="./css/6th_floor.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>6층 객실 :: 센티멘탈 호텔</title>
+</head>
+<body>
+<div class="container">
+    <!-- <div id="fade-box" class="fade-box"></div> -->
+    <div class="transparent-background"></div>
+    <div class="dialogue-box"></div>
+
+    <!-- items -->
+    <div class="items">
+        <div class="item map">
+            <img class="icon map-icon gifhover" src="image/icon/mapicon.png">
+            <div class="map-contents">
+                <div id="item-background" class="transparent-background"></div>
+                <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
+                <span class="close-x">&#10005;</span>
+            </div>
+        </div>
+        <div class="item flower">
+            <img class="icon flower-icon gifhover" src="image/icon/안개꽃.png">
+        </div>
+    </div>
+
+    <!-- scores -->
+    <div class="scores">
+        <img class="scoreboard" src="image/icon/점수판.png">
+        <span class="score__text">점수</span>
+        <span class="score"></span>
+    </div>
+
+    <!-- arrows -->
+    <div class="arrows">
+        <img class="movingarrow movingarrow__602" src="image/icon/arrow.png">
+        <!-- <img class="movingarrow movingarrow__elevator" src="image/icon/arrow.png"> -->
+    </div> 
+
+
+
+    <div class="big-hyun">
+        <img class="gif gifhover big-hyun__gif" src="image/6th_floor/큰현.gif">
+        <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
+    
+        <div class="dialogue-box2 dialogue-0-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">이제 6층이군요.</p>
+            <p class="line top-line second-line next-line">6층에 계신 분들은 이 호텔에서 가장 오래 지낸 중요한 손님들입니다. </p>
+            <p class="line top-line third-line next-line">그래서 저희 호텔도 상당히 신경 써서 서비스를 제공하고 있죠.</p>
+            <p class="line top-line fourth-line next-line">이분들께 인사를 드리고 각 손님에 대해 자세히 파악해 주세요.</p>
+            <p class="line bottom-line fifth-line four-toplines">- 네, <span class="clicker clicker-0-1">알겠습니다!</span></p>
+        </div>
+     
+        <div class="dialogue-box2 dialogue-0-2">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">아, 그리고 이 꽃을 <strong>603호</strong> 손님께 전해주세요. </p>
+            <p class="line top-line second-line next-line">603호 손님께는 정기적으로 꽃을 배달하고 있답니다.</p>
+            <p class="line bottom-line fourth-line three-toplines">(큰 현으로부터 안개꽃을 받았다.)<span class="clicker clicker-0-2"></span></p>
+            <p class="line bottom-line fifth-line next-line"><span class="clicker clicker-0-2">(확인)</span></p>
+        </div>
+
+
+
+    <div class="room-601">
+        <img class="gif gifhover door door__601 door601__1" src="image/6th_floor/601_1.png">
+        <img class="gif gifhover door door__601 door601__2" src="image/6th_floor/601_2.png">
+    
+        <div class="dialogue-box2 dialogue-601-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line"><strong>601호</strong>입니다. 노크하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-601-1-1">똑똑똑!</span></p>   
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-601-1-2">그만둔다.</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-601-2">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">......</p>
+            <p class="line bottom-line second-line two-toplines">- 여기가 루비님이 있다가 쫓겨났다는 방이구나. 왠지 문틈 사이로 담배 냄새가 나는 것 같다...</p>
+            <p class="line bottom-line third-line next-line"><span class="clicker clicker-601-2">(닫기)</span></p>
+        </div>
+        
+    </div>
+
+
+
+
+    <div class="room-602">
+        <img class="gif gifhover door door__602 door602__1" src="image/6th_floor/602_1.png">
+        <img class="gif gifhover door door__602 door602__2" src="image/6th_floor/602_2.png">
+
+        <img class="room room602" src="image/6th_floor/수효니방.jpg">
+        <img class="avatar avatar__602" src="image/6th_floor/수효니.png">
+        <img class="table" src="image/6th_floor/식탁.png">
+        <img id="pots" class="pots pots-before gif gifhover" src="image/6th_floor/요리-애니메이션.gif" draggable="true">
+        <img class="pots pots-after" src="image/6th_floor/요리끝.png">
+        <img class="plate-before" src="image/6th_floor/식사전.png">
+        <img class="plate-after" src="image/6th_floor/식사중.png">
+        <img class="gif gifhover frame" src="image/6th_floor/액자.png">
+        <div id="dropspot" class="dropspot"></div> 
+
+        <img class="illust illust1" src="image/6th_floor/1.jpg">
+        <img class="illust illust2" src="image/6th_floor/2.jpg">
+        <img class="illust illust3" src="image/6th_floor/3.jpg">
+        <img class="illust illust4" src="image/6th_floor/4.jpg">
+        <img class="illust illust5" src="image/6th_floor/5.jpg">
+        
+    
+        <div class="dialogue-box2 dialogue-602-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line"><strong>602호</strong>입니다. 노크하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <span class="clicker clicker-602-1-1">똑똑똑!</span></p>   
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-602-1-2">그만둔다.</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-2">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">들어와~</p>
+            <p class="line bottom-line second-line one-topline">- <span class="clicker clicker-602-2">안녕하세요! 이번에 새로 들어온 <span class="player-name"></span>...</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-3">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">뭐해. 어서 들어오라고! (화난 듯한 목소리다.)</p>
+            <p class="line bottom-line second-line one-topline">- <span  class="clicker clicker-602-3">(방으로 들어간다.)</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-4">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">...에? 현이가 아니네? ...누구신가요? (갑자기 목소리가 상냥해졌다.)</p>
+            <p class="line bottom-line second-line one-topline">- 아, 안녕하세요! 이번에 신입 직원으로 들어온 <span class="player-name"></span>입니다. <span class="clicker clicker-602-4">인사드리러 왔습니다!</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-5">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">아~ 신입 분이셨구나. 저는 현이의 친구 <strong>국내파</strong>라고 해요. 호호호. 교육받느라 수고가 많으시네요. </p>
+            <p class="line top-line second-line next-line">아, 마침 잘 됐네. 밥 먹고 가세요!</p>
+            <p class="line bottom-line third-line two-toplines">- <span class="clicker clicker-602-5">밥.. 이요...?</span></p>
+        </div>
+        
+        <div class="dialogue-box2 dialogue-602-6">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">제 취미이자 특기가 요리하기라서요. 히히. </p>
+            <p class="line top-line second-line next-line">현이도 항상 제가 해주는 밥을 먹고 간답니다. 한번 맛보면 빠져나올 수 없거든요. 크크크크크.</p>
+            <p class="line bottom-line third-line two-toplines">- 근데 교육 중에 먹어도 <span class="clicker clicker-602-6">괜찮을까요...?</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-7">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">아, 아~ 괜찮아요. 걱정하지 않으셔도 되요.</p>
+            <p class="line top-line second-line next-line">현이는 이미 잘 알고 있거든요. 누구든지 제 방에 들어오면 밥을 먹고 간다는걸... 흐흐흐.</p>
+            <p class="line top-line third-line next-line">그럼, 저기 부엌에서 냄비를 식탁으로 옮겨주시겠어요? </p>
+            <p class="line bottom-line fourth-line three-toplines">(냄비를 드래그하여 식탁에 놓자.)</p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-8">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">(냠냠냠...)</p>
+            <p class="line top-line second-line">맛이 어때요?</p>
+            <p class="line bottom-line third-line four-toplines">☛ <span class="clicker clicker-602-8-1">맛있습니다.</span></p>
+            <p class="line bottom-line fourth-line next-line">☛ <span class="clicker clicker-602-8-2">와, 이거 식당 차리셔도 되겠는데요?</span></p>
+            <p class="line bottom-line fifth-line next-line">☛ <span class="clicker clicker-602-8-3">너무 맛있어서 먹다 말고 공중제비 최소 두바퀴 이상 조지고 싶은 맛이네요.</span></p>
+        </div>
+    
+        <div class="dialogue-box2 dialogue-602-9-1">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">에이, 그걸론 부족해요.</p>
+            <p class="line bottom-line second-line one-topline"><span class="clicker clicker-602-9-1">(돌아가기)</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-9-2">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">저는 식당음식을 싫어해요. 맵고, 짜고, 자극적이거든요. </p>
+            <p class="line bottom-line second-line one-topline"><span class="clicker clicker-602-9-1">(돌아가기)</span></p>
+        </div>
+        
+        <div class="dialogue-box2 dialogue-602-9-3">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">까르르르르르! 좋아요, 좋아요. 그럼 잠시! 제 요리에 대해 설명하는 시간을 갖도록 하겠습니다.</p>
+            <p class="line top-line second-line next-line">이번 요리는 토마토 스파게티로, 핵심은 상큼한 tomato라고 할 수 있습니다. Tomato는 맛도 맛이지만 </p>
+            <p class="line top-line third-line next-line">건강에 정말 좋습니다. 왜냐하면 tomato에는 다양한 비타민과 무기질, 항산화물질이 풍부해서 노화를</p>
+            <p class="line top-line fourth-line next-line">방지하고 항암효과가 탁월하다고 알려져 있거든요. 구제적으로 설명드리면, tomato에 들어있는 Rutin은 </p>
+            <p class="line top-line fifth-line next-line">Vitamin C와 함께 혈압을 낮추는 작용을... (대충 tomato가 몸에 좋다는 내용인듯.)...<strong>안듣고있죠!</strong></p>
+            <p class="line bottom-line sixth-line six-toplines">- ...아, 토마토는 몸에 매우 좋다는 것을 말씀하신 중 아니셨나요? 하하하...</p>
+            <p class="line bottom-line seventh-line next-line">&nbsp;&nbsp;그나저나 Tomato... 아니, <strong>국내파</strong>님은 <span class="clicker clicker-602-9-3">어떻게 해서 이 호텔에 들어오셨나요?</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-10">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">음......</p>
+            <p class="line top-line second-line next-line">처음 호텔에 온건 중학교 때였나? 서로 만화 보는 걸 좋아해서 만화 이야기를 하다 보니... </p>
+            <p class="line top-line third-line next-line">어느새 제가 센티멘탈 호텔 4층에 머물고 있더라고요.</p>
+            <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-602-10">처음엔 4층에서 지내셨다는 말씀이세요?</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-11">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">네, 그러다가 현이가 대학교 신입생 때 제가 현이에게 영어 과외를 해주게 되었어요. </p>
+            <p class="line top-line second-line next-line">보시다시피 제가 영어를 좀 잘하거든요. 후훗.</p>
+            <p class="line top-line third-line next-line">그런데 이 새ㄲ… 아니, 이 친구, 처음엔 제 말귀를 하나도 못 알아들었어요. 진짜 바보인줄 알았다니까요?</p>
+            <p class="line top-line fourth-line next-line"> 그래서 좀 갈구면서 가르쳤는데, 가르치다 보니 바보가 아니라 그냥 남들보다 조금 느린거더라구요.</p>
+            <p class="line top-line fifth-line next-line">이때부터 조금씩 현이라는 사람을 이해하기 시작했죠.</p>
+            <p class="line bottom-line sixth-line five-toplines">- <span class="clicker clicker-602-11">그렇군요... 저의 지배인님에 대한 첫인상은 똑 부러지고 철저해 보이셨는데...</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-12">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">겉으로는 그래 보이려고 노력하죠. 기지배, 아마 신입 사원 앞이라 더 그런 척할 거예요. </p>
+            <p class="line top-line second-line next-line">하지만 속은 완전히 어린아이에요. 모든게 조금씩 어설프고, 둔하고, 자주 덜렁대요.</p>
+            <p class="line top-line third-line next-line">그치만 또 한편으론 감성적이고 사람들의 마음을 따뜻하게 잘 이해해줘요. </p>
+            <p class="line top-line fourth-line next-line">그래서 같이 있으면 왠지 모르게 편하달까...?</p>
+            <p class="line top-line fifth-line next-line">저는 현이랑 완전 반대거든요. 이성적이고, 계산적이고, 차가운 편이에요.</p>
+            <p class="line bottom-line sixth-line five-toplines">- <span class="clicker clicker-602-12">음... 서로가 서로의 부족한 부분을 메꿔주는게 아닐까요?</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-13">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">맞아요. 저는 제 똑똑함을 주체할 수가 없어서 현이같이 덜렁대는 사람에게 주절주절 떠들어 대죠.</p>
+            <p class="line top-line second-line next-line">현이는 제가 이렇게 참견하는 걸 오히려 즐겨요. 똑똑한 사람이 조언해주는게 좋다나 뭐라나... </p>
+            <p class="line top-line third-line next-line">이렇게 말하고 보니 서로에게 필요한 존재네요. 호호호.</p>
+            <p class="line top-line fourth-line next-line">아 참, 오신 김에 옛날 호텔 모습도 보여 드릴게요. 이쪽으로 오세요.</p>
+            <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-602-13">(확인)</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-14">
+            <h1 class="name"><span class="player-name"></h1>
+            <p class="line top-line first-line">이건 센티멘탈 호텔의 옛날 모습인가요?</p>
+            <p class="line bottom-line second-line one-topline"><span class="clicker clicker-602-14">(다음)</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-15">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">네 맞아요. 옛날 호텔은 정말 최악이었어요.</p>
+            <p class="line top-line second-line next-line">건물도 촌스럽기 그지없었고, 운영도 완전 개판이었죠.</p>
+            <p class="line top-line third-line next-line">아니 글쎄, 숫자를 헷갈려서 다른 호실 키를 주질 않나, 토마토 케첩을 고추장으로 착각해서 케첩 비빔밥을 먹은 적도 있고,</p>
+            <p class="line top-line fourth-line next-line">한번은 여름인데 히터를 틀어서 손님들을 통구이로 만들 뻔했던 적도 있었죠.</p>
+            <p class="line top-line fifth-line next-line">그때만 생각하면... 어휴!</p> 
+            <p class="line bottom-line sixth-line five-toplines">- <span class="clicker clicker-602-15">많이 힘드셨겠습니다.</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-16">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">말도 마세요. 그래서 똑.똑.한. 제가 하나부터 열까지 전부 가르쳐 줬죠. </p>
+            <p class="line top-line second-line next-line">심지어 어떤 종류의 토마토가 제일 좋은 tomato인지도 가르쳤다니까요...!</p>
+            <p class="line top-line third-line next-line">지금의 호텔이 제 손으로 만들어졌다고 해도 과언이 아니에요.</p>
+            <p class="line top-line fourth-line next-line">그때만 생각하면... 어휴!</p>
+            <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-602-16">(지배인님은 국내파님의 도움을 많이 받은 것 같다.)</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-602-17">
+            <h1 class="name">국내파</h1>
+            <p class="line top-line first-line">그럼 이제 옆 방으로 가보세요. 옆 방에는 이 호텔을 설립하신 분이 계시거든요. </p>
+            <p class="line top-line second-line next-line">현이랑 매일 투닥투닥하는 사이긴 하지만, 그래도 이것저것 많이 배울 수 있을꺼에요.</p>
+            <p class="line bottom-line third-line two-toplines">- 네, 그럼 앞으로 <span class="clicker clicker-602-17">잘 부탁드립니다!</span></p>
+        </div>
+
+
+    
+
+
+
+</div>
+
+<script>
+let hasClicked601 = false;
+let hasClicked602 = false;
+let hasClicked603 = false;
+
+
+$('#fade-box').hide();
+
+// item
+
+$('.map-icon').click(function() {
+        $('.map-contents,  #item-background').show();
+    })
+    $('.close-x').click(function(){
+        $('.map-contents,  #item-background').hide();
+    })
+
+
+// score
+
+    let score = 0;
+
+    function addScore(number) {
+        score += number;
+        $('.score').html(`${score}`);
+        sessionStorage.setItem("score", score);
+    }
+    addScore(0);
+
+    function addBonus(gif, score) {
+        if (gif === false) {
+            addScore(score);
+        }
+    }
+
+
+// player name
+
+    $('.player-name').text(sessionStorage.getItem("playerName"));
+
+
+// drag functions
+
+    $('#pots').draggable({
+        revert: true,
+        revertDuration: 0
+        });
+    $('#dropspot').droppable({
+        classes: {
+            "ui-droppable-hover": "dropspot-hover"
+        },   
+        drop: function( event, ui ) {
+            $('#pots').hide();
+            $('.plate-before').delay(1500).fadeOut(500);
+            $('.plate-after').fadeIn(1500);
+            $('.pots-after').show();
+            $('.dialogue-602-7, .dialogue-602-7 .line').hide();
+            $('.dialogue-602-8, .dialogue-602-8 .line').show();
+        }
+    });
+
+
+// start
+
+$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(0000).fadeIn(0);
+    //quick view
+    $('.dialogue-0-1').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-0-1').on('click', function() {
+        $('.dialogue-0-1, .dialogue-0-1 .line').hide();
+        $('.dialogue-0-2, .dialogue-0-2 .line').show();
+        $('.flower-icon').delay(2000).fadeIn(2000);
+    })
+    //quick view
+    $('.dialogue-0-2').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
+
+    //close
+    $('.clicker-0-2').on('click', function() {
+        $('.dialogue-0-2, .dialogue-0-2 .line, .dialogue-box, .big-hyun__avatar').hide();
+    })
+
+
+
+    //601
+    $('.door601__1').on('mouseenter', function() {
+        $(event.currentTarget).hide();
+        $('.door601__2').show();
+    })
+    $('.door601__2').on('mouseleave', function() {
+        $(event.currentTarget).hide();
+        $('.door601__1').show();
+    })
+
+    $('.door__601').on('click', function() {
+        $('.dialogue-601-1, .dialogue-601-1 .line, .dialogue-box').show();
+    })
+
+        //quick view
+        $('.dialogue-601-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+            
+        //close
+        $('.clicker-601-1-2').on('click', function() {
+            $('.dialogue-601-1, .dialogue-601-1 .line, .dialogue-box').hide();
+        })
+
+    $('.clicker-601-1-1').on('click', function() {
+        $('.dialogue-601-1, .dialogue-601-1 .line').hide();
+        $('.dialogue-601-2, .dialogue-601-2 .line').show();
+    })
+
+        //quick view
+        $('.dialogue-601-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+        //close
+        $('.clicker-601-2').on('click', function() {
+            $('.dialogue-601-2, .dialogue-box').hide();
+        })
+
+
+
+     //602
+    $('.door602__1').on('mouseenter', function() {
+        $(event.currentTarget).hide();
+        $('.door602__2').show();
+    })
+    $('.door602__2').on('mouseleave', function() {
+        $(event.currentTarget).hide();
+        $('.door602__1').show();
+    })
+
+    $('.door__602').on('click', function() {
+        $('.dialogue-602-1, .dialogue-602-1 .line, .dialogue-box').show();})
+        //quick view
+        $('.dialogue-602-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+        //close
+        $('.clicker-602-1-2').on('click', function() {
+            $('.dialogue-602-1, .dialogue-602-1 .line, .dialogue-box').hide();})
+
+
+    $('.clicker-602-1-1').on('click', function() {
+        $('.dialogue-602-1, .dialogue-602-1 .line').hide();
+        $('.dialogue-602-2, .dialogue-602-2 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-602-2').on('click', function() {
+        $('.dialogue-602-2, .dialogue-602-2 .line').hide();
+        $('.dialogue-602-3, .dialogue-602-3 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-602-3').on('click', function() {
+        $('.dialogue-602-3, .dialogue-602-3 .line').hide();
+        $('.dialogue-602-4, .dialogue-602-4 .line, .frame, .pots-before, #dropspot, .plate-before, .table, .room602, .avatar__602').show();
+    })
+        //quick view
+        $('.dialogue-602-4').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})   
+
+    $('.clicker-602-4').on('click', function() {
+        $('.dialogue-602-4, .dialogue-602-4 .line').hide();
+        $('.dialogue-602-5, .dialogue-602-5 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-5').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-602-5').on('click', function() {
+        $('.dialogue-602-5, .dialogue-602-5 .line').hide();
+        $('.dialogue-602-6, .dialogue-602-6 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-6').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+
+    $('.clicker-602-6').on('click', function() {
+        $('.dialogue-602-6, .dialogue-602-6 .line').hide();
+        $('.dialogue-602-7, .dialogue-602-7 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-7').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+
+    $('.clicker-602-8-1').on('click', function() {
+        $('.dialogue-602-8, .dialogue-602-8 .line').hide();
+        $('.dialogue-602-9-1, .dialogue-602-9-1 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-8').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+        //quick view
+        $('.dialogue-602-9-1').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+        //return
+        $('.clicker-602-9-1').on('click', function() {
+            $('.dialogue-602-9-1, .dialogue-602-9-1 .line, .dialogue-602-9-2, .dialogue-602-9-2 .line').hide();
+            $('.dialogue-602-8, .dialogue-602-8 .line').show();
+        })
+
+    $('.clicker-602-8-2').on('click', function() {
+        $('.dialogue-602-8, .dialogue-602-8 .line').hide();
+        $('.dialogue-602-9-2, .dialogue-602-9-2 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-9-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+    
+    $('.clicker-602-8-3').on('click', function() {
+        $('.dialogue-602-8, .dialogue-602-8 .line').hide();
+        $('.dialogue-602-9-3, .dialogue-602-9-3 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-9-3').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+
+    $('.clicker-602-9-3').on('click', function() {
+        $('.dialogue-602-9-3, .dialogue-602-9-3 .line').hide();
+        $('.dialogue-602-10, .dialogue-602-10 .line, .transparent-background, .illust1').show();
+    })
+        //quick view
+        $('.dialogue-602-10').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+
+    $('.clicker-602-10').on('click', function() {
+        $('.dialogue-602-10, .dialogue-602-10 .line, .illust1').hide();
+        $('.dialogue-602-11, .dialogue-602-11 .line, .illust2').show();
+    })
+        //quick view
+        $('.dialogue-602-11').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.clicker-602-11').on('click', function() {
+        $('.dialogue-602-11, .dialogue-602-11 .line, .illust2').hide();
+        $('.dialogue-602-12, .dialogue-602-12 .line, .illust3').show();
+    })
+        //quick view
+        $('.dialogue-602-12').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+
+    $('.clicker-602-12').on('click', function() {
+        $('.dialogue-602-12, .dialogue-602-12 .line').hide();
+        $('.dialogue-602-13, .dialogue-602-13 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-13').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+        //close
+        $('.clicker-602-13').on('click', function() {
+            $('.dialogue-602-13, .dialogue-602-13 .line, .avatar__602, .dialogue-box, .illust3, .transparent-background').hide();
+            $('.movingarrow__602').show();
+        })
+
+    $('.frame').click(function(){
+        $('.dialogue-602-14, .dialogue-602-14 .line, .dialogue-box, .transparent-background, .illust4, .avatar__602').show();
+        $('.movingarrow__602').hide();})
+        //quick view
+        $('.dialogue-602-14').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+    
+    $('.clicker-602-14').on('click', function() {
+        $('.dialogue-602-14, .dialogue-602-14 .line').hide();
+        $('.dialogue-602-15, .dialogue-602-15 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-15').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})  
+
+    $('.clicker-602-15').on('click', function() {
+        $('.dialogue-602-15, .dialogue-602-15 .line, .illust4').hide();
+        $('.dialogue-602-16, .dialogue-602-16 .line, .illust5').show();
+    })
+        //quick view
+        $('.dialogue-602-16').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+
+    $('.clicker-602-16').on('click', function() {
+        $('.dialogue-602-16, .dialogue-602-16 .line, .illust5, .transparent-background').hide();
+        $('.dialogue-602-17, .dialogue-602-17 .line').show();
+    })
+        //quick view
+        $('.dialogue-602-17').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');}) 
+        //close
+        $('.clicker-602-17').on('click', function() {
+            $('.dialogue-602-17, .dialogue-602-17 .line, .frame, .pots-before, #dropspot, .plate-after, .pots-after, .table, .plate-after, .room602, .avatar__602, .dialogue-box').hide();})
+
+
+
+
+    //     //close
+    //     $('.clicker-602-9').on('click', function() {
+    //         $('.dialogue-602-9, .dialogue-box, .transparent-background, .room602, .avatar__602').css(none);
+    //         hasClicked602 = true;
+    //         if (hasClicked602 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
+    //             $('.movingarrow__big-hyun').show();
+    //         }
+    //     })
+
+</script>
+</body>
+</html>

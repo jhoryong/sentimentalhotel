@@ -4,15 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/2964z06b34b.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>센티멘탈 호텔에 오신 것을 환영합니다!</title>
     <style>
-        h1 {
-            font-size: 100px;
-        }
+
     </style>
 </head>
 <body>
-    <h1>센티멘탈 호텔 표지</h1>
-    <a href="intro.html"><h1>시작하기</h1></a>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="container">
+        <img class="sign" src="image/index/간판.png">
+        <img class="light" src="image/index/빛.png">
+        
+        <a href="intro.html"><div class="doorset gif gifhover">
+            <img class="doorframe" src="image/index/문틀.png">
+            <img class="door door1" src="image/index/문1.png">
+            <img class="door door2" src="image/index/문2.png">
+            <img class="door door3" src="image/index/문3.png">
+            <img class="door door4" src="image/index/문4.png">
+            <img class="doorknob" src="image/index/문고리.png">
+            <img class="doorsign" src="image/index/흔들흔들.png">
+        </div></a>
+
+        <h1>문을 클릭하여 호텔로 입장하세요</h1>
+    </div>
+
+
+ <script>
+     $('.door1').click(function(){
+        event.preventDefault();
+        let t = 300;
+        $('.doorknob, .doorsign').delay(200).fadeOut(200);
+        setTimeout(function(){$('.door1').hide();}, t);
+        setTimeout(function(){$('.door2').show();}, t);
+        setTimeout(function(){$('.door2').hide();}, t*2);
+        setTimeout(function(){$('.door3').show();}, t*2);
+        setTimeout(function(){$('.door3').hide();}, t*3);
+        setTimeout(function(){$('.door4').show();}, t*3);
+        $('.white').delay(2000).fadeIn(2000);
+        $('.black').delay(4000).fadeIn(2000);
+        setTimeout(function() {
+            window.location = $('a').attr('href');
+        }, 8000);
+     })
+
+        
+ </script>
 </body>
 </html>

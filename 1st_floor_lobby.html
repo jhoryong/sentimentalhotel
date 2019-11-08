@@ -380,14 +380,13 @@
         $('#playerName').on('keyup', function (event) {
             if (event.keyCode === 13) {
                 getName();
-                $$('.dialogue-1-2, .dialogue-1-2 .line').hide();
+                $('.dialogue-1-2, .dialogue-1-2 .line').hide();
                 $('.dialogue-1-3, .dialogue-1-3 .line').show();
-
-                // fast view
-                $('.dialogue 1-3').on('click', function() {
-                    $(event.currentTarget).children().removeClass('first-line second-line third-line');
-                })
             }
+        })
+        // fast view
+        $('.dialogue 1-3').on('click', function() {
+            $(event.currentTarget).children().removeClass('first-line second-line third-line');
         })
 
     $('.clicker-1-3').on('click', function() {

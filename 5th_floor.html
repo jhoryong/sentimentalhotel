@@ -24,6 +24,15 @@
 <div class="dialogue-box"></div>
 
 
+    <!-- preloader  -->
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
 
     <!-- items -->
     <div class="items">
@@ -84,7 +93,7 @@
         <p class="line top-line first-line">5층에는 총 5분의 손님이 투숙하고 있어요.</p>
         <p class="line top-line second-line next-line">5층 손님들에게는 손님 맞춤형 서비스가 제공됩니다.</p>
         <p class="line top-line third-line next-line"><span class="player-name"></span>씨는 손님들께 인사를 드리면서, 각 손님에 대한 자세한 정보를 파악해 주세요.</p>
-        <p class="line bottom-line fourth-line three-toplines">(5층 손님들에게 인사를 하자.) <span class="clicker clicker-0-2">(확인)</span></p>
+        <p class="line bottom-line fourth-line three-toplines">(각 호실 문을 클릭하여 손님들을 만나보자.) <span class="clicker clicker-0-2">(확인)</span></p>
     </div>
 
 
@@ -497,8 +506,8 @@
         <p class="line top-line first-line">피아니스트의 전설이라... 배에서 평생을 산 피아니스트를 그린 멋진 영화죠... (+5점)</p>
         <p class="line top-line second-line next-line">아, 지배인에게 제가 왔을 때 🎭<strong>심리 관련 영화</strong>를 틀어 달라고 전해 주세요.</p>
         <p class="line top-line third-line next-line">저는 사람의 정신에 관심이 많거든요.</p>
-        <p class="line top-line third-line next-line">아참. 비밀에 대해서는 너무 신경 쓰지 마세요. 차차 알게 되실 테니... 그럼 안녕히.</span></p>
-        <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-505-7">(방에서 나가기)</span></p>
+        <p class="line top-line fourth-line next-line">아참. 비밀에 대해서는 너무 신경 쓰지 마세요. 차차 알게 되실 테니... 그럼 안녕히.</span></p>
+        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-505-7">(방에서 나가기)</span></p>
     </div>
 
 </div>
@@ -515,9 +524,15 @@ let hasClicked503 = false;
 let hasClicked504 = false;
 let hasClicked505 = false;
 
-$('#fade-box').hide();
 
-$('.player-name').text('호룡전사');
+//preloader 
+
+$('#fade-box').fadeOut(500);
+$('.preloader').delay(4000).fadeOut(0);
+$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
+
+//$('.player-name').text('호룡전사');
+
 
 
 // item
@@ -557,7 +572,7 @@ $('.player-name').text('호룡전사');
 
 // start
 
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').delay(0000).fadeIn(0);
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').delay(5500).fadeIn(0);
     //quick view
     $('.dialogue-0-1').click(function() {
         $(event.currentTarget).children().css('animation', 'none');}) 
@@ -1049,6 +1064,7 @@ $('.door502__1').on('mouseenter', function() {
     $('.clicker-504-6-1').on('click', function() {
         $('.dialogue-504-6, .dialogue-504-6 .line').hide();
         $('.dialogue-504-7-1, .dialogue-504-7-1 .line').show();
+        addBonus(hasClicked504, -5);
     })
         //quick view
         $('.dialogue-504-7-1').click(function() {
@@ -1145,6 +1161,7 @@ $('.door502__1').on('mouseenter', function() {
     $('.clicker-505-6-1').on('click', function() {
         $('.dialogue-505-6, .dialogue-505-6 .line').hide();
         $('.dialogue-505-7-1, .dialogue-505-7-1 .line').show();
+        addBonus(hasClicked505, -5);
     })
         //quick view
         $('.dialogue-505-7-1').click(function() {
@@ -1162,7 +1179,7 @@ $('.door502__1').on('mouseenter', function() {
 
     // close
     $('.clicker-505-7').on('click', function() {
-        $('.dialogue-505-7-2, .dialogue-505-7-2 .line, .dialogue-box, .transparent-background, .room505, .avatar__505').hide();
+        $('.dialogue-505-7-1, .dialogue-505-7-1 .line, .dialogue-505-7-2, .dialogue-505-7-2 .line, .dialogue-box, .transparent-background, .room505, .avatar__505').hide();
         hasClicked505 = true;
         if (hasClicked501 === true && hasClicked502 === true && hasClicked503 === true && hasClicked504 === true && hasClicked505 === true) {
             $('.movingarrow__big-hyun').show();

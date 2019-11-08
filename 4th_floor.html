@@ -17,7 +17,7 @@
     <title>4층 객실 :: 센티멘탈 호텔</title>
 </head>
 
-<body>
+<body>  
 
 <div class="container">
 <div id="fade-box" class="fade-box"></div>
@@ -105,7 +105,7 @@
         <p class="line top-line first-line">그와 더불어, 문제가 하나 생겼어요.</p>
         <p class="line top-line second-line next-line">저희 호텔은 금연구역이지만, 최근 4층에서 나는 담배 냄새 때문에 손님으로부터 항의가 들어왔어요.</p>
         <p class="line top-line third-line next-line"><span class="player-name"></span>씨는 손님들께 인사를 드리면서 담배 냄새에 관한 단서를 모아 주세요.</p>
-        <p class="line bottom-line fourth-line three-toplines">- 네, <span class="clicker clicker-0-3-1">알겠습니다!</span></p>
+        <p class="line bottom-line fourth-line three-toplines">- 네, <span class="clicker clicker-0-3-1">알겠습니다!</span> (각 호실 문을 클릭하여 손님들을 만나보자.)</p>
     </div>
 
     <div class="dialogue-box2 dialogue-0-4">
@@ -711,7 +711,7 @@ let hasClickedBigHyun = false;
 
 
 
-// fade-in to loader and fadeout
+// preloader
 
 $('#fade-box').fadeOut(500);
 $('.preloader').delay(4000).fadeOut(0);
@@ -757,7 +757,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 // start
 
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(7000).fadeIn(0);
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
 
         //quick view
         $('.dialogue-0-1').click(function() {

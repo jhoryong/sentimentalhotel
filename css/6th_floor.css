@@ -1,0 +1,168 @@
+
+.container {
+    background-image: url("../image/6th_floor/6층배경.jpg");
+}
+
+.dialogue-box2 {
+    position: absolute;
+    top: 35vw; 
+    left: 24vw;
+    width: 62vw;
+    height: 20vw; 
+    z-index: 16;
+    opacity: 1;
+    display: none;
+}
+
+.dialogue-box {
+    opacity: 0.8;
+    
+}
+
+
+/* flower item */
+.flower-icon {
+    height: 5vw;
+    position: absolute;
+    top: 27vw;
+    left: 2vw;
+    z-index: 10;
+    display: none;
+}
+
+/* big-hyun */
+    
+.big-hyun__gif {
+    width: 7vw;
+    top: 32.7vw;
+    left: 39.6vw;
+    /* display: none; */
+}
+
+.big-hyun__avatar {
+    width: 15.4vw;
+    top: 33.8vw;
+    left: 14vw;
+}
+
+
+
+
+/* rooms */
+    
+.door {position: absolute;}
+    
+.room {
+    position: absolute;
+    top: 0vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    z-index: 12;
+    display: none;
+}
+
+
+    /* 601 */
+    .door__601 {
+        top: 30.1vw;
+        left: 9.4vw;
+        width: 6vw;
+    }
+
+    .door601__2 {display: none;} 
+    
+
+    /* 602 */
+    .door__602 {
+        top: 6.45vw;
+        left: 48.9vw;
+        width: 5.7vw;
+    }
+
+    .movingarrow__602 {
+        top: 31vw;
+        left: 96vw;
+        z-index: 13;
+    }
+
+    .door602__2 {display: none;} 
+    
+    .room602 {
+        width: 100vw;
+        /* border: 1px black solid; */
+    }
+
+    .table {
+        position: absolute;
+        z-index: 12;
+        top: 24vw;
+        left: 66vw;
+        width: 20vw;
+        display:none;
+    }
+
+    .pots {
+        position: absolute;
+        z-index: 13;
+        top: 13.6vw;
+        left: 14.6vw;
+        width: 15vw;
+        display: none;
+    }
+
+    .frame {
+        position: absolute;
+        z-index: 12;
+        top: 35.3vw;
+        left: 93.4vw;
+        width: 6.5vw;
+        display: none;
+    }
+
+    .dropspot {
+        width: 25vw;
+        height: 19vw;
+        /* border: 1px black solid; */
+        z-index: 12;
+        position: absolute;
+        top: 23.8vw;
+        left: 63.6vw;
+        border-radius: 15px;
+        display: none;
+    }
+    .dropspot-hover {
+        border: 3px dashed #505050;
+    }
+
+    .plate-before, .plate-after {
+        position: absolute;
+        z-index: 12;
+        top: 25vw;
+        left: 69.3vw;
+        width: 11.9vw;
+        display:none;
+    }
+
+    .avatar__602 {
+        width: 20vw;
+        top: 30.3vw;
+        left: 9.6vw;
+        transform: rotateY(180deg); 
+    }
+
+    /* illustrations */
+
+    .illust {
+        position: absolute;
+        top: 2.7vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40vw;
+        z-index: 15;
+        display: none;
+    }
+
+    .transparent-background {
+        z-index: 14;
+    }

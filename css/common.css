@@ -6,48 +6,50 @@
     .icon:hover {
         cursor: pointer;
     }
+            
 
-    /* map */
 
-    .map-icon {
-        height: 5vw;
-        position: absolute;
-        top: 20vw;
-        left: 2vw;
-        z-index: 10;
-    }
+        /* map */
 
-    .map-contents {
-        display: none;
-    }
-
-    #item-background {
-        z-index: 21;
-    }
-
-    .map-image {
-        position: absolute;
-        height: 50vw;
-        top: 3vw;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 22;
-    }
-
-    .close-x {
-        position: absolute;
-        top: 5vw;
-        left: 80vw;
-        font-size: 4vw;
-        z-index: 20vw;
-        color:#8f8f8f;
-        z-index: 22;
-    }
-
-        .close-x:hover {
-            color: #d1d1d1;
-            cursor: pointer;
+        .map-icon {
+            height: 5vw;
+            position: absolute;
+            top: 20vw;
+            left: 2vw;
+            z-index: 10;
         }
+
+        .map-contents {
+            display: none;
+        }
+
+        #item-background {
+            z-index: 21;
+        }
+
+        .map-image {
+            position: absolute;
+            height: 50vw;
+            top: 3vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 22;
+        }
+
+        .close-x {
+            position: absolute;
+            top: 5vw;
+            left: 80vw;
+            font-size: 4vw;
+            z-index: 20vw;
+            color:#8f8f8f;
+            z-index: 22;
+        }
+
+            .close-x:hover {
+                color: #d1d1d1;
+                cursor: pointer;
+            }
 
 
 
@@ -159,7 +161,7 @@
         background-color: #FFF;
         border: #000000 2px solid;
         border-radius: 20px;
-        z-index: 13;
+        z-index: 15;
         display: none;
     }
 
@@ -234,6 +236,7 @@
         .sixth-line {animation: typing 1.5s 7.8s linear backwards;}
         .seventh-line {animation: typing 1.5s 9.3s linear backwards;}
 
+
         .fast-yes-line {animation: typing 1.5s 1s linear backwards;}
         .fast-no-line {animation: typing 1.5s 1.3s linear backwards;}
 
@@ -250,6 +253,7 @@
         .four-toplines {margin: var(--four-top-lines);}
         .five-toplines {margin: var(--five-top-lines);}
         .six-toplines {margin: var(--six-top-lines);}
+
 
     .clicker {
         color: blue;
