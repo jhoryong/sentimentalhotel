@@ -277,10 +277,11 @@
     let hasClickedMeetingRoom1 = false;
     let hasClickedMeetingRoom2 = false;
     let hasClickedMeetingRoom3 = false;
+    let hasSolvedQuestion = false;
     let hasClickedElevator = false;
 
     let hasClickedClock = false;
-    let hasClickedHandshake= false;
+    let hasClickedHandshake = false;
     let hasClickedCopier = false;
     
     function alertFoundAllGif() {
@@ -304,12 +305,13 @@
 
 // score
 
-    let score = 0;
+    let sessionValue = sessionStorage.getItem("score");
+    let savedscore = Number(sessionValue);
 
     function addScore(number) {
-        score += number;
-        $('.score').html(`${score}`);
-        sessionStorage.setItem("score", score);
+        savedscore += number;
+        document.querySelector('.score').innerHTML = savedscore;
+        sessionStorage.setItem("score", savedscore);
     }
     addScore(0);
 
@@ -658,6 +660,7 @@ $('.clicker-1-1').on('click', function() {
             $('.dialogue-2-1, .dialogue-2-1 .line').hide();   
             $('#wrong4').show();
             $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+            let hasSolvedQuestion = true;
         })
 
     $('.clicker-2-6').click(function(){
@@ -670,7 +673,7 @@ $('.clicker-1-1').on('click', function() {
 // elevator
 
 $('.button-off').on('click', function() {
-    if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+    if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true && hasSolvedQuestion === true) {
         $('.movingarrow__elevator').hide();
         $('.button-on').show();
         $('.dialogue-3-1, .dialogue-3-1 .line').show();

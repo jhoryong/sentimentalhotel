@@ -42,7 +42,7 @@
     transform: translateX(-50%);
     width: 23.1vw;
     z-index: 1;
-    animation: flash 1.5s ease-in-out infinite alternate backwards;
+    animation: flash 3s ease-in-out infinite alternate backwards;
 }
 
 .doorset {
@@ -92,6 +92,7 @@
     z-index: 11;
     transform-origin: 146% 17%;
     transform: rotate(0deg) translateX(3vw);
+    animation: rotate 5s 1s ease-in-out infinite;
 }
 
 h1 {
@@ -103,11 +104,11 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     color: #ffddfc;
-    animation: flashtext 1.5s ease infinite alternate backwards
+    animation: flashtext 1.5s ease infinite alternate backwards;
 }
 
 @keyframes flash {
-    from {opacity: 0.3;}
+    from {opacity: 0.5;}
     to {opacity: 1;}
 }
 
@@ -117,5 +118,13 @@ h1 {
 }
 
 @keyframes rotate {
-    from {}
+    0% {transform: rotate(0deg) translateX(3vw);}
+    20% {transform: rotate(18deg) translateX(3vw);}
+    30% {transform: rotate(-7deg) translateX(3vw);}
+    39% {transform: rotate(5deg) translateX(3vw);}
+    47% {transform: rotate(-3deg) translateX(3vw);}
+    55% {transform: rotate(0.5deg) translateX(3vw);}
+    61% {transform: rotate(-0.4deg) translateX(3vw);}
+    66% {transform: rotate(0deg) translateX(3vw);}
+    100% {transform: rotate(0deg) translateX(3vw);}
 }

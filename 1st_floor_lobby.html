@@ -280,12 +280,13 @@
 
 // score
 
-    let score = 0;
+    let sessionValue = sessionStorage.getItem("score");
+    let savedscore = Number(sessionValue);
 
     function addScore(number) {
-        score += number;
-        $('.score').html(`${score}`);
-        sessionStorage.setItem("score", score);
+        savedscore += number;
+        document.querySelector('.score').innerHTML = savedscore;
+        sessionStorage.setItem("score", savedscore);
     }
     addScore(0);
 

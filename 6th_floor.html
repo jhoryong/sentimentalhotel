@@ -173,7 +173,7 @@
             <p class="line top-line second-line">맛이 어때요?</p>
             <p class="line bottom-line third-line four-toplines">☛ <span class="clicker clicker-602-8-1">맛있습니다.</span></p>
             <p class="line bottom-line fourth-line next-line">☛ <span class="clicker clicker-602-8-2">와, 이거 식당 차리셔도 되겠는데요?</span></p>
-            <p class="line bottom-line fifth-line next-line">☛ <span class="clicker clicker-602-8-3">너무 맛있어서 먹다 말고 공중제비 최소 두바퀴 이상 조지고 싶은 맛이네요.</span></p>
+            <p class="line bottom-line fifth-line next-line">☛ <span class="clicker clicker-602-8-3">너무 맛있어서 먹다 말고 공중제비 최소 두바퀴 이상 돌고 싶은 맛이네요.</span></p>
         </div>
     
         <div class="dialogue-box2 dialogue-602-9-1">
@@ -295,12 +295,13 @@ $('.map-icon').click(function() {
 
 // score
 
-    let score = 0;
+    let sessionValue = sessionStorage.getItem("score");
+    let savedscore = Number(sessionValue);
 
     function addScore(number) {
-        score += number;
-        $('.score').html(`${score}`);
-        sessionStorage.setItem("score", score);
+        savedscore += number;
+        document.querySelector('.score').innerHTML = savedscore;
+        sessionStorage.setItem("score", savedscore);
     }
     addScore(0);
 

@@ -33,19 +33,19 @@ body {
     font-family: 'Noto Serif KR', serif;
 }
 
-    .line-1 {animation: fadein 1s 1s forwards;}
+    .line-1 {animation: fadein 2s 1s forwards;}
 
-    .line-2 {animation: fadein 1s 2s forwards;}
+    .line-2 {animation: fadein 2s 2s forwards;}
 
-    .line-3 {animation: fadein 1s 3s forwards;}
+    .line-3 {animation: fadein 2s 3s forwards;}
 
-    .line-4 {animation: fadein 1s 1s forwards;}
+    .line-4 {animation: fadein 2s 1s forwards;}
 
-    .line-5 {animation: fadein 1s 2s forwards;}
+    .line-5 {animation: fadein 2s 2s forwards;}
 
-    .line-6 {animation: fadein 1s 1s forwards;}
+    .line-6 {animation: fadein 2s 1s forwards;}
 
-    .line-7 {animation: fadein 1s 2s forwards;}
+    .line-7 {animation: fadein 2s 2s forwards;}
 
 .arrow {
     opacity: 0;
