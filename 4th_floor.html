@@ -152,7 +152,7 @@
         <h1 class="name">루비</h1>
         <p class="line top-line first-line">어머, 음... 사실 제가 쬐~끔 피웠어요. 헤헤. 호텔 밖까지 내려가기가 너무 귀찮아서... </p>
         <p class="line top-line second-line next-line">근데 이렇게까지 피해가 갈줄은 몰랐네요... 죄송합니다.</p>
-        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-1-right">(+50점)</span></p>
+        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-1-right">(+10점)</span></p>
     </div>
 
     <div class="dialogue-box2 dialogue-1-404">
@@ -192,10 +192,6 @@
     </div>
 
 </div>
-
-
-
-
 
 
 
@@ -702,11 +698,11 @@ $(document).ready(function() {
 let block = {display: 'block'};
 let none = {display: 'none'};
 
-let hasClicked401 = true;
-let hasClicked402 = true;
-let hasClicked404 = true;
-let hasClicked406 = true;
-let hasClicked407 = true;
+let hasClicked401 = false;
+let hasClicked402 = false;
+let hasClicked404 = false;
+let hasClicked406 = false;
+let hasClicked407 = false;
 let hasClickedBigHyun = false;
 
 
@@ -748,6 +744,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     }
 
 
+
 // player name
 
     $('.player-name').text(sessionStorage.getItem("playerName"));
@@ -755,38 +752,30 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
 
-
 // start
 
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
+    //quick view
+    $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
 
-        //quick view
-        $('.dialogue-0-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
+        
 
     $('.clicker-0-1-1').on('click', function() {
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
         $('.dialogue-0-2, .dialogue-0-2 .line').show();
     })
-        //quick view
-        $('.dialogue-0-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-0-2-1').on('click', function() {
         $('.dialogue-0-2, .dialogue-0-2 .line').hide();
         $('.dialogue-0-3, .dialogue-0-3 .line').show();
     })
-        //quick view
-        $('.dialogue-0-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-    
+
         //close
         $('.clicker-0-3-1').on('click', function() {
             $('.dialogue-0-3, .dialogue-0-3 .line, .dialogue-box, .big-hyun__avatar').hide();
         })
         
-
-
 
 
     // if not opened every door 
@@ -799,41 +788,28 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
             $('.dialogue-0-4, .dialogue-0-4 .line, .dialogue-box, .big-hyun__avatar').show();
         }
     })
-        //quick view
-        $('.dialogue-0-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
-        //quick view
-        $('.dialogue-1-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
-    
         //close
         $('.clicker-0-4').on('click', function() {
             $('.dialogue-0-4, .dialogue-0-4 .line, .dialogue-box, .big-hyun__avatar').hide();})
 
 
-
-
-
     // QUIZ!!
+    //quick view
+    $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .dialogue-1-wrong, .dialogue-1-right').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
+    
     $('.clicker-1-1').on('click', function() {
         hasClickedBigHyun = true;
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
         $('.dialogue-1-2, .dialogue-1-2 .line').show();
     })
-        //quick view
-        $('.dialogue-1-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     //힌트 보기
     $('.clicker-1-hint').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-3, .dialogue-1-3 .line').show();
     })
-        //quick view
-        $('.dialogue-1-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
-
         //return
         $('.clicker-1-3').on('click', function() {
             $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').show();
@@ -845,56 +821,38 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-401, .dialogue-1-401 .line, .avatar__401').show();
     })
-        //quick view
-        $('.dialogue-1-401').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     //402
     $('.clicker-1-402').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-402, .dialogue-1-402 .line, .avatar__402').show();
     })
-        //quick view
-        $('.dialogue-1-402').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})   
-            
+
     //404
     $('.clicker-1-404').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-404, .dialogue-1-404 .line, .avatar__404').show();
     })
-        //quick view
-        $('.dialogue-1-404').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})   
-
+ 
     //406
     $('.clicker-1-406').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-406, .dialogue-1-406 .line, .avatar__406').show();
     })
-        //quick view
-        $('.dialogue-1-406').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})  
 
     //407
     $('.clicker-1-407').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__avatar').hide();
         $('.dialogue-1-407, .dialogue-1-407 .line, .avatar__d').show();
     })
-        //quick view
-        $('.dialogue-1-407').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})   
-  
+
     //wrong
     $('.clicker-1-wrong').on('click', function() {
         addScore(-10);
         $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, .avatar__d').hide();
         $('.dialogue-1-wrong, .dialogue-1-wrong .line, .big-hyun__avatar').show();
     })
-        //quick view
-        $('.dialogue-1-wrong').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-    
+
         //close
         $('.clicker-1-closew').on('click', function() {
             $('.dialogue-1-wrong, .dialogue-1-wrong .line, .dialogue-box, .big-hyun__gif, .big-hyun__avatar').hide();
@@ -903,14 +861,11 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
     //right
     $('.clicker-1-right').on('click', function() {
-        addScore(+50);
+        addScore(10);
         $('.dialogue-1-401, .dialogue-1-402, .dialogue-1-404, .dialogue-1-406, .dialogue-1-407, .avatar__401, .avatar__402, .avatar__404, .avatar__406, .avatar__d').hide();
         $('.dialogue-1-right, .dialogue-1-right .line, .big-hyun__avatar').show();
     })
-        //quick view
-        $('.dialogue-1-right').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-    
+
         //close
         $('.clicker-1-closer').on('click', function() {
             $('.dialogue-1-right, .dialogue-1-right .line, .dialogue-box, .big-hyun__gif, .big-hyun__avatar').hide();
@@ -926,12 +881,9 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
 
     })
-
         //quick view
         $('.dialogue-2-1').click(function() {
-            $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
-        })
-
+            $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
         // close
         $('.clicker-2-2').click(function(){
             $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').hide();
@@ -946,11 +898,12 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
 
-
-
-
-
 // 401
+
+//quick view
+$('.dialogue-401-1, .dialogue-401-2, .dialogue-401-3, .dialogue-401-4, .dialogue-401-5, .dialogue-401-6, .dialogue-401-7, .dialogue-401-8, .dialogue-401-9').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
+
 
 $('.door401__1').on('mouseenter', function() {
     $(event.currentTarget).hide();
@@ -964,90 +917,49 @@ $('.door401__2').on('mouseleave', function() {
     $('.door__401').on('click', function() {
         $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').css(block);})
 
-        //quick view
-        $('.dialogue-401-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //close
         $('.clicker-401-1-2').on('click', function() {
             $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').hide();})
-
 
     $('.clicker-401-1-1').on('click', function() {
         $('.dialogue-401-1, .dialogue-401-1 .line').hide();
         $('.dialogue-401-2, .dialogue-401-2 .line').show();
     })
 
-        //quick view
-        $('.dialogue-401-2').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
-
     $('.clicker-401-2-1').on('click', function() {
         $('.dialogue-401-2, .dialogue-401-2 .line').hide();
         $('.dialogue-401-3, .dialogue-401-3 .line, .transparent-background, .room401, .avatar__401').show();
     })
-
-        //quick view
-        $('.dialogue-401-3').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
 
     $('.clicker-401-3-1').on('click', function() {
         $('.dialogue-401-3, .dialogue-401-3 .line').hide();
         $('.dialogue-401-4, .dialogue-401-4 .line').show();
     })
 
-        //quick view
-        $('.dialogue-401-4').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
     $('.clicker-401-4-1').on('click', function() {
         $('.dialogue-401-4, .dialogue-401-4 .line').hide();
         $('.dialogue-401-5, .dialogue-401-5 .line').show();
     })
-
-        //quick view
-        $('.dialogue-401-5').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-401-5-1').on('click', function() {
         $('.dialogue-401-5, .dialogue-401-5 .line').hide();
         $('.dialogue-401-6, .dialogue-401-6 .line').show();
     })
 
-        //quick view
-        $('.dialogue-401-6').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
     $('.clicker-401-6-1').on('click', function() {
         $('.dialogue-401-6, .dialogue-401-6 .line').hide();
         $('.dialogue-401-7, .dialogue-401-7 .line').show();
     })
-
-        //quick view
-        $('.dialogue-401-7').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-401-7-1').on('click', function() {
         $('.dialogue-401-7, .dialogue-401-7 .line').hide();
         $('.dialogue-401-8, .dialogue-401-8 .line').show();
     })
 
-        //quick view
-        $('.dialogue-401-8').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
     $('.clicker-401-8-1').on('click', function() {
         $('.dialogue-401-8, .dialogue-401-8 .line').hide();
         $('.dialogue-401-9, .dialogue-401-9 .line').show();
     })
-
-        //quick view
-        $('.dialogue-401-9').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
         //close
         $('.clicker-401-9-1').on('click', function() {
@@ -1064,6 +976,11 @@ $('.door401__2').on('mouseleave', function() {
 
 // 402
 
+//quick view
+$('.dialogue-402-1, .dialogue-402-2, .dialogue-402-3, .dialogue-402-4, .dialogue-402-5, .dialogue-402-6, .dialogue-402-7, .dialogue-402-8').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
+
+
 $('.door402__1').on('mouseenter', function() {
     $(event.currentTarget).hide();
     $('.door402__2').show();
@@ -1075,11 +992,6 @@ $('.door402__2').on('mouseleave', function() {
 
 $('.door__402').on('click', function() {
     $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').css(block);})
-
-    //quick view
-    $('.dialogue-402-1').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
-    
     //close
     $('.clicker-402-1-2').on('click', function() {
         $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').hide();})
@@ -1090,68 +1002,35 @@ $('.clicker-402-1-1').on('click', function() {
     $('.dialogue-402-2, .dialogue-402-2 .line').show();
 })
 
-    //quick view
-    $('.dialogue-402-2').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
-
 $('.clicker-402-2').on('click', function() {
     $('.dialogue-402-2, .dialogue-402-2 .line').hide();
     $('.dialogue-402-3, .dialogue-402-3 .line, .transparent-background, .room402, .avatar__402').show();
 })
 
-    //quick view
-    $('.dialogue-402-3').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
-
 $('.clicker-402-3').on('click', function() {
     $('.dialogue-402-3, .dialogue-402-3 .line').hide();
     $('.dialogue-402-4, .dialogue-402-4 .line').show();
 })
-
-    //quick view
-    $('.dialogue-402-4').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-          
+     
 $('.clicker-402-4').on('click', function() {
     $('.dialogue-402-4, .dialogue-402-4 .line').hide();
     $('.dialogue-402-5, .dialogue-402-5 .line').show();
 })
-
-    //quick view
-    $('.dialogue-402-5').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
 $('.clicker-402-5').on('click', function() {
     $('.dialogue-402-5, .dialogue-402-5 .line').hide();
     $('.dialogue-402-6, .dialogue-402-6 .line').show();
 })
 
-    //quick view
-    $('.dialogue-402-6').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
 $('.clicker-402-6').on('click', function() {
     $('.dialogue-402-6, .dialogue-402-6 .line').hide();
     $('.dialogue-402-7, .dialogue-402-7 .line').show();
 })
 
-    //quick view
-    $('.dialogue-402-7').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
 $('.clicker-402-7').on('click', function() {
     $('.dialogue-402-7, .dialogue-402-7 .line').hide();
     $('.dialogue-402-8, .dialogue-402-8 .line').show();
 })
-
-    //quick view
-    $('.dialogue-402-8').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     //close
     $('.clicker-402-8').on('click', function() {
@@ -1161,7 +1040,6 @@ $('.clicker-402-7').on('click', function() {
                 $('.movingarrow__big-hyun').show();
             }
     })
-
 
 
 
@@ -1180,7 +1058,7 @@ $('.door__403').on('click', function() {
 })
 
     //quick view
-    $('.dialogue-403-1').click(function() {
+    $('.dialogue-403-1, .dialogue-403-2').click(function() {
         $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
     })
         
@@ -1194,10 +1072,6 @@ $('.clicker-403-1-1').on('click', function() {
     $('.dialogue-403-2, .dialogue-403-2 .line').show();
 })
 
-    //quick view
-    $('.dialogue-403-2').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line');}) 
-
     //close
     $('.clicker-403-2').on('click', function() {
         $('.dialogue-403-2, .dialogue-box').css(none);
@@ -1206,6 +1080,10 @@ $('.clicker-403-1-1').on('click', function() {
 
 
 //404
+
+//quick view
+$('.dialogue-404-1, .dialogue-404-2, .dialogue-404-3, .dialogue-404-4, .dialogue-404-5, .dialogue-404-6').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
 
 $('.door404__1').on('mouseenter', function() {
     $(event.currentTarget).hide();
@@ -1219,11 +1097,6 @@ $('.door404__2').on('mouseleave', function() {
 
 $('.door__404').on('click', function() {
     $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').css(block);})
-
-    //quick view
-    $('.dialogue-404-1').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
-    
     //close
     $('.clicker-404-1-2').on('click', function() {
         $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').hide();})
@@ -1234,48 +1107,25 @@ $('.clicker-404-1-1').on('click', function() {
     $('.dialogue-404-2, .dialogue-404-2 .line').show();
 })
 
-    //quick view
-    $('.dialogue-404-2').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
-
 $('.clicker-404-2').on('click', function() {
     $('.dialogue-404-2, .dialogue-404-2 .line').hide();
     $('.dialogue-404-3, .dialogue-404-3 .line, .transparent-background, .room404, .avatar__404').show();
 })
-
-    //quick view
-    $('.dialogue-404-3').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
 
 $('.clicker-404-3').on('click', function() {
     $('.dialogue-404-3, .dialogue-404-3 .line').hide();
     $('.dialogue-404-4, .dialogue-404-4 .line').show();
 })
 
-    //quick view
-    $('.dialogue-404-4').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-          
 $('.clicker-404-4').on('click', function() {
     $('.dialogue-404-4, .dialogue-404-4 .line').hide();
     $('.dialogue-404-5, .dialogue-404-5 .line').show();
 })
 
-    //quick view
-    $('.dialogue-404-5').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
 $('.clicker-404-5').on('click', function() {
     $('.dialogue-404-5, .dialogue-404-5 .line').hide();
     $('.dialogue-404-6, .dialogue-404-6 .line').show();
 })
-
-    //quick view
-    $('.dialogue-404-6').click(function() {
-        $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     //close
     $('.clicker-404-6').on('click', function() {
@@ -1303,7 +1153,7 @@ $('.door__405').on('click', function() {
 })
 
     //quick view
-    $('.dialogue-405-1').click(function() {
+    $('.dialogue-405-1, .dialogue-405-2').click(function() {
         $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
     })
         
@@ -1317,10 +1167,6 @@ $('.clicker-405-1-1').on('click', function() {
     $('.dialogue-405-2, .dialogue-405-2 .line').show();
 })
 
-    //quick view
-    $('.dialogue-405-2').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line');}) 
-
     //close
     $('.clicker-405-2').on('click', function() {
         $('.dialogue-405-2, .dialogue-box').css(none);
@@ -1331,6 +1177,9 @@ $('.clicker-405-1-1').on('click', function() {
 
 
 //406
+
+$('.dialogue-406-1, .dialogue-406-2, .dialogue-406-3, .dialogue-406-4, .dialogue-406-5, .dialogue-406-6, .dialogue-406-7, .dialogue-406-8, .dialogue-406-9, .dialogue-406-10, .dialogue-406-11, .dialogue-406-12, .dialogue-406-13').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
 
 $('.door406__1').on('mouseenter', function() {
     $(event.currentTarget).hide();
@@ -1343,10 +1192,6 @@ $('.door406__2').on('mouseleave', function() {
 
     $('.door__406').on('click', function() {
         $('.dialogue-406-1, .dialogue-406-1 .line, .dialogue-box').css(block);})
-
-        //quick view
-        $('.dialogue-406-1').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
     
         //close
         $('.clicker-406-1-2').on('click', function() {
@@ -1357,11 +1202,6 @@ $('.door406__2').on('mouseleave', function() {
         $('.dialogue-406-1, .dialogue-406-1 .line').hide();
         $('.dialogue-406-2, .dialogue-406-2 .line').show();
     })
-
-        //quick view
-        $('.dialogue-406-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
-
         //close
         $('.clicker-406-2-2').on('click', function() {
             $('.dialogue-406-2, .dialogue-406-2 .line, .dialogue-box').hide();})
@@ -1371,12 +1211,6 @@ $('.door406__2').on('mouseleave', function() {
         $('.dialogue-406-2, .dialogue-406-2 .line').hide();
         $('.dialogue-406-3, .dialogue-406-3 .line').show();
     })
-
-        //quick view
-        $('.dialogue-406-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');
-        })
-
         //close
         $('.clicker-406-3-2').on('click', function() {
             $('.dialogue-406-3, .dialogue-406-3 .line, .dialogue-box').hide();})
@@ -1387,94 +1221,51 @@ $('.door406__2').on('mouseleave', function() {
         $('.dialogue-406-4, .dialogue-406-4 .line').show();
     })
 
-        //quick view
-        $('.dialogue-406-4').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
     $('.clicker-406-4').on('click', function() {
         $('.dialogue-406-4, .dialogue-406-4 .line').hide();
         $('.dialogue-406-5, .dialogue-406-5 .line, .transparent-background, .room406, .avatar__406').show();
     })
-
-        //quick view
-        $('.dialogue-406-5').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-406-5').on('click', function() {
         $('.dialogue-406-5, .dialogue-406-5 .line').hide();
         $('.dialogue-406-6, .dialogue-406-6 .line').show();
     })
 
-        //quick view
-        $('.dialogue-406-6').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
     $('.clicker-406-6').on('click', function() {
         $('.dialogue-406-6, .dialogue-406-6 .line').hide();
         $('.dialogue-406-7, .dialogue-406-7 .line').show();
     })
-
-        //quick view
-        $('.dialogue-406-7').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-406-7').on('click', function() {
         $('.dialogue-406-7, .dialogue-406-7 .line').hide();
         $('.dialogue-406-8, .dialogue-406-8 .line').show();
     })
 
-        //quick view
-        $('.dialogue-406-8').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
-
     $('.clicker-406-8').on('click', function() {
         $('.dialogue-406-8, .dialogue-406-8 .line').hide();
         $('.dialogue-406-9, .dialogue-406-9 .line').show();
     })
-
-        //quick view
-        $('.dialogue-406-9').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     $('.clicker-406-9').on('click', function() {
         $('.dialogue-406-9, .dialogue-406-9 .line').hide();
         $('.dialogue-406-10, .dialogue-406-10 .line').show();
     })
 
-        //quick view
-        $('.dialogue-406-10').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
     $('.clicker-406-10').on('click', function() {
         $('.dialogue-406-10, .dialogue-406-10 .line').hide();
         $('.dialogue-406-11, .dialogue-406-11 .line').show();
     })
-
-        //quick view
-        $('.dialogue-406-11').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     $('.clicker-406-11').on('click', function() {
         $('.dialogue-406-11, .dialogue-406-11 .line').hide();
         $('.dialogue-406-12, .dialogue-406-12 .line').show();
     })
 
-        //quick view
-        $('.dialogue-406-12').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
-
         //close
         $('.clicker-406-12').on('click', function() {
             $('.dialogue-406-12, .dialogue-box, .transparent-background, .room406, .avatar__406').css(none);
             $('.dialogue-406-13, .dialogue-406-13 .line, .dialogue-box').delay(1000).fadeIn(0);
         })
-
-        //quick view
-        $('.dialogue-406-13').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
 
         //close
         $('.clicker-406-13').on('click', function() {
@@ -1492,6 +1283,11 @@ $('.door406__2').on('mouseleave', function() {
     
 // 407
 
+//quick view
+$('.dialogue-407-1, .dialogue-407-2, .dialogue-407-3, .dialogue-407-4, .dialogue-407-5, .dialogue-407-6, .dialogue-407-7, .dialogue-407-8, .dialogue-407-9, .dialogue-407-10, .dialogue-407-11, .dialogue-407-12, .dialogue-407-13 .dialogue-407-14, .dialogue-407-15, .dialogue-407-16').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
+
+
 $('.door407__1').on('mouseenter', function() {
     $(event.currentTarget).hide();
     $('.door407__2').show();
@@ -1503,11 +1299,6 @@ $('.door407__2').on('mouseleave', function() {
 
     $('.door__407').on('click', function() {
         $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').css(block);})
-
-        //quick view
-        $('.dialogue-407-1').click(function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');})
-    
         //close
         $('.clicker-407-1-2').on('click', function() {
             $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').hide();})
@@ -1517,139 +1308,80 @@ $('.door407__2').on('mouseleave', function() {
         $('.dialogue-407-1, .dialogue-407-1 .line').hide();
         $('.dialogue-407-2, .dialogue-407-2 .line').show();
     })
-        //quick view
-        $('.dialogue-407-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
-
     $('.clicker-407-2').on('click', function() {
         $('.dialogue-407-2, .dialogue-407-2 .line').hide();
         $('.dialogue-407-3, .dialogue-407-3 .line, .transparent-background, .room__407d, .avatar__d').show();
     })
-
-        //quick view
-        $('.dialogue-407-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');
-        })
 
     $('.clicker-407-3').on('click', function() {
         $('.dialogue-407-3, .dialogue-407-3 .line').hide();
         $('.dialogue-407-4, .dialogue-407-4 .line').show();
     })
 
-        //quick view
-        $('.dialogue-407-4').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})    
     $('.clicker-407-4').on('click', function() {
         $('.dialogue-407-4, .dialogue-407-4 .line').hide();
         $('.dialogue-407-5, .dialogue-407-5 .line').show();
     })
-
-        //quick view
-        $('.dialogue-407-5').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-407-5').on('click', function() {
         $('.dialogue-407-5, .dialogue-407-5 .line').hide();
         $('.dialogue-407-6, .dialogue-407-6 .line').show();
     })
 
-        //quick view
-        $('.dialogue-407-6').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
-
     $('.clicker-407-6').on('click', function() {
         $('.dialogue-407-6, .dialogue-407-6 .line').hide();
         $('.dialogue-407-7, .dialogue-407-7 .line').show();
     })
-
-        //quick view
-        $('.dialogue-407-7').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
-
 
     $('.clicker-407-7').on('click', function() {
         $('.dialogue-407-7, .dialogue-407-7 .line').hide();
         $('.dialogue-407-8, .dialogue-407-8 .line').show();
     })
 
-        //quick view
-        $('.dialogue-407-8').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
-
     $('.clicker-407-8').on('click', function() {
         $('.dialogue-407-8, .dialogue-407-8 .line, .room__407d, .avatar__d').hide();
         $('.dialogue-407-9, .dialogue-407-9 .line, .room__407h, .avatar__h').show();
     })
-        //quick view
-        $('.dialogue-407-9').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     $('.clicker-407-9').on('click', function() {
         $('.dialogue-407-9, .dialogue-407-9 .line, .avatar__h').hide();
         $('.dialogue-407-10, .dialogue-407-10 .line, .avatar__d').show();
     })
-        //quick view
-        $('.dialogue-407-10').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
 
     $('.clicker-407-10').on('click', function() {
         $('.dialogue-407-10, .dialogue-407-10 .line, .avatar__d').hide();
         $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').show();
     })
-        //quick view
-        $('.dialogue-407-11').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');}) 
 
     $('.clicker-407-11').on('click', function() {
         $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').hide();
         $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').show();
     })
-        //quick view
-        $('.dialogue-407-12').click(function() {
-            $(event.currentTarget).children().removeClass('first-line   second-line third-line fourth-line fifth-line sixth-line');})
 
     $('.clicker-407-11').on('click', function() {
         $('.dialogue-407-11, .dialogue-407-11 .line, .avatar__h').hide();
         $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').show();
     })
-        //quick view
-        $('.dialogue-407-12').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     $('.clicker-407-12').on('click', function() {
         $('.dialogue-407-12, .dialogue-407-12 .line, .avatar__d').hide();
         $('.dialogue-407-13, .dialogue-407-13 .line, .avatar__h').show();
     })
-        //quick view
-        $('.dialogue-407-13').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     $('.clicker-407-13').on('click', function() {
         $('.dialogue-407-13, .dialogue-407-13 .line, .avatar__h, .room__407h').hide();
         $('.dialogue-407-14, .dialogue-407-14 .line, .avatar__d, .room__407d').show();
     })
-        //quick view
-        $('.dialogue-407-14').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     $('.clicker-407-14').on('click', function() {
         $('.dialogue-407-14, .dialogue-407-14 .line').hide();
         $('.dialogue-407-15, .dialogue-407-15 .line').show();
     })
-        //quick view
-        $('.dialogue-407-15').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     $('.clicker-407-15').on('click', function() {
         $('.dialogue-407-15, .dialogue-407-15 .line').hide();
         $('.dialogue-407-16, .dialogue-407-16 .line').show();
     })
-        //quick view
-        $('.dialogue-407-16').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
         //close
         $('.clicker-407-16').on('click', function() {

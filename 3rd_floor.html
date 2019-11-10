@@ -96,7 +96,7 @@
     <div class="dialogue-box foundallgif">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">움직이는 요소를 모두 찾았다! </p>
-        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
+        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 10점!)</span></p>
     </div>
 
     
@@ -275,13 +275,12 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     // found all gifs
     $('.clicker-100').click(function() {
         $('.foundallgif, .foundallgif .line').hide();
-        addScore(5);
+        addScore(10);
     })
 
 
      // logo     
     $('.logo1').on('click', function() {
-        addBonus(hasClickedLogo, 5);
         hasClickedLogo = true;
         alertFoundAllGif();
         let t = 200;
@@ -300,7 +299,6 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
     // popcorn
     $('.popcorn1').on('click', function() {
-        addBonus(hasClickedPopcorn, 5);
         hasClickedPopcorn = true;
         alertFoundAllGif();
         let t = 150;
@@ -321,7 +319,6 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
      // picture
     $('.picture1').on('click', function() {
-        addBonus(hasClickedPicture, 5);
         hasClickedPicture = true;
         alertFoundAllGif();
         let t = 200;
@@ -346,7 +343,6 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     
     // couple 
     $('.couple1').on('click', function() {
-        addBonus(hasClickedCouple, 5);
         hasClickedCouple = true;
         alertFoundAllGif();
         let t = 200;
@@ -442,27 +438,18 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     // big-hyun
 
         //quick view
-        $('.dialogue-1-1').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
+        $('.dialogue-1-1, .dialogue-1-2').click(function() {
+            $(event.currentTarget).children().css('animation', 'none');})
 
     $('.clicker-1-1').click(function() {
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
         $('.dialogue-1-2, .dialogue-1-2 .line').show();})
-
-        //quick view
-        $('.dialogue-1-2').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
         
         //close    
         $('.clicker-1-2').click(function() {
             $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__gif, .big-hyun__avatar').hide();
             $('.movingarrow__movie, .movingarrow__restaurant').show();})
             
-
-
-        
-    
-
 
 
     // movie
@@ -526,7 +513,6 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         })
 
     $('.clicker-3-1').click(function(){
-        addScore(50);
         event.preventDefault();
         $('#fade-box').fadeIn(2000);
         setTimeout(function() {window.location = $('a').attr('href');}, 2000);

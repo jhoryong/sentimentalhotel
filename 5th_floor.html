@@ -419,14 +419,14 @@
 
     <div class="dialogue-box2 dialogue-504-7-1">
         <h1 class="name">꽃송이</h1>
-        <p class="line top-line first-line">뭔가 매운거였는데... 내가 잘못봤나? 나중에 다시 확인해 봐야겠다. (-5점)</p>
+        <p class="line top-line first-line">뭔가 매운거였는데... 내가 잘못봤나? 나중에 다시 확인해 봐야겠다. (-10점..)</p>
         <p class="line top-line second-line next-line">그럼 저는 하던 영상 작업이 있어서 다시 들어가야겠어요. 안녕히가세요~</span></p>
         <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-504-7">(방에서 나가기)</span></p>
     </div>
 
     <div class="dialogue-box2 dialogue-504-7-2">
         <h1 class="name">꽃송이</h1>
-        <p class="line top-line first-line">으아 역시 마라탕이지...! 매콤 얼얼한 국물에 소주한잔 들이키면... 크...! (+5점)</p>
+        <p class="line top-line first-line">으아 역시 마라탕이지...! 매콤 얼얼한 국물에 소주한잔 들이키면... 크...! (10점 획득!)</p>
         <p class="line top-line second-line next-line">그럼 저는 하던 영상 작업이 있어서 다시 들어가야겠어요. 안녕히가세요~</span></p>
         <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-504-7">(방에서 나가기)</span></p>
     </div>
@@ -496,14 +496,14 @@
 
     <div class="dialogue-box2 dialogue-505-7-1">
         <h1 class="name">수리공</h1>
-        <p class="line top-line first-line">피아노 어쩌고 한것 같았는데... 제가 다시 한번 확인해 보겠습니다. (-5점)</p>
+        <p class="line top-line first-line">피아노 어쩌고 한것 같았는데... 제가 다시 한번 확인해 보겠습니다. (-10점..)</p>
         <p class="line top-line second-line next-line">아, 비밀에 대해 너무 신경 쓰지 마세요. 차차 알게 되실 테니. 그럼 안녕히.</span></p>
         <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-505-7">(방에서 나가기)</span></p>
     </div>
 
     <div class="dialogue-box2 dialogue-505-7-2">
         <h1 class="name">수리공</h1>
-        <p class="line top-line first-line">피아니스트의 전설이라... 배에서 평생을 산 피아니스트를 그린 멋진 영화죠... (+5점)</p>
+        <p class="line top-line first-line">피아니스트의 전설이라... 배에서 평생을 산 피아니스트를 그린 멋진 영화죠... (10점 획득!)</p>
         <p class="line top-line second-line next-line">아, 지배인에게 제가 왔을 때 🎭<strong>심리 관련 영화</strong>를 틀어 달라고 전해 주세요.</p>
         <p class="line top-line third-line next-line">저는 사람의 정신에 관심이 많거든요.</p>
         <p class="line top-line fourth-line next-line">아참. 비밀에 대해서는 너무 신경 쓰지 마세요. 차차 알게 되실 테니... 그럼 안녕히.</span></p>
@@ -575,16 +575,13 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
     $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').delay(5500).fadeIn(0);
     //quick view
-    $('.dialogue-0-1').click(function() {
+    $('.dialogue-0-1, .dialogue-0-2').click(function() {
         $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-0-1').on('click', function() {
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
         $('.dialogue-0-2, .dialogue-0-2 .line').show();
     })
-    //quick view
-    $('.dialogue-0-2').click(function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
 
     //close
     $('.clicker-0-2').on('click', function() {
@@ -598,22 +595,17 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         $('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box, .big-hyun__avatar').show();
         $('.movingarrow__big-hyun').hide();})
     //quick view
-    $('.dialogue-1-1').click(function() {
+    $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3').click(function() {
         $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-1-1').click(function(){
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
         $('.dialogue-1-2, .dialogue-1-2 .line').show();})
-    //quick view
-    $('.dialogue-1-2').click(function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-1-2').click(function(){
         $('.dialogue-1-2, .dialogue-1-2 .line').hide();
         $('.dialogue-1-3, .dialogue-1-3 .line').show();})
-    //quick view
-    $('.dialogue-1-3').click(function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
+
     //close
     $('.clicker-1-3').click(function(){
         $('.dialogue-1-3, .dialogue-1-3 .line, .dialogue-box, .big-hyun__avatar, .big-hyun__gif').hide();
@@ -649,6 +641,10 @@ $('.clicker-2-1').click(function(){
 
 // 501
 
+    //quick view
+    $('.dialogue-501-1, .dialogue-501-2, .dialogue-501-3, .dialogue-501-4, .dialogue-501-5-1, .dialogue-501-5-2, .dialogue-501-5-3, .dialogue-501-5-4, .dialogue-501-6').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');})
+
     $('.door501__1').on('mouseenter', function() {
         $(event.currentTarget).hide();
         $('.door501__2').show();
@@ -661,9 +657,7 @@ $('.clicker-2-1').click(function(){
     $('.door__501').on('click', function() {
         $('.dialogue-501-1, .dialogue-501-1 .line, .dialogue-box').show();
     })
-        //quick view
-        $('.dialogue-501-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+
         //close
         $('.clicker-501-1-2').on('click', function() {
             $('.dialogue-501-1, .dialogue-501-1 .line, .dialogue-box').hide();})
@@ -673,35 +667,23 @@ $('.clicker-2-1').click(function(){
         $('.dialogue-501-1, .dialogue-501-1 .line').hide();
         $('.dialogue-501-2, .dialogue-501-2 .line').show();
     })
-        //quick view
-        $('.dialogue-501-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-501-2').on('click', function() {
         $('.dialogue-501-2, .dialogue-501-2 .line').hide();
         $('.dialogue-501-3, .dialogue-501-3 .line, .transparent-background, .room501, .avatar__501').show();
     })
-        //quick view
-        $('.dialogue-501-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-501-3').on('click', function() {
         $('.dialogue-501-3, .dialogue-501-3 .line').hide();
         $('.dialogue-501-4, .dialogue-501-4 .line').show();
     })
-        //quick view
-        $('.dialogue-501-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})    
-    
+
     //option 1
     $('.clicker-501-4-1').on('click', function() {
         $('.dialogue-501-4, .dialogue-501-4 .line').hide();
         $('.dialogue-501-5-1, .dialogue-501-5-1 .line').show();
     })
-        //quick view
-        $('.dialogue-501-5-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+
         //return
         $('.clicker-501-5-1').on('click', function() {
             $('.dialogue-501-4, .dialogue-501-4 .line').show();
@@ -713,9 +695,6 @@ $('.clicker-2-1').click(function(){
         $('.dialogue-501-4, .dialogue-501-4 .line').hide();
         $('.dialogue-501-5-2, .dialogue-501-5-2 .line').show();
     })
-        //quick view
-        $('.dialogue-501-5-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
         //return
         $('.clicker-501-5-1').on('click', function() {
             $('.dialogue-501-4, .dialogue-501-4 .line').show();
@@ -727,9 +706,6 @@ $('.clicker-2-1').click(function(){
         $('.dialogue-501-4, .dialogue-501-4 .line').hide();
         $('.dialogue-501-5-3, .dialogue-501-5-3 .line').show();
     })
-        //quick view
-        $('.dialogue-501-5-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //return
         $('.clicker-501-5-1').on('click', function() {
             $('.dialogue-501-4, .dialogue-501-4 .line').show();
@@ -741,18 +717,11 @@ $('.clicker-2-1').click(function(){
         $('.dialogue-501-4, .dialogue-501-4 .line').hide();
         $('.dialogue-501-5-4, .dialogue-501-5-4 .line').show();
     })
-        //quick view
-        $('.dialogue-501-5-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-501-5-2').on('click', function() {
         $('.dialogue-501-6, .dialogue-501-6 .line').show();
         $('.dialogue-501-5-4, .dialogue-501-5-4 .line').hide();
     })
-        //quick view
-        $('.dialogue-501-6').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
         // close
         $('.clicker-501-6').on('click', function() {
@@ -769,6 +738,10 @@ $('.clicker-2-1').click(function(){
 
 // 502
 
+    //quick view
+    $('.dialogue-502-1, .dialogue-502-2, .dialogue-502-3, .dialogue-502-4, .dialogue-502-5-1, .dialogue-502-5-2, .dialogue-502-5-3, .dialogue-502-5-4, .dialogue-502-6').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');})
+
 $('.door502__1').on('mouseenter', function() {
         $(event.currentTarget).hide();
         $('.door502__2').show();
@@ -781,9 +754,7 @@ $('.door502__1').on('mouseenter', function() {
     $('.door__502').on('click', function() {
         $('.dialogue-502-1, .dialogue-502-1 .line, .dialogue-box').show();
     })
-        //quick view
-        $('.dialogue-502-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+
         //close
         $('.clicker-502-1-2').on('click', function() {
             $('.dialogue-502-1, .dialogue-502-1 .line, .dialogue-box').hide();})
@@ -793,35 +764,22 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-502-1, .dialogue-502-1 .line').hide();
         $('.dialogue-502-2, .dialogue-502-2 .line').show();
     })
-        //quick view
-        $('.dialogue-502-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-502-2').on('click', function() {
         $('.dialogue-502-2, .dialogue-502-2 .line').hide();
         $('.dialogue-502-3, .dialogue-502-3 .line, .transparent-background, .room502, .avatar__502').show();
     })
-        //quick view
-        $('.dialogue-502-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-502-3').on('click', function() {
         $('.dialogue-502-3, .dialogue-502-3 .line').hide();
         $('.dialogue-502-4, .dialogue-502-4 .line').show();
     })
-        //quick view
-        $('.dialogue-502-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})    
-    
+ 
     //option 1
     $('.clicker-502-4-1').on('click', function() {
         $('.dialogue-502-4, .dialogue-502-4 .line').hide();
         $('.dialogue-502-5-1, .dialogue-502-5-1 .line').show();
     })
-        //quick view
-        $('.dialogue-502-5-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //return
         $('.clicker-502-5-1').on('click', function() {
             $('.dialogue-502-4, .dialogue-502-4 .line').show();
@@ -833,18 +791,12 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-502-4, .dialogue-502-4 .line').hide();
         $('.dialogue-502-5-2, .dialogue-502-5-2 .line').show();
     })
-        //quick view
-        $('.dialogue-502-5-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
     //option 3
     $('.clicker-502-4-3').on('click', function() {
         $('.dialogue-502-4, .dialogue-502-4 .line').hide();
         $('.dialogue-502-5-3, .dialogue-502-5-3 .line').show();
     })
-        //quick view
-        $('.dialogue-502-5-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //return
         $('.clicker-502-5-1').on('click', function() {
             $('.dialogue-502-4, .dialogue-502-4 .line').show();
@@ -856,10 +808,6 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-502-4, .dialogue-502-4 .line').hide();
         $('.dialogue-502-5-4, .dialogue-502-5-4 .line').show();
     })
-        //quick view
-        $('.dialogue-502-5-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
-
         //return
         $('.clicker-502-5-1').on('click', function() {
             $('.dialogue-502-4, .dialogue-502-4 .line').show();
@@ -871,9 +819,6 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-502-6, .dialogue-502-6 .line').show();
         $('.dialogue-502-5-2, .dialogue-502-5-2 .line').hide();
     })
-        //quick view
-        $('.dialogue-502-6').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
         // close
         $('.clicker-502-6').on('click', function() {
@@ -890,6 +835,10 @@ $('.door502__1').on('mouseenter', function() {
 
     //503
 
+    //quick view
+    $('.dialogue-503-1, .dialogue-503-2, .dialogue-503-3, .dialogue-503-4, .dialogue-503-5').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
+
     $('.door503__1').on('mouseenter', function() {
         $(event.currentTarget).hide();
         $('.door503__2').show();
@@ -901,9 +850,7 @@ $('.door502__1').on('mouseenter', function() {
 
     $('.door__503').on('click', function() {
         $('.dialogue-503-1, .dialogue-503-1 .line, .dialogue-box').show();})
-        //quick view
-        $('.dialogue-503-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+ 
         //close
         $('.clicker-503-1-2').on('click', function() {
             $('.dialogue-503-1, .dialogue-503-1 .line, .dialogue-box').hide();})
@@ -912,34 +859,22 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-503-1, .dialogue-503-1 .line').hide();
         $('.dialogue-503-2, .dialogue-503-2 .line').show();
     })
-        //quick view
-        $('.dialogue-503-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-503-2').on('click', function() {
         $('.dialogue-503-2, .dialogue-503-2 .line').hide();
         $('.dialogue-503-3, .dialogue-503-3 .line, .transparent-background, .room503, .avatar__503').show();
     })
-        //quick view
-        $('.dialogue-503-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-503-3').on('click', function() {
         $('.dialogue-503-3, .dialogue-503-3 .line').hide();
         $('.dialogue-503-4, .dialogue-503-4 .line').show();
     })
-        //quick view
-        $('.dialogue-503-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-503-4').on('click', function() {
         $('.dialogue-503-4, .dialogue-503-4 .line').hide();
         $('.dialogue-503-5, .dialogue-503-5 .line').show();
     })
-        //quick view
-        $('.dialogue-503-5').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})  
+ 
     // close
     $('.clicker-503-5').on('click', function() {
         $('.dialogue-503-5, .dialogue-503-5 .line, .dialogue-box, .transparent-background, .room503, .avatar__503').hide();
@@ -955,6 +890,10 @@ $('.door502__1').on('mouseenter', function() {
 
 // 504
 
+    //quick view
+    $('.dialogue-504-1, .dialogue-504-2, .dialogue-504-3, .dialogue-504-4, .dialogue-504-5-1, .dialogue-504-5-2, .dialogue-504-5-3, .dialogue-504-5-4, .dialogue-504-6, .dialogue-504-7-1, .dialogue-504-7-2').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');})
+
     $('.door504__1').on('mouseenter', function() {
         $(event.currentTarget).hide();
         $('.door504__2').show();
@@ -967,9 +906,6 @@ $('.door502__1').on('mouseenter', function() {
     $('.door__504').on('click', function() {
         $('.dialogue-504-1, .dialogue-504-1 .line, .dialogue-box').show();
     })
-        //quick view
-        $('.dialogue-504-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //close
         $('.clicker-504-1-2').on('click', function() {
             $('.dialogue-504-1, .dialogue-504-1 .line, .dialogue-box').hide();})
@@ -978,36 +914,25 @@ $('.door502__1').on('mouseenter', function() {
     $('.clicker-504-1-1').on('click', function() {
         $('.dialogue-504-1, .dialogue-504-1 .line').hide();
         $('.dialogue-504-2, .dialogue-504-2 .line').show();
-    })
-        //quick view
-        $('.dialogue-504-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+    }) 
 
     $('.clicker-504-2').on('click', function() {
         $('.dialogue-504-2, .dialogue-504-2 .line').hide();
         $('.dialogue-504-3, .dialogue-504-3 .line, .transparent-background, .room504, .avatar__504').show();
     })
-        //quick view
-        $('.dialogue-504-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-504-3').on('click', function() {
         $('.dialogue-504-3, .dialogue-504-3 .line').hide();
         $('.dialogue-504-4, .dialogue-504-4 .line').show();
     })
-        //quick view
-        $('.dialogue-504-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})    
-    
+
+
     //option 1
     $('.clicker-504-4-1').on('click', function() {
         $('.dialogue-504-4, .dialogue-504-4 .line').hide();
         $('.dialogue-504-5-1, .dialogue-504-5-1 .line').show();
     })
-        //quick view
-        $('.dialogue-504-5-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+
         //return
         $('.clicker-504-5-1').on('click', function() {
             $('.dialogue-504-4, .dialogue-504-4 .line').show();
@@ -1019,9 +944,7 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-504-4, .dialogue-504-4 .line').hide();
         $('.dialogue-504-5-2, .dialogue-504-5-2 .line').show();
     })
-        //quick view
-        $('.dialogue-504-5-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
+
         //return
         $('.clicker-504-5-1').on('click', function() {
             $('.dialogue-504-4, .dialogue-504-4 .line').show();
@@ -1033,9 +956,7 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-504-4, .dialogue-504-4 .line').hide();
         $('.dialogue-504-5-3, .dialogue-504-5-3 .line').show();
     })
-        //quick view
-        $('.dialogue-504-5-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+
         //return
         $('.clicker-504-5-1').on('click', function() {
             $('.dialogue-504-4, .dialogue-504-4 .line').show();
@@ -1047,39 +968,28 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-504-4, .dialogue-504-4 .line').hide();
         $('.dialogue-504-5-4, .dialogue-504-5-4 .line').show();
     })
-        //quick view
-        $('.dialogue-504-5-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
 
     $('.clicker-504-5-2').on('click', function() {
         $('.dialogue-504-5-4, .dialogue-504-5-4 .line').hide();
         $('.dialogue-504-6, .dialogue-504-6 .line').show();
     })
-        //quick view 
-        $('.dialogue-504-6').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
 
     //option 1
     $('.clicker-504-6-1').on('click', function() {
         $('.dialogue-504-6, .dialogue-504-6 .line').hide();
         $('.dialogue-504-7-1, .dialogue-504-7-1 .line').show();
-        addBonus(hasClicked504, -5);
-    })
-        //quick view
-        $('.dialogue-504-7-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+        addBonus(hasClicked504, -10);
+    })  
 
     //option 2 --> ** answer!
     $('.clicker-504-6-2').on('click', function() {
         $('.dialogue-504-6, .dialogue-504-6 .line').hide();
         $('.dialogue-504-7-2, .dialogue-504-7-2 .line').show();
-        addBonus(hasClicked504, 5);
+        addBonus(hasClicked504, 10);
     })
-        //quick view
-        $('.dialogue-504-7-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+ 
     
     // close
     $('.clicker-504-7').on('click', function() {
@@ -1097,6 +1007,10 @@ $('.door502__1').on('mouseenter', function() {
 
 
     //505
+    //quick view
+    $('.dialogue-505-1, .dialogue-505-2, .dialogue-505-3, .dialogue-505-4, .dialogue-505-5, .dialogue-505-6, .dialogue-505-7-1, .dialogue-505-7-2').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
+        
 
     $('.door505__1').on('mouseenter', function() {
         $(event.currentTarget).hide();
@@ -1109,9 +1023,6 @@ $('.door502__1').on('mouseenter', function() {
 
     $('.door__505').on('click', function() {
         $('.dialogue-505-1, .dialogue-505-1 .line, .dialogue-box').show();})
-        //quick view
-        $('.dialogue-505-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
         //close
         $('.clicker-505-1-2').on('click', function() {
             $('.dialogue-505-1, .dialogue-505-1 .line, .dialogue-box').hide();})
@@ -1120,63 +1031,41 @@ $('.door502__1').on('mouseenter', function() {
         $('.dialogue-505-1, .dialogue-505-1 .line').hide();
         $('.dialogue-505-2, .dialogue-505-2 .line').show();
     })
-        //quick view
-        $('.dialogue-505-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
-
 
     $('.clicker-505-2').on('click', function() {
         $('.dialogue-505-2, .dialogue-505-2 .line').hide();
         $('.dialogue-505-3, .dialogue-505-3 .line, .transparent-background, .room505, .avatar__505').show();
     })
-        //quick view
-        $('.dialogue-505-3').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-505-3').on('click', function() {
         $('.dialogue-505-3, .dialogue-505-3 .line').hide();
         $('.dialogue-505-4, .dialogue-505-4 .line').show();
     })
-        //quick view
-        $('.dialogue-505-4').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-505-4').on('click', function() {
         $('.dialogue-505-4, .dialogue-505-4 .line').hide();
         $('.dialogue-505-5, .dialogue-505-5 .line').show();
     })
-        //quick view
-        $('.dialogue-505-5').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})  
 
     $('.clicker-505-5').on('click', function() {
         $('.dialogue-505-5, .dialogue-505-5 .line').hide();
         $('.dialogue-505-6, .dialogue-505-6 .line').show();
     })
-        //quick view 
-        $('.dialogue-505-6').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');})
 
 
     //option 1
     $('.clicker-505-6-1').on('click', function() {
         $('.dialogue-505-6, .dialogue-505-6 .line').hide();
         $('.dialogue-505-7-1, .dialogue-505-7-1 .line').show();
-        addBonus(hasClicked505, -5);
+        addBonus(hasClicked505, -10);
     })
-        //quick view
-        $('.dialogue-505-7-1').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     //option 2 --> ** answer!
     $('.clicker-505-6-2').on('click', function() {
         $('.dialogue-505-6, .dialogue-505-6 .line').hide();
         $('.dialogue-505-7-2, .dialogue-505-7-2 .line').show();
-        addBonus(hasClicked505, 5);
+        addBonus(hasClicked505, 10);
     })
-        //quick view
-        $('.dialogue-505-7-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
 
     // close
     $('.clicker-505-7').on('click', function() {

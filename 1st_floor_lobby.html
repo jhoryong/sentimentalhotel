@@ -133,10 +133,10 @@
 
     <div class="dialogue-box dialogue-2-4">
         <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">아, 저건 교육 평가 점수에요. 점수는 다음과 같이 매겨집니다.</p>
-        <p class="line top-line second-line next-line">문제를 맞추고 한 층 통과: <strong>+50점</strong></p>
-        <p class="line top-line third-line next-line">문제 오답시: <strong>-10점</strong></p>
-        <p class="line top-line fourth-line next-line">0점에 다다를시: <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사 실패</span></p>
+        <p class="line top-line first-line">아, 저건 교육 평가 점수에요.</p>
+        <p class="line top-line second-line next-line">중간 중간 나오는 퀴즈를 맞추면 점수를 얻을 수 있습니다.</p>
+        <p class="line top-line third-line next-line">하지만 문제를 틀릴 시 점수를 잃게 됩니다.</p>
+        <p class="line top-line fourth-line next-line">0점에 다다를시: <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사에 실패</span>하게 됩니다.</p>
         <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></span></p>
     </div>
 
@@ -144,8 +144,8 @@
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">하하하. 점수를 얻는 팁을 살짝 드리면...</p>
         <p class="line top-line second-line next-line">------</p>
-        <p class="line top-line third-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 오브젝트</strong>들이 있다. (위에 마우스를 갖다대면 투명해진다.)</p>
-        <p class="line top-line fourth-line next-line">오브젝트를 클릭하면 <strong>5점</strong>씩 얻을 수 있고, 모두 찾아내면 <strong>보너스 5점</strong>을 얻을 수 있다.</p>
+        <p class="line top-line third-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 오브젝트</strong>들이 있다.</p>
+        <p class="line top-line fourth-line next-line">오브젝트를 찾아 모두 클릭하면 <strong>보너스 10점</strong>을 얻을 수 있다.</p>
         <p class="line top-line fifth-line">------</p>
         <p class="line top-line sixth-line next-line">쉿! 이건 <span class="player-name"></span>씨를 위해 제가 특별히 알려 드린 거에요. 알겠죠?</p>
         <p class="line bottom-line seventh-line six-toplines">- 네 <span class="clicker clicker-2-5">감사합니다!</span></p>
@@ -230,7 +230,7 @@
     <div class="dialogue dialogue__foundallgif">
         <div class="dialogue-box">
             <h1 class="name">&nbsp;</h1>
-            <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>+5</strong>점!)</p>
+            <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
             <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
         </div>
     </div>
@@ -262,7 +262,7 @@
     function alertFoundAllGif() {
         if (hasClickedEmployee === true && hasClickedBoy === true && hasClickedArrow === true) {
             $('.foundallgif, .foundallgif .line').show();
-        addScore(5);
+        addScore(10);
         alertFoundAllGif = function(){};
         }
     }
@@ -598,7 +598,6 @@
         let employee3 = document.querySelector('.employee3');
 
         employee1.addEventListener('click', function() {
-            addBonus(hasClickedEmployee, 5);
             let employeegif = function() {
             setTimeout(function(){employee1.style.display = 'none';}, 120)
             setTimeout(function(){employee3.style.display = 'block';}, 120)
@@ -619,7 +618,6 @@
         let boy2 = document.querySelector('.boy2');
 
         boy1.addEventListener('click', function() {      
-            addBonus(hasClickedBoy, 5);
             let boygif = function() {
             setTimeout(function(){boy1.style.display = 'none';}, 400)
             setTimeout(function(){boy2.style.display = 'block';}, 400)
@@ -640,7 +638,6 @@
         let arrow3 = document.querySelector('.arrow3');
 
         arrow1.addEventListener('click', function() {
-            addBonus(hasClickedArrow, 5);
             let arrowgif = function() {
             setTimeout(function(){arrow1.style.display = 'none';}, 100)
             setTimeout(function(){arrow2.style.display = 'block';}, 100)

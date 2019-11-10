@@ -19,9 +19,19 @@
 </head>
 <body>
 <div class="container">
-    <!-- <div id="fade-box" class="fade-box"></div> -->
+    <div id="fade-box" class="fade-box"></div>
     <div class="transparent-background"></div>
     <div class="dialogue-box"></div>
+
+    <!-- preloader  -->
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
+    </div>
 
     <!-- items -->
     <div class="items">
@@ -48,7 +58,8 @@
     <!-- arrows -->
     <div class="arrows">
         <img class="movingarrow movingarrow__602" src="image/icon/arrow.png">
-        <!-- <img class="movingarrow movingarrow__elevator" src="image/icon/arrow.png"> -->
+        <img class="movingarrow movingarrow__big-hyun" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__elevator" src="image/icon/arrow.png">
     </div> 
 
 
@@ -96,6 +107,27 @@
         </div>
 
     </div>
+
+
+
+
+    <div class="6thfloor-elevator">
+    
+        <img class="gif gifhover elevator__button button-off" src="image/common/객실_엘베버튼off.png">
+        <img class="gif gifhover elevator__button button-on" src="image/common/객실_엘베버튼on.png">
+        <img class="elevator__alarm alarm-off" src="image/common/객실_엘베알람off.png">
+        <img class="elevator__alarm alarm-on" src="image/common/객실_엘베알람on.png">
+    
+        <div class="dialogue-box2 dialogue-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">7층으로 올라가시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a href="6th_floor.html"><span class="clicker clicker-1-1">올라간다</span></a></p> 
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-1-2">더 둘러본다</span></p>
+        </div>
+    
+    </div>
+
+
 
 
     <div class="room-601">
@@ -552,10 +584,13 @@ let hasClicked602 = false;
 let hasClicked603 = false;
 
 
-$('#fade-box').hide();
+//preloader 
+
+$('#fade-box').fadeOut(500);
+$('.preloader').delay(4000).fadeOut(0);
+$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 // item
-
 $('.map-icon').click(function() {
         $('.map-contents,  #item-background').show();
     })
@@ -593,7 +628,7 @@ $('.map-icon').click(function() {
     //602
     $('#pots').draggable({
         revert: true,
-        revertDuration: 0
+        revertDuration: 500
         });
     $('#dropspot').droppable({
         classes: {
@@ -612,7 +647,7 @@ $('.map-icon').click(function() {
     //603
     $('.flower-icon').draggable({
         revert: true,
-        revertDuration: 200
+        revertDuration: 500
         });
     $('#dropspot2').droppable({
         classes: {
@@ -634,7 +669,7 @@ $('.map-icon').click(function() {
     $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4, .dialogue-0-5').click(function() {
         $(event.currentTarget).children().css('animation', 'none');}) 
 
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(0000).fadeIn(0);
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
 
     $('.clicker-0-1').on('click', function() {
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
@@ -649,6 +684,7 @@ $('.map-icon').click(function() {
     $('.big-hyun__gif').click(function(){
         if (hasClicked601 === true && hasClicked602 === true && hasClicked603 === true) {
             $('.dialogue-0-3, .dialogue-0-3 .line, .big-hyun__avatar, .dialogue-box').show();
+            $('.movingarrow__big-hyun').show();
         } else {}
     })
 
@@ -663,10 +699,38 @@ $('.map-icon').click(function() {
     })
         //close
         $('.clicker-0-5').click(function(){
-            $('.dialogue-0-5, .dialogue-0-5 .line, .big-hyun__avatar, .dialogue-box').hide();
+            $('.dialogue-0-5, .dialogue-0-5 .line, .big-hyun__avatar, .dialogue-box, .big-hyun__gif, .movingarrow__big-hyun').hide();
+            $('.movingarrow__elevator').show();
         })
 
     
+
+    // elevator
+
+    //quick view
+    $('.dialogue-1').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');})
+
+    $('.button-off').on('click', function() {
+        if (hasClicked601 === true && hasClicked602 === true && hasClicked603) {
+            $('.movingarrow__elevator').hide();
+            $('.button-on, .dialogue-1, .dialogue-1 .line, .alarm-on, .dialogue-box').show();
+        } else {}
+    })
+        
+        // close
+        $('.clicker-1-2').click(function(){
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').hide();
+        })
+
+    $('.clicker-1-1').click(function(){
+        event.preventDefault();
+        $('#fade-box').fadeIn(2000);
+        setTimeout(function() {window.location = $('a').attr('href');}, 2000);
+    })
+
+
+
 
 
 
@@ -703,6 +767,8 @@ $('.map-icon').click(function() {
         $('.clicker-601-2').on('click', function() {
             hasClicked601 = true;
             $('.dialogue-601-2, .dialogue-box').hide();
+            if (hasClicked601 === true && hasClicked602 === true && hasClicked603 === true) {
+                $('.movingarrow__big-hyun').show();}
         })
 
 
@@ -834,7 +900,10 @@ $('.map-icon').click(function() {
         //close
         $('.clicker-602-17').on('click', function() {
             hasClicked602 = true;
-            $('.dialogue-602-17, .dialogue-602-17 .line, .frame, .pots-before, #dropspot, .plate-after, .pots-after, .table, .plate-after, .room602, .avatar__602, .dialogue-box').hide();})
+            $('.dialogue-602-17, .dialogue-602-17 .line, .frame, .pots-before, #dropspot, .plate-after, .pots-after, .table, .plate-after, .room602, .avatar__602, .dialogue-box').hide();
+            if (hasClicked601 === true && hasClicked602 === true && hasClicked603 === true) {
+                $('.movingarrow__big-hyun').show();}
+        })
 
 
 
@@ -1024,6 +1093,8 @@ $('.map-icon').click(function() {
         $('.clicker-603-21').on('click', function() {
             $('.dialogue-603-21, .dialogue-603-21 .line, .illust15, .avatar__603, .room603, .dialogue-box, .flowerpot-after, .dropspot2, #table2, .tea').hide();
             hasClicked603 = true;
+            if (hasClicked601 === true && hasClicked602 === true && hasClicked603 === true) {
+                $('.movingarrow__big-hyun').show();}
         })
 
 

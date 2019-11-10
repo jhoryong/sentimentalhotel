@@ -97,7 +97,7 @@
         <div class="dialogue-box foundallgif">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">모든 움직이는 요소를 찾았다! </p>
-            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
+            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 10점!)</span></p>
         </div>
 
         
@@ -108,10 +108,11 @@
         <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
         <div class="dialogue-box dialogue-0-1">
             <h1 class="name">큰 현</h1>
-            <p class="line top-line first-line">아, 오셨군요.
-            <p class="line top-line second-line next-line">표정을 보니 무척 잘 쉬고 오신 것 같네요.</p>
-            <p class="line top-line third-line next-line">그럼 이어서 교육을 진행할게요.</p>
-            <p class="line bottom-line fourth-line three-toplines">- <span class="clicker clicker-0-1">네!</span></p>
+            <p class="line top-line first-line">아, 오셨군요.</p>
+            <p class="line top-line second-line next-line">무사히 1층을 통과하셨군요.</p>
+            <p class="line top-line third-line next-line">격려의 의미로 <strong>50점</strong>을 드리겠습니다. 그럼 이어서 교육을 진행할게요.</p>
+            <p class="line top-line fourth-line next-line">그럼 앞으로 이어지는 교육도 열심히 참여해 주세요.</p>
+            <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-0-1">와, 감사합니다! (클릭시 50점 획득!)</span></p>
         </div>
 
         <div class="dialogue-box dialogue-0-2">
@@ -234,11 +235,11 @@
 
         <div class="dialogue-box dialogue-2-2">
             <h1 class="name">큰 현</h1>
-            <p id="wrong1" class="line top-line first-line">음... 강의실에 있진 않은 것 같은데... (점수 획득 실패!)</p>
-            <p id="wrong2" class="line top-line first-line">음... 연회장에 있진 않은 것 같은데... (점수 획득 실패!)</p>
-            <p id="wrong3" class="line top-line first-line">음... 회의실 1에 있진 않은 것 같은데... (점수 획득 실패!)</p>
-            <p id="right" class="line top-line first-line">아, 회의실 2에 계셨군요...! (<strong>50점</strong> 획득!)</span></p>
-            <p id="wrong4" class="line top-line first-line">음... 회의실 3에 있진 않은 것 같은데... (50점 획득 실패)</p>
+            <p id="wrong1" class="line top-line first-line">음... 강의실에 있진 않은 것 같은데... (-10점..)</p>
+            <p id="wrong2" class="line top-line first-line">음... 연회장에 있진 않은 것 같은데... (-10점..)</p>
+            <p id="wrong3" class="line top-line first-line">음... 회의실 1에 있진 않은 것 같은데... (-10점..)</p>
+            <p id="right" class="line top-line first-line">아, 회의실 2에 계셨군요...! (10점 획득!)</span></p>
+            <p id="wrong4" class="line top-line first-line">음... 회의실 3에 있진 않은 것 같은데... (-10점..)</p>
 
             <p id="result-wrong" class="line top-line second-line">아무래도 제가 직접 가서 찾아봐야 할것 같군요. <span class="player-name"></span>씨는 먼저 3층을 둘러보고 계세요.</p>
             <p id="result-right" class="line top-line second-line">저는 회의실 2로 가서 인사를 드리고 올 테니, <span class="player-name"></span>씨는 먼저 3층을 둘러보고 계세요.</p>
@@ -327,18 +328,19 @@
     $('.player-name').text(sessionStorage.getItem("playerName"));
 
 
+
+
+
 // gif
 
     // found all gifs
     $('.clicker-100').click(function() {
         $('.foundallgif, .foundallgif .line').hide();
-        addScore(5);
+        addScore(10);
     })
 
     // clock
-
     $('.clock1').on('click', function() {
-        addBonus(hasClickedClock, 5);
         hasClickedClock = true;
         alertFoundAllGif();
         let t = 100;
@@ -369,9 +371,7 @@
     })
 
     // handshake
-
     $('.handshake1').on('click', function() {
-        addBonus(hasClickedHandshake, 5);
         hasClickedHandshake = true;
         alertFoundAllGif()
         let t = 150;
@@ -388,9 +388,7 @@
     });
 
     // copier
-
     $('.copier').on('click', function() {
-        addBonus(hasClickedCopier, 5);
         hasClickedCopier = true;
         alertFoundAllGif()
         let t = 150;
@@ -419,41 +417,28 @@ $('.fade-box').fadeOut(1000);
 
 
  // start dialogue
+    // quick view
+    $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
 
     setTimeout(function(){
         $('.dialogue-0-1, .dialogue-0-1 .line, .big-hyun__avatar').show();}, 5500)
 
-        //quick view
-        $('.dialogue-0-1').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');})
-
     $('.clicker-0-1').click(function(){
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
-        $('.dialogue-0-2, .dialogue-0-2 .line').show();})
-
-
-        //quick view
-        $('.dialogue-0-2').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
+        $('.dialogue-0-2, .dialogue-0-2 .line').show();
+        addScore(50);
         })
 
     $('.clicker-0-2').click(function(){
         $('.dialogue-0-2, .dialogue-0-2 .line').hide();
         $('.dialogue-0-3, .dialogue-0-3 .line').show();
     })
-        //quick view
-        $('.dialogue-0-3').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
 
     $('.clicker-0-3').click(function(){
         $('.dialogue-0-3, .dialogue-0-3 .line').hide();
         $('.dialogue-0-4, .dialogue-0-4 .line').show();
     })
-        //quick view
-        $('.dialogue-0-4').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
 
     $('.clicker-0-4').click(function(){
         $('.dialogue-0-4, .dialogue-0-4 .line, .big-hyun__avatar').hide();
@@ -464,43 +449,38 @@ $('.fade-box').fadeOut(1000);
 
 //reception
 
-$('.reception__gif').on('click', function() {
-    $('.reception, .reception .line').show();
-    $('.movingarrow__businesscenter').hide();
-})
-
-    //close
-    $('.clicker-1-6').on('click', function() {
-        $('.reception, .reception .line').hide();
-    })
-
     //quick view
-    $('.reception').click(function() {
+    $('.reception, .lecture-room-d, .banquet-room-d, .meeting-room-1-d, .meeting-room-2-d, .meeting-room-3-d').click(function() {
         $(event.currentTarget).children().css('animation', 'none')
     })
+
+    $('.reception__gif').on('click', function() {
+        $('.reception, .reception .line').show();
+        $('.movingarrow__businesscenter').hide();
+    })
+
+        //close
+        $('.clicker-1-6').on('click', function() {
+            $('.reception, .reception .line').hide();
+        })
+
+        
 
 
 
 //lecture room
 
-$('.clicker-1-1').on('click', function() {
-    hasClickedLectureRoom = true;
-    $('#room-bg, .lecture-room, .lecture-room-d, .lecture-room-d .line').show();
-})
-
-    //close
-    $('.clicker-1-1-1').on('click', function() {
-        $('.lecture-room, .lecture-room-d, .lecture-room-d .line,  #room-bg').hide();
-        if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
-            $('.movingarrow__big-hyun').show();
-        }
+    $('.clicker-1-1').on('click', function() {
+        hasClickedLectureRoom = true;
+        $('#room-bg, .lecture-room, .lecture-room-d, .lecture-room-d .line').show();
     })
-
-    //quick view
-    $('.lecture-room-d').click(function() {
-        $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-    })
-            
+        //close
+        $('.clicker-1-1-1').on('click', function() {
+            $('.lecture-room, .lecture-room-d, .lecture-room-d .line,  #room-bg').hide();
+            if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
+                $('.movingarrow__big-hyun').show();
+            }
+        })  
 
 
     //banquet room
@@ -518,12 +498,6 @@ $('.clicker-1-1').on('click', function() {
             }
         })
 
-        //quick view
-        $('.banquet-room-d').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-            
-
 
     //meeting-room-1
 
@@ -539,13 +513,7 @@ $('.clicker-1-1').on('click', function() {
                 $('.movingarrow__big-hyun').show();
             }
         })
-
-        //quick view
-        $('.meeting-room-1-d').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
             
-
 
     //meeting-room-2
 
@@ -561,12 +529,6 @@ $('.clicker-1-1').on('click', function() {
                 $('.movingarrow__big-hyun').show();
             }
         })
-
-        //quick view
-        $('.meeting-room-2-d').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-            
 
 
     //meeting-room-3
@@ -584,18 +546,14 @@ $('.clicker-1-1').on('click', function() {
             }
         })
 
-        //quick view
-        $('.meeting-room-3-d').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-            
-
-
-
 
     
 
 // big-hyun
+
+    //quick view
+    $('.dialogue-2-0, .dialogue-2-1, .dialogue-2-2').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');})
 
     $('.big-hyun__gif').on('click', function() {
         if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true) {
@@ -605,67 +563,51 @@ $('.clicker-1-1').on('click', function() {
             $('.big-hyun__avatar, .dialogue-2-0, .dialogue-2-0 .line').show();
         }
     })
-
         //close 
         $('.clicker-2-0').click(function(){
             $('.big-hyun__avatar, .dialogue-2-0, .dialogue-2-0 .line').hide();
         })
 
-        //quick view
-        $('.dialogue-2-0').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
-        
-    
     $('.clicker-2-1').click(function(){
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('#wrong1').show();
         $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+        addScore(-10);
     })
-
-        //quick view
-        $('.dialogue-2-1').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-            $(event.currentTarget).children().css('animation', 'none');
-        })
-
-
-        //quick view
-        $('.dialogue-2-2').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
 
     $('.clicker-2-2').click(function(){
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('#wrong2').show();
         $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+        addScore(-10);
     })
 
     $('.clicker-2-3').click(function(){
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('#wrong3').show();
         $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+        addScore(-10);
     })
 
     $('.clicker-2-4').click(function(){
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('#right').show();
         $('.dialogue-2-2, .dialogue-2-2 #result-right, .dialogue-2-2 .bottom-line').show();
-        addScore(50);
+        addScore(10);
+    })
+      
+    $('.clicker-2-5').click(function(){
+        $('.dialogue-2-1, .dialogue-2-1 .line').hide();   
+        $('#wrong4').show();
+        $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
+        addScore(-10);
     })
 
-        //close
-        $('.clicker-2-5').click(function(){
-            $('.dialogue-2-1, .dialogue-2-1 .line').hide();   
-            $('#wrong4').show();
-            $('.dialogue-2-2, .dialogue-2-2 #result-wrong, .dialogue-2-2 .bottom-line').show();
-            let hasSolvedQuestion = true;
-        })
-
+    //close
     $('.clicker-2-6').click(function(){
         $('.dialogue-2-2, .dialogue-2-2 .line, .big-hyun__gif, .big-hyun__avatar').hide();
         $('.movingarrow__elevator').show();
+        hasSolvedQuestion = true;
     })
 
 
@@ -678,7 +620,6 @@ $('.button-off').on('click', function() {
         $('.button-on').show();
         $('.dialogue-3-1, .dialogue-3-1 .line').show();
         $('.alarm-on').show();
-        addBonus(hasClickedElevator, 50);
         hasClickedElevator = true;
     } else {}
 })

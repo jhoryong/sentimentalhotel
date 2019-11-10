@@ -63,7 +63,7 @@
     <div class="dialogue-box foundallgif">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">모든 움직이는 요소를 찾았다! </p>
-        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 5점!)</span></p>
+        <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 10점!)</span></p>
     </div>
 
     <div class="start">
@@ -212,7 +212,6 @@
 
     document.querySelector('.coffee').addEventListener('click', function() {
         document.querySelector('#coffee').play();
-        addBonus(hasClickedCoffee, 5);
         hasClickedCoffee = true;
         alertFoundAllGif()
     })
@@ -223,7 +222,6 @@
     let lightbulb2 = document.querySelector('.lightbulb2');
 
     lightbulb1.addEventListener('click', function() {
-        addBonus(hasClickedLightbulb, 5);
         hasClickedLightbulb = true;
         alertFoundAllGif()
         lightbulb1.style.display = 'none';
@@ -240,7 +238,6 @@
     let people2 = document.querySelector('.people2');
 
     people1.addEventListener('click', function() {
-        addBonus(hasClickedPeople, 5);
         hasClickedPeople = true;
         alertFoundAllGif()
         let peoplegif = function() {
@@ -257,7 +254,7 @@
     // found all gifs
     $('.clicker-100').click(function() {
         $('.foundallgif, .foundallgif .line').hide();
-        addScore(5);
+        addScore(10);
     })
 
 
@@ -396,7 +393,6 @@
             $('.button-on').show();
             $('.dialogue-2, .dialogue-2 .line').show();
             $('.alarm-on').show();
-            addBonus(hasClickedElevator, 25);
             hasClickedElevator = true;
         } else {}
     })

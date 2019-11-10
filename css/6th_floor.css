@@ -36,6 +36,7 @@
     width: 7vw;
     top: 32.7vw;
     left: 39.6vw;
+    z-index: 1;
     /* display: none; */
 }
 
@@ -46,6 +47,54 @@
 }
 
 
+
+
+/* elevator */
+
+.movingarrow__elevator {
+    top: 32.5vw;
+    left: 41.1vw;
+}
+
+.elevator__button {
+    width: 2.5vw;
+    top: 37vw;
+    left: 41.1vw;
+}
+
+.button-on {display: none;}
+
+.elevator__alarm {
+    position: absolute;
+    width: 2.5vw;
+    top: 32.3vw;
+    left: 41.2vw;
+    z-index: 0;
+}
+
+.alarm-on {
+    animation: flash 0.6s 400ms ease-out infinite alternate backwards;
+    display: none;
+}
+
+
+/* arrows  */
+.movingarrow__602 {
+    top: 31vw;
+    left: 96vw;
+    z-index: 13;
+}
+
+.movingarrow__big-hyun{
+    top: 30.7vw;
+    left: 40.5vw;
+    z-index:2;
+}
+
+.movingarrow__elevator {
+    top: 32.5vw;
+    left: 41.1vw;
+}
 
 
 /* rooms */
@@ -74,17 +123,14 @@
     
 
     /* 602 */
+
     .door__602 {
         top: 6.45vw;
         left: 48.9vw;
         width: 5.7vw;
     }
 
-    .movingarrow__602 {
-        top: 31vw;
-        left: 96vw;
-        z-index: 13;
-    }
+
 
     .door602__2 {display: none;} 
 
@@ -141,8 +187,8 @@
 
     .avatar__602 {
         width: 16vw;
-        top: 31.5vw;
-        left: 13.3vw;
+        top: 32.2vw;
+        left: 13.9vw;
     }
 
     /* illustrations */
@@ -206,8 +252,8 @@
     .tea {
         position: absolute;
         z-index: 12;
-        top: 25vw;
-        left: 70.3vw;
-        width: 10.3vw;
+        top: 25.7vw;
+        left: 71.1vw;
+        width: 9vw;
         display:none;
     }
