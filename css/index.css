@@ -63,9 +63,14 @@
     position: absolute;
     top: 18.8vw;
     left: 50%;
-    transform: translateX(-23.4vw);
+    transform: translateX(-23.5vw);
     width: 29.4vw;
     z-index:10;
+}
+
+.door1 {
+    transform: translateX(-52.4%);
+    width: 12.8vw;
 }
 
 .door2, .door3, .door4 {

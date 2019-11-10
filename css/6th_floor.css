@@ -22,10 +22,10 @@
 
 /* flower item */
 .flower-icon {
-    height: 5vw;
+    height: 6vw;
     position: absolute;
     top: 27vw;
-    left: 2vw;
+    left: 1.4vw;
     z-index: 10;
     display: none;
 }
@@ -57,7 +57,7 @@
     top: 0vw;
     left: 50%;
     transform: translateX(-50%);
-    width: 70vw;
+    width: 100vw;
     z-index: 12;
     display: none;
 }
@@ -87,11 +87,6 @@
     }
 
     .door602__2 {display: none;} 
-    
-    .room602 {
-        width: 100vw;
-        /* border: 1px black solid; */
-    }
 
     .table {
         position: absolute;
@@ -138,17 +133,16 @@
     .plate-before, .plate-after {
         position: absolute;
         z-index: 12;
-        top: 25vw;
-        left: 69.3vw;
-        width: 11.9vw;
+        top: 24.5vw;
+        left: 69.7vw;
+        width: 12.4vw;
         display:none;
     }
 
     .avatar__602 {
-        width: 20vw;
-        top: 30.3vw;
-        left: 9.6vw;
-        transform: rotateY(180deg); 
+        width: 16vw;
+        top: 31.5vw;
+        left: 13.3vw;
     }
 
     /* illustrations */
@@ -165,4 +159,55 @@
 
     .transparent-background {
         z-index: 14;
+    }
+
+
+    /* 603 */
+
+    .door__603 {
+        top: 27.3vw;
+        left: 88.1vw;
+        width: 5.4vw;
+    }
+
+    .door603__2 {display: none;} 
+
+    .avatar__603 {
+        width: 17vw;
+        top: 28vw;
+        left: 13vw;
+        transform: rotateY(180deg);
+    }
+
+    .flowerpot {
+        position: absolute;
+        z-index: 12;
+        top: 24.1vw;
+        left: 44vw;
+        width: 11vw;
+        display: none;
+    }
+
+    .dropspot2 {
+        width: 15vw;
+        height: 11vw;
+        /* border: 1px black solid; */
+        z-index: 12;
+        position: absolute;
+        top: 22.7vw;
+        left: 41.8vw;
+        border-radius: 15px;
+        display: none;
+    }
+    .dropspot2-hover {
+        border: 3px dashed #505050;
+    }
+
+    .tea {
+        position: absolute;
+        z-index: 12;
+        top: 25vw;
+        left: 70.3vw;
+        width: 10.3vw;
+        display:none;
     }
