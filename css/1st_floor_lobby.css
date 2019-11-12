@@ -22,7 +22,7 @@
 
     .small-hyun__avatar {
         width: 18vw;
-        top: 34vw;
+        top: 33.7vw;
         left: 11vw;
     }
 
@@ -39,6 +39,7 @@
 
     input[type=submit] {
         margin-left: 0.3vw;
+        font-size: 1.2vw;
         background-color: #FFF;
         border: none;
     }
@@ -145,42 +146,42 @@
     .line-24 {
         margin: 0 0 0 6vw;
         max-width: 3vw;
-        animation: typing 1.5s 2s linear backwards;}
+        animation: typing 1.5s 1.5s linear backwards;}
 
     .line-25 {
         margin: 0 0 0 9vw;
         max-width: 50vw;
-        animation: typing 1.5s 3.5s linear backwards}
+        animation: typing 1.5s 2.5s linear backwards}
 
     .line-26 {
         margin: 4vw 0 0 6vw;
         max-width: 3vw;
-        animation: typing 1.5s 5.5s linear backwards}
+        animation: typing 1.5s 4.5s /*+2s*/linear backwards}
 
     .line-27 {
         margin: 4vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 1.5s 6.5s linear backwards}
+        animation: typing 1.5s 5.5s linear backwards}
 
     .line-28 {
         margin: 8vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 1.5s 8s linear backwards}
+        animation: typing 1.5s 7s linear backwards}
 
     .line-29 {
         margin: 12vw 0 0 6vw;
         max-width: 3vw;
-        animation: typing 1.5s 9.5s linear backwards}
+        animation: typing 1.5s 8.5s linear backwards}
 
     .line-30 {
         margin: 12vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 1.5s 11s linear backwards}
+        animation: typing 1.5s 9.5s linear backwards}
 
     .line-31 {
         margin: 16vw 0 0 7.9vw;
         max-width: 50vw;
-        animation: typing 1.5s 12.5s linear backwards}
+        animation: typing 1.5s 11s /*+1.5s*/linear backwards}
 
     @keyframes typing {
         from {width: 0;}
