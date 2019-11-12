@@ -120,7 +120,7 @@
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
         <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
-        <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-2-2"><strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>이요...?</span></p>
+        <p class="line bottom-line third-line two-toplines">- <span class="clicker clicker-2-2"><strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>이요...?</span></p>
     </div>
 
     <div class="dialogue-box dialogue-2-3">
@@ -128,7 +128,7 @@
         <p class="line top-line first-line">네. 너무 걱정하진 마세요. <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 따라 각 층을 체험하면 되니까요.</p>
         <p class="line top-line second-line next-line">또한 제가 내는 <strong>문제</strong>를 잘 맞추시면 되요.</p>
         <p class="line top-line third-line next-line">문제는 스토리를 잘 읽는다면 충분히 맞출 수 있어요.</p>
-        <p class="line bottom-line fourth-line four-toplines">화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
+        <p class="line bottom-line fourth-line four-toplines">- 화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
     </div>
 
     <div class="dialogue-box dialogue-2-4">
@@ -136,8 +136,8 @@
         <p class="line top-line first-line">아, 저건 교육 평가 점수에요.</p>
         <p class="line top-line second-line next-line">중간 중간 나오는 퀴즈를 맞추면 점수를 얻을 수 있습니다.</p>
         <p class="line top-line third-line next-line">하지만 문제를 틀릴 시 점수를 잃게 됩니다.</p>
-        <p class="line top-line fourth-line next-line">0점에 다다를시: <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사에 실패</span>하게 됩니다.</p>
-        <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></span></p>
+        <p class="line top-line fourth-line next-line">0점에 다다를시 <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사에 실패</span>하게 됩니다.</p>
+        <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></p>
     </div>
 
     <div class="dialogue-box dialogue-2-5">
@@ -156,7 +156,7 @@
         <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔에 대해 간략히 알아보겠습니다.</p>
         <p class="line top-line second-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
         <p class="line top-line third-line next-line">1층 ~ 3층은 리셉션, 라운지 등의 편의 시설이 있습니다.</p>
-        <p class="line top-line fourth-line next-line">4층 부터는 객실이 있어요.</p>
+        <p class="line top-line fourth-line next-line">4층부터는 객실이 자리하고 있죠.</p>
         <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-2-6">(다음)</span></p>
     </div>
 
@@ -164,8 +164,8 @@
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
         <p class="line top-line second-line next-line">로비에는 리셉션과 누구나 자유로운 휴식 공간이 있어요.</p>
-        <p class="line top-line third-line next-line">저는 옆 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, 로비를 둘러보고 나서 라운지로 와 주세요.</p>
-        <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</p>
+        <p class="line top-line third-line next-line">저는 옆 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, <strong>로비를 둘러보고 나서 라운지로 와 주세요.</strong></p>
+        <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</span></p>
     </div>
 
 </div>
@@ -554,7 +554,6 @@
     $('.clicker-3-1').click(function() {
         $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-1').css(none);
         $('.movingarrow__link').css(block);
-        addBonus(hasClickedGoldplate, 25);
         hasClickedGoldplate = true;
         $('.dialogue-3-1 .first-line, .dialogue-3-1 .name').html("&nbsp;");
     })

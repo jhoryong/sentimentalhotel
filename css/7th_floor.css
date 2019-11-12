@@ -1,0 +1,56 @@
+.container {
+    background-image: url("../image/7th_floor/7층-라운지.jpg");
+}
+
+.dialogue-box2 {
+    position: absolute;
+    top: 35vw; 
+    left: 24vw;
+    width: 62vw;
+    height: 20vw; 
+    z-index: 16;
+    opacity: 1;
+    display: none;
+}
+
+.dialogue-box {
+    opacity: 0.8;
+    
+}
+
+
+/* gif */
+    .band {
+        position: absolute;
+        width: 16.9vw;
+        top: 42.5vw;
+        left: 25.7vw;}
+
+    .band1 {display: block;} 
+    .band2 {
+        display: none;
+        top:42.7vw;
+    } 
+    .band3 {
+        display: none;
+        top: 42.4vw;
+    } 
+
+
+/* star */
+
+.star__gif {
+    top: 22.9vw;
+    left: 32.6vw;
+    width: 6.1vw;
+}
+
+.illust {
+    position: absolute;
+    top: 2.7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    z-index: 15;
+    display: none;
+}

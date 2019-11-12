@@ -24,6 +24,20 @@ body {
         display: none;
     }
 
+.nextbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    display: none;
+    z-index:10;
+}
+
+.nextbox:hover{
+    cursor: pointer;
+}
+
 .line {
     text-align: center;
     color: #fff;
@@ -52,10 +66,6 @@ body {
     color: #fff;
     font-size: 1.5vw;
 }
-
-    .arrow:hover {
-        cursor: pointer;
-    }
 
 .arrow-1 {
     animation: fadein 0.5s 3s infinite alternate;
