@@ -220,16 +220,20 @@
         overflow: hidden; 
         white-space: nowrap;
         display: none;
+        font-size: 1.2vw;
         font-size: var(--font-size);
+        line-height: 1.5;
         line-height: var(--line-height);
         max-width: 55vw;
     }
 
         .top-line {
+            margin: 0vw 0 0 6vw;
             margin: var(--first-line);
         }
 
         .bottom-line {
+            margin: 10vw 0 0 6vw;
             margin: var(--one-top-line);
         }
 
@@ -253,18 +257,17 @@
 
         /* margin */
         .next-line {margin-top: 0;}
-        .one-topline {margin: var(--one-top-line);}
-        .two-toplines {margin: var(--two-top-lines);}
-        .three-toplines {margin: var(--three-top-lines);}
-        .four-toplines {margin: var(--four-top-lines);}
-        .five-toplines {margin: var(--five-top-lines);}
-        .six-toplines {margin: var(--six-top-lines);}
+        .one-topline {margin: 10vw 0 0 6vw; margin: var(--one-top-line);}
+        .two-toplines {margin: 8.4vw 0 0 6vw; margin: var(--two-top-lines);}
+        .three-toplines {margin: 6.8vw 0 0 6vw; margin: var(--three-top-lines);}
+        .four-toplines {margin: 5vw 0 0 6vw; margin: var(--four-top-lines);}
+        .five-toplines {margin: 3.4vw 0 0 6vw; margin: var(--five-top-lines);}
+        .six-toplines {margin: 1.8vw 0 0 6vw; margin: var(--six-top-lines);}
 
 
     .clicker {
         color: blue;
         font-family: 'Noto Serif KR', serif;
-        font-size: var(--player-font-size);
         text-decoration: none;
     }
 
