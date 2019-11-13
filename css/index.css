@@ -96,7 +96,7 @@
     width: 3vw;
     z-index: 11;
     transform-origin: 146% 17%;
-    transform: rotate(0deg) translateX(3vw);
+    transform: translateX(3vw);
     animation: rotate 5s 1s ease-in-out infinite;
 }
 
