@@ -85,13 +85,24 @@
 
 
 
+    /* reset */
+    .reset-icon {
+        position: absolute;
+        font-size: 4vw;
+        color: #fff;
+        opacity: 0.8;
+        top: 50vw;
+        left: 2vw;
+        z-index: 1;
+    }
+
 
 
     /* arrow icon */
 
     .movingarrow {
         position: absolute;
-        width: 3.5vw;
+        width: 3vw;
         animation: updown 0.7s alternate ease-in-out infinite;
         display: none;
         z-index: 1;

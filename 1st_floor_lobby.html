@@ -12,7 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/2964z06b34b.js"></script> -->
+    <script src="https://kit.fontawesome.com/296406b34b.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>1층 로비 :: 센티멘탈 호텔</title>
@@ -47,6 +47,10 @@
         </div>
     </div>
 
+    <div class="reset">
+        <a class="resetlink" href="index.html"><i class="fas fa-redo-alt reset-icon gifhover"></i></a>
+    </div>
+
     <div class="scores">
         <img class="scoreboard" src="image/icon/점수판.png">
         <span class="score__text">점수</span>
@@ -58,9 +62,9 @@
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
             <p class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</p>
-            <p class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. <span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span></p>
-            <p class="line top-line fourth-line next-line">&nbsp;</p>
-            <p class="line top-line fifth-line next-line">* tip) 대화상자를 클릭하여 대사를 빠르게 넘길 수 있습니다.</p>
+            <p class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. </p>
+            <p class="line top-line fourth-line next-line"><span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span> <strong>🡄 클릭!</strong></p>
+            <p class="line bottom-line fifth-line four-toplines">💬 대화가 나오는 중 대화상자를 누르면 대사를 빠르게 넘길 수 있습니다.</p>
         </div>
     </div>
 
@@ -266,7 +270,20 @@
         alertFoundAllGif = function(){};
         }
     }
-    
+
+
+// reset
+    $('.reset-icon').click(function(event){
+        event.preventDefault();
+        sessionStorage.clear();
+        let reset = confirm("게임을 초기화하고 처음으로 돌아가시겠습니까?");
+        if (reset === true) {
+            $('.fade-box').fadeIn(2000);
+            setTimeout(function() {
+            window.location = $('.resetlink').attr('href');
+            }, 2000);
+        } else {}
+    })
 
 // item
 
