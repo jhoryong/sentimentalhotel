@@ -23,7 +23,7 @@
     .band {
         position: absolute;
         width: 16.9vw;
-        top: 42.5vw;
+        top: 42.55vw;
         left: 25.7vw;}
 
     .band1 {display: block;} 
@@ -36,6 +36,13 @@
         top: 42.4vw;
     } 
 
+/* bartender */
+
+.bartender__gif {
+    width: 5vw;
+    top: 14.5vw;
+    left: 60.4vw;
+}
 
 /* star */
 

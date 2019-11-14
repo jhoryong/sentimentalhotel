@@ -138,7 +138,7 @@
         <p class="line top-line second-line next-line">거짓말을 한다고 해서 그 사람이 반드시 담배를 피웠다고 할 수는 없다.</p>
         <p class="line top-line third-line next-line">한 명을 범인이라고 가정하고, 거짓말쟁이와 범인을 찾아보자.</p>
         <p class="line top-line fourth-line next-line"></p>
-        <p class="line bottom-line fifth-line three-toplines"><span class="clicker clicker-1-3">(돌아가기)</span></p>
+        <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-1-3">(돌아가기)</span></p>
     </div>
 
     <div class="dialogue-box2 dialogue-1-401">
@@ -915,7 +915,9 @@ $('.door401__2').on('mouseleave', function() {
 })
 
     $('.door__401').on('click', function() {
-        $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').css(block);})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-401-1, .dialogue-401-1 .line, .dialogue-box').show();
+        } else {}})
 
         //close
         $('.clicker-401-1-2').on('click', function() {
@@ -991,7 +993,9 @@ $('.door402__2').on('mouseleave', function() {
 })
 
 $('.door__402').on('click', function() {
-    $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').css(block);})
+    if (document.querySelector('.dialogue-box').style.display === 'none') {
+        $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').show();
+    } else {}})
     //close
     $('.clicker-402-1-2').on('click', function() {
         $('.dialogue-402-1, .dialogue-402-1 .line, .dialogue-box').hide();})
@@ -1054,7 +1058,9 @@ $('.door403__2').on('mouseleave', function() {
 })
 
 $('.door__403').on('click', function() {
-    $('.dialogue-403-1, .dialogue-403-1 .line, .dialogue-box').css(block);
+    if (document.querySelector('.dialogue-box').style.display === 'none') {
+        $('.dialogue-403-1, .dialogue-403-1 .line, .dialogue-box').show();
+    } else {}
 })
 
     //quick view
@@ -1096,7 +1102,9 @@ $('.door404__2').on('mouseleave', function() {
 
 
 $('.door__404').on('click', function() {
-    $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').css(block);})
+    if (document.querySelector('.dialogue-box').style.display === 'none') {
+        $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').show();
+    } else {}})
     //close
     $('.clicker-404-1-2').on('click', function() {
         $('.dialogue-404-1, .dialogue-404-1 .line, .dialogue-box').hide();})
@@ -1149,7 +1157,9 @@ $('.door405__2').on('mouseleave', function() {
 })
 
 $('.door__405').on('click', function() {
-    $('.dialogue-405-1, .dialogue-405-1 .line, .dialogue-box').css(block);
+    if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-405-1, .dialogue-405-1 .line, .dialogue-box').show();
+        } else {}
 })
 
     //quick view
@@ -1191,7 +1201,9 @@ $('.door406__2').on('mouseleave', function() {
 })
 
     $('.door__406').on('click', function() {
-        $('.dialogue-406-1, .dialogue-406-1 .line, .dialogue-box').css(block);})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-406-1, .dialogue-406-1 .line, .dialogue-box').show();
+        } else {}})
     
         //close
         $('.clicker-406-1-2').on('click', function() {
@@ -1298,7 +1310,9 @@ $('.door407__2').on('mouseleave', function() {
 })
 
     $('.door__407').on('click', function() {
-        $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').css(block);})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').show();
+        } else {}})
         //close
         $('.clicker-407-1-2').on('click', function() {
             $('.dialogue-407-1, .dialogue-407-1 .line, .dialogue-box').hide();})
@@ -1391,9 +1405,6 @@ $('.door407__2').on('mouseleave', function() {
                 $('.movingarrow__big-hyun').show();
             }
         })
-
-
-
 })
 </script>
 </body>

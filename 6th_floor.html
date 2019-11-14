@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>    
     <title>센티멘탈 호텔 ::: 6층 객실</title>
 </head>
 <body>
@@ -753,7 +753,7 @@ $('.map-icon').click(function() {
 
     //quick view
     $('.dialogue-601-1, .dialogue-601-2').click(function() {
-            $(event.currentTarget).children().css('animation', 'none');}) 
+        $(event.currentTarget).children().css('animation', 'none');}) 
 
     //door open/close
     $('.door601__1').on('mouseenter', function() {
@@ -765,9 +765,12 @@ $('.map-icon').click(function() {
         $('.door601__1').show();
     })
 
-    //start
+    //dialogue
     $('.door__601').on('click', function() {
-        $('.dialogue-601-1, .dialogue-601-1 .line, .dialogue-box').show();
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-601-1, .dialogue-601-1 .line, .dialogue-box').show();
+        } else {}
+        
     })
         //close
         $('.clicker-601-1-2').on('click', function() {
@@ -806,7 +809,10 @@ $('.map-icon').click(function() {
 
     //start
     $('.door__602').on('click', function() {
-        $('.dialogue-602-1, .dialogue-602-1 .line, .dialogue-box').show();})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-602-1, .dialogue-602-1 .line, .dialogue-box').show();
+        } else {}
+    })
         
         //close
         $('.clicker-602-1-2').on('click', function() {
@@ -922,8 +928,6 @@ $('.map-icon').click(function() {
 
 
 
-    
-
     //603
 
     // quick view
@@ -943,7 +947,10 @@ $('.map-icon').click(function() {
 
     // start
     $('.door__603').on('click', function() {
-        $('.dialogue-603-1, .dialogue-603-1 .line, .dialogue-box').show();})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-603-1, .dialogue-603-1 .line, .dialogue-box').show();
+        } else {}
+    })
 
         //close
         $('.clicker-603-1-2').on('click', function() {

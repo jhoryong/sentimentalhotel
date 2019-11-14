@@ -655,7 +655,9 @@ $('.clicker-2-1').click(function(){
     })
 
     $('.door__501').on('click', function() {
-        $('.dialogue-501-1, .dialogue-501-1 .line, .dialogue-box').show();
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-501-1, .dialogue-501-1 .line, .dialogue-box').show();
+        } else {}
     })
 
         //close
@@ -752,7 +754,9 @@ $('.door502__1').on('mouseenter', function() {
     })
 
     $('.door__502').on('click', function() {
-        $('.dialogue-502-1, .dialogue-502-1 .line, .dialogue-box').show();
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-502-1, .dialogue-502-1 .line, .dialogue-box').show();
+        } else {}
     })
 
         //close
@@ -849,7 +853,10 @@ $('.door502__1').on('mouseenter', function() {
     })
 
     $('.door__503').on('click', function() {
-        $('.dialogue-503-1, .dialogue-503-1 .line, .dialogue-box').show();})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-503-1, .dialogue-503-1 .line, .dialogue-box').show();
+        } else {}
+    })
  
         //close
         $('.clicker-503-1-2').on('click', function() {
@@ -904,7 +911,9 @@ $('.door502__1').on('mouseenter', function() {
     })
 
     $('.door__504').on('click', function() {
-        $('.dialogue-504-1, .dialogue-504-1 .line, .dialogue-box').show();
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-504-1, .dialogue-504-1 .line, .dialogue-box').show();
+        } else {}
     })
         //close
         $('.clicker-504-1-2').on('click', function() {
@@ -1022,7 +1031,10 @@ $('.door502__1').on('mouseenter', function() {
     })
 
     $('.door__505').on('click', function() {
-        $('.dialogue-505-1, .dialogue-505-1 .line, .dialogue-box').show();})
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-505-1, .dialogue-505-1 .line, .dialogue-box').show();
+        } else {}
+    })
         //close
         $('.clicker-505-1-2').on('click', function() {
             $('.dialogue-505-1, .dialogue-505-1 .line, .dialogue-box').hide();})
