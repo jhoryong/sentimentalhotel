@@ -91,7 +91,7 @@
 
     .movingarrow {
         position: absolute;
-        width: 2.5vw;
+        width: 3.5vw;
         animation: updown 0.7s alternate ease-in-out infinite;
         display: none;
         z-index: 1;
