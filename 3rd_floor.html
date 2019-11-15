@@ -20,10 +20,20 @@
 
 <body>
 <div class="container">
-
+    <div class="dialogue-box"></div>
     <div id="fade-box" class="fade-box"></div>
     <div class="fade-box fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
 
+    <div class="reset">
+        <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+        <div class="dialogue-box-reset">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+            <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+        </div>
+    </div>
+    
     <!-- preloader -->
     <div class="preloader">
         <div class="circle"></div>
@@ -93,7 +103,7 @@
     </div>
 
 
-    <div class="dialogue-box foundallgif">
+    <div class="dialogue-box2 foundallgif">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">움직이는 요소를 모두 찾았다! </p>
         <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 10점!)</span></p>
@@ -104,7 +114,7 @@
 
     <div class="start">
 
-        <div class="dialogue-box dialogue-0-1">
+        <div class="dialogue-box2 dialogue-0-1">
             <h1 id="big-hyun__start" class="name">리조트 직원</h1>
             <p class="line top-line first-line">센티멘탈 리조트에 오신 것을 진심으로 환영합니다!</p>
             <p class="line top-line second-line next-line">저희 센티멘탈 리조트의 멋지고 다양한 시설은 최고의 휴식과 감동을 선사합니다.</p>
@@ -147,13 +157,13 @@
         
         <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
 
-        <div class="dialogue-box dialogue-1-1">
+        <div class="dialogue-box2 dialogue-1-1">
             <h1 class="name">큰 현</h1>
             <p class="line top-line first-line">아, 거기 계셨군요 <span class="player-name"></span>씨.</p>
             <p class="line top-line second-line next-line">인사를 드리고 오느라 조금 늦었네요. 저에겐 정말 중요한 분이셔서... (지배인의 얼굴이 볼그래졌다.)</p>
             <p class="line bottom-line third-line two-toplines">- 엇, 지배인님 얼굴이 좀 <span class="clicker clicker-1-1">빨개지신것 같은데요...?</span></p>
         </div>
-        <div class="dialogue-box dialogue-1-2">
+        <div class="dialogue-box2 dialogue-1-2">
             <h1 class="name">큰 현</h1>
             <p class="line top-line first-line">...그, 그나저나 3층은 좀 둘러보셨나요? 3층엔 리조트 시설들이 많아요, 하하하.</p>
             <p class="line top-line second-line next-line">아, 특히 <strong>영화관에서 상영 중인 영화 제목</strong>과 <strong>레스토랑의 오늘의 메뉴</strong>는 반드시 기억해야 해요.</p>
@@ -190,10 +200,10 @@
         <img class="elevator__alarm alarm-off" src="image/2nd_floor/엘베알람off.png">
         <img class="elevator__alarm alarm-on" src="image/2nd_floor/엘베알람on.png">
 
-        <div class="dialogue-box dialogue-2-1">
+        <div class="dialogue-box2 dialogue-2-1">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">4층으로 올라가시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines">- <a href="4th_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="4th_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
             <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
         </div>
 
@@ -219,11 +229,26 @@
     
     function alertFoundAllGif() {
         if (hasClickedLogo=== true && hasClickedPopcorn === true && hasClickedPicture === true && hasClickedCouple === true) {
-            $('.foundallgif, .foundallgif .line').show();
+            $('.foundallgif, .foundallgif .line, .dialogue-box').show();
             alertFoundAllGif = function(){};
         }
     }
+
     
+// reset
+$('.reset-icon').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
+    $('.clicker-reset-1').click(function(evnet){
+        event.preventDefault();
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+        window.location = $('#reset').attr('href');
+        }, 4000);
+    })
+    //close
+    $('.clicker-reset-2').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
+    })
 
 // fade-in to loader and fadeout
 
@@ -274,7 +299,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
     // found all gifs
     $('.clicker-100').click(function() {
-        $('.foundallgif, .foundallgif .line').hide();
+        $('.foundallgif, .foundallgif .line, .dialogue-box').hide();
         addScore(10);
     })
 
@@ -367,7 +392,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
     // start
     
-    $('.dialogue-0-1, .dialogue-0-1 .line').delay(5500).fadeIn(0);
+    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').delay(5500).fadeIn(0);
 
         //quick view
         $('.dialogue-0-1').click(function() {
@@ -375,8 +400,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
         //close   
         $('.clicker-0-1').on('click', function() {
-            $('.dialogue-0-1').hide();
-            $('.dialogue-0-1').children().hide();
+            $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').hide();
             $('.movingarrow__swimming, .movingarrow__fitness, .movingarrow__spa').show();})
 
 
@@ -392,7 +416,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         setTimeout(function() {$('#swimming')[0].play();}, 2000);
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
-            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
             
         }
     })
@@ -410,7 +434,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
-            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
             
         }
     })
@@ -428,7 +452,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         
 
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
-            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line').delay(15000).fadeIn(0);
+            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
             
         }
     })
@@ -447,7 +471,7 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         
         //close    
         $('.clicker-1-2').click(function() {
-            $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__gif, .big-hyun__avatar').hide();
+            $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__gif, .big-hyun__avatar, .dialogue-box').hide();
             $('.movingarrow__movie, .movingarrow__restaurant').show();})
             
 
@@ -494,12 +518,14 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
     // elevator
 
     $('.button-off').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true && hasClickedMovie === true && hasClickedRestaurant === true) {
             $('.movingarrow__elevator').hide();
-            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').show();
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
             addBonus(hasClickedElevator, 50);
             hasClickedElevator = true;
         } else {}
+    } else {}
     })
 
         //quick view
@@ -509,13 +535,13 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
         // close
         $('.clicker-3-2').click(function(){
-            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on').hide();
+            $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').hide();
         })
 
     $('.clicker-3-1').click(function(){
         event.preventDefault();
         $('#fade-box').fadeIn(2000);
-        setTimeout(function() {window.location = $('a').attr('href');}, 2000);
+        setTimeout(function() {window.location = $('#nextStage').attr('href');}, 2000);
     })
 
 

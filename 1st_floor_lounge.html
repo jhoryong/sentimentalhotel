@@ -19,6 +19,17 @@
 <body>
 <div class="fade-box"></div>
 <div class="container">
+    <div class="dialogue-box"></div>
+
+    <div class="reset">
+        <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+        <div class="dialogue-box-reset">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+            <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+        </div>
+    </div>
 
     <div class="items">
         <div class="item map">
@@ -60,7 +71,7 @@
         <img class="gif gifhover people people2" src="image/1st_floor_lounge/people2.png">
     </div>
 
-    <div class="dialogue-box foundallgif">
+    <div class="dialogue-box2 foundallgif">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">모든 움직이는 요소를 찾았다! </p>
         <p class="line bottom-line fast-yes-line"><span class="clicker clicker-100">(보너스 10점!)</span></p>
@@ -69,7 +80,7 @@
     <div class="start">
         <img class="gif gifhover big-hyun__gif" src="image/1st_floor_lounge/큰현.gif">
         <img class="avatar big-hyun__avatar" src="image/common/큰현.png">
-        <div class="dialogue-box dialogue-0-1">
+        <div class="dialogue-box2 dialogue-0-1">
             <h1 class="name">큰 현</h1>
             <p class="line top-line first-line">오셨군요.</p>
             <p class="line top-line second-line next-line">여기는 <strong>센티멘탈 호텔 라운지</strong>에요. 호텔 방문객 누구나 음료를 마시며 쉴 수 있죠.</p>
@@ -83,7 +94,7 @@
     <div class="bartender">
         <img class="gif gifhover bartender__gif" src="image/1st_floor_lounge/바텐더.gif">
             
-        <div id="menu" class="dialogue-box menu">
+        <div id="menu" class="dialogue-box2 menu">
             <h1 class="name">바텐더</h1>
             <p class="line top-line first-line">허허허, 어서 오세요 <span class="player-name"></span>씨. 자, 어떤 음료로 하실텐가요?</p>
             <p class="line top-line next-line" style="animation: typing 0 0 linear backwards">&nbsp;</p>
@@ -95,7 +106,7 @@
             <p class="line top-line next-line" style="animation: typing 1.5s 2.7s linear backwards;"><span class="clicker clicker-1-5">대화 그만하기</span></p>
         </div>
 
-        <div class="dialogue-box applecidar">
+        <div class="dialogue-box2 applecidar">
             <h1 class="name"><span class="player-name"></span></h1>
             <p class="line top-line first-line">음...</p>
             <p class="line top-line second-line next-line">신선한 사과와 톡 쏘는 탄산의 조합이...</p>
@@ -103,7 +114,7 @@
             <p class="line bottom-line fourth-line three-toplines">갈증이 해소되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-1">(오예!)</span></p>
         </div>
 
-        <div class="dialogue-box milktea">
+        <div class="dialogue-box2 milktea">
             <h1 class="name"><span class="player-name"></span></h1>
             <p class="line top-line first-line">음...</p>
             <p class="line top-line second-line next-line">밀크티의 부드럽고 달콤한 맛이...</p>
@@ -111,7 +122,7 @@
             <p class="line bottom-line fourth-line three-toplines">긴장이 완화되어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-2">(오예!)</span></p>
         </div>
     
-        <div class="dialogue-box americano">
+        <div class="dialogue-box2 americano">
             <h1 class="name"><span class="player-name"></span></h1>
             <p class="line top-line first-line">음... </p>
             <p class="line top-line second-line next-line">아메리카노의 씁쓸하면서도 그윽한 향이...</p>
@@ -119,7 +130,7 @@
             <p class="line bottom-line fourth-line three-toplines">졸음에서 깨어 보너스 점수 <strong>5점</strong>을 얻었다!&nbsp;<span class="clicker clicker-2-3">(오예!)</span></p>
         </div>
 
-        <div class="dialogue-box sexonthebeach">
+        <div class="dialogue-box2 sexonthebeach">
             <h1 class="name"><span class="player-name"></span></h1>
             <p class="line top-line first-line">교육중에 음주하면 안될 것 같지만... 지배인님 몰래 살짝 마셔야지. 히힛.</p>
             <p class="line top-line second-line next-line">음... 상큼한 과일향과 보드카의 조화가 예술이다... </p>
@@ -139,10 +150,10 @@
         <img class="elevator__alarm alarm-off" src="image/1st_floor_lounge/엘베알람off.png">
         <img class="elevator__alarm alarm-on" src="image/1st_floor_lounge/엘베알람on.png">
 
-        <div class="dialogue-box dialogue-2">
+        <div class="dialogue-box2 dialogue-2">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">2층으로 올라가시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines">- <a href="2nd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="2nd_floor.html"><span class="clicker clicker-3-1">올라간다</span></a></p>
             <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
         </div>
 
@@ -166,7 +177,7 @@
     
     function alertFoundAllGif() {
         if (hasClickedCoffee=== true && hasClickedLightbulb === true && hasClickedPeople === true) {
-            $('.foundallgif, .foundallgif .line').show();
+            $('.foundallgif, .foundallgif .line, .dialogue-box').show();
             alertFoundAllGif = function(){};
         }
     }
@@ -253,21 +264,35 @@
 
     // found all gifs
     $('.clicker-100').click(function() {
-        $('.foundallgif, .foundallgif .line').hide();
+        $('.foundallgif, .foundallgif .line, .dialogue-box').hide();
         addScore(10);
     })
 
 
+// reset
+$('.reset-icon').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
+    $('.clicker-reset-1').click(function(evnet){
+        event.preventDefault();
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+        window.location = $('#reset').attr('href');
+        }, 4000);
+    })
+    //close
+    $('.clicker-reset-2').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
+    })
 
 
 // start
     $('.fade-box').delay(2000).fadeOut(2000);
     setTimeout(function() {
-        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line').show();
+        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();
     }, 4500);
 
     $('.clicker-0-1').on('click', function() {
-        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .big-hyun__gif').hide();
+        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .big-hyun__gif, .dialogue-box').hide();
         $('.movingarrow__bartender').show();
     })
 
@@ -281,8 +306,10 @@
     //bartender
 
     $('.bartender__gif').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         $('.movingarrow__bartender').hide();
-        $('.menu, .menu .line').show();
+        $('.menu, .menu .line, .dialogue-box').show();
+        } else {}
     })
 
         //quick view
@@ -294,9 +321,9 @@
         $('.clicker-1-5').click(function() {
             if (hasClickedApplecidar === true && hasClickedMilktea === true && hasClickedAmericano === true && hasClickedSexonthebeach === true) {
                 $('.movingarrow__elevator').show();
-                $('.menu, .menu .line').hide();
+                $('.menu, .menu .line, .dialogue-box').hide();
             } else {
-                $('.menu, .menu .line').hide();
+                $('.menu, .menu .line, .dialogue-box').hide();
             }
         })
             
@@ -307,6 +334,7 @@
     $('.clicker-1-1').on('click', function() {
         addBonus(hasClickedApplecidar, 5);
         hasClickedApplecidar = true;
+        $('.menu, .menu .line').hide();
         $('.applecidar, .applecidar .line').show();
         $('.menu #menu1').html("&nbsp;");
     })
@@ -314,6 +342,7 @@
         //close
         $('.clicker-2-1').on('click', function() {
             $('.applecidar, .applecidar .line').hide();
+            $('.menu, .menu .line').show();
             $('.menu #menu1').hide();
         })
 
@@ -328,12 +357,14 @@
     $('.clicker-1-2').on('click', function() {
         addBonus(hasClickedMilktea, 5);
         hasClickedMilktea = true;
+        $('.menu, .menu .line').hide();
         $('.milktea, .milktea .line').show();
         $('.menu #menu2').html("&nbsp;");
     })
 
         //close
         $('.clicker-2-2').on('click', function() {
+            $('.menu, .menu .line').show();
             $('.milktea, .milktea .line').hide();
             $('#milktea .dialogue-box').children().hide();
         })
@@ -349,12 +380,14 @@
     $('.clicker-1-3').on('click', function() {
         addBonus(hasClickedAmericano, 5);
         hasClickedAmericano = true;
+        $('.menu, .menu .line').hide();
         $('.americano, .americano .line').show();
         $('.menu #menu3').html("&nbsp;");
     })
 
         //close
         $('.clicker-2-3').on('click', function() {
+            $('.menu, .menu .line').show();
             $('.americano, .americano .line').hide();
         })
 
@@ -369,12 +402,14 @@
     $('.clicker-1-4').on('click', function() {
         addBonus(hasClickedSexonthebeach, -15);
         hasClickedSexonthebeach = true;
+        $('.menu, .menu .line').hide();
         $('.sexonthebeach, .sexonthebeach .line').show();
         $('.menu #menu4').html("&nbsp;");
     })
     
         //close
         $('.clicker-2-4').on('click', function() {
+            $('.menu, .menu .line').show();
             $('.sexonthebeach, .sexonthebeach .line').hide();
         })
 
@@ -388,13 +423,13 @@
 // elevator
 
     $('.button-off').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         if (hasClickedApplecidar === true && hasClickedMilktea === true && hasClickedAmericano === true && hasClickedSexonthebeach === true) {
             $('.movingarrow__elevator').hide();
-            $('.button-on').show();
-            $('.dialogue-2, .dialogue-2 .line').show();
-            $('.alarm-on').show();
+            $('.dialogue-2, .dialogue-2 .line, .button-on, .dialogue-box, .alarm-on').show();
             hasClickedElevator = true;
         } else {}
+    } else {}
     })
 
         //quick view
@@ -413,7 +448,7 @@
         event.preventDefault();
         $('.fade-box').fadeIn(2000);
         setTimeout(function() {
-            window.location = $('a').attr('href');
+            window.location = $('#nextStage').attr('href');
         }, 2000);
     })
 

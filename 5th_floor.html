@@ -23,6 +23,16 @@
 <div class="transparent-background"></div>
 <div class="dialogue-box"></div>
 
+    <div class="reset">
+        <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+        <div class="dialogue-box-reset">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+            <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+        </div>
+    </div>
+
 
     <!-- preloader  -->
     <div class="preloader">
@@ -72,7 +82,7 @@
     <div class="dialogue-box2 dialogue-2-1">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">6층으로 올라가시겠습니까?</p>
-        <p class="line bottom-line fast-yes-line two-toplines">- <a href="6th_floor.html"><span class="clicker clicker-2-1">올라간다</span></a></p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="6th_floor.html"><span class="clicker clicker-2-1">올라간다</span></a></p>
         <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-2-2">더 둘러본다</span></p>
     </div>
 
@@ -570,6 +580,20 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
 
+// reset
+$('.reset-icon').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
+    $('.clicker-reset-1').click(function(evnet){
+        event.preventDefault();
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+        window.location = $('#reset').attr('href');
+        }, 4000);
+    })
+    //close
+    $('.clicker-reset-2').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
+    })
 
 // start
 
@@ -633,7 +657,7 @@ $('.button-off').on('click', function() {
 $('.clicker-2-1').click(function(){
     event.preventDefault();
     $('#fade-box').fadeIn(2000);
-    setTimeout(function() {window.location = $('a').attr('href');}, 2000);
+    setTimeout(function() {window.location = $('#nextStage').attr('href');}, 2000);
 })
 
 

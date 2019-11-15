@@ -31,6 +31,7 @@
 </div>
 
 <div class="container">
+    <div class="dialogue-box"></div>
     <div id="dialogue-bg" class="transparent-background"></div>
 
     <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
@@ -38,7 +39,7 @@
 
     <div class="items">
         <div class="item map">
-            <img class="icon map-icon" src="image/icon/mapicon.png">
+            <img class="icon gifhover map-icon" src="image/icon/mapicon.png">
             <div class="map-contents">
                 <div id="item-background" class="transparent-background"></div>
                 <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
@@ -48,7 +49,13 @@
     </div>
 
     <div class="reset">
-        <a class="resetlink" href="index.html"><i class="fas fa-redo-alt reset-icon gifhover"></i></a>
+        <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+        <div class="dialogue-box-reset">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+            <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+        </div>
     </div>
 
     <div class="scores">
@@ -58,7 +65,7 @@
     </div>
     
     <div class="start">
-        <div class="dialogue-box dialogue-0">
+        <div class="dialogue-box2 dialogue-0">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
             <p class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</p>
@@ -76,26 +83,26 @@
         <img class="gif gifhover small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
             <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
 
-        <div class="dialogue-box dialogue-1-1">
+        <div class="dialogue-box2 dialogue-1-1">
             <h1 class="name">작은 현</h1>
             <p class="line top-line first-line">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
             <p class="line bottom-line second-line one-topline">- (어린 아이가 나에게 반말을 하네...? 뭐, 첫날이니 그러려니 해야지.) <span class="clicker clicker-1-1">네, 그렇습니다!</span></p>
         </div>
 
-        <div class="dialogue-box dialogue-1-2">
+        <div class="dialogue-box2 dialogue-1-2">
             <h1 class="name">작은 현</h1>
             <p class="line top-line first-line">너 이름이 뭐야?</p>
             <p class="line bottom-line second-line one-topline">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"><input class="clicker clicker-1-2" type="submit" value="입니다!"></p>
         </div>
 
-        <div class="dialogue-box dialogue-1-3">
+        <div class="dialogue-box2 dialogue-1-3">
             <h1 class="name">작은 현</h1>
             <p class="line top-line first-line">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
             <p class="line top-line second-line next-line">날 부를 때는 그냥 <strong>'작은 지배인님'</strong>이라고 불러.</p>
             <p class="line bottom-line third-line two-toplines">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-1-3">작은 지배인님.</span></p>
         </div>
 
-        <div class="dialogue-box dialogue-1-4">
+        <div class="dialogue-box2 dialogue-1-4">
             <h1 class="name">작은 현</h1>
             <p class="line top-line first-line">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
             <p class="line top-line second-line next-line">큰 현이한테 가봐.</p>
@@ -112,7 +119,7 @@
     <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
     <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
 
-    <div class="dialogue-box dialogue-2-1">
+    <div class="dialogue-box2 dialogue-2-1">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요?</p>
         <p class="line top-line second-line next-line">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
@@ -120,14 +127,14 @@
         <p class="line bottom-line fourth-line three-toplines">- (이 호텔은 지배인이 두 명인가...?) 네 알겠습니다, <span class="clicker clicker-2-1">큰 지배인님!</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-2">
+    <div class="dialogue-box2 dialogue-2-2">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
         <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
         <p class="line bottom-line third-line two-toplines">- <span class="clicker clicker-2-2">센티멘탈 호텔 신입 직원 교육이요...?</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-3">
+    <div class="dialogue-box2 dialogue-2-3">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">네. 너무 걱정하진 마세요. <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 따라 각 층을 체험하면 되니까요.</p>
         <p class="line top-line second-line next-line">또한 제가 내는 <strong>문제</strong>를 잘 맞추시면 되요.</p>
@@ -135,7 +142,7 @@
         <p class="line bottom-line fourth-line four-toplines">- 화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-4">
+    <div class="dialogue-box2 dialogue-2-4">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">아, 저건 교육 평가 점수에요.</p>
         <p class="line top-line second-line next-line">중간 중간 나오는 퀴즈를 맞추면 점수를 얻을 수 있습니다.</p>
@@ -144,7 +151,7 @@
         <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-5">
+    <div class="dialogue-box2 dialogue-2-5">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">하하하. 점수를 얻는 팁을 살짝 드리면...</p>
         <p class="line top-line second-line next-line">------</p>
@@ -155,7 +162,7 @@
         <p class="line bottom-line seventh-line six-toplines">- 네 <span class="clicker clicker-2-5">감사합니다!</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-6">
+    <div class="dialogue-box2 dialogue-2-6">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔에 대해 간략히 알아보겠습니다.</p>
         <p class="line top-line second-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
@@ -164,7 +171,7 @@
         <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-2-6">(다음)</span></p>
     </div>
 
-    <div class="dialogue-box dialogue-2-7">
+    <div class="dialogue-box2 dialogue-2-7">
         <h1 class="name">큰 현</h1>
         <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
         <p class="line top-line second-line next-line">로비에는 리셉션과 누구나 자유로운 휴식 공간이 있어요.</p>
@@ -180,19 +187,19 @@
 <div class="gold-plate">
     <img class="gif gifhover gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
 
-    <div class="dialogue-box gold-plate__mission-box">
+    <div class="dialogue-box2 gold-plate__mission-box">
         <h1 class="name gold-plate__name">미션</h1>
         <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
-        <span class="line gold-plate__line line-25">우리는 모든 고객이 센티멘탈 호텔만의 섬세함을 경험케 한다.</span>
+        <span class="line gold-plate__line line-25">우리는 모든 고객이 센티멘탈 호텔만의 섬세함을 경험하게 한다.</span>
         <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
         <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
         <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
         <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
-        <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때 묻지 않은 순수한 마음을 통해 현이 더 나은</span>
+        <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때묻지 않은 순수한 마음을 통해 현이 더 나은</span>
         <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
     </div>
 
-    <div class="dialogue-box dialogue-3-1">
+    <div class="dialogue-box2 dialogue-3-1">
         <h1 class="name"><span class="player-name"></span></h1>
         <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
         <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
@@ -206,10 +213,10 @@
 <div class="lounge-link">
     <div class="clicker gifhover lounge-link__clicker" title="라운지로 가기"></div>
 
-    <div class="dialogue-box dialogue-4-1">
+    <div class="dialogue-box2 dialogue-4-1">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
-        <p class="line bottom-line fast-yes-line two-toplines">- <a href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
+        <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
         <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
     </div>
 
@@ -232,7 +239,7 @@
     </div>
 
     <div class="dialogue dialogue__foundallgif">
-        <div class="dialogue-box">
+        <div class="dialogue-box2">
             <h1 class="name">&nbsp;</h1>
             <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
             <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
@@ -265,7 +272,7 @@
     
     function alertFoundAllGif() {
         if (hasClickedEmployee === true && hasClickedBoy === true && hasClickedArrow === true) {
-            $('.foundallgif, .foundallgif .line').show();
+            $('.foundallgif, .foundallgif .line, .dialogue-box').show();
         addScore(10);
         alertFoundAllGif = function(){};
         }
@@ -273,16 +280,18 @@
 
 
 // reset
-    $('.reset-icon').click(function(event){
+    $('.reset-icon').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
+    $('.clicker-reset-1').click(function(evnet){
         event.preventDefault();
-        sessionStorage.clear();
-        let reset = confirm("게임을 초기화하고 처음으로 돌아가시겠습니까?");
-        if (reset === true) {
-            $('.fade-box').fadeIn(2000);
-            setTimeout(function() {
-            window.location = $('.resetlink').attr('href');
-            }, 2000);
-        } else {}
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+        window.location = $('#reset').attr('href');
+        }, 4000);
+    })
+    //close
+    $('.clicker-reset-2').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
     })
 
 // item
@@ -338,60 +347,46 @@
 //start dialogue
 
     setTimeout(function() {
-        $('.dialogue-0, .dialogue-0 .line').show();
+        $('.dialogue-0, .dialogue-0 .line, .dialogue-box').show();
     }, 7000);
 
     //close
     $('.clicker-0-1').on('click', function() {
-        $('.start').hide();
+        $('.start, .dialogue-box').hide();
         $('.movingarrow__small-hyun').css(block);
     })
 
     //fast view
     $('.dialogue-0').click(function() {
         $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-    }) 
+    })
 
 
 
 // small hyun
 
     $('.small-hyun__gif').on('click', function() {
-        
-        $('.small-hyun__dialogue').css(block);
-        $('.big-hyun__dialogue, .gold-plate__dialogue').css(none);
-        if (hasClickedSmallHyun === true) {
-            $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar').children().css(block);
-        } else {
-            $('.dialogue-1-1, .dialogue-1-1 .line, .small-hyun__avatar').show();
-            $('.movingarrow__small-hyun').css(none);
-        }
-
-        // fast view
-        $('.dialogue-1-1').click(function(event) {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line');
-        }) 
+        if (document.querySelector('.dialogue-box').style.display === 'none'){
+            if (hasClickedSmallHyun === true) {
+                $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar, .dialogue-box').children().css(block);
+            } else {
+                $('.dialogue-1-1, .dialogue-1-1 .line, .small-hyun__avatar, .dialogue-box').show();
+                $('.movingarrow__small-hyun').css(none);
+            }
+        } else {}
     })
-
+    // fast view
+    $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4').click(function(event) {
+        $(event.currentTarget).children().css('animation', 'none');}) 
+    
     $('.clicker-1-1').on('click', function() {
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
         $('.dialogue-1-2, .dialogue-1-2 .line').show();
-
-        // fast view
-        $('.dialogue-1-2').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line');
-        })
     })
-
     $('.clicker-1-2').on('click', function() {
         getName();
         $('.dialogue-1-2, .dialogue-1-2 .line').hide();
         $('.dialogue-1-3, .dialogue-1-3 .line').show();
-
-        // fast view
-        $('.dialogue-1-3').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line');
-        })
     })
 
         // also go next when press enter
@@ -402,26 +397,15 @@
                 $('.dialogue-1-3, .dialogue-1-3 .line').show();
             }
         })
-        // fast view
-        $('.dialogue 1-3').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line');
-        })
 
     $('.clicker-1-3').on('click', function() {
         $('.dialogue-1-3, .dialogue-1-3 .line').hide();
         $('.dialogue-1-4, .dialogue-1-4 .line').show();
-
-        // fast view
-        $('.dialogue-1-4').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line');
-        })
     })
-
     //close
     $('.clicker-1-4').on('click', function() {
         hasClickedSmallHyun = true;
-        $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar').hide();
-        $('.movingarrow__small-hyun').css(none);
+        $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar, .dialogue-box, .movingarrow__small-hyun').hide();
         $('.movingarrow__big-hyun').css(block);
     })
 
@@ -433,90 +417,49 @@
 
     $('.big-hyun__gif').click(function() {
 
-        // prevent interception
-        $('.small-hyun .dialogue-box').css(none);
-
         // disappear arrow
         $('.movingarrow__big-hyun').css(none);
-        
-        if (hasClickedSmallHyun === true) {
-            $('.dialogue-2-1, .dialogue-2-1 .line, .big-hyun__avatar').css(block);
-        
-            // fast view
-            $('.dialogue-2-1').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line');
-        })
-        } else {}
-        
+        if (document.querySelector('.dialogue-box').style.display === 'none'){
+            if (hasClickedSmallHyun === true) {
+                $('.dialogue-2-1, .dialogue-2-1 .line, .big-hyun__avatar, .dialogue-box').css(block);
+            } else {}
+        }
     })
+
+    // fast view
+    $('.dialogue-2-1, .dialogue-2-2, .dialogue-2-3, .dialogue-2-4, .dialogue-2-5, .dialogue-2-6, .dialogue-2-7').on('click', function() {
+        $(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.clicker-2-1').click(function() {
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('.dialogue-2-2, .dialogue-2-2 .line').show();
-
-        // fast view
-        $('.dialogue-2-2').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
     })
-
     $('.clicker-2-2').click(function() {
         $('.dialogue-2-2, .dialogue-2-2 .line').hide();
         $('.dialogue-2-3, .dialogue-2-3 .line').show();
-
-        // fast view
-        $('.dialogue-2-3').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
     })
-
     $('.clicker-2-3').click(function() {
         $('.dialogue-2-3, .dialogue-2-3 .line').hide();
         $('.dialogue-2-4, .dialogue-2-4 .line').show();
-
-        // fast view
-        $('.dialogue-2-4').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-        })
     })
-
     $('.clicker-2-4').click(function() {
         $('.dialogue-2-4, .dialogue-2-4 .line').hide();
         $('.dialogue-2-5, .dialogue-2-5 .line').show();
-
-        // fast view
-        $('.dialogue-2-5').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line seventh-line');
-        })
     })
-
     $('.clicker-2-5').click(function() {
         $('.dialogue-2-5, .dialogue-2-5 .line').hide();
         $('.dialogue-2-6, .dialogue-2-6 .line, .big-hyun__mapimg, #dialogue-bg').show();
-        
-        // fast view
-        $('.dialogue-2-6').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
     })
-
     $('.clicker-2-6').click(function() {
         $('.dialogue-2-6, .dialogue-2-6 .line, .big-hyun__map').hide();
         $('.dialogue-2-7, .dialogue-2-7 .line').show();
-
-        // fast view
-        $('.dialogue-2-7').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
     })
-
         //close button
         $('.clicker-2-7').click(function() {
-            $('.dialogue-2-7, .dialogue-2-7 .line, .big-hyun__gif, .big-hyun__avatar, .big-hyun__mapimg, #dialogue-bg').hide();
+            $('.dialogue-2-7, .dialogue-2-7 .line, .big-hyun__gif, .big-hyun__avatar, .big-hyun__mapimg, #dialogue-bg, .dialogue-box').hide();
 
             //appear arrow to lounge
             $('.movingarrow__gold-plate').css(block);
-            
             hasClickedBigHyun = true;
         })
 
@@ -528,32 +471,25 @@
 
     $('.gold-plate__gif').on('click', function() {
 
-        // prevent interception
-        $('.small-hyun .dialogue-box, .big-hyun .dialogue-box').css(none);
-
         // logic 
-        if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === false) {
-            $('.movingarrow__gold-plate').css(none);
-            $('#dialogue-bg, .gold-plate__mission-box').css(block);
-            $('.line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('display', 'inline-block')
-
-            setTimeout(function() {
-                $('.dialogue-3-1, .dialogue-3-1 .line').css(block);
-            }, 14000);
-        } 
-        
-        if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-           
-            $('.gold-plate__dialogue, #dialogue-bg, .gold-plate__mission-box').css(block);
-            $('.gold-plate__name, .line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('animation', 'none');
+        if (document.querySelector('.dialogue-box').style.display === 'none'){
+            if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === false) {
+                $('.movingarrow__gold-plate').css(none);
+                $('#dialogue-bg, .gold-plate__mission-box').css(block);
+                $('.line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('display', 'inline-block')
+                setTimeout(function() {
+                    $('.dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').css(block);
+                }, 12500);
+            } 
             
-
-            setTimeout(function() {
-                $('.dialogue-3-1, .dialogue-3-1 .line').css(block);
-            }, 400);
-        }
-        
-        else {}
+            if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
+                $('.gold-plate__dialogue, #dialogue-bg, .gold-plate__mission-box').css(block);
+                $('.gold-plate__name, .line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('animation', 'none');
+                setTimeout(function() {
+                    $('.dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').css(block);
+                }, 400);
+            } else {}
+        } else {}
 
         // fast view
         $('.dialogue-3-1').on('click', function() {
@@ -569,7 +505,7 @@
 
     //close
     $('.clicker-3-1').click(function() {
-        $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-1').css(none);
+        $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-1, .dialogue-box').css(none);
         $('.movingarrow__link').css(block);
         hasClickedGoldplate = true;
         $('.dialogue-3-1 .first-line, .dialogue-3-1 .name').html("&nbsp;");
@@ -579,29 +515,29 @@
 //link to lounge
 
     $('.lounge-link__clicker').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-            $('.dialogue-4-1, .dialogue-4-1 .line').css(block);
-
-            // fast view
-            $('.dialogue-4-1').on('click', function() {
-                $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line fourth-line fifth-line');
-            })
-
+            $('.dialogue-4-1, .dialogue-4-1 .line, .dialogue-box').css(block);
         } else {}
+    } else {}
+    })
 
+    // fast view
+    $('.dialogue-4-1').on('click', function() {
+        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line fourth-line fifth-line');
     })
 
     $(".clicker-4-1").on('click', function(event) {
         event.preventDefault();
         $('.fade-box').fadeIn(2000);
         setTimeout(function() {
-            window.location = $('a').attr('href');
+            window.location = $('#nextStage').attr('href');
         }, 2000);
     })
 
         //close
         $('.clicker-4-2').on('click', function() {
-            $('.dialogue-4-1, .dialogue-4-1 .line').css(none);
+            $('.dialogue-4-1, .dialogue-4-1 .line, .dialogue-box').css(none);
         })
 
     
@@ -669,8 +605,7 @@
         })
 
     $('.clicker-5-1').click(function() {
-        $('.dialogue__foundallgif, foundall').css(none);
-
+        $('.dialogue__foundallgif, foundall, .dialogue-box').css(none);
     })
 
 </script>

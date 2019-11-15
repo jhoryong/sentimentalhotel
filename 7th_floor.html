@@ -23,6 +23,16 @@
         <div class="transparent-background"></div>
         <div class="dialogue-box"></div>
 
+        <div class="reset">
+            <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+            <div class="dialogue-box-reset">
+                <h1 class="name">&nbsp;</h1>
+                <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+                <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+            </div>
+        </div>
+    
         <!-- items -->
         <div class="items">
             <div class="item map">
@@ -101,7 +111,7 @@
 
         <div class="star">
             <img class="gif gifhover star__gif" src="image/7th_floor/별.gif">
-            <img class="avatar star__avatar">
+            <img class="avatar star__avatar" src="image/4th_floor/희미한별.png">
 
             <img class="illust illust1" src="image/7th_floor/1.jpg">
             <img class="illust illust2" src="image/7th_floor/2.jpg">
@@ -477,6 +487,22 @@ let hasClickedBand = false;
 let hasClickedBartender = false;
 
 
+
+// reset
+$('.reset-icon').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
+    $('.clicker-reset-1').click(function(evnet){
+        event.preventDefault();
+        $('.fade-box').fadeIn(2000);
+        setTimeout(function() {
+        window.location = $('#reset').attr('href');
+        }, 4000);
+    })
+    //close
+    $('.clicker-reset-2').click(function(){
+        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
+    })
+
 // item
     $('.map-icon').click(function() {
         $('.map-contents,  #item-background').show();
@@ -565,11 +591,12 @@ let hasClickedBartender = false;
     $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4, .dialogue-1-5, .dialogue-1-6, .dialogue-1-7, .dialogue-1-8, .dialogue-1-9, .dialogue-1-10, .dialogue-1-11, .dialogue-1-12, .dialogue-1-13, .dialogue-1-13-1, .dialogue-1-14, .dialogue-1-15, .dialogue-1-16, .dialogue-1-17, .dialogue-1-18, .dialogue-1-19, .dialogue-1-20, .dialogue-1-21, .dialogue-1-22, .dialogue-1-23, .dialogue-1-24, .dialogue-1-25, .dialogue-1-26, .dialogue-1-27, .dialogue-1-28').click(function() {$(event.currentTarget).children().css('animation', 'none');}) 
 
     $('.star__gif').on('click', function() {
-        $('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').show();
-    })
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').show();
+        } else {}})
     $('.clicker-1-1').on('click', function() {
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
-        $('.dialogue-1-2, .dialogue-1-2 .line').show();
+        $('.dialogue-1-2, .dialogue-1-2 .line, .star__avatar').show();
     })
     $('.clicker-1-2').on('click', function() {
         $('.dialogue-1-2, .dialogue-1-2 .line').hide();
@@ -592,12 +619,12 @@ let hasClickedBartender = false;
         $('.dialogue-1-7, .dialogue-1-7 .line').show();
     })
     $('.clicker-1-7').on('click', function() {
-        $('.dialogue-1-7, .dialogue-1-7 .line').hide();
+        $('.dialogue-1-7, .dialogue-1-7 .line, .star__avatar').hide();
         $('.dialogue-1-8, .dialogue-1-8 .line').show();
     })
     $('.clicker-1-8').on('click', function() {
         $('.dialogue-1-8, .dialogue-1-8 .line').hide();
-        $('.dialogue-1-9, .dialogue-1-9 .line').show();
+        $('.dialogue-1-9, .dialogue-1-9 .line, .star__avatar').show();
     })
     $('.clicker-1-9').on('click', function() {
         $('.dialogue-1-9, .dialogue-1-9 .line').hide();
@@ -612,7 +639,7 @@ let hasClickedBartender = false;
         $('.dialogue-1-12, .dialogue-1-12 .line, .transparent-background, .illust1').show();
     })
     $('.clicker-1-12').on('click', function() {
-        $('.dialogue-1-12, .dialogue-1-12 .line').hide();
+        $('.dialogue-1-12, .dialogue-1-12 .line, .star__avatar').hide();
         $('.dialogue-1-13, .dialogue-1-13 .line').show();
     })
     $('.clicker-1-13').on('click', function() {
@@ -629,7 +656,7 @@ let hasClickedBartender = false;
     })
     $('.clicker-1-15').on('click', function() {
         $('.dialogue-1-15, .dialogue-1-15 .line, .illust2').hide();
-        $('.dialogue-1-16, .dialogue-1-16 .line, .illust3').show();
+        $('.dialogue-1-16, .dialogue-1-16 .line, .illust3, .star__avatar').show();
     })
     $('.clicker-1-16').on('click', function() {
         $('.dialogue-1-16, .dialogue-1-16 .line').hide();
@@ -660,15 +687,15 @@ let hasClickedBartender = false;
         $('.dialogue-1-23, .dialogue-1-23 .line').show();
     })
     $('.clicker-1-23').on('click', function() {
-        $('.dialogue-1-23, .dialogue-1-23 .line').hide();
+        $('.dialogue-1-23, .dialogue-1-23 .line, .star__avatar').hide();
         $('.dialogue-1-24, .dialogue-1-24 .line').show();
     })
     $('.clicker-1-24').on('click', function() {
         $('.dialogue-1-24, .dialogue-1-24 .line').hide();
-        $('.dialogue-1-25, .dialogue-1-25 .line').show();
+        $('.dialogue-1-25, .dialogue-1-25 .line, .star__avatar').show();
     })
     $('.clicker-1-25').on('click', function() {
-        $('.dialogue-1-25, .dialogue-1-25 .line, .illust7, .transparent-background').hide();
+        $('.dialogue-1-25, .dialogue-1-25 .line, .illust8, .transparent-background').hide();
         $('.dialogue-1-26, .dialogue-1-26 .line').show();
     })
     $('.clicker-1-26').on('click', function() {
@@ -681,13 +708,15 @@ let hasClickedBartender = false;
     })
         //close
         $('.clicker-1-28').on('click', function() {
-            $('.dialogue-1-28, .dialogue-1-28 .line, .dialogue-box, .star__gif').hide();
+            $('.dialogue-1-28, .dialogue-1-28 .line, .dialogue-box, .star__gif, .star__avatar').hide();
         })
     
 
     //bartender
     $('.bartender__gif').click(function(){
-        $('.dialogue-2-1, .dialogue-2-1 .line, .dialogue-box').show();
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.dialogue-2-1, .dialogue-2-1 .line, .dialogue-box').show();
+        } else {}
     })
     $('.clicker-2-1').click(function() {
         $('.dialogue-2-1, .dialogue-2-1 .line, .dialogue-box').hide();

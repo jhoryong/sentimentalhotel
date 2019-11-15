@@ -115,11 +115,10 @@
 
 
     .avatar__404 {
-        width: 26vw;
-        top: 30vw;
-        left: 4vw;
-        transform: rotateY(180deg);}
-
+        width: 24vw;
+        top: 32vw;
+        left: 6.5vw;
+    }
 
     /* 405 */
     .door__405 {
