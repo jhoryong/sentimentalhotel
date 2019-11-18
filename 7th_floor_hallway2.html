@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>센티멘탈 호텔 ::: 7층 객실</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/7th_floor.css"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        .container {
+            background-image: url("image/7th_floor/복도2.jpg");
+        }
+
+        .door {
+        top: 15.95vw;
+        left: 29vw;
+        width: 7vw;
+        }
+
+        .door2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="fade-box"></div>
+        <div class="dialogue-box"></div>
+
+        <!-- <audio>
+            <source src="sound/knocking sound.mp3" type="audio/mpeg">
+        </audio> -->
+
+        <img class="gif gifhover door door1" src="image/7th_floor/문1.png">
+        <img class="gif gifhover door door2" src="image/7th_floor/문2.png">
+
+        <div class="dialogue-box2 dialogue-701">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line"><strong>스위트룸 701호</strong>입니다. 들어가시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a class="nextStage" href="7th_floor_701.html"><span class="clicker clicker-701-1">들어간다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-701-2">그만둔다</span></p>
+        </div>
+    </div>
+<script>
+    $('.fade-box').fadeOut(2000);
+
+
+    //door open/close
+    $('.door1').on('mouseenter', function() {
+        $(event.currentTarget).hide();
+        $('.door2').show();
+    })
+    $('.door2').on('mouseleave', function() {
+        $(event.currentTarget).hide();
+        $('.door1').show();
+    })
+
+    $('.door').click(function(){
+        $('.dialogue-box, .dialogue-701, .dialogue-701 .line').show();
+    })
+        //close
+        $('.clicker-701-2').click(function(){
+            $('.dialogue-box, .dialogue-701, .dialogue-701 .line').hide();
+        })
+
+    $('.nextStage').click(function(event){
+        event.preventDefault();
+        $('.fade-box').delay(400).fadeIn(2000);
+        setTimeout(function() {
+            window.location = $('.nextStage').attr('href');
+        }, 2400);
+    })
+
+    // //sound
+    // $('.door').click(function(){
+    //     $('audio')[0].play();
+    // })
+
+
+</script>
+</body>
+</html>

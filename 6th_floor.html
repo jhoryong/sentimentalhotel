@@ -24,6 +24,10 @@
     <div class="transparent-background"></div>
     <div class="dialogue-box"></div>
 
+    <audio>
+        <source src="sound/knocking sound.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="reset">
         <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
         <div class="dialogue-box-reset">
@@ -176,6 +180,7 @@
         <img class="pots pots-after" src="image/6th_floor/요리끝.png">
         <img class="plate-before" src="image/6th_floor/식사전.png">
         <img class="plate-after" src="image/6th_floor/식사중.png">
+        <img class="plate-finish" src="image/6th_floor/식사후.png">
         <img class="gif gifhover frame" src="image/6th_floor/액자.png">
         <div id="dropspot" class="dropspot"></div> 
 
@@ -607,6 +612,11 @@ let hasClicked601 = false;
 let hasClicked602 = false;
 let hasClicked603 = false;
 
+//sound
+$('.door').click(function(){
+    $('audio')[0].play();
+})
+
 
 // reset
 $('.reset-icon').click(function(){
@@ -920,8 +930,8 @@ $('.map-icon').click(function() {
     })
        //close
         $('.clicker-602-13').on('click', function() {
-            $('.dialogue-602-13, .dialogue-602-13 .line, .avatar__602, .dialogue-box, .illust3, .transparent-background').hide();
-            $('.movingarrow__602').show();
+            $('.dialogue-602-13, .dialogue-602-13 .line, .avatar__602, .dialogue-box, .illust3, .transparent-background, .plate-after').hide();
+            $('.movingarrow__602, .plate-finish').show();
         })
 
     $('.frame').click(function(){

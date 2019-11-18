@@ -100,6 +100,12 @@
         top: 50vw;
         left: 2vw;
         z-index: 1;
+        transform-origin: center center;
+        transition: transform 400ms;
+    }
+
+    .reset-icon:hover {
+        transform: rotate(180deg);
     }
 
 

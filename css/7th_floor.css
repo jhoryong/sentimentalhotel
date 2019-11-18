@@ -23,34 +23,33 @@
     .band {
         position: absolute;
         width: 16.9vw;
-        top: 42.55vw;
-        left: 25.7vw;}
+        top: 40.65vw;
+        left: 25.9vw;}
 
     .band1 {display: block;} 
     .band2 {
         display: none;
-        top:42.7vw;
+        top: 40.75vw;
     } 
     .band3 {
         display: none;
-        top: 42.4vw;
+        top: 40.45vw;
     } 
 
 /* bartender */
 
 .bartender__gif {
     width: 5vw;
-    top: 14.5vw;
+    top: 12.7vw;
     left: 60.4vw;
 }
 
 /* star */
 
 .star__gif {
-    top: 22.9vw;
-    left: 32.6vw;
-    width: 6.1vw;
-}
+    top: 21.2vw;
+    left: 32.7vw;
+    width: 6.1vw;}
 
 .illust {
     position: absolute;
@@ -66,4 +65,19 @@
     width: 24vw;
     top: 32vw;
     left: 6.5vw;
+}
+
+.entrancediv {
+    top: 4.5vw;
+    left: 38.4vw;
+    width: 6vw;
+    height: 15.3vw;
+    /* border: black 1px solid; */
+}
+
+.whitespace {
+    top: 4.45vw;
+    left: 38vw;
+    width: 6.6vw;
+    display:none;
 }

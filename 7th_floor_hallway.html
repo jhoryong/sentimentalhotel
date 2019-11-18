@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>센티멘탈 호텔 ::: 7층 복도</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/7th_floor.css"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .container {
+            background-image: url("image/7th_floor/복도.jpg");
+        }
+        .light {
+            position:absolute;
+            top: 5.3vw;
+            left: 28.7vw;
+            width: 40vw;
+        }
+        .nextStage {
+            position: absolute;
+            top: 20vw;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10vw;
+            height: 20vw;
+            /* border: black 1px solid */
+        }
+    </style>
+</head>
+<body>
+    <div class="fade-box"></div>
+    <div class="container">
+        <a href="7th_floor_hallway2.html">
+            <img class="light gifhover" src="image/7th_floor/가운데빛.png">
+        </a>
+    </div>
+
+<script>
+    $('.fade-box').fadeOut(2000);
+    $('a').click(function(event){
+        event.preventDefault();
+        $('.fade-box').delay(400).fadeIn(2000);
+        setTimeout(function() {
+            window.location = $('a').attr('href');
+        }, 2400);
+    })
+</script>
+</body>
+</html>

@@ -176,7 +176,7 @@
         border: 3px dashed #505050;
     }
 
-    .plate-before, .plate-after {
+    .plate-before, .plate-after, .plate-finish {
         position: absolute;
         z-index: 12;
         top: 24.5vw;
@@ -219,10 +219,9 @@
     .door603__2 {display: none;} 
 
     .avatar__603 {
-        width: 17vw;
-        top: 28vw;
-        left: 13vw;
-        transform: rotateY(180deg);
+        width: 14vw;
+        top: 30.2vw;
+        left: 15vw;
     }
 
     .flowerpot {
@@ -252,8 +251,8 @@
     .tea {
         position: absolute;
         z-index: 12;
-        top: 25.7vw;
-        left: 71.1vw;
-        width: 9vw;
+        top: 26.3vw;
+        left: 72.1vw;
+        width: 8vw;
         display:none;
     }
