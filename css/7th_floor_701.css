@@ -1,0 +1,105 @@
+.container {
+    background-image: url("../image/701/방.jpg");
+}
+
+.mirror {
+    top: 2.7vw;
+    left: 0vw;
+    width: 8.5vw;
+}
+    .mirror2, .mirror3 {
+        display: none;
+    }
+
+.radio {
+    top: 34vw;
+    left: 7vw;
+    width: 11vw;
+}
+
+    .radio2, .radio3, .radio4 {
+        display: none;
+    }
+
+.tea {
+    top: 35.5vw;
+    left: 28vw;
+    width: 10vw;
+}
+
+    .tea2, .tea3 {
+        display: none;
+    }
+
+.telephone {
+    top: 28.5vw;
+    left: 88vw;
+    width: 12vw;
+}
+
+    .telephone2 {
+        display: none;
+    }
+
+.window {
+    top: 14.5vw;
+    left: 56vw;
+    width: 19.3vw;
+}
+
+    .window2, .window3, .window4, .window5, .window6 {
+        display: none;
+    }
+
+.table {
+    position: absolute;
+    top: 23vw;
+    left: 70vw;
+    width: 19vw;
+    z-index:1;
+}
+
+.buddha {
+    top: 13vw;
+    left: 79vw;
+    width: 12vw;
+}
+
+    .buddha2 {
+        display: none;
+    }
+
+.long-lamp {
+    top: 13vw;
+    left: 79vw;
+    width: 12vw;
+}
+
+    .long-lamp {
+        display: none;
+    }
+
+.small-lamp {
+    top: 26vw;
+    left: 97vw;
+    width: 3vw;
+}
+
+.laptop {
+    top: 23.5vw;
+    left: 77vw;
+    width: 7vw;
+}
+
+.candle {
+    top: 21.5vw;
+    left: 73.2vw;
+    width: 3.5vw;
+}
+
+.cat {
+    top: 31.8vw;
+    left: 71vw;
+    width: 16.7vw;
+}
+

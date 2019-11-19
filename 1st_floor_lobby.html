@@ -18,242 +18,241 @@
     <title>1층 로비 :: 센티멘탈 호텔</title>
 </head>
 <body>
+    <audio id="bgm" loop>
+        <source src="sound/1st_floor_lobby/Take it Easy - Lounge Jazz - Royalty Free Music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="fade-box"></div>
 
-<div class="fade-box"></div>
-
-<div class="preloader">
-    <div class="circle"></div>
-    <div class="chain__upwards">
-        <img class="chain chain-1" src="image/loader/chain.png">
-        <img class="chain chain-2" src="image/loader/chain.png">
+    <div class="preloader">
+        <div class="circle"></div>
+        <div class="chain__upwards">
+            <img class="chain chain-1" src="image/loader/chain.png">
+            <img class="chain chain-2" src="image/loader/chain.png">
+        </div>
+        <img class="elevator" src="image/loader/elevator.png">
     </div>
-    <img class="elevator" src="image/loader/elevator.png">
-</div>
 
-<div class="container">
-    <div class="dialogue-box"></div>
-    <div id="dialogue-bg" class="transparent-background"></div>
+    <div class="container">
+        <div class="dialogue-box"></div>
+        <div id="dialogue-bg" class="transparent-background"></div>
 
-    <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
-    
+        <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
+        
 
-    <div class="items">
-        <div class="item map">
-            <img class="icon gifhover map-icon" src="image/icon/mapicon.png">
-            <div class="map-contents">
-                <div id="item-background" class="transparent-background"></div>
-                <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
-                <span class="close-x">&#10005;</span>
+        <div class="items">
+            <div class="item map">
+                <img class="icon gifhover map-icon" src="image/icon/mapicon.png">
+                <div class="map-contents">
+                    <div id="item-background" class="transparent-background"></div>
+                    <img class="map-image" src="image/1st_floor_lobby/설명-맵.png">
+                    <span class="close-x">&#10005;</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="reset">
-        <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
-        <div class="dialogue-box-reset">
-            <h1 class="name">&nbsp;</h1>
-            <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
-            <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
-        </div>
-    </div>
-
-    <div class="scores">
-        <img class="scoreboard" src="image/icon/점수판.png">
-        <span class="score__text">점수</span>
-        <span class="score"></span>
-    </div>
-    
-    <div class="start">
-        <div class="dialogue-box2 dialogue-0">
-            <h1 class="name">&nbsp;</h1>
-            <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
-            <p class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</p>
-            <p class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. </p>
-            <p class="line top-line fourth-line next-line"><span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span> <strong>🡄 클릭!</strong></p>
-            <p class="line bottom-line fifth-line four-toplines">💬 대화가 나오는 중 대화상자를 누르면 대사를 빠르게 넘길 수 있습니다.</p>
-        </div>
-    </div>
-
-
-
-
-    <div class="small-hyun">
-
-        <img class="gif gifhover small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
-            <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
-
-        <div class="dialogue-box2 dialogue-1-1">
-            <h1 class="name">작은 현</h1>
-            <p class="line top-line first-line">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
-            <p class="line bottom-line second-line one-topline">- (어린 아이가 나에게 반말을 하네...? 뭐, 첫날이니 그러려니 해야지.) <span class="clicker clicker-1-1">네, 그렇습니다!</span></p>
+        <div class="reset">
+            <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
+            <div class="dialogue-box-reset">
+                <h1 class="name">&nbsp;</h1>
+                <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
+                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+                <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
+            </div>
         </div>
 
-        <div class="dialogue-box2 dialogue-1-2">
-            <h1 class="name">작은 현</h1>
-            <p class="line top-line first-line">너 이름이 뭐야?</p>
-            <p class="line bottom-line second-line one-topline">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"><input class="clicker clicker-1-2" type="submit" value="입니다!"></p>
-        </div>
-
-        <div class="dialogue-box2 dialogue-1-3">
-            <h1 class="name">작은 현</h1>
-            <p class="line top-line first-line">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
-            <p class="line top-line second-line next-line">날 부를 때는 그냥 <strong>'작은 지배인님'</strong>이라고 불러.</p>
-            <p class="line bottom-line third-line two-toplines">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-1-3">작은 지배인님.</span></p>
-        </div>
-
-        <div class="dialogue-box2 dialogue-1-4">
-            <h1 class="name">작은 현</h1>
-            <p class="line top-line first-line">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
-            <p class="line top-line second-line next-line">큰 현이한테 가봐.</p>
-            <p class="line bottom-line third-line two-toplines">(로비를 보니 큰 현이 서 있다. <span class="clicker clicker-1-4">큰 현에게 가보자.</span>)</p>
+        <div class="scores">
+            <img class="scoreboard" src="image/icon/점수판.png">
+            <span class="score__text">점수</span>
+            <span class="score"></span>
         </div>
         
-    </div>
-
-
-
-
-<div class="big-hyun">
-    <img class="gif gifhover big-hyun__gif" src="image/1st_floor_lobby/큰현.gif">
-    <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
-    <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
-
-    <div class="dialogue-box2 dialogue-2-1">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요?</p>
-        <p class="line top-line second-line next-line">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
-        <p class="line top-line third-line next-line"><span class="player-name"></span>씨가 저를 부를 때는 <strong>‘큰 지배인님’</strong>이라고 부르면 되요.</p>
-        <p class="line bottom-line fourth-line three-toplines">- (이 호텔은 지배인이 두 명인가...?) 네 알겠습니다, <span class="clicker clicker-2-1">큰 지배인님!</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-2">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
-        <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
-        <p class="line bottom-line third-line two-toplines">- <span class="clicker clicker-2-2">센티멘탈 호텔 신입 직원 교육이요...?</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-3">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">네. 너무 걱정하진 마세요. <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 따라 각 층을 체험하면 되니까요.</p>
-        <p class="line top-line second-line next-line">또한 제가 내는 <strong>문제</strong>를 잘 맞추시면 되요.</p>
-        <p class="line top-line third-line next-line">문제는 스토리를 잘 읽는다면 충분히 맞출 수 있어요.</p>
-        <p class="line bottom-line fourth-line four-toplines">- 화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-4">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">아, 저건 교육 평가 점수에요.</p>
-        <p class="line top-line second-line next-line">중간 중간 나오는 퀴즈를 맞추면 점수를 얻을 수 있습니다.</p>
-        <p class="line top-line third-line next-line">하지만 문제를 틀릴 시 점수를 잃게 됩니다.</p>
-        <p class="line top-line fourth-line next-line">0점에 다다를시 <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사에 실패</span>하게 됩니다.</p>
-        <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-5">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">하하하. 점수를 얻는 팁을 살짝 드리면...</p>
-        <p class="line top-line second-line next-line">------</p>
-        <p class="line top-line third-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 오브젝트</strong>들이 있다.</p>
-        <p class="line top-line fourth-line next-line">오브젝트를 찾아 모두 클릭하면 <strong>보너스 10점</strong>을 얻을 수 있다.</p>
-        <p class="line top-line fifth-line">------</p>
-        <p class="line top-line sixth-line next-line">쉿! 이건 <span class="player-name"></span>씨를 위해 제가 특별히 알려 드린 거에요. 알겠죠?</p>
-        <p class="line bottom-line seventh-line six-toplines">- 네 <span class="clicker clicker-2-5">감사합니다!</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-6">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔에 대해 간략히 알아보겠습니다.</p>
-        <p class="line top-line second-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
-        <p class="line top-line third-line next-line">1층 ~ 3층은 리셉션, 라운지 등의 편의 시설이 있습니다.</p>
-        <p class="line top-line fourth-line next-line">4층부터는 객실이 자리하고 있죠.</p>
-        <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-2-6">(다음)</span></p>
-    </div>
-
-    <div class="dialogue-box2 dialogue-2-7">
-        <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
-        <p class="line top-line second-line next-line">로비에는 리셉션과 누구나 자유로운 휴식 공간이 있어요.</p>
-        <p class="line top-line third-line next-line">저는 옆 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, <strong>로비를 둘러보고 나서 라운지로 와 주세요.</strong></p>
-        <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</span></p>
-    </div>
-
-</div>
-
-
-
-
-<div class="gold-plate">
-    <img class="gif gifhover gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
-
-    <div class="dialogue-box2 gold-plate__mission-box">
-        <h1 class="name gold-plate__name">미션</h1>
-        <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
-        <span class="line gold-plate__line line-25">우리는 모든 고객이 센티멘탈 호텔만의 섬세함을 경험하게 한다.</span>
-        <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
-        <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
-        <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
-        <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
-        <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때묻지 않은 순수한 마음을 통해 현이 더 나은</span>
-        <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
-    </div>
-
-    <div class="dialogue-box2 dialogue-3-1">
-        <h1 class="name"><span class="player-name"></span></h1>
-        <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
-        <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
-    </div>
-
-</div>
-
-
-
-
-<div class="lounge-link">
-    <div class="clicker gifhover lounge-link__clicker" title="라운지로 가기"></div>
-
-    <div class="dialogue-box2 dialogue-4-1">
-        <h1 class="name">&nbsp;</h1>
-        <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
-        <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
-        <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
-    </div>
-
-</div>
-
-
-
-    <div class="employee-gif">
-        <img class="gif employee employee1 gifhover" src="image/1st_floor_lobby/employee1.png">
-        <img class="gif employee employee3 gifhover" src="image/1st_floor_lobby/employee3.png">
-    </div>
-    <div class="boy-gif">
-        <img class="gif boy boy1 gifhover" src="image/1st_floor_lobby/boy1.png">
-        <img class="gif boy boy2 gifhover" src="image/1st_floor_lobby/boy2.png">
-    </div>
-    <div class="arrow-gif">
-        <img class="gif arrow arrow1 gifhover" src="image/1st_floor_lobby/arrow1.png">
-        <img class="gif arrow arrow2 gifhover" src="image/1st_floor_lobby/arrow2.png">
-        <img class="gif arrow arrow3 gifhover" src="image/1st_floor_lobby/arrow3.png">
-    </div>
-
-    <div class="dialogue dialogue__foundallgif">
-        <div class="dialogue-box2">
-            <h1 class="name">&nbsp;</h1>
-            <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
-            <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
+        <div class="start">
+            <div class="dialogue-box2 dialogue-0">
+                <h1 class="name">&nbsp;</h1>
+                <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
+                <p class="line top-line second-line next-line">그나저나 어디로 가야 하지? 음...</p>
+                <p class="line top-line third-line next-line">일단 리셉션 직원과 이야기해봐야겠다. </p>
+                <p class="line top-line fourth-line next-line"><span class="clicker clicker-0-1">(리셉션 데스크 안의 직원과 이야기해 보자.)</span> <strong>🡄 클릭!</strong></p>
+                <p class="line bottom-line fifth-line four-toplines">💬 대화가 나오는 중 대화상자를 누르면 대사를 빠르게 넘길 수 있습니다.</p>
+            </div>
         </div>
+
+
+
+
+        <div class="small-hyun">
+
+            <img class="gif gifhover small-hyun__gif" src="image/1st_floor_lobby/작은현.gif">
+                <img class="avatar small-hyun__avatar" src="image/1st_floor_lobby/작은현.png">
+
+            <div class="dialogue-box2 dialogue-1-1">
+                <h1 class="name">작은 현</h1>
+                <p class="line top-line first-line">안녕? 네가 이번에 들어왔다는 신입이구나?</p>
+                <p class="line bottom-line second-line one-topline">- (어린 아이가 나에게 반말을 하네...? 뭐, 첫날이니 그러려니 해야지.) <span class="clicker clicker-1-1">네, 그렇습니다!</span></p>
+            </div>
+
+            <div class="dialogue-box2 dialogue-1-2">
+                <h1 class="name">작은 현</h1>
+                <p class="line top-line first-line">너 이름이 뭐야?</p>
+                <p class="line bottom-line second-line one-topline">- 제 이름은...<input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"><input class="clicker clicker-1-2" type="submit" value="입니다!"></p>
+            </div>
+
+            <div class="dialogue-box2 dialogue-1-3">
+                <h1 class="name">작은 현</h1>
+                <p class="line top-line first-line">뭐? <strong><span class="player-name"></span></strong>? 얼굴만큼이나 웃긴 이름이네... 큭큭. 어쨌든 호텔에 온 걸 환영해. 난 <strong>작은 현</strong>이야.</p>
+                <p class="line top-line second-line next-line">날 부를 때는 그냥 <strong>'작은 지배인님'</strong>이라고 불러.</p>
+                <p class="line bottom-line third-line two-toplines">- (이 조그만 꼬마가 이 호텔의 지배인이라고…?) 아, 네 알겠습니다... <span class="clicker clicker-1-3">작은 지배인님.</span></p>
+            </div>
+
+            <div class="dialogue-box2 dialogue-1-4">
+                <h1 class="name">작은 현</h1>
+                <p class="line top-line first-line">넌 오늘부터 호텔 직원이 되기 위한 교육을 받을 거야. 교육은 저기 서 있는 큰 현이가 해.</p>
+                <p class="line top-line second-line next-line">큰 현이한테 가봐.</p>
+                <p class="line bottom-line third-line two-toplines">(로비를 보니 큰 현이 서 있다. <span class="clicker clicker-1-4">큰 현에게 가보자.</span>)</p>
+            </div>
+            
+        </div>
+
+
+
+
+    <div class="big-hyun">
+        <img class="gif gifhover big-hyun__gif" src="image/1st_floor_lobby/큰현.gif">
+        <img class="big-hyun__mapimg" src="image/1st_floor_lobby/설명-맵.png">
+        <img class="avatar big-hyun__avatar" src="image/1st_floor_lobby/큰현.png">
+
+        <div class="dialogue-box2 dialogue-2-1">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">안녕하세요? 이번에 새로 들어온 <span class="player-name"></span>씨군요?</p>
+            <p class="line top-line second-line next-line">저는 오늘 신입 직원 교육을 진행할 이 호텔의 지배인, <strong>큰 현</strong>이라고 해요.</p>
+            <p class="line top-line third-line next-line"><span class="player-name"></span>씨가 저를 부를 때는 <strong>‘큰 지배인님’</strong>이라고 부르면 되요.</p>
+            <p class="line bottom-line fourth-line three-toplines">- (이 호텔은 지배인이 두 명인가...?) 네 알겠습니다, <span class="clicker clicker-2-1">큰 지배인님!</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-2">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">좋아요. 먼저 말씀드릴 것은, <span class="player-name"></span>씨는 아직 정식 채용 된 것이 아니에요.</p>
+            <p class="line top-line second-line next-line">오늘 진행되는 <strong>&lt;센티멘탈 호텔 신입 직원 교육&gt;</strong>을 반드시 통과하셔야 정식 직원이 될 수 있어요.</p>
+            <p class="line bottom-line third-line two-toplines">- <span class="clicker clicker-2-2">센티멘탈 호텔 신입 직원 교육이요...?</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-3">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">네. 너무 걱정하진 마세요. <strong>화살표</strong><img style="height:3vw" src="image/icon/arrow.png">를 따라 각 층을 체험하면 되니까요.</p>
+            <p class="line top-line second-line next-line">또한 제가 내는 <strong>문제</strong>를 잘 맞추시면 되요.</p>
+            <p class="line top-line third-line next-line">문제는 스토리를 잘 읽는다면 충분히 맞출 수 있어요.</p>
+            <p class="line bottom-line fourth-line four-toplines">- 화면 우측 상단의 점수판은 <span class="clicker clicker-2-3">뭔가요?</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-4">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">아, 저건 교육 평가 점수에요.</p>
+            <p class="line top-line second-line next-line">중간 중간 나오는 퀴즈를 맞추면 점수를 얻을 수 있습니다.</p>
+            <p class="line top-line third-line next-line">하지만 문제를 틀릴 시 점수를 잃게 됩니다.</p>
+            <p class="line top-line fourth-line next-line">0점에 다다를시 <strong>게임 오버</strong> 및 <span style="color: red; font-weight: bold;">호텔 입사에 실패</span>하게 됩니다.</p>
+            <p class="line bottom-line fifth-line four-toplines">- <span class="clicker clicker-2-4">입..입사 실패요?!</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-5">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">하하하. 점수를 얻는 팁을 살짝 드리면...</p>
+            <p class="line top-line second-line next-line">------</p>
+            <p class="line top-line third-line next-line">호텔 곳곳에는 <strong>클릭하면 움직이는 오브젝트</strong>들이 있다.</p>
+            <p class="line top-line fourth-line next-line">오브젝트를 찾아 모두 클릭하면 <strong>보너스 10점</strong>을 얻을 수 있다.</p>
+            <p class="line top-line fifth-line">------</p>
+            <p class="line top-line sixth-line next-line">쉿! 이건 <span class="player-name"></span>씨를 위해 제가 특별히 알려 드린 거에요. 알겠죠?</p>
+            <p class="line bottom-line seventh-line six-toplines">- 네 <span class="clicker clicker-2-5">감사합니다!</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-6">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">좋아요. 그럼 먼저 센티멘탈 호텔에 대해 간략히 알아보겠습니다.</p>
+            <p class="line top-line second-line next-line">센티멘탈 호텔은 총 <strong>7층</strong>으로 이루어져 있어요.</p>
+            <p class="line top-line third-line next-line">1층 ~ 3층은 리셉션, 라운지 등의 편의 시설이 있습니다.</p>
+            <p class="line top-line fourth-line next-line">4층부터는 객실이 자리하고 있죠.</p>
+            <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-2-6">(다음)</span></p>
+        </div>
+
+        <div class="dialogue-box2 dialogue-2-7">
+            <h1 class="name">큰 현</h1>
+            <p class="line top-line first-line">저희가 현재 있는 이곳은 센티멘탈 호텔의 1층 메인 로비예요. </p>
+            <p class="line top-line second-line next-line">로비에는 리셉션과 누구나 자유로운 휴식 공간이 있어요.</p>
+            <p class="line top-line third-line next-line">저는 옆 라운지에서 <span class="player-name"></span>씨를 위한 음료를 준비해 놓겠으니, <strong>로비를 둘러보고 나서 라운지로 와 주세요.</strong></p>
+            <p class="line bottom-line fourth-line three-toplines">- 네 <span class="clicker clicker-2-7">알겠습니다!</span></p>
+        </div>
+
     </div>
-    
-    <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
-    <img class="movingarrow movingarrow__big-hyun" src="image/icon/arrow.png">
-    <img class="movingarrow movingarrow__gold-plate" src="image/icon/arrow.png">
-    <img class="movingarrow movingarrow__link" src="image/icon/arrow.png">
-</div>
 
 
 
+
+    <div class="gold-plate">
+        <img class="gif gifhover gold-plate__gif" src="image/1st_floor_lobby/금색판.gif">
+
+        <div class="dialogue-box2 gold-plate__mission-box">
+            <h1 class="name gold-plate__name">미션</h1>
+            <span class="line gold-plate__line line-24"><strong>하나.</strong></span>
+            <span class="line gold-plate__line line-25">우리는 모든 고객이 센티멘탈 호텔만의 섬세함을 경험하게 한다.</span>
+            <span class="line gold-plate__line line-26"><strong>둘.</strong></span> 
+            <span class="line gold-plate__line line-27">우리는 센티멘탈 호텔의 직원으로서 각자의 자리에서 소중한 나의 마음을 어떠한 왜곡 없이</span>
+            <span class="line gold-plate__line line-28">고객에게 전달하기 위해 최선의 노력을 다한다.</span>
+            <span class="line gold-plate__line line-29"><strong>셋.</strong></span> 
+            <span class="line gold-plate__line line-30">우리는 진심을 표현하기 위한 부단한 노력과 때묻지 않은 순수한 마음을 통해 현이 더 나은</span>
+            <span class="line gold-plate__line line-31">삶을 누릴 수 있도록 기여한다.</span>
+        </div>
+
+        <div class="dialogue-box2 dialogue-3-1">
+            <h1 class="name"><span class="player-name"></span></h1>
+            <p class="line top-line first-line">...잠깐. 현이 더 나은 삶을 누릴 수 있도록 기여한다고...? 뭔가 이상한데...</p>
+            <p class="line bottom-line second-line one-topline"><span class="clicker clicker-3-1">(나가기)</span></p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="lounge-link">
+        <div class="clicker gifhover lounge-link__clicker" title="라운지로 가기"></div>
+
+        <div class="dialogue-box2 dialogue-4-1">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
+        </div>
+
+    </div>
+
+
+
+        <div class="employee-gif">
+            <img class="gif employee employee1 gifhover" src="image/1st_floor_lobby/employee1.png">
+            <img class="gif employee employee3 gifhover" src="image/1st_floor_lobby/employee3.png">
+        </div>
+        <div class="boy-gif">
+            <img class="gif boy boy1 gifhover" src="image/1st_floor_lobby/boy1.png">
+            <img class="gif boy boy2 gifhover" src="image/1st_floor_lobby/boy2.png">
+        </div>
+        <div class="arrow-gif">
+            <img class="gif arrow arrow1 gifhover" src="image/1st_floor_lobby/arrow1.png">
+            <img class="gif arrow arrow2 gifhover" src="image/1st_floor_lobby/arrow2.png">
+            <img class="gif arrow arrow3 gifhover" src="image/1st_floor_lobby/arrow3.png">
+        </div>
+
+        <div class="dialogue dialogue__foundallgif">
+            <div class="dialogue-box2">
+                <h1 class="name">&nbsp;</h1>
+                <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
+                <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
+            </div>
+        </div>
+        
+        <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__big-hyun" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__gold-plate" src="image/icon/arrow.png">
+        <img class="movingarrow movingarrow__link" src="image/icon/arrow.png">
+    </div>
 
 
 <script>
@@ -352,6 +351,7 @@
 
     //close
     $('.clicker-0-1').on('click', function() {
+        $('#bgm')[0].play();
         $('.start, .dialogue-box').hide();
         $('.movingarrow__small-hyun').css(block);
     })

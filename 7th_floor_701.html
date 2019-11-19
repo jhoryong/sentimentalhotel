@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/loader.css">
+    <link rel="stylesheet" type="text/css" href="./css/7th_floor_701.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/296406b34b.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <title>센티멘탈 호텔 :: 701호</title>
+</head>
+<body>
+    <div class="container">
+
+        <img class="gif gifhover mirror mirror1" src="image/701/거울1.png">
+        <img class="gif gifhover mirror mirror2" src="image/701/거울2.png">
+        <img class="gif gifhover mirror mirror3" src="image/701/거울3.png">
+
+        <img class="gif gifhover radio radio1" src="image/701/라디오1.png">
+        <img class="gif gifhover radio radio2" src="image/701/라디오2.png">
+        <img class="gif gifhover radio radio3" src="image/701/라디오3.png">
+        <img class="gif gifhover radio radio4" src="image/701/라디오4.png">
+
+        <img class="gif gifhover tea tea1" src="image/701/차1.png">
+        <img class="gif gifhover tea tea2" src="image/701/차2.png">
+        <img class="gif gifhover tea tea3" src="image/701/차3.png">
+
+        <img class="gif gifhover telephone telephone1" src="image/701/전화기1.png">
+        <img class="gif gifhover telephone telephone2" src="image/701/전화기2.png">
+
+        <img class="gif gifhover window window1" src="image/701/창1.png">
+        <img class="gif gifhover window window2" src="image/701/창2.png">
+        <img class="gif gifhover window window3" src="image/701/창3.png">
+        <img class="gif gifhover window window4" src="image/701/창4.png">
+        <img class="gif gifhover window window5" src="image/701/창5.png">
+        <img class="gif gifhover window window6" src="image/701/창6.png">
+
+        <img class="table" src="image/701/책상.png">
+
+        <img class="gif gifhover buddha buddha1" src="image/701/부처1.png">
+        <img class="gif gifhover buddha buddha2" src="image/701/부처2.png">
+
+        <img class="gif gifhover long-lamp" src="image/701/긴스탠드1.png">
+        <img class="gif gifhover long-lamp" src="image/701/긴스탠드2.png">
+
+        <img class="gif gifhover small-lamp small-lamp1" src="image/701/스탠드-전등1.png">
+        <img class="gif gifhover small-lamp small-lamp2" src="image/701/스탠드-전등2.png">
+
+        <img class="gif gifhover laptop" src="image/701/노트북1.png">
+        <img class="gif gifhover laptop" src="image/701/노트북2.png">
+
+        <img class="gif gifhover candle" src="image/701/초1.png">
+        <img class="gif gifhover candle" src="image/701/초2.png">
+
+        <img class="gif gifhover cat" src="image/701/고양이1.png">
+        <img class="gif gifhover cat" src="image/701/고양이2.png">
+    </div>
+<script>
+    $('.mirror1').click(function(){
+        t = 100;
+        setTimeout(function(){$('.mirror1').hide();}, t);
+        setTimeout(function(){$('.mirror2').show();}, t);
+        setTimeout(function(){$('.mirror2').hide();}, t*2);
+        setTimeout(function(){$('.mirror3').show();}, t*2);
+        setTimeout(function(){$('.mirror3').hide();}, t*3);
+        setTimeout(function(){$('.mirror1').show();}, t*3);
+    })
+
+    $('.radio1').click(function(){
+        t = 200;
+        setTimeout(function(){$('.radio1').hide();}, t);
+        setTimeout(function(){$('.radio2').show();}, t);
+        setTimeout(function(){$('.radio2').hide();}, t*2);
+        setTimeout(function(){$('.radio3').show();}, t*2);
+        setTimeout(function(){$('.radio3').hide();}, t*3);
+        setTimeout(function(){$('.radio4').show();}, t*3);
+        setTimeout(function(){$('.radio4').hide();}, t*4);
+        setTimeout(function(){$('.radio1').show();}, t*4);
+    })
+
+    $('.tea1').click(function(){
+        t = 300;
+        setTimeout(function(){$('.tea1').hide();}, t);
+        setTimeout(function(){$('.tea2').show();}, t);
+        setTimeout(function(){$('.tea2').hide();}, t*2);
+        setTimeout(function(){$('.tea3').show();}, t*2);
+        setTimeout(function(){$('.tea3').hide();}, t*3);
+        setTimeout(function(){$('.tea1').show();}, t*3);
+    })
+
+    $('.window1').click(function(){
+        t = 100;
+        setTimeout(function(){$('.window1').hide();}, t);
+        setTimeout(function(){$('.window2').show();}, t);
+        setTimeout(function(){$('.window2').hide();}, t*2);
+        setTimeout(function(){$('.window3').show();}, t*2);
+        setTimeout(function(){$('.window3').hide();}, t*3);
+        setTimeout(function(){$('.window4').show();}, t*3);
+        setTimeout(function(){$('.window4').hide();}, t*4);
+        setTimeout(function(){$('.window5').show();}, t*4);
+        setTimeout(function(){$('.window5').hide();}, t*5);
+        setTimeout(function(){$('.window6').show();}, t*5);
+        setTimeout(function(){$('.window6').hide();}, t*6);
+        setTimeout(function(){$('.window1').show();}, t*6);
+    })
+
+    $('.telephone1').click(function(){
+        $('.telephone2').show();
+    })
+
+    $('.small-lamp1').click(function(){
+        $(this).hide();
+        $('.small-lamp2').show();
+    })
+    $('.small-lamp2').click(function(){
+        $(this).hide();
+        $('.small-lamp1').show();
+    })
+
+    $('.buddha1').click(function(){
+        $('.buddha1').hide();
+        $('.buddha2').show();
+    })
+
+
+</script>
+</body>
+</html>
