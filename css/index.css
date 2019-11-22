@@ -100,7 +100,7 @@
     animation: rotate 5s 1s ease-in-out infinite;
 }
 
-h1 {
+.message {
     font-family: 'Noto Serif KR', serif;
     font-size: 1.3vw;
     letter-spacing: 1.2px;
@@ -110,6 +110,17 @@ h1 {
     transform: translateX(-50%);
     color: #ffddfc;
     animation: flashtext 1.5s ease infinite alternate backwards;
+}
+
+.credits {
+    font-family: 'Noto Serif KR', serif;
+    position: absolute;
+    top: 54vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1vw;
+    color: #ffddfc;
 }
 
 @keyframes flash {

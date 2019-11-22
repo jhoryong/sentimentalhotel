@@ -4,9 +4,9 @@ body {
 
 .dialogue {
     position: absolute;
-    top: 50%;
+    top: 23vw;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     white-space: nowrap;
     word-break: keep-all;
     display:none;
@@ -79,9 +79,9 @@ body {
 
 .linkbox {
     position: absolute;
-    top: 75%;
+    top: 37vw;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translateX(-50%);
     text-decoration: none;
     display: none; 
     justify-content: center;

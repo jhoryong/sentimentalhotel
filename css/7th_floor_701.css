@@ -7,6 +7,7 @@
     left: 0vw;
     width: 8.5vw;
 }
+
     .mirror2, .mirror3 {
         display: none;
     }
@@ -25,16 +26,17 @@
     top: 35.5vw;
     left: 28vw;
     width: 10vw;
+    z-index:2;
 }
 
-    .tea2, .tea3 {
+    .tea2, .tea3, .tea4, .tea5 {
         display: none;
     }
 
 .telephone {
-    top: 28.5vw;
-    left: 88vw;
-    width: 12vw;
+    top: 31vw;
+    left: 90vw;
+    width: 10vw;
 }
 
     .telephone2 {
@@ -42,9 +44,9 @@
     }
 
 .window {
-    top: 14.5vw;
-    left: 56vw;
-    width: 19.3vw;
+    top: 14.8vw;
+    left: 56.05vw;
+    width: 19.7vw;
 }
 
     .window2, .window3, .window4, .window5, .window6 {
@@ -60,46 +62,112 @@
 }
 
 .buddha {
-    top: 13vw;
-    left: 79vw;
-    width: 12vw;
+    top: 14vw;
+    left: 79.5vw;
+    width: 11vw;
 }
 
     .buddha2 {
         display: none;
     }
 
-.long-lamp {
-    top: 13vw;
-    left: 79vw;
-    width: 12vw;
+.small-lamp {
+    top: 26.3vw;
+    left: 93vw;
+    width: 7vw;
 }
 
-    .long-lamp {
+    .small-lamp2 {
         display: none;
     }
-
-.small-lamp {
-    top: 26vw;
-    left: 97vw;
-    width: 3vw;
-}
 
 .laptop {
     top: 23.5vw;
     left: 77vw;
-    width: 7vw;
+    width: 5.5vw;
 }
+
+    .laptop2 {
+        display: none;
+    }
 
 .candle {
     top: 21.5vw;
     left: 73.2vw;
-    width: 3.5vw;
+    width: 3vw;
 }
+
+    .candle2 {
+        display: none;
+    }
 
 .cat {
-    top: 31.8vw;
-    left: 71vw;
-    width: 16.7vw;
+    top: 32.2vw;
+    left: 72.35vw;
+    width: 9.3vw;
 }
 
+    .cat2 {
+        display: none;
+    }
+
+.elevator {
+    top: 8.1vw;
+    left: 34.2vw;
+    width: 12vw;
+}
+
+    .elevator2 {
+        display:none;
+    }
+
+.bookshelf {
+    top: 5vw;
+    left: 27.9vw;
+    width: 23.5vw;
+    z-index: 1;
+}
+
+.book-a {
+    top: 11.6vw;
+    left: 28.2vw;
+    width: 12vw;
+    z-index: 2;
+}
+
+    .book-a2 {
+        display: none;
+    }
+
+.book-b {
+    top: 9.7vw;
+    left: 41.35vw;
+    width: 8.6vw;
+    z-index: 2;
+}
+
+    .book-b2 {
+        display: none;
+    }
+
+.book-c {
+    top: 21.6vw;
+    left: 10.8vw;
+    width: 16.4vw;
+    z-index: 2;
+}
+
+    .book-c2 {
+        display: none;
+    }
+
+.long-lamp {
+    top: 24vw;
+    left: 51.9vw;
+    width: 20vw;
+    z-index: 1;
+}
+
+    .long-lamp-2 {
+        display: none;
+    }

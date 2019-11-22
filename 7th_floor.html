@@ -29,7 +29,7 @@
             <div class="dialogue-box-reset">
                 <h1 class="name">&nbsp;</h1>
                 <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✔️ 예</span></a></p>
                 <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
             </div>
         </div>
@@ -569,31 +569,30 @@
 
         </div>
 
-    <div class="bartender">
-        <img class="gif gifhover bartender__gif" src="image/7th_floor/바텐더.gif">
+        <div class="bartender">
+            <img class="gif gifhover bartender__gif" src="image/7th_floor/바텐더.gif">
 
-        <div class="dialogue-box2 dialogue-2-1">
-            <h1 class="name">VIP 라운지 바텐더</h1>
-            <p class="line top-line first-line">센티멘탈 VIP 라운지에 오신 것을 환영합니다, 허허허</p>
-            <p class="line top-line second-line next-line">즐거운 시간 보내시길 바랍니다.</p>
-            <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-2-1">(확인)</span></p>
+            <div class="dialogue-box2 dialogue-2-1">
+                <h1 class="name">VIP 라운지 바텐더</h1>
+                <p class="line top-line first-line">센티멘탈 VIP 라운지에 오신 것을 환영합니다, 허허허</p>
+                <p class="line top-line second-line next-line">즐거운 시간 보내시길 바랍니다.</p>
+                <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-2-1">(확인)</span></p>
+            </div>
+        </div>
+
+        <div class="nextstage">
+            <div class="gif entrancediv"></div>
+            <img class="gif gifhover whitespace" src="image/7th_floor/하얀통로.png">
+            <div class="dialogue-box2 dialogue-entrance">
+                <h1 class="name">&nbsp;</h1>
+                <p class="line top-line first-line">스위트룸으로 이동하시겠습니까?</p>
+                <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="7th_floor_hallway.html"><span class="clicker clicker-3-1">이동한다</span></a></p>
+                <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
+            </div>
         </div>
 
     </div>
 
-    <div class="nextstage">
-        <div class="gif entrancediv"></div>
-        <img class="gif gifhover whitespace" src="image/7th_floor/하얀통로.png">
-        <div class="dialogue-box2 dialogue-entrance">
-            <h1 class="name">&nbsp;</h1>
-            <p class="line top-line first-line">스위트룸으로 이동하시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="7th_floor_hallway.html"><span class="clicker clicker-3-1">이동한다</span></a></p>
-            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-3-2">더 둘러본다</span></p>
-        </div>
-    </div>
-
-
-    </div>
 <script>
 let hasClickedHyun = false;
 let hasClickedBand = false;
@@ -897,6 +896,7 @@ $('.reset-icon').click(function(){
             } else {}
         } else {}
     })
+
     $('.clicker-3-1').click(function(event){
         event.preventDefault();
         $('.fade-box').fadeIn(2000);

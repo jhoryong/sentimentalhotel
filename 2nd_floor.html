@@ -18,9 +18,6 @@
     <title>2층 비즈니스 센터 :: 센티멘탈 호텔</title>
 </head>
 <body>
-    <audio id="bgm">
-        <source src="sound/2nd_floor/bensound-theelevatorbossanova.mp3" type="audio/mpeg">
-    </audio>
     <div class="fade-box"></div>
 
     <div class="container">
@@ -32,7 +29,7 @@
             <div class="dialogue-box-reset">
                 <h1 class="name">&nbsp;</h1>
                 <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
-                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+                <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✔️ 예</span></a></p>
                 <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
             </div>
         </div>
@@ -312,7 +309,6 @@
         }
     }
 
-//play bgm
 
 
 // reset
@@ -465,7 +461,6 @@ $('.fade-box').fadeOut(1000);
     $('.clicker-0-1').click(function(){
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
         $('.dialogue-0-2, .dialogue-0-2 .line').show();
-        $('#bgm')[0].play();
         addScore(50);
         })
 

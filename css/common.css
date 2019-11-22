@@ -10,8 +10,28 @@
     }
             
 
-    /* reset */
+    /* fullscreen */
+    .fullscreen {
+        position: absolute;
+        top: 53vw;
+        left: 1.5vw;
+        
+    }
+    .fullscreen-checkbox {
+        font-size:2vw;
+        color: #ffddfc;
+    }
 
+        #check {
+            display: none;
+        }
+
+    .fullscreen-text {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.2vw;
+        vertical-align: 3.7px;
+        color: #ffddfc;
+    }
 
     /* map */
 
@@ -94,11 +114,11 @@
     /* reset */
     .reset-icon {
         position: absolute;
-        font-size: 3.8vw;
+        font-size: 3.6vw;
         color: #fff;
         opacity: 0.8;
-        top: 50vw;
-        left: 2vw;
+        top: 51vw;
+        left: 95vw;
         z-index: 1;
         transform-origin: center center;
         transition: transform 400ms;
@@ -157,13 +177,10 @@
         z-index: 0;
     }
 
-        .gif:hover {
+        .gifhover:hover {
+            filter: /*saturate(120%)*/ brightness(110%) /*contrast(110%)*/;
             cursor: pointer;
         }
-
-    .gifhover:hover {
-        filter: /*saturate(120%)*/ brightness(110%) /*contrast(110%)*/;
-    }
 
 
 
@@ -226,6 +243,10 @@
         background-color: #000000;
         opacity: 0.8;
         z-index: 11;
+    }
+
+    .reset-tb {
+        z-index: 999;
     }
 
     .name {

@@ -5,40 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script src="https://kit.fontawesome.com/296406b34b.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/2964z06b34b.js"></script> -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>::: 센티멘탈 호텔 :::</title>
-    <style>
 
-    </style>
 </head>
 <body>
     <div class="white"></div>
     <div class="black"></div>
     <div class="container">
+
+        <!-- fullscreen -->
+        <div class="fullscreen">
+            <i id="uncheck" class="fas fa-square fullscreen-checkbox"></i>
+            <i id="check" class="fas fa-check-square fullscreen-checkbox"></i>
+            <span class="fullscreen-text">전체화면으로 보기</span>
+        </div>
+
         <img class="sign" src="image/index/간판.png">
         <img class="light" src="image/index/빛.png">
         
-        <a href="intro.html"><div class="doorset">
-            <img class="doorframe" src="image/index/문틀.png">
-            <img class="gif gifhover door door1" src="image/index/문1.png">
-            <img class="door door2" src="image/index/문2.png">
-            <img class="door door3" src="image/index/문3.png">
-            <img class="door door4" src="image/index/문4.png">
-            <img class="doorknob" src="image/index/문고리.png">
-            <img class="doorsign" src="image/index/흔들흔들.png">
-        </div></a>
+        <a href="intro.html">
+            <div class="doorset">
+                <img class="doorframe" src="image/index/문틀.png">
+                <img class="gif gifhover door door1" src="image/index/문1.png">
+                <img class="door door2" src="image/index/문2.png">
+                <img class="door door3" src="image/index/문3.png">
+                <img class="door door4" src="image/index/문4.png">
+                <img class="doorknob" src="image/index/문고리.png">
+                <img class="doorsign" src="image/index/흔들흔들.png">
+            </div>
+        </a>
 
-        <h1>문을 클릭하여 호텔로 입장하세요</h1>
+        <h1 class="message">문을 클릭하여 호텔로 입장하세요</h1>
+        <h1 class="credits">© 2019 Sentimental Hotel All Rights Reserved.</h1>
     </div>
-
-
 <script>
+
+    let screen = document.documentElement;
+    $('#uncheck').click(function(){
+        $('#check').show();
+        $(this).hide();
+        if (screen.requestFullscreen) {
+            screen.requestFullscreen();
+        } else if (screen.mozRequestFullScreen) { /* Firefox */
+            screen.mozRequestFullScreen();
+        } else if (screen.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            screen.webkitRequestFullscreen();
+        } else if (screen.msRequestFullscreen) { /* IE/Edge */
+            screen.msRequestFullscreen();
+        }
+    })
+
+    $('#check').click(function(){
+        $('#uncheck').show();
+        $(this).hide();
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+            document.msExitFullscreen();
+        }
+    })
+
      $('.door1').click(function(){
         event.preventDefault();
         let t = 300;

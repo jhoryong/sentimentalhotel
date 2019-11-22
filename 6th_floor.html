@@ -33,7 +33,7 @@
         <div class="dialogue-box-reset">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">게임을 재시작하시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✅ 예</span></a></p>
+            <p class="line bottom-line fast-yes-line two-toplines"><a id="reset" href="index.html"><span class="clicker clicker-reset-1">✔️ 예</span></a></p>
             <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
         </div>
     </div>
@@ -955,7 +955,7 @@ $('.map-icon').click(function() {
         //close
         $('.clicker-602-17').on('click', function() {
             hasClicked602 = true;
-            $('.dialogue-602-17, .dialogue-602-17 .line, .frame, .pots-before, #dropspot, .plate-after, .pots-after, .table, .plate-after, .room602, .avatar__602, .dialogue-box').hide();
+            $('.dialogue-602-17, .dialogue-602-17 .line, .frame, .pots-before, #dropspot, .pots-after, .table, .plate-after, .plate-finish, .room602, .avatar__602, .dialogue-box').hide();
             if (hasClicked601 === true && hasClicked602 === true && hasClicked603 === true) {
                 $('.movingarrow__big-hyun').show();}
         })
