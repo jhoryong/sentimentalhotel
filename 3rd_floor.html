@@ -221,6 +221,7 @@
     let hasClickedMovie = false;
     let hasClickedRestaurant = false;
     let hasClickedElevator = false;
+    let bigHyun = false;
 
     let hasClickedLogo = false;
     let hasClickedPopcorn = false;
@@ -406,25 +407,26 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
     // swimming
-
     $('.swimming__gif').on('click', function() {
-        $('.movingarrow__swimming').hide();
-        hasClickedSwimmingpool = true;
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+            $('.movingarrow__swimming').hide();
+            hasClickedSwimmingpool = true;
 
-        fade.fadeIn(1000).delay(12000).fadeOut(1000);
-        $('.swimming-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
-        setTimeout(function() {$('#swimming')[0].play();}, 2000);
+            fade.fadeIn(1000).delay(12000).fadeOut(1000);
+            $('.swimming-in').delay(2000).fadeIn(2000).delay(8000).fadeOut(1000);
+            setTimeout(function() {$('#swimming')[0].play();}, 2000);
 
-        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
-            $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
-            
-        }
+            if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+                $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
+            } else {}
+        } else {}
     })
 
 
     // fitness
 
     $('.fitness__gif').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         $('.movingarrow__fitness').hide();
         hasClickedFitness = true;
 
@@ -436,13 +438,15 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
             
-        }
+        } else {}
+    } else {}
     })
 
 
     // spa
 
     $('.spa__gif').on('click', function() {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
         $('.movingarrow__spa').hide();
         hasClickedSpa = true;
 
@@ -454,7 +458,8 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
             $('.big-hyun__gif, .big-hyun__avatar, .dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').delay(15000).fadeIn(0);
             
-        }
+        } else {}
+    } else {}
     })
 
 
@@ -472,14 +477,17 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         //close    
         $('.clicker-1-2').click(function() {
             $('.dialogue-1-2, .dialogue-1-2 .line, .big-hyun__gif, .big-hyun__avatar, .dialogue-box').hide();
-            $('.movingarrow__movie, .movingarrow__restaurant').show();})
+            $('.movingarrow__movie, .movingarrow__restaurant').show();
+            bigHyun = true;
+        })
             
 
 
     // movie
 
     $('.movie__gif').on('click', function() {
-        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true && bigHyun === true) {
             hasClickedMovie = true;
             $('.movingarrow__movie').hide();
 
@@ -491,15 +499,17 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
             if (hasClickedMovie === true && hasClickedRestaurant === true) {
                 $('.movingarrow__elevator').show();
-            }
+            } else {}
         } else {}
+    } else {}
     })
 
 
     // restaurant
 
     $('.restaurant__gif').on('click', function() {
-        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true) {
+        if (document.querySelector('.dialogue-box').style.display === 'none') {
+        if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true && bigHyun === true) {
             hasClickedRestaurant = true;
             $('.movingarrow__restaurant').hide();
 
@@ -509,8 +519,9 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
             
             if (hasClickedMovie === true && hasClickedRestaurant === true) {
                 $('.movingarrow__elevator').show();
-            }
+            } else {}
         } else {}
+    } else {}
     })
     
 
@@ -522,7 +533,6 @@ $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
         if (hasClickedSwimmingpool === true && hasClickedFitness === true && hasClickedSpa === true && hasClickedMovie === true && hasClickedRestaurant === true) {
             $('.movingarrow__elevator').hide();
             $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
-            addBonus(hasClickedElevator, 50);
             hasClickedElevator = true;
         } else {}
     } else {}

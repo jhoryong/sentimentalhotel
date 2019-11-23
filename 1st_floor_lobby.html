@@ -220,12 +220,6 @@
             <p class="line bottom-line third-line two-toplines"><span class="clicker clicker-3-1">(나가기)</span></p>
         </div>
 
-        <div class="dialogue-box2 dialogue-3-2">
-            <h1 class="name">&nbsp;</span></h1>
-            <p class="line top-line">&nbsp;</p>
-            <p class="line bottom-line one-topline"><span class="clicker clicker-3-2">(나가기)</span></p>
-        </div>
-
     </div>
 
 
@@ -259,12 +253,10 @@
             <img class="gif arrow arrow3 gifhover" src="image/1st_floor_lobby/arrow3.png">
         </div>
 
-        <div class="dialogue dialogue__foundallgif">
-            <div class="dialogue-box2">
-                <h1 class="name">&nbsp;</h1>
-                <p class="foundall line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
-                <p class="foundall line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
-            </div>
+        <div class="dialogue-box2 dialogue__foundallgif">
+            <h1 class="name">&nbsp;</h1>
+            <p class="line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
+            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
         </div>
         
         <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
@@ -286,15 +278,19 @@
 
     let hasClickedEmployee = false;
     let hasClickedBoy = false;
-    let hasClickedArrow = false;
-    
+
     function alertFoundAllGif() {
-        if (hasClickedEmployee === true && hasClickedBoy === true && hasClickedArrow === true) {
-            $('.foundallgif, .foundallgif .line, .dialogue-box').show();
+        if (hasClickedEmployee === true && hasClickedBoy === true) {
+            $('.dialogue-box, .dialogue__foundallgif, .dialogue__foundallgif .line').show();
         addScore(10);
         alertFoundAllGif = function(){};
         }
     }
+
+    $('.clicker-5-1').click(function() {
+        $('.dialogue-box, .dialogue__foundallgif, .dialogue__foundallgif.line').hide();
+    })
+
 
 
 // reset
@@ -505,23 +501,15 @@
                 $('.movingarrow__gold-plate').css(none);
                 $('#dialogue-bg, .gold-plate__mission-box').css(block);
                 $('.line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('display', 'inline-block');
-                $('.gold-plate__mission-box').click(function(){
-                $(event.currentTarget).children().css('animation', 'none');
-                $('.dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').show();
-            })
 
-                if ($('.gold-plate__dialogue').css('animation', 'none')) {
-                    
-                } else {
-                    setTimeout(function() {
+                setTimeout(function() {
                     $('.dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').css(block);
                 }, 12500);
-                }
             } 
             
             if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-                $('.gold-plate__dialogue, #dialogue-bg, .gold-plate__mission-box, .dialogue-3-2, .dialogue-3-2 .line, .dialogue-box').css(block);
-                $('.gold-plate__name, .line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('animation', 'none');
+                $('.gold-plate__dialogue, #dialogue-bg, .gold-plate__mission-box, .dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').css(block);
+                
             } else {}
         } else {}
 
@@ -529,13 +517,6 @@
         $('.dialogue-3-1, .dialogue-3-2').on('click', function() {
             $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
         })
-
-        
-        // // fast view
-        // $('.gold-plate__mission-box').on('click', function() {
-        //     $(event.currentTarget).children().css('animation', 'none');
-        // })
-
     })
 
     //close
@@ -543,9 +524,7 @@
         $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-1, .dialogue-box').css(none);
         $('.movingarrow__link').css(block);
         hasClickedGoldplate = true;
-    })
-    $('.clicker-3-2').click(function() {
-        $('#dialogue-bg, .gold-plate__mission-box, .dialogue-3-2, .dialogue-box').css(none);
+        $('.gold-plate__name, .line-24, .line-25, .line-26, .line-27, .line-28, .line-29, .line-30, .line-31').css('animation', 'none');
     })
 
 
@@ -618,33 +597,7 @@
             alertFoundAllGif()
         })
 
-
-
-    // arrow
-
-        let arrow1 = document.querySelector('.arrow1');
-        let arrow2 = document.querySelector('.arrow2');
-        let arrow3 = document.querySelector('.arrow3');
-
-        arrow1.addEventListener('click', function() {
-            let arrowgif = function() {
-            setTimeout(function(){arrow1.style.display = 'none';}, 100)
-            setTimeout(function(){arrow2.style.display = 'block';}, 100)
-            setTimeout(function(){arrow2.style.display = 'none';}, 300)
-            setTimeout(function(){arrow3.style.display = 'block';}, 300)
-            setTimeout(function(){arrow3.style.display = 'none';}, 500)
-            setTimeout(function(){arrow1.style.display = 'block';}, 500)
-            }
-            let repeat = setInterval(arrowgif, 500);
-            setTimeout(function() {clearInterval(repeat);}, 1800)
-            hasClickedArrow = true;
-            alertFoundAllGif()
-        })
-
-    $('.clicker-5-1').click(function() {
-        $('.dialogue__foundallgif, foundall, .dialogue-box').css(none);
-    })
-
+   
 </script>
 </body>
 

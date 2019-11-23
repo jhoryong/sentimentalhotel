@@ -684,12 +684,14 @@ $('.map-icon').click(function() {
             "ui-droppable-hover": "dropspot-hover"
         },   
         drop: function( event, ui ) {
+            if (document.querySelector('.dialogue-602-7').style.display === 'block'){
             $('#pots').hide();
             $('.plate-before').delay(1500).fadeOut(500);
             $('.plate-after').fadeIn(1500);
             $('.pots-after').show();
             $('.dialogue-602-7, .dialogue-602-7 .line').hide();
             $('.dialogue-602-8, .dialogue-602-8 .line').show();
+            }
         }
     });
 
@@ -703,11 +705,13 @@ $('.map-icon').click(function() {
             "ui-droppable-hover": "dropspot2-hover"
         },   
         drop: function( event, ui ) {
+            if (document.querySelector('.dialogue-603-6').style.display === 'block'){
             $('.flower-icon').hide();
             $('.flowerpot-before').delay(1500).fadeOut(500);
             $('.flowerpot-after').fadeIn(1500);
             $('.dialogue-603-6, .dialogue-603-6 .line').hide();
             $('.dialogue-603-7, .dialogue-603-7 .line').delay(1500).fadeIn(0);
+            }
         }
     });
 
