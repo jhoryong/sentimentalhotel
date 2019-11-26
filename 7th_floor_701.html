@@ -24,13 +24,13 @@
         <div class="dialogue-box2 dialogue-1-1">
                 <h1 class="name"><span class="player-name"></span></h1>
                 <p class="line top-line first-line">여기가 반짝이는 별님이 지내시는 <strong>스위트 룸</strong>이구나...</p>
-                <p class="line top-line second-line next-line">음...</p>
-                <p class="line top-line third-line next-line">뭔가...</p>
-                <p class="line top-line fourth-line next-line">비밀이 있을것만 같은 이 느낌은 뭐지...?</p>
+                <p class="line top-line second-line next-line">음... 뭔가...</p>
+                <p class="line top-line third-line next-line"><strong>비밀이 있을것만 같은 이 느낌은 뭐지...?</strong></p>
+                <p class="line top-line fourth-line next-line"></p>
                 <p class="line top-line fifth-line next-line"></p>
                 <p class="line top-line sixth-line next-line"></p>
                 <p class="line top-line seventh-line next-line"></p>
-                <p class="line bottom-line fifth-line four-toplines"><span class="clicker clicker-1">(클릭가능한 모든 그림을 클릭해봐야 할 것만 같다...!)</span></p>
+                <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-1">(클릭가능한 모든 그림을 클릭해봐야 할 것만 같다...!)</span></p>
             </div>
 
 
@@ -42,18 +42,33 @@
 
         <img class="gif bookshelf" src="image/701/책장.png">
 
+        <audio id="long-lamp">
+            <source src="sound/701/lamp-big.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover long-lamp long-lamp-1" src="image/701/긴스탠드1.png">
         <img class="gif long-lamp long-lamp-2" src="image/701/긴스탠드2.png">
 
+        <audio id="book1">
+            <source src="sound/701/book1.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover book-a book-a1" src="image/701/책A1.png">
         <img class="gif book-a book-a2" src="image/701/책A2.png">
 
+        <audio id="book2">
+            <source src="sound/701/book2.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover book-b book-b1" src="image/701/책B1.png">
         <img class="gif book-b book-b2" src="image/701/책B2.png">
 
+        <audio id="book3">
+            <source src="sound/701/book3.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover book-c book-c1" src="image/701/책C1.png">
         <img class="gif book-c book-c2" src="image/701/책C2.png">
 
+        <audio id="mirror">
+            <source src="sound/701/mirror.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover mirror mirror1" src="image/701/거울1.png">
         <img class="gif gifhover mirror mirror2" src="image/701/거울2.png">
         <img class="gif mirror mirror3" src="image/701/거울3.png">
@@ -75,9 +90,15 @@
         <img class="gif gifhover tea tea4" src="image/701/차4.png">
         <img class="gif tea tea5" src="image/701/차5.png">
 
+        <audio id="telephone">
+            <source src="sound/701/telephone.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover telephone telephone1" src="image/701/전화기1.png">
-        <img class="gif gifhover telephone telephone2" src="image/701/전화기2.png">
+        <img class="gif telephone telephone2" src="image/701/전화기2.png">
 
+        <audio id="star">
+            <source src="sound/701/star.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover window window1" src="image/701/창1.png">
         <img class="gif gifhover window window2" src="image/701/창2.png">
         <img class="gif gifhover window window3" src="image/701/창3.png">
@@ -85,9 +106,15 @@
         <img class="gif gifhover window window5" src="image/701/창5.png">
         <img class="gif window window6" src="image/701/창6.png">
 
+        <audio id="wink">
+            <source src="sound/701/wink.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover buddha buddha1" src="image/701/부처1.png">
         <img class="gif buddha buddha2" src="image/701/부처2.png">
 
+        <audio id="small-lamp">
+            <source src="sound/701/lamp-small.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover small-lamp small-lamp1" src="image/701/스탠드-전등1.png">
         <img class="gif small-lamp small-lamp2" src="image/701/스탠드-전등2.png">
 
@@ -97,6 +124,9 @@
         <img class="gif gifhover laptop laptop1" src="image/701/노트북1.png">
         <img class="gif laptop laptop2" src="image/701/노트북2.png">
 
+        <audio id="candle">
+            <source src="sound/701/fire.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover candle candle1" src="image/701/초1.png">
         <img class="gif candle candle2" src="image/701/초2.png">
 
@@ -173,38 +203,47 @@
     })
 
     $('.book-a1').click(function(){
+        $('#book1')[0].play();
         book1 = true;
-        $(this).hide();
-        $('.book-a2').show();
+        setTimeout(function(){
+            $('.book-a1').hide();
+            $('.book-a2').show();
+        }, 100)
         reveal();
     })
 
     $('.book-b1').click(function(){
-        
+        $('#book2')[0].play();
         book2 = true;
-        $(this).hide();
-        $('.book-b2').show();
+        setTimeout(function(){
+            $('.book-b1').hide();
+            $('.book-b2').show();
+        }, 100)
         reveal();
     })
 
     $('.book-c1').click(function(){
-        
+        $('#book3')[0].play();
         book3 = true;
-        $(this).hide();
-        $('.book-c2').show();
+        setTimeout(function(){
+            $('.book-c1').hide();
+            $('.book-c2').show();
+        }, 100)
         reveal();
     })
 
     $('.long-lamp-1').click(function(){
-        
+        $('#long-lamp')[0].play();
         longlamp = true;
-        $(this).hide();
-        $('.long-lamp-2').show();
+        setTimeout(function(){
+            $(this).hide();
+            $('.long-lamp-2').show();
+        }, 200)
         reveal();
     })
 
     $('.mirror1').click(function(){
-        
+        $('#mirror')[0].play();
         mirror = true;
         t = 100;
         setTimeout(function(){$('.mirror1').hide();}, t);
@@ -234,7 +273,7 @@
         setTimeout(function(){
             $('.radio1').hide();
             $('.radio4').show();
-        }, t*36);
+        }, t*33);
         reveal();
     })
 
@@ -255,42 +294,48 @@
     })
 
     $('.window1').click(function(){
-        
+        $('#star')[0].play();
         windows = true;
         t = 70;
-        setTimeout(function(){$('.window1').hide();}, t);
-        setTimeout(function(){$('.window2').show();}, t);
-        setTimeout(function(){$('.window2').hide();}, t*2);
-        setTimeout(function(){$('.window3').show();}, t*2);
-        setTimeout(function(){$('.window3').hide();}, t*3);
-        setTimeout(function(){$('.window4').show();}, t*3);
-        setTimeout(function(){$('.window4').hide();}, t*4);
-        setTimeout(function(){$('.window5').show();}, t*4);
-        setTimeout(function(){$('.window5').hide();}, t*5);
-        setTimeout(function(){$('.window6').show();}, t*5);
+        i = 30;
+        setTimeout(function(){$('.window1').hide();}, i + t);
+        setTimeout(function(){$('.window2').show();}, i + t);
+        setTimeout(function(){$('.window2').hide();}, i + t*2);
+        setTimeout(function(){$('.window3').show();}, i + t*2);
+        setTimeout(function(){$('.window3').hide();}, i + t*3);
+        setTimeout(function(){$('.window4').show();}, i + t*3);
+        setTimeout(function(){$('.window4').hide();}, i + t*4);
+        setTimeout(function(){$('.window5').show();}, i + t*4);
+        setTimeout(function(){$('.window5').hide();}, i + t*5);
+        setTimeout(function(){$('.window6').show();}, i + t*5);
         reveal();
     })
 
     $('.telephone1').click(function(){
-        
+        $('#telephone')[0].play();
         telephone = true;
+        $(this).hide();
         $('.telephone2').show();
         reveal();
     })
 
     $('.small-lamp1').click(function(){
-        
+        $('#small-lamp')[0].play();
         smalllamp = true;
-        $(this).hide();
-        $('.small-lamp2').show();
+        setTimeout(function(){
+            $(this).hide();
+            $('.small-lamp2').show();
+        }, 200)
         reveal();
     })
 
     $('.buddha1').click(function(){
-        
+        $('#wink')[0].play();
         buddha = true;
-        $('.buddha1').hide();
-        $('.buddha2').show();
+        setTimeout(function(){
+            $('.buddha1').hide();
+            $('.buddha2').show();
+        }, 100)
         reveal();
     })
 
@@ -298,15 +343,15 @@
         
         laptop = true;
         $('#startup')[0].play();
-        $('.laptop2').delay(100).fadeIn(400);
+        $('.laptop2').delay(200).fadeIn(400);
         reveal();
     })
 
     $('.candle1').click(function(){
-        
+        $('#candle')[0].play();
         candle = true
-        $(this).hide();
-        $('.candle2').show();
+        $(this).delay(400).fadeOut();
+        $('.candle2').delay(200).fadeIn();
         reveal();
     })
 

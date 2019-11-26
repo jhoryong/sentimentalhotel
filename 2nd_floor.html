@@ -500,6 +500,10 @@ $('.fade-box').fadeOut(1000);
             $('.reception, .reception .line, .dialogue-box').hide();
         })
 
+    $('.clicker-2-1, .clicker-2-2, .clicker-2-3, .clicker-2-4, .clicker-2-5').click(function(){
+        $(this).css('color', '#551A8B');
+    })
+
         
 
 
@@ -517,6 +521,7 @@ $('.fade-box').fadeOut(1000);
             $('.reception, .reception .line').show();
             if (hasClickedLectureRoom === true && hasClickedBanquetRoom === true && hasClickedMeetingRoom1 === true && hasClickedMeetingRoom2 === true && hasClickedMeetingRoom3 === true && hasSolvedQuestion === false) {
                 $('.movingarrow__big-hyun').show();
+            
             }
         })  
 
