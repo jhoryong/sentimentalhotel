@@ -37,7 +37,11 @@
         <a href="b1.html"></a>
             <img class="gif gifhover elevator elevator1" src="image/701/엘베1.png">
         </a>
-            <img class="gif elevator elevator2" src="image/701/엘베2.png">
+
+        <audio id="door">
+            <source src="sound/701/door.mp3" type="audio/mpeg">
+        </audio>
+        <img class="gif elevator elevator2" src="image/701/엘베2.png">
         
 
         <img class="gif bookshelf" src="image/701/책장.png">
@@ -195,6 +199,7 @@
         event.preventDefault();
         $(this).hide();
         $('.elevator2').show();
+        $('#door')[0].play();
 
         $('.fade-box').delay(1000).fadeIn(2000);
         setTimeout(function() {
