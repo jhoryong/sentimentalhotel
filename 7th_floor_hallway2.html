@@ -20,9 +20,9 @@
         }
 
         .door {
-        top: 15.95vw;
-        left: 29vw;
-        width: 7vw;
+            top: 16.4vw;
+            left: 29.3vw;
+            width: 6.6vw;
         }
 
         .door2 {
@@ -36,9 +36,9 @@
         <div class="fade-box"></div>
         <div class="dialogue-box"></div>
 
-        <!-- <audio>
+        <audio>
             <source src="sound/knocking sound.mp3" type="audio/mpeg">
-        </audio> -->
+        </audio>
 
         <img class="gif gifhover door door1" src="image/7th_floor/문1.png">
         <img class="gif gifhover door door2" src="image/7th_floor/문2.png">
@@ -65,6 +65,7 @@
     })
 
     $('.door').click(function(){
+        $('audio')[0].play();
         $('.dialogue-box, .dialogue-701, .dialogue-701 .line').show();
     })
         //close
@@ -79,11 +80,6 @@
             window.location = $('.nextStage').attr('href');
         }, 2400);
     })
-
-    // //sound
-    // $('.door').click(function(){
-    //     $('audio')[0].play();
-    // })
 
 
 </script>

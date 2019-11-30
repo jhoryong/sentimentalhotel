@@ -18,6 +18,7 @@
     <title>1층 로비 :: 센티멘탈 호텔</title>
 </head>
 <body>
+    <div class="container">
     <div class="fade-box"></div>
 
     <div class="preloader">
@@ -29,9 +30,10 @@
         <img class="elevator" src="image/loader/elevator.png">
     </div>
 
-    <div class="container">
+    
         <div class="dialogue-box"></div>
         <div id="dialogue-bg" class="transparent-background"></div>
+        <div id="reset-bg" class="transparent-background"></div>
 
         <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
         
@@ -231,8 +233,8 @@
         <div class="dialogue-box2 dialogue-4-1">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">라운지로 이동하시겠습니까?</p>
-            <p class="line bottom-line fast-yes-line two-toplines">✔️ <a id="nextStage" href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
-            <p class="line bottom-line fast-no-line next-line">❌ <span class="clicker clicker-4-2">더 둘러본다</span></p>
+            <p class="line bottom-line fast-yes-line two-toplines">- <a id="nextStage" href="1st_floor_lounge.html"><span class="clicker clicker-4-1">이동한다</span></a></p>
+            <p class="line bottom-line fast-no-line next-line">- <span class="clicker clicker-4-2">더 둘러본다</span></p>
         </div>
 
     </div>
@@ -256,7 +258,7 @@
         <div class="dialogue-box2 dialogue__foundallgif">
             <h1 class="name">&nbsp;</h1>
             <p class="line top-line first-line">모든 움직이는 요소를 찾았다! (보너스 <strong>10</strong>점!)</p>
-            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-5-1">(확인)</span></p>
+            <p class="line bottom-line fast-yes-line"><span class="clicker clicker-foundallgif">(확인)</span></p>
         </div>
         
         <img class="movingarrow movingarrow__small-hyun" src="image/icon/arrow.png">
@@ -265,9 +267,12 @@
         <img class="movingarrow movingarrow__link" src="image/icon/arrow.png">
     </div>
 
+<script src="script/score.js"></script>
+<script src="script/reset.js"></script>
+<script src="script/playerName.js"></script>
+<script src="script/item.js"></script>
 
 <script>
-
 
     let block = {display: 'block'};
     let none = {display: 'none'};
@@ -287,68 +292,9 @@
         }
     }
 
-    $('.clicker-5-1').click(function() {
+    $('.clicker-foundallgif').click(function() {
         $('.dialogue-box, .dialogue__foundallgif, .dialogue__foundallgif.line').hide();
     })
-
-
-
-// reset
-    $('.reset-icon').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
-    $('.clicker-reset-1').click(function(evnet){
-        event.preventDefault();
-        $('.fade-box').fadeIn(2000);
-        setTimeout(function() {
-        window.location = $('#reset').attr('href');
-        }, 4000);
-    })
-    //close
-    $('.clicker-reset-2').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
-    })
-
-// item
-
-    $('.map-icon').click(function() {
-        $('.map-contents, #item-background').show();
-    })
-    $('.close-x').click(function(){
-        $('.map-contents, #item-background').hide();
-    })
-
-
-// score
-
-    let sessionValue = sessionStorage.getItem("score");
-    let savedscore = Number(sessionValue);
-
-    function addScore(number) {
-        savedscore += number;
-        document.querySelector('.score').innerHTML = savedscore;
-        sessionStorage.setItem("score", savedscore);
-    }
-    addScore(0);
-
-    function addBonus(gif, score) {
-        if (gif === false) {
-            addScore(score);
-        }
-    }
-
-
-// save user name to sessionStorage and bring it out
-
-    let getName = function(){
-        let inputVal = $('#playerName').val();
-        sessionStorage.setItem("playerName", inputVal);
-        $('.player-name').text(sessionStorage.getItem("playerName"));
-    }
-
-
-// add fade in (main start version), disappear fade-in box
-    // document.querySelector('.fade-box').classList.add('fade-in-start');
-    // setTimeout(function() {document.querySelector('.fade-box').style.display = 'none';}, 4000);
 
 
 // fade-in to loader and fadeout
@@ -374,7 +320,6 @@
     $('.dialogue-0').click(function() {
         $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
     })
-
 
 
 // small hyun
@@ -422,8 +367,6 @@
         $('.dialogue-1-4, .dialogue-1-4 .line, .small-hyun__avatar, .dialogue-box, .movingarrow__small-hyun').hide();
         $('.movingarrow__big-hyun').css(block);
     })
-
-
 
 
 

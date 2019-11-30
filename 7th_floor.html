@@ -20,9 +20,21 @@
 
 <body>
     <div class="container">
-        <div class="transparent-background"></div>
+
+        <!-- preloader  -->
+        <div class="preloader">
+            <div class="circle"></div>
+            <div class="chain__upwards">
+                <img class="chain chain-1" src="image/loader/chain.png">
+                <img class="chain chain-2" src="image/loader/chain.png">
+            </div>
+            <img class="elevator" src="image/loader/elevator.png">
+        </div>
+
+        <div id="room-bg" class="transparent-background"></div>
+        <div id="reset-bg" class="transparent-background"></div>
         <div class="dialogue-box"></div>
-        <div class="fade-box"></div>
+        <div id="fade-box" class="fade-box"></div>
 
         <div class="reset">
             <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
@@ -33,7 +45,7 @@
                 <p class="line bottom-line fast-no-line next-line"><span class="clicker clicker-reset-2">❌ 아니오</span></p>
             </div>
         </div>
-    
+
         <!-- items -->
         <div class="items">
             <div class="item map">
@@ -293,9 +305,9 @@
             <div class="dialogue-box2 dialogue-1-12">
                 <h1 class="name">반짝이는 별</h1>
                 <p class="line top-line first-line">제가 지배인을 처음 본건 역사 수업이였어요.</p>
-                <p class="line top-line second-line next-line">수업에서 조별 과제를 하게 되었는데, 저와 현씨는 우연히 같은 주제를 골랐어요.</p>
-                <p class="line top-line third-line next-line">지배인과 우연히 같은 주제를 골랐기 때문이죠.</p>
-                <p class="line top-line fourth-line next-line">수업이 끝나고 둘이서 회의를 하는데, 그날따라 학교 카페에 자리가 없었어요</p>
+                <p class="line top-line second-line next-line">수업에서 조별 과제를 하게 되었는데,</p>
+                <p class="line top-line third-line next-line">우연인지 필연인지 저와 현씨는 같은 주제를 골랐죠.</p>
+                <p class="line top-line fourth-line next-line">수업이 끝나고 둘이서 회의를 하는데, 그날따라 학교 카페에 자리가 없었어요.</p>
                 <p class="line top-line fifth-line next-line"></p>
                 <p class="line top-line sixth-line next-line"></p>
                 <p class="line top-line seventh-line next-line"></p>
@@ -593,61 +605,22 @@
 
     </div>
 
+<script src="script/reset.js"></script>
+<script src="script/score.js"></script>
+<script src="script/playerName.js"></script>
+<script src="script/item.js"></script>
+
 <script>
 let hasClickedHyun = false;
 let hasClickedBand = false;
 let hasClickedBartender = false;
 let hasClickedStar = false;
-$('.fade-box').hide();
 
+//preloader 
 
-// reset
-$('.reset-icon').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
-    $('.clicker-reset-1').click(function(evnet){
-        event.preventDefault();
-        $('.fade-box').fadeIn(2000);
-        setTimeout(function() {
-        window.location = $('#reset').attr('href');
-        }, 4000);
-    })
-    //close
-    $('.clicker-reset-2').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
-    })
-
-// item
-    $('.map-icon').click(function() {
-        $('.map-contents,  #item-background').show();
-    })
-    $('.close-x').click(function(){
-        $('.map-contents,  #item-background').hide();
-    })
-
-
-// score
-
-    let sessionValue = sessionStorage.getItem("score");
-    let savedscore = Number(sessionValue);
-
-    function addScore(number) {
-        savedscore += number;
-        document.querySelector('.score').innerHTML = savedscore;
-        sessionStorage.setItem("score", savedscore);
-    }
-    addScore(0);
-
-    function addBonus(gif, score) {
-        if (gif === false) {
-            addScore(score);
-        }
-    }
-
-
-// player name
-
-    $('.player-name').text(sessionStorage.getItem("playerName"));
-
+$('#fade-box').fadeOut(500);
+$('.preloader').delay(4000).fadeOut(0);
+$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
 
 
 //gif`
@@ -773,7 +746,7 @@ $('.reset-icon').click(function(){
     })
     $('.clicker-1-11').on('click', function() {
         $('.dialogue-1-11, .dialogue-1-11 .line').hide();
-        $('.dialogue-1-12, .dialogue-1-12 .line, .transparent-background, .illust1').show();
+        $('.dialogue-1-12, .dialogue-1-12 .line, #room-bg, .illust1').show();
     })
     $('.clicker-1-12').on('click', function() {
         $('.dialogue-1-12, .dialogue-1-12 .line, .star__avatar').hide();
@@ -852,7 +825,7 @@ $('.reset-icon').click(function(){
         $('.dialogue-1-25, .dialogue-1-25 .line, .star__avatar').show();
     })
     $('.clicker-1-25').on('click', function() {
-        $('.dialogue-1-25, .dialogue-1-25 .line, .illust8, .transparent-background').hide();
+        $('.dialogue-1-25, .dialogue-1-25 .line, .illust8, #room-bg').hide();
         $('.dialogue-1-26, .dialogue-1-26 .line').show();
     })
     $('.clicker-1-26').on('click', function() {
@@ -871,8 +844,8 @@ $('.reset-icon').click(function(){
     
 
     //bartender
-    $('.bartender__gif').click(function(){
-        if (document.querySelector('.dialogue-box').style.display === 'none') {
+    $('.bartender__gif').click(function() {
+        if (document.querySelector('.dialogue-box').style.display === "none") {
             $('.dialogue-2-1, .dialogue-2-1 .line, .dialogue-box').show();
         } else {}
     })

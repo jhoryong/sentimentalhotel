@@ -21,7 +21,8 @@
 
     <div class="container">
     <div id="fade-box" class="fade-box"></div>
-    <div class="transparent-background"></div>
+    <div id="room-bg" class="transparent-background"></div>
+    <div id="reset-bg" class="transparent-background"></div>
     <div class="dialogue-box"></div>
     <audio>
         <source src="sound/knocking sound.mp3" type="audio/mpeg">
@@ -115,7 +116,7 @@
 
     <div class="dialogue-box2 dialogue-0-3">
         <h1 class="name">큰 현</h1>
-        <p class="line top-line first-line">그와 더불어, 문제가 하나 생겼어요.</p>
+        <p class="line top-line first-line">게다가 최근 골치아픈 문제가 하나 생겼어요.</p>
         <p class="line top-line second-line next-line">저희 호텔은 금연구역이지만, 최근 4층에서 나는 담배 냄새 때문에 손님으로부터 항의가 들어왔어요.</p>
         <p class="line top-line third-line next-line"><span class="player-name"></span>씨는 손님들께 인사를 드리면서 담배 냄새에 관한 단서를 모아 주세요.</p>
         <p class="line bottom-line fourth-line three-toplines">- 네, <span class="clicker clicker-0-3-1">알겠습니다!</span> (각 호실 문을 클릭하여 손님들을 만나보자.)</p>
@@ -529,7 +530,8 @@
     <div class="dialogue-box2 dialogue-406-8">
         <h1 class="name">라 & 민</h1>
         <p class="line top-line first-line">민) 그 남자때문이 틀림없어요. 들리는 소문에 의하면 누가 밤에 현 언니가 그 남자 방으로 들어가는걸 </p>
-        <p class="line top-line second-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;봤다는데~ 에~? 흐~으~음~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span> 크크크~</p>
+        <p class="line top-line second-line next-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;봤다는데~ 에~? 흐~으~음~? <span class="emoticon">( ͡° ͜ʖ ͡°)
+            </span></p>
         <p class="line top-line third-line next-line">라, 민) 꺅~~~! 대박사건! 대박사건!</p>
         <p class="line top-line fourth-line next-line">민) 근데 그 남자 은근 키도 크고 잘생겼던데?</p>
         <p class="line top-line fifth-line next-line">라) 에이, 아니야~ 키가 크진 않던데? 얼굴은 뭐, 조금 봐줄만 한것 같기도 하고.</p>
@@ -574,7 +576,7 @@
     <div class="dialogue-box2 dialogue-406-13">
         <h1 class="name">&nbsp;</h1>
         <p class="line top-line first-line">라) 민아, 오늘 뭐 시켜 먹을래?</p>
-        <p class="line top-line second-line">민) 음...... 취~ 킨~? <span class="emoticon">( ͡° ͜ʖ ͡° )</span></p>
+        <p class="line top-line second-line">민) 음...... 취~ 킨~? <span class="emoticon">( ͡° ͜ʖ ͡°)</span></p>
         <p class="line top-line third-line">라) 꺄악! 좋아! 까르르르....</p>
         <p class="line bottom-line fourth-line three-toplines"><span class="clicker clicker-406-13">(확인)</span></p>
     </div>
@@ -702,6 +704,11 @@
             
 </div>
 </div>
+
+<script src="script/score.js"></script>
+<script src="script/reset.js"></script>
+<script src="script/playerName.js"></script>
+<script src="script/item.js"></script>
 <script>
 $(document).ready(function() {
     
@@ -730,59 +737,6 @@ $('.door').click(function(){
 $('#fade-box').fadeOut(500);
 $('.preloader').delay(4000).fadeOut(0);
 $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
-
-
-// reset
-$('.reset-icon').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
-    $('.clicker-reset-1').click(function(evnet){
-        event.preventDefault();
-        $('.fade-box').fadeIn(2000);
-        setTimeout(function() {
-        window.location = $('#reset').attr('href');
-        }, 4000);
-    })
-    //close
-    $('.clicker-reset-2').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
-    })
-
-// item
-
-    $('.map-icon').click(function() {
-        $('.map-contents,  #item-background').show();
-    })
-    $('.close-x').click(function(){
-        $('.map-contents,  #item-background').hide();
-    })
-
-
-// score
-
-    let sessionValue = sessionStorage.getItem("score");
-    let savedscore = Number(sessionValue);
-
-    function addScore(number) {
-        savedscore += number;
-        document.querySelector('.score').innerHTML = savedscore;
-        sessionStorage.setItem("score", savedscore);
-    }
-    addScore(0);
-
-    function addBonus(gif, score) {
-        if (gif === false) {
-            addScore(score);
-        }
-    }
-
-
-
-
-// player name
-
-    $('.player-name').text(sessionStorage.getItem("playerName"));
-
-
 
 
 // start
@@ -962,7 +916,7 @@ $('.door401__2').on('mouseleave', function() {
 
     $('.clicker-401-2-1').on('click', function() {
         $('.dialogue-401-2, .dialogue-401-2 .line').hide();
-        $('.dialogue-401-3, .dialogue-401-3 .line, .transparent-background, .room401, .avatar__401').show();
+        $('.dialogue-401-3, .dialogue-401-3 .line, #room-bg, .room401, .avatar__401').show();
     })
 
     $('.clicker-401-3-1').on('click', function() {
@@ -997,7 +951,7 @@ $('.door401__2').on('mouseleave', function() {
 
         //close
         $('.clicker-401-9-1').on('click', function() {
-            $('.dialogue-401-9, .dialogue-box, .transparent-background, .room401, .avatar__401').css(none);
+            $('.dialogue-401-9, .dialogue-box, #room-bg, .room401, .avatar__401').css(none);
             hasClicked401 = true;
             if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
                 $('.movingarrow__big-hyun').show();
@@ -1040,7 +994,7 @@ $('.clicker-402-1-1').on('click', function() {
 
 $('.clicker-402-2').on('click', function() {
     $('.dialogue-402-2, .dialogue-402-2 .line').hide();
-    $('.dialogue-402-3, .dialogue-402-3 .line, .transparent-background, .room402, .avatar__402').show();
+    $('.dialogue-402-3, .dialogue-402-3 .line, #room-bg, .room402, .avatar__402').show();
 })
 
 $('.clicker-402-3').on('click', function() {
@@ -1070,7 +1024,7 @@ $('.clicker-402-7').on('click', function() {
 
     //close
     $('.clicker-402-8').on('click', function() {
-        $('.dialogue-402-8, .dialogue-box, .transparent-background, .room402, .avatar__402').css(none);
+        $('.dialogue-402-8, .dialogue-box, #room-bg, .room402, .avatar__402').css(none);
         hasClicked402 = true;
         if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
                 $('.movingarrow__big-hyun').show();
@@ -1149,7 +1103,7 @@ $('.clicker-404-1-1').on('click', function() {
 
 $('.clicker-404-2').on('click', function() {
     $('.dialogue-404-2, .dialogue-404-2 .line').hide();
-    $('.dialogue-404-3, .dialogue-404-3 .line, .transparent-background, .room404, .avatar__404').show();
+    $('.dialogue-404-3, .dialogue-404-3 .line, #room-bg, .room404, .avatar__404').show();
 })
 
 $('.clicker-404-3').on('click', function() {
@@ -1169,7 +1123,7 @@ $('.clicker-404-5').on('click', function() {
 
     //close
     $('.clicker-404-6').on('click', function() {
-        $('.dialogue-404-6, .dialogue-box, .transparent-background, .room404, .avatar__404').css(none);
+        $('.dialogue-404-6, .dialogue-box, #room-bg, .room404, .avatar__404').css(none);
         hasClicked404 = true;
         if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
                 $('.movingarrow__big-hyun').show();
@@ -1267,7 +1221,7 @@ $('.door406__2').on('mouseleave', function() {
 
     $('.clicker-406-4').on('click', function() {
         $('.dialogue-406-4, .dialogue-406-4 .line').hide();
-        $('.dialogue-406-5, .dialogue-406-5 .line, .transparent-background, .room406, .avatar__406').show();
+        $('.dialogue-406-5, .dialogue-406-5 .line, #room-bg, .room406, .avatar__406').show();
     })
 
     $('.clicker-406-5').on('click', function() {
@@ -1307,7 +1261,7 @@ $('.door406__2').on('mouseleave', function() {
 
         //close
         $('.clicker-406-12').on('click', function() {
-            $('.dialogue-406-12, .dialogue-box, .transparent-background, .room406, .avatar__406').css(none);
+            $('.dialogue-406-12, .dialogue-box, #room-bg, .room406, .avatar__406').css(none);
             $('.dialogue-406-13, .dialogue-406-13 .line, .dialogue-box').show();
         })
 
@@ -1356,7 +1310,7 @@ $('.door407__2').on('mouseleave', function() {
     })
     $('.clicker-407-2').on('click', function() {
         $('.dialogue-407-2, .dialogue-407-2 .line').hide();
-        $('.dialogue-407-3, .dialogue-407-3 .line, .transparent-background, .room__407d, .avatar__d').show();
+        $('.dialogue-407-3, .dialogue-407-3 .line, #room-bg, .room__407d, .avatar__d').show();
     })
 
     $('.clicker-407-3').on('click', function() {
@@ -1431,7 +1385,7 @@ $('.door407__2').on('mouseleave', function() {
 
         //close
         $('.clicker-407-16').on('click', function() {
-            $('.dialogue-407-16, .dialogue-box, .transparent-background, .room__407d, .avatar__d').css(none);
+            $('.dialogue-407-16, .dialogue-box, #room-bg, .room__407d, .avatar__d').css(none);
             hasClicked407 = true;
             if (hasClicked401 === true && hasClicked402 === true && hasClicked404 === true && hasClicked406 === true && hasClicked407 === true) {
                 $('.movingarrow__big-hyun').show();

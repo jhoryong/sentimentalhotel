@@ -23,6 +23,7 @@
     <div class="container">
     <div class="dialogue-box"></div>
     <div id="room-bg" class="transparent-background"></div>
+    <div id="reset-bg" class="transparent-background"></div>
 
         <div class="reset">
             <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
@@ -285,6 +286,10 @@
 
     </div>
 
+<script src="script/score.js"></script>
+<script src="script/reset.js"></script>
+<script src="script/playerName.js"></script>
+<script src="script/item.js"></script>
 <script>
 
     let block = {display: 'block'};
@@ -308,59 +313,6 @@
             alertFoundAllGif = function(){};
         }
     }
-
-
-
-// reset
-$('.reset-icon').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
-    $('.clicker-reset-1').click(function(evnet){
-        event.preventDefault();
-        $('.fade-box').fadeIn(2000);
-        setTimeout(function() {
-        window.location = $('#reset').attr('href');
-        }, 4000);
-    })
-    //close
-    $('.clicker-reset-2').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
-    })
-
-// item
-
-    $('.map-icon').click(function() {
-        $('.map-contents,  #item-background').show();
-    })
-    $('.close-x').click(function(){
-        $('.map-contents,  #item-background').hide();
-    })
-
-
-// score
-
-    let sessionValue = sessionStorage.getItem("score");
-    let savedscore = Number(sessionValue);
-
-    function addScore(number) {
-        savedscore += number;
-        document.querySelector('.score').innerHTML = savedscore;
-        sessionStorage.setItem("score", savedscore);
-    }
-    addScore(0);
-
-    function addBonus(gif, score) {
-        if (gif === false) {
-            addScore(score);
-        }
-    }
-
-
-// player name
-
-    $('.player-name').text(sessionStorage.getItem("playerName"));
-
-
-
 
 
 // gif

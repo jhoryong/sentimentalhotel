@@ -21,6 +21,7 @@
 <body>
 <div class="container">
     <div class="dialogue-box"></div>
+    <div id="reset-bg" class="transparent-background"></div>
     <div id="fade-box" class="fade-box"></div>
     <div class="fade-box fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
 
@@ -210,7 +211,11 @@
     </div>
 
 </div>
-    
+
+<script src="script/score.js"></script>
+<script src="script/reset.js"></script>
+<script src="script/playerName.js"></script>
+<script src="script/item.js"></script>
 <script>
 
     let fade = $('.fade-box__sound');
@@ -235,65 +240,12 @@
         }
     }
 
-    
-// reset
-$('.reset-icon').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').show();})
-    $('.clicker-reset-1').click(function(evnet){
-        event.preventDefault();
-        $('.fade-box').fadeIn(2000);
-        setTimeout(function() {
-        window.location = $('#reset').attr('href');
-        }, 4000);
-    })
-    //close
-    $('.clicker-reset-2').click(function(){
-        $('.dialogue-box-reset, .dialogue-box-reset .line, .transparent-background').hide();
-    })
 
 // fade-in to loader and fadeout
 
 $('#fade-box').fadeOut(500);
 $('.preloader').delay(4000).fadeOut(0);
 $('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
-
-
-
-// item
-
-    $('.map-icon').click(function() {
-        $('.map-contents,  #item-background').show();
-    })
-    $('.close-x').click(function(){
-        $('.map-contents,  #item-background').hide();
-    })
-
-
-// score
-
-    let sessionValue = sessionStorage.getItem("score");
-    let savedscore = Number(sessionValue);
-
-    function addScore(number) {
-        savedscore += number;
-        document.querySelector('.score').innerHTML = savedscore;
-        sessionStorage.setItem("score", savedscore);
-    }
-    addScore(0);
-
-    function addBonus(gif, score) {
-        if (gif === false) {
-            addScore(score);
-        }
-    }
-
-
-// player name
-
-    $('.player-name').text(sessionStorage.getItem("playerName"));
-
-
-
 
 
 // gif
