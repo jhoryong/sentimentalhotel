@@ -46,6 +46,12 @@
     }
 
     .fade-box__sound {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+        height: 56.25vw;
+        z-index: 2000;
         background-color: #141318;
         display: none;
     }

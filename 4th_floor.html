@@ -712,6 +712,13 @@
 <script src="script/item.js"></script>
 <script>
 
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').show();}, 7000);
+    }
+    
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
+
 let block = {display: 'block'};
 let none = {display: 'none'};
 
@@ -731,6 +738,8 @@ $('.door').click(function(){
 
 
 // start
+
+    
 
     //quick view
     $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {

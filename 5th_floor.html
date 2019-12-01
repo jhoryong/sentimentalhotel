@@ -632,6 +632,13 @@
 <script src="script/item.js"></script>
 <script>
 
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();}, 7000);
+    }
+    
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
+
 let hasClicked501 = false;
 let hasClicked502 = false;
 let hasClicked503 = false;
@@ -645,6 +652,8 @@ $('.door').click(function(){
 
 
 // start
+
+    
     
     //quick view
     $('.dialogue-0-1, .dialogue-0-2').click(function() {

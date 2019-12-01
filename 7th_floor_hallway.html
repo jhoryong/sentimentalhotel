@@ -17,12 +17,20 @@
         .container {
             background-image: url("image/7th_floor/복도.jpg");
         }
+
         .light {
             position:absolute;
-            top: 5.3vw;
-            left: 28.7vw;
+            top: 6.2vw;
+            left: 29.4vw;
             width: 40vw;
+            animation: fade-in-out 2s 2s ease-in-out infinite alternate backwards;
         }
+
+        @keyframes fade-in-out {
+            0% {opacity: 1;}
+            100% {opacity: 0.8;}
+        }
+
         .nextStage {
             position: absolute;
             top: 20vw;

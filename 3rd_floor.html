@@ -24,7 +24,7 @@
     <div class="dialogue-box"></div>
     <div id="reset-bg" class="transparent-background"></div>
     <div id="fade-box" class="fade-box"></div>
-    <div class="fade-box fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
+    <div class="fade-box__sound"><img class="soundicon" src="image/3rd_floor/soundicon.gif"><!--<i class="fas fa-volume-up"></i>--></div>
 
     <div class="reset">
         <i class="fas fa-redo-alt icon reset-icon gifhover"></i>
@@ -218,6 +218,13 @@
 <script src="script/playerName.js"></script>
 <script src="script/item.js"></script>
 <script>
+
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();}, 7000);
+    }
+    
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
 
     let fade = $('.fade-box__sound');
 

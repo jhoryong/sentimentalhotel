@@ -293,6 +293,13 @@
 <script src="script/item.js"></script>
 <script>
 
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').show();}, 7000);
+    }
+    
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
+
     let block = {display: 'block'};
     let none = {display: 'none'};
 

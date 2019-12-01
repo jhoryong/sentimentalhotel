@@ -602,14 +602,18 @@
 <script src="script/item.js"></script>
 <script>
 
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').show();}, 7000);
+    }
+    
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
+
 let hasClicked601 = false;
 let hasClicked602 = false;
 let hasClicked603 = false;
 
-//sound
-$('.door').click(function(){
-    $('audio')[0].play();
-})
+
 
 
 // drag functions
@@ -661,8 +665,6 @@ $('.door').click(function(){
     //quick view
     $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4, .dialogue-0-5').click(function() {
         $(event.currentTarget).children().css('animation', 'none');}) 
-
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
 
     $('.clicker-0-1').on('click', function() {
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
@@ -746,6 +748,10 @@ $('.door').click(function(){
     //dialogue
     $('.door__601').on('click', function() {
         if (document.querySelector('.dialogue-box').style.display === 'none') {
+            //sound
+            $('.door').click(function(){
+                $('audio')[0].play();
+            })
             $('.dialogue-601-1, .dialogue-601-1 .line, .dialogue-box').show();
         } else {}
         
@@ -788,6 +794,10 @@ $('.door').click(function(){
     //start
     $('.door__602').on('click', function() {
         if (document.querySelector('.dialogue-box').style.display === 'none') {
+            //sound
+            $('.door').click(function(){
+                $('audio')[0].play();
+            })
             $('.dialogue-602-1, .dialogue-602-1 .line, .dialogue-box').show();
         } else {}
     })
@@ -926,6 +936,10 @@ $('.door').click(function(){
     // start
     $('.door__603').on('click', function() {
         if (document.querySelector('.dialogue-box').style.display === 'none') {
+            //sound
+            $('.door').click(function(){
+                $('audio')[0].play();
+            })
             $('.dialogue-603-1, .dialogue-603-1 .line, .dialogue-box').show();
         } else {}
     })

@@ -274,6 +274,10 @@
 
 <script>
 
+    function start () {
+        setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();}, 7000);
+    }
+    
     $('.fade-box').fadeOut(1000);
     $('.preloader').show();
 
@@ -309,7 +313,7 @@
 
 
 //quick view
-    $('.dialogue-0, .dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4, .dialogue-2-1, .dialogue-2-2, .dialogue-2-3,  .dialogue-2-3-1, .dialogue-2-4, .dialogue-2-5, .dialogue-2-6, .dialogue-2-7, .dialogue-2-8, .dialogue-3-1, .dialogue-3-2, .dialogue-4-1').click(function() {
+    $('.dialogue-0-1, .dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4, .dialogue-2-1, .dialogue-2-2, .dialogue-2-3,  .dialogue-2-3-1, .dialogue-2-4, .dialogue-2-5, .dialogue-2-6, .dialogue-2-7, .dialogue-2-8, .dialogue-3-1, .dialogue-3-2, .dialogue-4-1').click(function() {
         $(event.currentTarget).children().css('animation', 'none');
     }) 
 
