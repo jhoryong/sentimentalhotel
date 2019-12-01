@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/loader.js"></script>
 
     <title>4층 객실 :: 센티멘탈 호텔</title>
 </head>
@@ -710,10 +711,6 @@
 <script src="script/playerName.js"></script>
 <script src="script/item.js"></script>
 <script>
-$(document).ready(function() {
-    
-// $('.player-name').text('호룡');
-
 
 let block = {display: 'block'};
 let none = {display: 'none'};
@@ -732,21 +729,12 @@ $('.door').click(function(){
     $('audio')[0].play();
 })
 
-// preloader
-
-$('#fade-box').fadeOut(500);
-$('.preloader').delay(4000).fadeOut(0);
-$('#fade-box').delay(3000).fadeIn(500).fadeOut(2000);
-
 
 // start
 
     //quick view
     $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
-
-    $('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box, .big-hyun__avatar').delay(5500).fadeIn(0);
-        
+        $(event.currentTarget).children().css('animation', 'none');})       
 
     $('.clicker-0-1-1').on('click', function() {
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();
@@ -1391,7 +1379,7 @@ $('.door407__2').on('mouseleave', function() {
                 $('.movingarrow__big-hyun').show();
             }
         })
-})
+
 </script>
 </body>
 </html>

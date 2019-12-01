@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/loader.js"></script>
 
     <title>2층 비즈니스 센터 :: 센티멘탈 호텔</title>
 </head>
@@ -314,6 +315,9 @@
         }
     }
 
+//quick view
+$('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');}) 
 
 // gif
 
@@ -393,22 +397,7 @@
     })
 
 
-// fade-in to loader and fadeout
-
-$('.fade-box').fadeOut(1000);
-    setTimeout(function() {$('.preloader').hide();}, 4000)
-    setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
-
-
-
  // start dialogue
-    // quick view
-    $('.dialogue-0-1, .dialogue-0-2, .dialogue-0-3, .dialogue-0-4').click(function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
-
-    setTimeout(function(){
-        $('.dialogue-0-1, .dialogue-0-1 .line, .big-hyun__avatar, .dialogue-box').show();
-        }, 5500)
 
     $('.clicker-0-1').click(function(){
         $('.dialogue-0-1, .dialogue-0-1 .line').hide();

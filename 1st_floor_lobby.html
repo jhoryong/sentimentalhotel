@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <title>1층 로비 :: 센티멘탈 호텔</title>
+    <script src="script/loader.js"></script>
 </head>
 <body>
     <div class="container">
@@ -66,7 +66,7 @@
         </div>
         
         <div class="start">
-            <div class="dialogue-box2 dialogue-0">
+            <div class="dialogue-box2 dialogue-0-1">
                 <h1 class="name">&nbsp;</h1>
                 <p class="line top-line first-line">드디어 호텔 첫 출근이다! 첫인상을 잘 보여야 할 텐데...</p>
                 <p class="line top-line second-line next-line">그나저나 어디로 가야 하지?</p>
@@ -274,6 +274,9 @@
 
 <script>
 
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
+
     let block = {display: 'block'};
     let none = {display: 'none'};
 
@@ -284,6 +287,7 @@
     let hasClickedEmployee = false;
     let hasClickedBoy = false;
 
+    //when found all gifs
     function alertFoundAllGif() {
         if (hasClickedEmployee === true && hasClickedBoy === true) {
             $('.dialogue-box, .dialogue__foundallgif, .dialogue__foundallgif .line').show();
@@ -299,26 +303,25 @@
 
 // fade-in to loader and fadeout
 
-    $('.fade-box').fadeOut(1000);
-    setTimeout(function() {$('.preloader').hide();}, 4000)
-    setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
+    // $('.fade-box').fadeOut(1000);
+    // setTimeout(function() {$('.preloader').hide();}, 4000)
+    // setTimeout(function(){$('.fade-box').fadeIn(1000).fadeOut(2000);}, 3000);
+
+
+//quick view
+    $('.dialogue-0, .dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4, .dialogue-2-1, .dialogue-2-2, .dialogue-2-3,  .dialogue-2-3-1, .dialogue-2-4, .dialogue-2-5, .dialogue-2-6, .dialogue-2-7, .dialogue-2-8, .dialogue-3-1, .dialogue-3-2, .dialogue-4-1').click(function() {
+        $(event.currentTarget).children().css('animation', 'none');
+    }) 
 
 
 //start dialogue
 
-    setTimeout(function() {
-        $('.dialogue-0, .dialogue-0 .line, .dialogue-box').show();
-    }, 6000);
+
 
     //close
     $('.clicker-0-1').on('click', function() {
         $('.start, .dialogue-box').hide();
         $('.movingarrow__small-hyun').css(block);
-    })
-
-    //fast view
-    $('.dialogue-0').click(function() {
-        $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
     })
 
 
@@ -334,9 +337,6 @@
             }
         } else {}
     })
-    // fast view
-    $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4').click(function(event) {
-        $(event.currentTarget).children().css('animation', 'none');}) 
     
     $('.clicker-1-1').on('click', function() {
         $('.dialogue-1-1, .dialogue-1-1 .line').hide();
@@ -383,10 +383,6 @@
         }
     })
 
-    // fast view
-    $('.dialogue-2-1, .dialogue-2-2, .dialogue-2-3,  .dialogue-2-3-1, .dialogue-2-4, .dialogue-2-5, .dialogue-2-6, .dialogue-2-7, .dialogue-2-8').on('click', function() {
-        $(event.currentTarget).children().css('animation', 'none');}) 
-
     $('.clicker-2-1').click(function() {
         $('.dialogue-2-1, .dialogue-2-1 .line').hide();
         $('.dialogue-2-2, .dialogue-2-2 .line').show();
@@ -399,12 +395,10 @@
         $('.dialogue-2-3, .dialogue-2-3 .line').hide();
         $('.dialogue-2-4, .dialogue-2-4 .line').show();
     })
-    
     $('.clicker-2-3-1').click(function() {
         $('.dialogue-2-3-1, .dialogue-2-3-1 .line').hide();
         $('.dialogue-2-4, .dialogue-2-4 .line').show();
     })
-
     $('.clicker-2-4').click(function() {
         $('.dialogue-2-4, .dialogue-2-4 .line').hide();
         $('.dialogue-2-5, .dialogue-2-5 .line').show();
@@ -455,11 +449,6 @@
                 
             } else {}
         } else {}
-
-        // fast view
-        $('.dialogue-3-1, .dialogue-3-2').on('click', function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
     })
 
     //close
@@ -475,15 +464,10 @@
 
     $('.lounge-link__clicker').on('click', function() {
         if (document.querySelector('.dialogue-box').style.display === 'none') {
-        if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
-            $('.dialogue-4-1, .dialogue-4-1 .line, .dialogue-box').css(block);
+            if (hasClickedSmallHyun === true && hasClickedBigHyun === true && hasClickedGoldplate === true) {
+                $('.dialogue-4-1, .dialogue-4-1 .line, .dialogue-box').css(block);
+            } else {}
         } else {}
-    } else {}
-    })
-
-    // fast view
-    $('.dialogue-4-1').on('click', function() {
-        $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line fourth-line fifth-line');
     })
 
     $(".clicker-4-1").on('click', function(event) {
@@ -540,9 +524,6 @@
             alertFoundAllGif()
         })
 
-   
 </script>
 </body>
-
-    
 </html>

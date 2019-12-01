@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/loader.js"></script>
 
     <title>1층 라운지 :: 센티멘탈 호텔</title>
 </head>
@@ -190,7 +191,11 @@
             alertFoundAllGif = function(){};
         }
     }
-    
+
+
+//quick view
+$('.dialogue-0-1, .menu, .applecidar, .milktea, .americano, .sexonthebeach, .dialogue-2, .dialogue-2 .line').click(function() {
+    $(event.currentTarget).children().css('animation', 'none');})
 
 
 // gif
@@ -254,20 +259,12 @@
 
 
 // start
-    $('.fade-box').delay(2000).fadeOut(2000);
-    setTimeout(function() {
-        $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();
-    }, 4500);
 
     $('.clicker-0-1').on('click', function() {
         $('.big-hyun__avatar, .dialogue-0-1, .dialogue-0-1 .line, .big-hyun__gif, .dialogue-box').hide();
         $('.movingarrow__bartender').show();
     })
 
-    //quick view
-    $('.dialogue-0-1').click(function() {
-        $('.dialogue-0-1').children().removeClass('first-line second-line third-line fourth-line fifth-line sixth-line');
-    })
 
 // bartender
 
@@ -279,11 +276,6 @@
         $('.menu, .menu .line, .dialogue-box').show();
         } else {}
     })
-
-        //quick view
-        $('.menu').click(function() {
-           $(event.currentTarget).children().css('animation', '').removeClass('first-line');
-        })
 
         //close
         $('.clicker-1-5').click(function() {
@@ -314,11 +306,6 @@
             $('.menu #menu1').hide();
         })
 
-        //quick view
-        $('.applecidar').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
-
 
     // milktea
 
@@ -335,11 +322,6 @@
             $('.menu, .menu .line').show();
             $('.milktea, .milktea .line').hide();
             $('#milktea .dialogue-box').children().hide();
-        })
-
-        //quick view
-        $('.milktea').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
         })
 
 
@@ -359,11 +341,6 @@
             $('.americano, .americano .line').hide();
         })
 
-        //quick view
-        $('.americano').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
-
 
     // sex on the beach
 
@@ -380,12 +357,6 @@
             $('.menu, .menu .line').show();
             $('.sexonthebeach, .sexonthebeach .line').hide();
         })
-
-        //quick view
-        $('.sexonthebeach').click(function() {
-            $(event.currentTarget).children().removeClass('first-line second-line third-line fourth-line fifth-line');
-        })
-
     
 
 // elevator
@@ -399,11 +370,6 @@
         } else {}
     } else {}
     })
-
-        //quick view
-        $('.dialogue-2, .dialogue-2 .line').click(function() {
-            $(event.currentTarget).children().removeClass('first-line fast-yes-line fast-no-line');
-            })
 
         // close
         $('.clicker-3-2').click(function(){
