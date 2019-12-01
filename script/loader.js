@@ -8,9 +8,8 @@ var loadTime = window.performance.timing.domContentLoadedEventEnd - window.perfo
         setTimeout(function() {$('.dialogue-0, .dialogue-0 .line, .dialogue-box').show();}, 7000);
     } else {
         window.addEventListener("load", function() {
-            setTimeout(function() {$('.preloader').hide();}, 1000)
+            setTimeout(function() {$('.preloader').hide();}, 1000);
             $('.fade-box').fadeIn(1000).fadeOut(2000);
             setTimeout(function() {$('.dialogue-0-1, .dialogue-0-1 .line, .dialogue-box').show();}, 3000);
         })
     }
-}
