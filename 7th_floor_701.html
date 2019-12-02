@@ -34,7 +34,7 @@
             </div>
 
 
-        <a href="b1.html"></a>
+        <a href="b1.html">
             <img class="gif gifhover elevator elevator1" src="image/701/엘베1.png">
         </a>
 
@@ -262,7 +262,6 @@
     })
 
     $('.radio1').click(function(){
-        
         radio = true;
         t = 400;
         let radiogif = function(){
@@ -348,7 +347,6 @@
     })
 
     $('.laptop1').click(function(){
-        
         laptop = true;
         $('#startup')[0].play();
         $('.laptop2').delay(200).fadeIn(400);
@@ -357,7 +355,7 @@
 
     $('.candle1').click(function(){
         $('#candle')[0].play();
-        candle = true
+        candle = true;
         $(this).delay(400).fadeOut();
         $('.candle2').delay(200).fadeIn();
         reveal();

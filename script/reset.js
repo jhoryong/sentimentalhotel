@@ -6,6 +6,7 @@ $('.reset-icon').click(function(){
 //proceed reset
 $('.clicker-reset-1').click(function(event){
     event.preventDefault();
+    sessionStorage.clear();
     $('.fade-box').fadeIn(2000);
     setTimeout(function() {
         window.location = $('#reset').attr('href');
