@@ -8,12 +8,30 @@
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/elevator.css">
-    <link rel="stylesheet" type="text/css" href="./css/b1.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700&display=swap&subset=korean" rel="stylesheet">
     <script src="https://kit.fontawesome.com/296406b34b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/loader.js"></script>
+    <style>
+        .container {
+            background-image: url("./image/b1/지하.jpg");
+        }   
 
+        .elevator {
+            width: 18vw;
+        }
+
+        .heart {
+            width: 27vw;
+            top: 8.9vw;
+            left: 36.6vw;
+        }
+
+        .heart2 {
+            display: none;
+        }
+    </style>
     <title>센티멘탈 호텔 :: 지하 1층</title>
 </head>
 <body>
@@ -31,9 +49,12 @@
             <img class="elevator" src="image/elevator/7층엘리베이터.png">
         </div>
 
-        <audio id="heartbeat">
+        <audio id="heartbeat" loop>
             <source src="sound/underground/heartbeat.mp3" type="audio/mpeg">
         </audio>
+
+        <img class="gif gifhover heart heart1" src="image/b1/심장1.png">
+        <img class="gif gifhover heart heart2" src="image/b1/심장2.png">
 
         <div class="dialogue-box2 dialogue-1-1">
             <h1 class="name">&nbsp;</h1>
@@ -138,24 +159,48 @@
 <script>
 //preloader 
 
-$('#fade-box').fadeOut(500).delay(6000).fadeIn(500).fadeOut(2000);
-$('.preloader').delay(7000).fadeOut(0);
+// $('#fade-box').fadeOut(500).delay(6000).fadeIn(500).fadeOut(2000);
+// $('.preloader').delay(7000).fadeOut(0);
 // $('#fade-box').hide();
 // $('.preloader').show();
+function start () {
+        setTimeout(function() {$('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').show();}, 7000);
+    }
+
+    $('.fade-box').fadeOut(1000);
+    $('.preloader').show();
 
 //quick view
 $('.dialogue-1-1, .dialogue-1-2, .dialogue-1-3, .dialogue-1-4, .dialogue-1-5, .dialogue-1-6, .dialogue-1-7, .dialogue-1-8').click(function() {
     $(event.currentTarget).children().css('animation', 'none');
 }) 
 
-setTimeout(function(){
-    $('.dialogue-box, .dialogue-1-1, .dialogue-1-1 .line').show();   
-}, 10000);
+function heartbeat() {
+    let beat = function() {
+    setTimeout(function(){$('.heart1').hide();}, 300)
+    setTimeout(function(){$('.heart2').show();}, 300)
+    setTimeout(function(){$('.heart2').hide();}, 1100)
+    setTimeout(function(){$('.heart1').show();}, 1100)
+    
+    }
+    let repeat = setInterval(beat, 1100);
+}
+
+// setTimeout(function(){
+//     $('.dialogue-box, .dialogue-1-1, .dialogue-1-1 .line').show();   
+// }, 10000);
+
+// $('.heart').click(function(){
+//     setTimeout(function(){$('#heartbeat')[0].play();}, 300)
+//     heartbeat();
+// })
 
 $('.clicker-1-1').on('click', function() {
     $('#heartbeat')[0].play();
     $('.dialogue-1-1, .dialogue-1-1 .line').hide();
+    // setInterval(heartbeat, 1100);
     $('.dialogue-1-2, .dialogue-1-2 .line').show();
+
 })
 $('.clicker-1-2').on('click', function() {
     $('.dialogue-1-2, .dialogue-1-2 .line').hide();
