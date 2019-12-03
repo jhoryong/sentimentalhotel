@@ -144,7 +144,9 @@
         top: 32vw;
         left: 7vw;}
 
-    .emoticon {font-family: sans-serif;}
+    .emoticon {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
 
 
     /* 407 */
