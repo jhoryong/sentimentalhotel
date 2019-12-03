@@ -1,7 +1,7 @@
 .preloader {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 56.25vw;
     overflow: hidden;
     background-color:#ffffff;
     z-index:10; 
