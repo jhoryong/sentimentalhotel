@@ -1,5 +1,6 @@
 .container {
     background-image: url("../image/index/배경.jpg  ");   
+    font-family: 'Noto Serif KR', serif;
 }
 
 .white {
@@ -101,7 +102,6 @@
 }
 
 .message {
-    font-family: 'Noto Serif KR', serif;
     font-size: 1.3vw;
     letter-spacing: 1.2px;
     position: absolute;
@@ -112,8 +112,24 @@
     animation: flashtext 1.5s ease infinite alternate backwards;
 }
 
+.revisit {
+    font-size: 1.1vw;
+    letter-spacing: 1.2px;
+    position: absolute;
+    top: 50vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffddfc;
+    opacity: 0.8;
+}
+
+.revisit:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .credits {
-    font-family: 'Noto Serif KR', serif;
     position: absolute;
     top: 54vw;
     left: 50%;
