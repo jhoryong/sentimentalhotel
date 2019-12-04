@@ -144,3 +144,26 @@
     66% {transform: rotate(0deg) translateX(3vw);}
     100% {transform: rotate(0deg) translateX(3vw);}
 }
+
+    /* fullscreen */
+    .fullscreen {
+        position: absolute;
+        top: 53vw;
+        left: 1.5vw;
+    }
+
+    .fullscreen-checkbox {
+        font-size:2vw;
+        color: #ffddfc;
+    }
+
+        #check {
+            display: none;
+        }
+
+    .fullscreen-text {
+        font-family: 'Noto Serif KR', serif;
+        font-size: 1.2vw;
+        vertical-align: 3.7px;
+        color: #ffddfc;
+    }

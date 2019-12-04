@@ -1,7 +1,156 @@
 .container {
-    background-color: black;
-}
+    background-image: url("../image/b1/지하.jpg");
+    font-family: 'Noto Serif KR', serif;
+}   
 
 .elevator {
     width: 18vw;
 }
+
+.heart {
+    width: 27vw;
+    top: 8.9vw;
+    left: 36.6vw;
+}
+
+.heart2 {
+    display: none;
+}
+
+.small-hyun__avatar {
+    width: 18vw;
+    top: 33.7vw;
+    left: 11vw;
+}
+
+/* certificate page */
+
+.certificate {
+    background-color: #000000;
+    opacity: 0.85;
+    position: absolute;
+    top: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 67vw;
+    height: 46vw;
+    z-index: 10;
+    display: none;
+}
+
+.certificate__contents {
+    position: absolute;
+    top: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66vw;
+    z-index: 11;
+
+    color: #ffffff;
+    text-align: center;
+    /* border: 2px dashed #898989; */
+    display: none;
+}
+
+.logo {
+    width: 5.5vw;
+    margin-top: 2.5vw;
+}
+
+.title {
+    font-size: 3.1vw;
+    letter-spacing: 0.8vw;
+    margin-top: 5vw;
+    font-weight: 500;
+}
+
+.player__name {
+    margin-top: 5vw;
+    font-size: 2.5vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+}
+
+.cert__line {
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.line-1 {
+    margin-top: 3vw;
+}
+
+.line-2 {
+    margin-top: 1.5vw;
+}
+
+.date {
+    margin-top: 5vw;
+    font-size: 1.5vw;
+}
+
+.manager__name {
+    vertical-align: 2vw;
+    display: inline;
+    margin-right: 1vw;
+    font-size: 1.5vw;
+}
+
+/* credits page */
+.nextbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* width: 100%; width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴.. */
+    height: 56.25vw;
+    display: none;
+    z-index: 22;
+}
+
+.nextbox:hover {
+    cursor: pointer;
+}
+
+#credits-10:hover {
+    cursor: default;
+}
+
+.credits {
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*width를 안정하면 제대로 화면에 안뜨고, z-index가 제대로 적용안되서 gif가 앞으로옴..*/
+    height: 56.25vw;
+    display: none;
+    z-index: 20;
+}
+
+.nextbox > p, .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    color: #ffffff;
+    font-size: 1.7vw;
+    text-align: center;
+    z-index: 21;
+}
+
+.wrapper {
+    width: 90vw;
+}
+
+.wrapper p {
+    margin-bottom: 1.2vw;
+}
+
+#text-1 {
+    display: none;
+}
+
+.go-home {
+    color: #ffffff;
+}
+
