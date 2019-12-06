@@ -95,7 +95,7 @@
 
         <div class="dialogue-box2 dialogue-1-5">
             <h1 class="name"><span class="player-name"></span></h1>
-            <p class="line top-line first-line">...지배인과 인연이 있는 사람만이 들어올 수 있는 곳.</p>
+            <p class="line top-line first-line">... 지배인과 인연이 있는 사람만이 들어올 수 있는 곳.</p>
             <p class="line top-line second-line next-line">올라갈수록 소중한 사람이 살고 있는 구조.</p>
             <p class="line top-line third-line next-line">지배인을 마치 가족처럼 부르는 손님들.</p>
             <p class="line top-line fourth-line next-line"></p>
@@ -109,7 +109,7 @@
             <h1 class="name"><span class="player-name"></span></h1>
             <p class="line top-line first-line">아... 이제 알겠어요. 이 호텔의 정체를.</p>
             <p class="line top-line second-line next-line">이 호텔은... </p>
-            <p class="line top-line third-line next-line"><strong>지배인 현, 당신의 마음 속이었던 거에요.</strong></p>
+            <p class="line top-line third-line next-line"><strong>지배인 현, 당신의 마음 속이었던 거예요.</strong></p>
             <p class="line top-line fourth-line next-line"></p>
             <p class="line top-line fifth-line next-line"></p>
             <p class="line top-line sixth-line next-line"></p>
@@ -189,8 +189,8 @@
                     <p>본 콘텐츠는 건국대학교 다이나믹미디어학과 2019년 졸업작품으로,</p>
                     <p>소설 “센티멘탈 호텔”에 기반하여 만들어진 콘텐츠입니다.</p>
                     <p>재미있게 즐기셨다면 원작인 소설도 즐겨 주세요!</p><br>
-                    <p class="clicker"><a href="https://www.dropbox.com/s/t09f3ugj12azmkk/%EC%86%8C%EC%84%A4%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0">📖 소설 읽기</a></p>
-                    <p class="clicker"><a href="index.html"><i class="fas fa-redo-alt go-home"></i> 처음으로 가기</a></p>
+                    <p class="clicker"><a href="https://www.dropbox.com/s/t09f3ugj12azmkk/%EC%86%8C%EC%84%A4%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0" target="_blank" rel="noopener noreferrer">📖 소설 읽기(새 탭)</a></p>
+                    <p class="clicker"><a href="index.html" id="goHome"><i class="fas fa-redo-alt go-home"></i> 처음으로 가기</a></p>
                 </div>
             </div>
         </div>
@@ -349,6 +349,14 @@
             $(this).fadeOut();
             $('#credits-10').fadeIn();
             sessionStorage.setItem('hasReachedCredits10', 'true');
+        })
+
+        $('#goHome').click(function(event){
+            event.preventDefault();
+            $('.fade-box').fadeIn(3000);
+            setTimeout(function() {
+            window.location = $('#goHome').attr('href');
+            }, 4000);
         })
     </script>
 </body>

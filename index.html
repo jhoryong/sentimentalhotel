@@ -13,6 +13,7 @@
 
     <script src="https://kit.fontawesome.com/296406b34b.js" crossorigin="anonymous"></script>
 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
@@ -27,7 +28,9 @@
 <body>
     <div class="white"></div>
     <div class="black"></div>
+    
     <div class="container">
+        <div id="index-tb" class="transparent-background"></div>
 
         <!-- fullscreen -->
         <div class="fullscreen">
@@ -54,7 +57,62 @@
         <h1 class="message">문을 클릭하여 호텔로 입장하세요</h1>
         <h1 class="revisit">(이미 방문하신 적이 있나요?)</h1>
         <h1 class="credits">© 2019 Sentimental Hotel All Rights Reserved.</h1>
+
+        <div class="modal-container">
+            <div class="modal-window">
+                <div class="modal-contents">
+                    <div class="contents-1">
+                        <form>
+                            <h1>다시 방문해 주셔서 감사합니다.</h1>
+                            <h2>이름이 어떻게 되시나요?</h2>
+                            <h2>- 제 이름은... <input id="playerName" type="text" name="player-name" placeholder="(최대 4글자)" maxlength="4"> <input id="playerNameButton" type="button" value="확인"></h2>
+                            <!-- <input id="playerNameButton" type="submit" value="확인"> -->
+                        </form>
+                    </div>
+                    <div class="contents-2">
+                        <form>
+                            <h1>환영합니다, <span class="player-name"></span>님! 몇 층으로 가시겠습니까?</h1>
+                            <select id="selectFloor">
+                                <option id="1st-lobby" value="1st_floor_lobby.html">1층 로비</option>
+                                <option id="1st-lounge" value="1st_floor_lounge.html">1층 라운지</option>
+                                <option id="2nd" value="2nd_floor.html">2층 비즈니스 센터</option>
+                                <option id="3nd" value="3rd_floor.html">3층 리조트</option>
+                                <option id="4rd" value="4th_floor.html">4층 객실</option>
+                                <option id="5th" value="5th_floor.html">5층 객실</option>
+                                <option id="6th" value="6th_floor.html">6층 객실</option>
+                                <option id="7th" value="7th_floor.html">7층 VIP 라운지</option>
+                            </select>
+                            <input id="moveButton" type="button" value="이동"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+<script src="script/playerName.js"></script>
 <script>
 
     let screen = document.documentElement;
@@ -86,7 +144,7 @@
         }
     })
 
-     $('.door1').click(function(){
+    $('.door1').click(function(){
         event.preventDefault();
         let t = 300;
         $('.doorknob, .doorsign').delay(200).fadeOut(200);
@@ -101,9 +159,41 @@
         setTimeout(function() {
             window.location = $('a').attr('href');
         }, 9000);
-     })
+    })
 
-        
+    $('.revisit').click(function(){
+        $('.modal-window, #index-tb').show();
+    })
+    
+    $('#playerNameButton').click(function(){
+        getName();
+        $('.modal-window').css('height', '18vw');
+        setTimeout(function(){
+            $('.contents-2').fadeIn(1000);
+        },1500)
+    });
+
+    // also go next when press enter
+    $('#playerName').on('keydown', function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            getName();
+            $('.modal-window').css('height', '18vw');
+            setTimeout(function(){
+                $('.contents-2').fadeIn(1000);
+            }, 1500)
+        }
+    })
+
+    $('#moveButton').click(function(){
+        let link = $('#selectFloor').val();
+        window.location = link;
+    })
+
+
 </script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 </body>
 </html>

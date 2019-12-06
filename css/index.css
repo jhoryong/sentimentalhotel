@@ -11,7 +11,7 @@
     height: 56.25vw;
     background-color: #eeeeee;
     z-index: 2000;
-    display:none;
+    display: none;
 }
 
 .black {
@@ -22,10 +22,12 @@
     height: 56.25vw;
     background-color: #000000;
     z-index: 2000;
-    display:none;
+    display: none;
 }
 
-
+#index-tb {
+    opacity: 0.5;
+}
 
 .sign {
     position: absolute;
@@ -103,7 +105,7 @@
 
 .message {
     font-size: 1.3vw;
-    letter-spacing: 1.2px;
+    letter-spacing: 0px;
     position: absolute;
     top: 47vw;
     left: 50%;
@@ -114,9 +116,9 @@
 
 .revisit {
     font-size: 1.1vw;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.4px;
     position: absolute;
-    top: 50vw;
+    top: 49.5vw;
     left: 50%;
     transform: translateX(-50%);
     color: #ffddfc;
@@ -124,7 +126,7 @@
 }
 
 .revisit:hover {
-    color: blue;
+    color: #ffffff;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -183,3 +185,64 @@
         vertical-align: 3.7px;
         color: #ffddfc;
     }
+
+/* modal */
+.modal-window {
+    width: 35vw;
+    height: 11vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;  
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 1.2vw;
+    display: none;
+    transition: all 1s 400ms;
+}
+
+.modal-contents {
+    margin: 3vw;   
+}
+
+    /* contents-1 */
+
+        .contents-1 h1 {
+            margin-bottom: 0.5vw;
+        }
+
+        .contents-1 h3 {
+            display: inline;
+        }
+
+        #playerName {
+            height: 2vw;
+            width: 12vw;
+            border-radius: 4px;
+            border: 2px solid #cccccc;
+            font-family: 'Noto Serif KR', serif;   
+            font-size: 1.2vw;
+            margin-top: 0.5vw;
+        }
+
+        #playerNameButton {
+            font-family: 'Noto Serif KR', serif; 
+            font-size: 1.2vw;
+        }
+
+    /* contents-2 */
+
+        .contents-2 {
+            margin-top: 3vw;
+            display: none;
+        }
+
+            .contents-2 select {
+                margin-top: 1vw;
+            }
+
+            select, .contents-2 input {
+                font-family: 'Noto Serif KR', serif; 
+                font-size: 1.2vw;
+            }

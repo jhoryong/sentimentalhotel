@@ -1205,6 +1205,8 @@ $('.door406__2').on('mouseleave', function() {
     $('.clicker-406-2-1').on('click', function() {
         $('.dialogue-406-2, .dialogue-406-2 .line').hide();
         $('.dialogue-406-3, .dialogue-406-3 .line').show();
+        $('audio')[0].play(); //knock sound
+
     })
         //close
         $('.clicker-406-3-2').on('click', function() {
@@ -1214,6 +1216,8 @@ $('.door406__2').on('mouseleave', function() {
     $('.clicker-406-3-1').on('click', function() {
         $('.dialogue-406-3, .dialogue-406-3 .line').hide();
         $('.dialogue-406-4, .dialogue-406-4 .line').show();
+        $('audio')[0].play(); //knock sound
+
     })
 
     $('.clicker-406-4').on('click', function() {
