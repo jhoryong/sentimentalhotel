@@ -134,9 +134,10 @@
     text-align: center;
     font-size: 1vw;
     color: #ffddfc;
+    display: inline;
 }
 
-.bottom-right-corner {
+/* .bottom-right-corner {
     position: absolute;
     top: 54vw;
     left: 88%;
@@ -145,18 +146,32 @@
     opacity: 0.8;
 }
     .compatibility {
-        display: inline;
     }
 
     .credits {
-        display: inline;
     }
 
     .compatibility:hover, .credits:hover {
         color: #ffffff;
         text-decoration: underline;
         cursor: pointer;
+    } */
+
+    .info-logo {
+        position: absolute;
+        height: 3.5vw;
+        top: 52vw;
+        left: 95%;
+        font-size: 1vw;
+        color: #ffddfc;
+        opacity: 0.8;
     }
+
+    .info-logo:hover, .info-logo:focus {
+        opacity: 1;
+        cursor: pointer;
+    }
+
 
 @keyframes flash {
     from {opacity: 0.5;}
@@ -207,10 +222,10 @@
     width: 35vw;
     height: 21vw;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000;  
+    z-index: 1000;
     background-color: #ffffff;
     border-radius: 20px;
     font-size: 1.2vw;
@@ -276,7 +291,7 @@
 
     #playerName {
         height: 2vw;
-        width: 12vw;
+        width: 10vw;
         border-radius: 4px;
         border: 2px solid #cccccc;
         font-family: 'Noto Serif KR', serif;   
@@ -284,9 +299,22 @@
         margin-top: 0.5vw;
     }
 
-    #playerNameButton {
-        font-family: 'Noto Serif KR', serif; 
+    input[type=button] {
+        font-family: 'Noto Serif KR', serif;
         font-size: 1.2vw;
+        width: 6vw;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #ffffff;
+        background-color: #9c00b2;
+        border-radius: 65px;
+        margin-left: 10px;
+        height: 2.2vw;
+    }
+
+    #playerNameButton:hover {
+        cursor: pointer;
+        background-color: #860097;
     }
 
     /* contents-2 */
@@ -303,3 +331,28 @@
             font-family: 'Noto Serif KR', serif; 
             font-size: 1.2vw;
         }
+
+/* confirm popup */
+.confirm-popup {
+    width: 31vw;
+    height: 13vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1020;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 1.2vw;
+    display: none;
+}
+
+.confirm-popup-contents {
+    margin: auto;
+
+}
+
+#confirm_tb {
+    z-index: 1010;
+    opacity:0.5;
+}

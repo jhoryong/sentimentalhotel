@@ -54,18 +54,17 @@
             </div>
         </a>
 
-        <h1 class="message">문을 클릭하여 호텔로 입장하세요</h1>
+        <h1 class="message">문을 클릭하여 호텔로 입장하세요!</h1>
         <h1 class="revisit">(이미 방문하신 적이 있나요?)</h1>
         <h1 class="copyright">© 2019 Sentimental Hotel All Rights Reserved.</h1>
+      
         <div class="bottom-right-corner">
-            <h1 class="compatibility">호환성 정보</h1>
-            <h1 class="credits">제작자 정보</h1>
+            <img class="info-logo" src="image/index/logo.png">
         </div>
         
 
         <div class="modal-container">
             <div class="modal-window">
-                
                 <div class="modal-contents">
                     <div class="modal-header">
                         <img class="modal-logo" src="image/index/logo.png">
@@ -80,10 +79,10 @@
                         </form>
                     </div>
                     <div class="contents-2">
-                        <h1>환영합니다, <span class="player-name"></span>님! 몇 층으로 가시겠습니까?</h1>
+                        <h1>환영합니다, <span class="player-name"></span>님! 몇 층으로 안내해 드릴까요?</h1>
                         <form>
                             <select id="selectFloor">
-                                <option id="1st-lobby" value="1st_floor_lobby.html">1층 로비</option>
+                                <option id="1st-lobby" value="1st_floor_lobby.html" name="">1층 로비</option>
                                 <option id="1st-lounge" value="1st_floor_lounge.html">1층 라운지</option>
                                 <option id="2nd" value="2nd_floor.html">2층 비즈니스 센터</option>
                                 <option id="3nd" value="3rd_floor.html">3층 리조트</option>
@@ -97,7 +96,15 @@
                 </div>
             </div>
         </div>
-
+        <!-- <div id ="confirm_tb" class="transparent-background"></div>
+        <div class="confirm-popup">
+            <div class="confirm-popup-contents">
+                <h1><span id="floor_name"></span>로 이동하시겠습니까?</h1>
+                <h1>(점수는 초기화된 상태로 시작합니다)</h1>
+                <input id="moveToFloor" type="button" value="이동하기">
+                <input id="cancel" type="button" value="취소">
+            </div>
+        </div> -->
     </div>
 
     <!-- Modal -->
@@ -208,13 +215,25 @@
         }
     })
 
-    $('#moveButton').click(function(){
+    $('#moveButton').click(function(event){
+        event.preventDefault();
         let link = $('#selectFloor').val();
-        window.location = link;
+        $('.black').fadeIn(2000);
+        setTimeout(function(){
+            window.location = link;
+        }, 2000)
     })
 
-    
+    // $('#moveButton').click(function(){
+    //     $('#confirm_tb, .confirm-popup').fadeIn();
+    //     // let link = $('#selectFloor').val();
+    //     // window.location = link;
+    // })
 
+    // let floorName = $("#selectFloor option:selected").text();
+    // $('#floor_name').text(floorName);
+
+    
 </script>
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
