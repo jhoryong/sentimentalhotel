@@ -120,14 +120,13 @@
     color: #ffddfc;
     opacity: 0.8;
 }
+    .revisit:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
-.revisit:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.credits {
+.copyright {
     position: absolute;
     top: 54vw;
     left: 50%;
@@ -136,6 +135,28 @@
     font-size: 1vw;
     color: #ffddfc;
 }
+
+.bottom-right-corner {
+    position: absolute;
+    top: 54vw;
+    left: 88%;
+    font-size: 1vw;
+    color: #ffddfc;
+    opacity: 0.8;
+}
+    .compatibility {
+        display: inline;
+    }
+
+    .credits {
+        display: inline;
+    }
+
+    .compatibility:hover, .credits:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
 @keyframes flash {
     from {opacity: 0.5;}
@@ -159,18 +180,16 @@
     100% {transform: rotate(0deg) translateX(3vw);}
 }
 
-    /* fullscreen */
-    .fullscreen {
-        position: absolute;
-        top: 53vw;
-        left: 1.5vw;
-    }
-
+/* fullscreen */
+.fullscreen {
+    position: absolute;
+    top: 53vw;
+    left: 1.5vw;
+}
     .fullscreen-checkbox {
         font-size:2vw;
         color: #ffddfc;
     }
-
         #check {
             display: none;
         }
@@ -178,16 +197,17 @@
     .fullscreen-text {
         font-family: 'Noto Serif KR', serif;
         font-size: 1.2vw;
-        vertical-align: 3.7px;
+        vertical-align: 0.3vw;
         color: #ffddfc;
+        margin-left: 0.3vw;
     }
 
 /* modal */
 .modal-window {
     width: 35vw;
-    height: 11vw;
+    height: 21vw;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;  
@@ -195,22 +215,59 @@
     border-radius: 20px;
     font-size: 1.2vw;
     display: none;
-    transition: all 1s 400ms;
+    transition: height 1s;
 }
 
-#index-tb {
-    opacity:0.5;
-    transition: opacity .15s linear;
+#index-tb { 
+    display: none;
+    opacity: 0.3;
 }
 
 .modal-contents {
     margin: 3vw;   
+    margin-top: 2.5vw;
 }
+
+    /* modal-header */
+    .modal-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .modal-close {
+        position: absolute;
+        left: 90%;
+        top: 5%;
+        font-size: 2.5vw;
+        color: #aaaaaa;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
     /* contents-1 */
 
+    .contents-1, .contents-2 {
+        text-align: center;
+    }
+
+    .contents-1 {
+        margin-bottom: 4vw;
+    }
+
     .contents-1 h1 {
         margin-bottom: 0.5vw;
+    }
+
+    .line-2 {
+        margin-bottom: 2vw;
     }
 
     .contents-1 h3 {
@@ -235,7 +292,6 @@
     /* contents-2 */
 
     .contents-2 {
-        margin-top: 3vw;
         display: none;
     }
 
@@ -247,4 +303,3 @@
             font-family: 'Noto Serif KR', serif; 
             font-size: 1.2vw;
         }
-
