@@ -13,7 +13,6 @@
 
     <script src="https://kit.fontawesome.com/296406b34b.js" crossorigin="anonymous"></script>
 
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
@@ -56,7 +55,14 @@
 
         <h1 class="message">문을 클릭하여 호텔로 입장하세요!</h1>
         <h1 class="revisit">(이미 방문하신 적이 있나요?)</h1>
-        <h1 class="copyright">© 2019 Sentimental Hotel All Rights Reserved.</h1>
+        <h1 class="copyright">© 2019 Sentimental Hotel All Rights Reserved.
+            <i class="fas fa-info-circle info-circle"></i>
+            <i class="fas fa-question-circle info-circle"></i>
+            <!-- <div class="info-popover">
+                <p>이 콘텐츠는 건국대학교 다이나믹미디어학과 2019년 졸업작품으로 만든 웹 비주얼 노블(Visual Novel) 게임입니다.</p>
+            </div> -->
+        </h1>
+        
       
         <div class="bottom-right-corner">
             <img class="info-logo" src="image/index/logo.png">
@@ -96,37 +102,18 @@
                 </div>
             </div>
         </div>
-        <!-- <div id ="confirm_tb" class="transparent-background"></div>
+        <div id ="confirm_tb" class="transparent-background"></div>
         <div class="confirm-popup">
             <div class="confirm-popup-contents">
-                <h1><span id="floor_name"></span>로 이동하시겠습니까?</h1>
-                <h1>(점수는 초기화된 상태로 시작합니다)</h1>
+                
+                    <p><span id="floor_name"></span>로 이동하시겠습니까?</p>
+                    <p>(점수는 초기화된 상태로 시작합니다)</p>
+                
                 <input id="moveToFloor" type="button" value="이동하기">
                 <input id="cancel" type="button" value="취소">
             </div>
-        </div> -->
-    </div>
-
-    <!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div> -->
+    </div>
 
 <script src="script/playerName.js"></script>
 <script>
@@ -182,14 +169,17 @@
         $('.modal-window, #index-tb').fadeIn();
     })
 
-    //close modal
+    //close modal on click
     $('#index-tb, .modal-close').on('click', function(event){
         $('#index-tb, .modal-window').fadeOut();
+        closeFloorSelect();
     })
 
+    //close modal on esc key
     $(document).on('keydown', function(event){
         if (event.keyCode == 27) {
             $('#index-tb, .modal-window').fadeOut();
+            closeFloorSelect();
         }
     });
 
@@ -199,6 +189,14 @@
             setTimeout(function(){
                 $('.contents-2').fadeIn(1000);
             }, 1000)
+    }
+
+    function closeFloorSelect() {
+        setTimeout(function(){
+            $('.modal-window').css('height', '21vw');
+            $('.contents-2').hide();
+        }, 1000)
+       
     }
 
     $('#playerNameButton').click(function(){
@@ -215,28 +213,25 @@
         }
     })
 
-    $('#moveButton').click(function(event){
-        event.preventDefault();
-        let link = $('#selectFloor').val();
-        $('.black').fadeIn(2000);
-        setTimeout(function(){
-            window.location = link;
-        }, 2000)
-    })
-
-    // $('#moveButton').click(function(){
-    //     $('#confirm_tb, .confirm-popup').fadeIn();
-    //     // let link = $('#selectFloor').val();
-    //     // window.location = link;
+    // $('#moveButton').click(function(event){
+    //     event.preventDefault();
+    //     let link = $('#selectFloor').val();
+    //     $('.black').fadeIn(2000);
+    //     setTimeout(function(){
+    //         window.location = link;
+    //     }, 2000)
     // })
 
-    // let floorName = $("#selectFloor option:selected").text();
-    // $('#floor_name').text(floorName);
+    $('#moveButton').click(function(){
+        $('#confirm_tb, .confirm-popup').fadeIn();
+        // let link = $('#selectFloor').val();
+        // window.location = link;
+    })
+
+    let floorName = $("#selectFloor option:selected").text();
+    $('#floor_name').text(floorName);
 
     
 </script>
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 </body>
 </html>

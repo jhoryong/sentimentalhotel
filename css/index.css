@@ -99,6 +99,7 @@
     animation: rotate 5s 1s ease-in-out infinite;
 }
 
+/* 문을 클릭하여...! */
 .message {
     font-size: 1.3vw;
     letter-spacing: 0px;
@@ -106,10 +107,11 @@
     top: 47vw;
     left: 50%;
     transform: translateX(-50%);
-    color: #ffddfc;
+    color: #ffffff;
     animation: flashtext 1.5s ease infinite alternate backwards;
 }
 
+/* 이미 방문하신 적이 있나요? */
 .revisit {
     font-size: 1.1vw;
     letter-spacing: 0.4px;
@@ -117,11 +119,11 @@
     top: 49.5vw;
     left: 50%;
     transform: translateX(-50%);
-    color: #ffddfc;
-    opacity: 0.8;
+    color: #ffffff;
+    opacity: 0.6;
 }
     .revisit:hover {
-        color: #ffffff;
+        opacity: 1;
         text-decoration: underline;
         cursor: pointer;
     }
@@ -133,30 +135,14 @@
     transform: translateX(-50%);
     text-align: center;
     font-size: 1vw;
-    color: #ffddfc;
+    color: #ffffff;
     display: inline;
 }
 
-/* .bottom-right-corner {
-    position: absolute;
-    top: 54vw;
-    left: 88%;
+.info-circle {
     font-size: 1vw;
-    color: #ffddfc;
-    opacity: 0.8;
+    color: #ffffff;
 }
-    .compatibility {
-    }
-
-    .credits {
-    }
-
-    .compatibility:hover, .credits:hover {
-        color: #ffffff;
-        text-decoration: underline;
-        cursor: pointer;
-    } */
-
     .info-logo {
         position: absolute;
         height: 3.5vw;
@@ -198,12 +184,12 @@
 /* fullscreen */
 .fullscreen {
     position: absolute;
-    top: 53vw;
+    top: 54vw;
     left: 1.5vw;
 }
     .fullscreen-checkbox {
-        font-size:2vw;
-        color: #ffddfc;
+        font-size:1.2vw;
+        color: #ffffff;
     }
         #check {
             display: none;
@@ -211,10 +197,10 @@
 
     .fullscreen-text {
         font-family: 'Noto Serif KR', serif;
-        font-size: 1.2vw;
-        vertical-align: 0.3vw;
-        color: #ffddfc;
-        margin-left: 0.3vw;
+        font-size: 1vw;
+        vertical-align: 3px;
+        color: #ffffff;
+        margin-left: 0.2vw;
     }
 
 /* modal */
@@ -274,7 +260,7 @@
     }
 
     .contents-1 {
-        margin-bottom: 4vw;
+        margin-bottom: 2.5vw;
     }
 
     .contents-1 h1 {
@@ -320,6 +306,8 @@
     /* contents-2 */
 
     .contents-2 {
+        border-top: 1px solid #d7d7d7;
+        padding-top: 3vw;
         display: none;
     }
 
@@ -348,11 +336,31 @@
 }
 
 .confirm-popup-contents {
-    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
 
+.confirm-popup p {
+    margin-bottom: 0.5vw;
 }
 
 #confirm_tb {
     z-index: 1010;
-    opacity:0.5;
+    opacity: 0.5;
+}
+
+.info-popover {
+    position: absolute;
+    width: 5vw;
+    height: 10vw;
+    background-color: #ffffff;
+    top: 20vw;
+    left: 20vw;
+}
+
+#moveToFloor {
+    margin-top: 1vw;
+    margin-right: 1vw;
 }
