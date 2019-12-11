@@ -127,10 +127,8 @@
         <div id ="confirm_tb" class="transparent-background"></div>
         <div class="confirm-popup">
             <div class="confirm-popup-contents">
-                
                     <p><span id="floor_name"></span>로 이동하시겠습니까?</p>
                     <p>(점수는 초기화된 상태로 시작합니다.)</p>
-                
                 <input id="moveToFloor" type="button" value="이동하기">
                 <input id="cancel" type="button" value="취소">
             </div>
@@ -203,7 +201,7 @@
     //close modal on esc key
     $(document).on('keydown', function(event){
         if (event.keyCode == 27) {
-            $('#index-tb, .modal-window').fadeOut();
+            $('#index-tb, .modal-window, .credit-modal').fadeOut();
             closeFloorSelect();
         }
     });
@@ -245,6 +243,9 @@
         setTimeout(function(){
             window.location = link;
         }, 2000)
+    })
+    $('#cancel').click(function(){
+        $('#confirm_tb, .confirm-popup').fadeOut();
     })
 
     $('#moveButton').click(function(){
