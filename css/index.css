@@ -217,7 +217,7 @@
     font-size: 1.2vw;
     display: none;
     transition: height 1s;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 
@@ -346,7 +346,7 @@
     padding: 1vw 4vw;
     font-size: 1.2vw;
     line-height: 1.7vw;
-    border: 2px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
 }
 
 .credit-modal i {
@@ -396,7 +396,7 @@
     border-radius: 20px;
     font-size: 1.2vw;
     display: none;
-    border: 2px solid rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.5);
 }
 
 .confirm-popup-contents {
