@@ -450,12 +450,12 @@
 }
     #ratioInfo .tooltiptext {
         width: 13vw;
-        left: 65%;
+        left: 70%;
     }
     #contentsInfo .tooltiptext {
         /* visibility: visible; */
         width: 17vw;
-        left: 62%;
+        left: 56.5%;
     }
 
     a:hover {
