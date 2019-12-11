@@ -56,16 +56,38 @@
         <h1 class="message">문을 클릭하여 호텔로 입장하세요!</h1>
         <h1 class="revisit">(이미 방문하신 적이 있나요?)</h1>
         <h1 class="copyright">© 2019 Sentimental Hotel All Rights Reserved.
-            <i class="fas fa-info-circle info-circle"></i>
-            <i class="fas fa-question-circle info-circle"></i>
-            <!-- <div class="info-popover">
-                <p>이 콘텐츠는 건국대학교 다이나믹미디어학과 2019년 졸업작품으로 만든 웹 비주얼 노블(Visual Novel) 게임입니다.</p>
-            </div> -->
+            <i id="ratioInfo" class="fas fa-info-circle info-circle"> 
+                <span class="tooltiptext tooltiptext__ratioInfo">센티멘탈 호텔은 16:9 비율에 최적화되어 있습니다.<br>(전체화면으로 보시는 것을 권장합니다.)</span>
+            </i>
+            <i id="contentsInfo" class="fas fa-question-circle info-circle">
+                <span class="tooltiptext tooltiptext__contentsInfo">이 콘텐츠는 2019년 건국대학교 다이나믹미디어학과 졸업작품으로 만든 웹 비주얼 노블 (Visual Novel) 게임입니다.<br>원작 소설을 감상하시려면 <a href="https://www.dropbox.com/s/t09f3ugj12azmkk/%EC%86%8C%EC%84%A4%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0" target="_blank" rel="noopener noreferrer">여기<i class="fas fa-external-link-alt"></i></a>를 클릭하세요.</span>
+            </i>
         </h1>
         
       
         <div class="bottom-right-corner">
             <img class="info-logo" src="image/index/logo.png">
+        </div>
+        <div class="credit-modal">
+            <div class="modal-contents modal-contents__credit">
+                <div class="illustrator">
+                    <img src="image/index/승현.png">
+                    <h1>Illustrated by</h1>
+                    <h1>Seunghyun Kim</h1>
+                    <h2><a href="mailto:tmdtmdgus425@naver.com">tmdtmdgus425@naver.com</a></h2>
+                    <h2><a href="https://www.instagram.com/imok25/?hl=ko" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></h2>
+                </div>
+                <div class="developer">
+                    <img src="image/index/호룡.png">
+                    <h1>Developed by</h1>
+                    <h1>Horyong Jung</h1>
+                    <h2><a href="mailto:jhoryong@gmail.com">jhoryong@gmail.com</a></h2>
+                    <h2>
+                        <a href="https://www.instagram.com/horyong_steve/?hl=ko" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/jhoryong" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    </h2>
+                </div>
+            </div>
         </div>
         
 
@@ -107,7 +129,7 @@
             <div class="confirm-popup-contents">
                 
                     <p><span id="floor_name"></span>로 이동하시겠습니까?</p>
-                    <p>(점수는 초기화된 상태로 시작합니다)</p>
+                    <p>(점수는 초기화된 상태로 시작합니다.)</p>
                 
                 <input id="moveToFloor" type="button" value="이동하기">
                 <input id="cancel" type="button" value="취소">
@@ -168,10 +190,13 @@
     $('.revisit').click(function(){
         $('.modal-window, #index-tb').fadeIn();
     })
+    $('.info-logo').click(function(){
+        $('.credit-modal, #index-tb').fadeIn();
+    })
 
     //close modal on click
     $('#index-tb, .modal-close').on('click', function(event){
-        $('#index-tb, .modal-window').fadeOut();
+        $('#index-tb, .modal-window, .credit-modal').fadeOut();
         closeFloorSelect();
     })
 
@@ -213,14 +238,14 @@
         }
     })
 
-    // $('#moveButton').click(function(event){
-    //     event.preventDefault();
-    //     let link = $('#selectFloor').val();
-    //     $('.black').fadeIn(2000);
-    //     setTimeout(function(){
-    //         window.location = link;
-    //     }, 2000)
-    // })
+    $('#moveToFloor').click(function(event){
+        event.preventDefault();
+        let link = $('#selectFloor').val();
+        $('.black').fadeIn(2000);
+        setTimeout(function(){
+            window.location = link;
+        }, 2000)
+    })
 
     $('#moveButton').click(function(){
         $('#confirm_tb, .confirm-popup').fadeIn();
