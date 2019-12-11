@@ -25,7 +25,7 @@
     <div id="room-bg" class="transparent-background"></div>
     <div id="reset-bg" class="transparent-background"></div>
     <div class="dialogue-box"></div>
-    <audio>
+    <audio id="knocking">
         <source src="sound/knocking sound.mp3" type="audio/mpeg">
     </audio>
     
@@ -78,7 +78,9 @@
 
 
     <div class="4thfloor-elevator">
-    
+        <audio id="elevatorBellRing">
+            <source src="sound/Elevator Bell Ring.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover elevator__button button-off" src="image/common/객실_엘베버튼off.png">
         <img class="gif gifhover elevator__button button-on" src="image/common/객실_엘베버튼on.png">
         <img class="elevator__alarm alarm-off" src="image/common/객실_엘베알람off.png">
@@ -293,6 +295,9 @@
 <div class="room-402">
     <img class="gif gifhover door door__402 door402__1" src="image/4th_floor/402_1.png">
     <img class="gif gifhover door door__402 door402__2" src="image/4th_floor/402_2.png">
+    <audio id="dog-barking">
+        <source src="sound/4th_floor/dog.mp3" type="audio/mpeg">
+    </audio>
 
 
     <img class="room room402" src="image/4th_floor/루비방.jpg">
@@ -733,7 +738,7 @@ let hasClickedBigHyun = false;
 
 //sound
 $('.door').click(function(){
-    $('audio')[0].play();
+    $('#knocking')[0].play();
 })
 
 
@@ -860,10 +865,9 @@ $('.door').click(function(){
 
 // elevator
     $('.button-off').on('click', function() {
-        
+        $('#elevatorBellRing')[0].play();
         $('.movingarrow__elevator').hide();
         $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
-
     })
         //quick view
         $('.dialogue-2-1').click(function() {
@@ -985,11 +989,13 @@ $('.door__402').on('click', function() {
 
 
 $('.clicker-402-1-1').on('click', function() {
+    $('#dog-barking')[0].play();
     $('.dialogue-402-1, .dialogue-402-1 .line').hide();
     $('.dialogue-402-2, .dialogue-402-2 .line').show();
 })
 
 $('.clicker-402-2').on('click', function() {
+    
     $('.dialogue-402-2, .dialogue-402-2 .line').hide();
     $('.dialogue-402-3, .dialogue-402-3 .line, #room-bg, .room402, .avatar__402').show();
 })
@@ -1205,7 +1211,7 @@ $('.door406__2').on('mouseleave', function() {
     $('.clicker-406-2-1').on('click', function() {
         $('.dialogue-406-2, .dialogue-406-2 .line').hide();
         $('.dialogue-406-3, .dialogue-406-3 .line').show();
-        $('audio')[0].play(); //knock sound
+        $('#knocking')[0].play(); //knock sound
 
     })
         //close
@@ -1216,7 +1222,7 @@ $('.door406__2').on('mouseleave', function() {
     $('.clicker-406-3-1').on('click', function() {
         $('.dialogue-406-3, .dialogue-406-3 .line').hide();
         $('.dialogue-406-4, .dialogue-406-4 .line').show();
-        $('audio')[0].play(); //knock sound
+        $('#knocking')[0].play(); //knock sound
     })
 
     $('.clicker-406-4').on('click', function() {

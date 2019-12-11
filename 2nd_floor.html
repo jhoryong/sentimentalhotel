@@ -270,7 +270,9 @@
 
 
         <div class="lounge-elevator">
-            
+            <audio id="elevatorBellRing">
+                <source src="sound/Elevator Bell Ring.mp3" type="audio/mpeg">
+            </audio>
             <img class="gif gifhover elevator__button button-off" src="image/2nd_floor/엘베버튼off.png">
             <img class="gif gifhover elevator__button button-on" src="image/2nd_floor/엘베버튼on.png">
             <img class="elevator__alarm alarm-off" src="image/2nd_floor/엘베알람off.png">
@@ -622,6 +624,7 @@ $('.button-off').on('click', function() {
             $('.dialogue-3-1, .dialogue-3-1 .line, .dialogue-box').show();
             $('.alarm-on').show();
             hasClickedElevator = true;
+            $('#elevatorBellRing')[0].play();
         } else {}
     } else {}
 })

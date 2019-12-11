@@ -169,6 +169,19 @@
                 <p id="text-6" class="credits-text">음향효과 &nbsp;정호룡</p>
             </div>
 
+            <div id="credits-6-1" class="nextbox">
+                <p id="text-6-1" class="credits-text" style="width: 70vw; line-height: 2.5vw;">
+                    Lazy Sunday Smooth Jazz - FREESOUND MUSIC (royalty free music)<br>
+                    royalty free Music by Giorgio Di Campo for FreeSound Music<br>
+                    http://freesoundmusic.eu<br>
+                    https://www.facebook.com/freemusicfor...<br>
+                    https://youtube.com/freesoundmusic<br>
+                    original video: https://www.youtube.com/watch?v=i7N-iceO8PI<br><br>
+                    Bossa Lounger Long Jazz Sound Effects'tm<br>
+                    https://www.youtube.com/watch?v=-WrfPS_jS8g
+                </p>
+            </div>
+
             <div id="credits-7" class="nextbox">
                 <p id="text-7" class="credits-text">Special Thanks to 수효니, 서영이</p>
             </div>
@@ -189,7 +202,7 @@
                     <p>본 콘텐츠는 건국대학교 다이나믹미디어학과 2019년 졸업작품으로,</p>
                     <p>소설 “센티멘탈 호텔”에 기반하여 만들어진 웹 비주얼 노블(Visual Novel) 게임입니다.</p>
                     <p>재미있게 즐기셨다면 원작인 소설도 즐겨 주세요!</p><br>
-                    <p class="clicker"><a href="https://www.dropbox.com/s/t09f3ugj12azmkk/%EC%86%8C%EC%84%A4%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0" target="_blank" rel="noopener noreferrer">📖 소설 읽기(새 탭)</a></p>
+                    <p class="clicker"><a href="https://www.dropbox.com/s/t09f3ugj12azmkk/%EC%86%8C%EC%84%A4%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0" target="_blank" rel="noopener noreferrer">📖 소설 읽기 <i class="fas fa-external-link-alt"></i></a></p>
                     <p class="clicker"><a href="index.html" id="goHome"><i class="fas fa-redo-alt go-home"></i> 처음으로 가기</a></p>
                 </div>
             </div>
@@ -250,19 +263,22 @@
         function repeat() {
             setInterval(heartbeat, t);
         }
-
         repeat();
 
-        $('.heart').on('click', function () {
+        function clickHeart () {
             $('.dialogue-1-1, .dialogue-1-1 .line, .dialogue-box').fadeOut(1000);
             setTimeout(function () {
                 $('#heartbeat')[0].play();
             }, 1000)
-            //repeat();
             $('.heart').removeClass('gifhover');
             setTimeout(function () {
                 $('.dialogue-1-2, .dialogue-1-2 .line, .dialogue-box').show();
             }, 5000)
+            clickHeart = function(){};
+        }
+
+        $('.heart').on('click', function () {
+            clickHeart();
         })
         $('.clicker-1-2').on('click', function () {
             $('.dialogue-1-2, .dialogue-1-2 .line').hide();
@@ -331,6 +347,11 @@
         })
 
         $('#credits-6').click(function () {
+            $(this).fadeOut();
+            $('#credits-6-1').fadeIn();
+        })
+
+        $('#credits-6-1').click(function () {
             $(this).fadeOut();
             $('#credits-7').fadeIn();
         })

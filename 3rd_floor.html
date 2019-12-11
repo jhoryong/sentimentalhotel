@@ -196,7 +196,9 @@
 
 
     <div class="3rdfloor-elevator">
-    
+        <audio id="elevatorBellRing">
+            <source src="sound/Elevator Bell Ring.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif gifhover elevator__button button-off" src="image/2nd_floor/엘베버튼off.png">
         <img class="gif gifhover elevator__button button-on" src="image/2nd_floor/엘베버튼on.png">
         <img class="elevator__alarm alarm-off" src="image/2nd_floor/엘베알람off.png">
@@ -481,6 +483,7 @@
             $('.movingarrow__elevator').hide();
             $('.button-on, .dialogue-2-1, .dialogue-2-1 .line, .alarm-on, .dialogue-box').show();
             hasClickedElevator = true;
+            $('#elevatorBellRing')[0].play();
         } else {}
     } else {}
     })

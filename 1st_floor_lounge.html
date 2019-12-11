@@ -148,7 +148,9 @@
 
 
     <div class="lounge-elevator">
-        
+        <audio id="elevatorBellRing">
+            <source src="sound/Elevator Bell Ring.mp3" type="audio/mpeg">
+        </audio>
         <img class="gif elevator__button button-off" src="image/1st_floor_lounge/엘베버튼off.png">
         <img class="gif elevator__button button-on" src="image/1st_floor_lounge/엘베버튼on.png">
         <img class="elevator__alarm alarm-off" src="image/1st_floor_lounge/엘베알람off.png">
@@ -372,6 +374,7 @@ $('.dialogue-0-1, .menu, .applecidar, .milktea, .americano, .sexonthebeach, .dia
             $('.movingarrow__elevator').hide();
             $('.dialogue-2, .dialogue-2 .line, .button-on, .dialogue-box, .alarm-on').show();
             hasClickedElevator = true;
+            $('#elevatorBellRing')[0].play();
         } else {}
     } else {}
     })
