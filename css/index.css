@@ -438,7 +438,7 @@
     /* font-family: 'Noto Serif KR', serif; */
     font-family: sans-serif;
     color: #404040;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: .6vw;
     position: absolute;
     z-index: 1;
