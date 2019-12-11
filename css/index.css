@@ -298,8 +298,8 @@
         font-family: 'Noto Serif KR', serif;
         font-size: 1.2vw;
         width: 6vw;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        /* padding-top: 5px;
+        padding-bottom: 5px; */
         color: #ffffff;
         background-color: #9c00b2;
         border-radius: 65px;
