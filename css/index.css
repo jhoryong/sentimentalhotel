@@ -198,9 +198,9 @@
     .fullscreen-text {
         font-family: sans-serif;
         font-size: 1vw;
-        vertical-align: 3px;
+        vertical-align: 1px;
         color: #ffffff;
-        margin-left: 0.2vw;
+        /* margin-left: 0.2vw; */
     }
 
 /* modal */
