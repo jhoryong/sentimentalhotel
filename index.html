@@ -251,12 +251,12 @@
 
     $('#moveButton').click(function(){
         $('#confirm_tb, .confirm-popup').fadeIn();
+        let floorName = $('#selectFloor option:selected').text();
+        $('#floor_name').text(floorName);
         // let link = $('#selectFloor').val();
         // window.location = link;
     })
 
-    let floorName = $("#selectFloor option:selected").text();
-    $('#floor_name').text(floorName);
 
     
 </script>
