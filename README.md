@@ -15,38 +15,49 @@
 * 또한 피로에 지친 당신을 위한 최고의 리조트 시설도 준비되어 있죠. 
 * 어떠한 계기로 호텔 지배인과 친분을 쌓게 되면, 객실로 초대받게 될 수도 있습니다!
 
-다음 안내판에 호텔의 시설이 안내되어 있습니다.
+밑의 안내판에 호텔의 시설이 자세히 안내되어 있습니다.
+
+## 어떻게 하면 호텔에 갈 수 있나요?
+호텔에 가고 싶은 마음이 생기셨나요?
+
+센티멘탈 호텔의 스토리를 진행하려면 [여기](https://jhoryong.github.io/sentimentalhotel "센티멘탈 호텔로 가기")를 클릭하여 입장하세요.
+
+각 층을 빠르게 둘러보고 싶다면 밑의 안내판의 각 층을 클릭하여 입장하세요.
 
 ## 센티멘탈 호텔 안내판
 
-**1층 - 메인 로비, 라운지**
+**1층 - [메인 로비](https://jhoryong.github.io/sentimentalhotel/1st_floor_lobby "메인 로비"), [라운지](https://jhoryong.github.io/sentimentalhotel/1st_floor_lounge "라운지")**
 
 >체크인을 할 수 있는 리셉션과, 고급스러운 바가 있는 라운지가 있습니다.
 
-**2층 - 비즈니스 센터**
+**2층 - [비즈니스 센터](https://jhoryong.github.io/sentimentalhotel/2nd_floor "비즈니스 센터")**
 
 >각종 회의, 강연, 행사를 진행할 수 있는 공간입니다.
 
-**3층 - 리조트**
+**3층 - [리조트](https://jhoryong.github.io/sentimentalhotel/3rd_floor "리조트")**
 
 >여유와 휴식의 낭만이 있는 리조트입니다. 스파, 피트니스 센터, 수영장, 극장, 레스토랑이 있습니다.
 
-**4층 - 객실**
+**4층 - [객실](https://jhoryong.github.io/sentimentalhotel/4th_floor "4층 객실")**
 
 >총 6명의 손님이 투숙하고 있습니다.
 
-**5층 - 객실**
+**5층 - [객실](https://jhoryong.github.io/sentimentalhotel/5th_floor "5층 객실")**
 
 >총 5명의 손님이 투숙하고 있습니다.
 
-**6층 - 객실**
+**6층 - [객실](https://jhoryong.github.io/sentimentalhotel/6th_floor "6층 객실")**
 
 >총 2명의 손님이 투숙하고 있습니다.
 
-**7층 - VIP 라운지, 스위트룸**
+**7층 - [VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor "7층 객실"), 스위트룸**
 
->센티멘탈 호텔의 VIP만이 사용할 수 있는 전용 라운지로써, 멋진 전망과 고급스러운 서비스를 제공하고 있습니다. 또한 VIP만이 스위트룸에 머물 수 있습니다.
+>센티멘탈 호텔의 VIP만이 사용할 수 있는 전용 라운지로써, 멋진 전망과 고급스러운 서비스를 제공하고 있습니다. VIP만이 스위트룸에 머물 수 있습니다.
 
 **지하층**
 
 >???
+
+© 2019 Sentimental Hotel All Rights Reserved.
+
+
