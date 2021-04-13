@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Mocha Tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.2.0/mocha.min.css"
+    integrity="sha512-6RWs5FczsXwODIZJoL0szz3bXX5W+q/m7bFVQ7HSwZbBXd7PpyYrg2f9Dr4Y2Guqi5k4NJsemxXuiiFoI8fQ4A=="
+    crossorigin="anonymous" />
+</head>
+<style>
+  #hidden {
+    display: none;
+  }
+</style>
+
+<body>
+  <div id="hidden">
+    <div class="container">
+      <div class="calculator">
+        <div class="calculator__display--bare">
+          <span class="calculator__operend--left">0</span>
+          <span class="calculator__operator">+</span>
+          <span class="calculator__operend--right">0</span>
+          <span class="calculator__equal">=</span>
+          <span class="calculator__result">0</span>
+        </div>
+        <div class="calculator__display--for-advanced">0</div>
+        <div class="calculator__buttons">
+          <div class="clear__and__enter">
+            <button class="clear">AC</button>
+            <button class="calculate">Enter</button>
+          </div>
+          <div class="button__row">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">+</button>
+          </div>
+          <div class="button__row">
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+          </div>
+          <div class="button__row">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">*</button>
+          </div>
+          <div class="button__row">
+            <button class="number double">0</button>
+            <button class="decimal">.</button>
+            <button class="operator">/</button>
+          </div>
+        </div>
+      </div>
+      <img class="logo" src="data/codestates-logo.png">
+    </div>
+    <script src='./script.js'></script>
+  </div>
+  <div id="mocha"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.js"
+    integrity="sha512-hXF0w8mwpiqkvtr5GjHSdVH/2dlBX0x30u5u+ORY9iPsX12BABcmRuiVvmsDizU6FiDTrImwQvcKpkQGC7Os2Q=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.2.0/mocha.js"
+    integrity="sha512-U4/xmC1Ukp1OGyEfvR9qe7iYqwual7PNHLdRIL8T3MzaP9GykX6w/YfNaHrG/vr5J/kO3tKku5MwAKzL0vbtFg=="
+    crossorigin="anonymous"></script>
+  <script class="mocha-init">
+    mocha.setup('bdd');
+  </script>
+  <script src="./spec/script.test.js"></script>
+  <script class="mocha-exec">
+    mocha.run();
+  </script>
+</body>
+
+</html>
