@@ -2,8 +2,8 @@
   <img width="100" height="100" src="https://jhoryong.github.io/sentimentalhotel/sh_logo.png">
 </p>
 
-# [센티멘탈 호텔 Sentimental Hotel](https://jhoryong.github.io/sentimentalhotel)
-센티멘탈 호텔은 웹 비주얼 노블 (Visual Novel) 게임으로써, 2019년 건국대학교 다이나믹미디어학과 졸업 작품입니다. [@imok25](https://www.instagram.com/imok25/?hl=ko "imok25 인스타그램")의 [소설 센티멘탈 호텔](https://www.dropbox.com/s/9ygnu03023w4vha/%EC%9B%B9%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0 "센티멘탈 호텔 소설 읽기")을 바탕으로 하고 있습니다.
+# 센티멘탈 호텔 Sentimental Hotel
+[센티멘탈 호텔](https://jhoryong.github.io/sentimentalhotel)은 웹 비주얼 노블 (Visual Novel) 게임으로써, 2019년 건국대학교 다이나믹미디어학과 졸업 작품입니다. [@imok25](https://www.instagram.com/imok25/?hl=ko "imok25 인스타그램")의 [소설 - 센티멘탈 호텔](https://www.dropbox.com/s/9ygnu03023w4vha/%EC%9B%B9%20%EC%84%BC%ED%8B%B0%EB%A9%98%ED%83%88%20%ED%98%B8%ED%85%94.pdf?dl=0 "센티멘탈 호텔 소설 읽기")을 바탕으로 하고 있습니다.
 
 ## 센티멘탈 호텔은 어떤 호텔인가요?
 센티멘탈 호텔은 누구나 저마다 가지고 있는 마음 속의 호텔입니다.
