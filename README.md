@@ -34,15 +34,15 @@
 
 >여유와 휴식의 낭만이 있는 리조트입니다. 스파, 피트니스 센터, 수영장, 극장, 레스토랑이 있습니다.
 
-**4층 : [🚪 객실](https://jhoryong.github.io/sentimentalhotel/4th_floor)**
+**4층 : [🛌 객실](https://jhoryong.github.io/sentimentalhotel/4th_floor)**
 
 >총 7개의 방이 있으며, 5명의 손님이 머물고 있습니다.
 
-**5층 : [🚪 객실](https://jhoryong.github.io/sentimentalhotel/5th_floor)**
+**5층 : [🛌 객실](https://jhoryong.github.io/sentimentalhotel/5th_floor)**
 
 >총 5개의 방이 있으며, 5명의 손님이 머물고 있습니다.
 
-**6층 : [🚪 객실](https://jhoryong.github.io/sentimentalhotel/6th_floor)**
+**6층 : [🛌 객실](https://jhoryong.github.io/sentimentalhotel/6th_floor)**
 
 >총 3개의 방이 있으며, 2명의 손님이 머물고 있습니다.
 
