@@ -23,31 +23,31 @@
 
 ## 센티멘탈 호텔 안내판
 
-**1층 - [메인 로비](https://jhoryong.github.io/sentimentalhotel/1st_floor_lobby), [라운지](https://jhoryong.github.io/sentimentalhotel/1st_floor_lounge)**
+**1층 - [🏨 메인 로비](https://jhoryong.github.io/sentimentalhotel/1st_floor_lobby), [🛋️ 라운지](https://jhoryong.github.io/sentimentalhotel/1st_floor_lounge)**
 
 >체크인을 할 수 있는 리셉션과, 고급스러운 바가 있는 라운지가 있습니다.
 
-**2층 - [비즈니스 센터](https://jhoryong.github.io/sentimentalhotel/2nd_floor)**
+**2층 - [🖥 비즈니스 센터](https://jhoryong.github.io/sentimentalhotel/2nd_floor)**
 
 >각종 회의, 강연, 행사를 진행할 수 있는 공간입니다.
 
-**3층 - [리조트](https://jhoryong.github.io/sentimentalhotel/3rd_floor)**
+**3층 - [🏖 리조트](https://jhoryong.github.io/sentimentalhotel/3rd_floor)**
 
 >여유와 휴식의 낭만이 있는 리조트입니다. 스파, 피트니스 센터, 수영장, 극장, 레스토랑이 있습니다.
 
-**4층 - [객실](https://jhoryong.github.io/sentimentalhotel/4th_floor)**
+**4층 - [🚪 객실](https://jhoryong.github.io/sentimentalhotel/4th_floor)**
 
 >총 7개의 방이 있으며, 5명의 손님이 머물고 있습니다.
 
-**5층 - [객실](https://jhoryong.github.io/sentimentalhotel/5th_floor)**
+**5층 - [🚪 객실](https://jhoryong.github.io/sentimentalhotel/5th_floor)**
 
 >총 5개의 방이 있으며, 5명의 손님이 머물고 있습니다.
 
-**6층 - [객실](https://jhoryong.github.io/sentimentalhotel/6th_floor)**
+**6층 - [🚪 객실](https://jhoryong.github.io/sentimentalhotel/6th_floor)**
 
 >총 3개의 방이 있으며, 2명의 손님이 머물고 있습니다.
 
-**7층 - [VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor), 스위트룸**
+**7층 - [🥂 VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor), 스위트룸**
 
 >센티멘탈 호텔의 VIP만이 사용할 수 있는 전용 라운지로써, 멋진 전망과 고급스러운 서비스를 제공하고 있습니다. VIP라운지를 통해 VIP만이 머물 수 있는 스위트룸으로 갈 수 있습니다.
 
