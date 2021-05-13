@@ -56,7 +56,7 @@
 
 ## 어떻게 하면 호텔에 갈 수 있나요?
 
-마침 이 글을 읽은 당신에게 호텔 지배인이 **할 말이 있다고 합니다.** [지배인과 함께 호텔의 사건들을 해결하고 비밀을 밝혀 보세요!](https://jhoryong.github.io/sentimentalhotel)
+마침 이 글을 읽은 당신에게 호텔 지배인이 **할 말이 있다고 합니다.** [지금 센티멘탈 호텔에 방문해 보세요!](https://jhoryong.github.io/sentimentalhotel)
 
 ---
 
