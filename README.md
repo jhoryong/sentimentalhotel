@@ -32,7 +32,7 @@
 
 **3층 : [🏖 리조트](https://jhoryong.github.io/sentimentalhotel/3rd_floor)**
 
->여유와 휴식의 낭만이 있는 리조트입니다. 스파, 피트니스 센터, 수영장, 극장, 레스토랑이 있습니다.
+>스파, 피트니스 센터, 수영장, 극장, 레스토랑이 있습니다.
 
 **4층 : [🛌 객실](https://jhoryong.github.io/sentimentalhotel/4th_floor)**
 
@@ -48,7 +48,7 @@
 
 **7층 : [🍷 VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor), [🌟 스위트룸](https://jhoryong.github.io/sentimentalhotel/7th_floor_701)**
 
->센티멘탈 호텔의 VIP만이 사용할 수 있는 전용 라운지와 스위트룸이 있습니다. 🤫 **스위트룸에는 지하층으로 갈 수 있는 비밀 통로가 있다고 하던데...?**
+>호텔의 VIP만이 사용할 수 있는 전용 라운지와 스위트룸이 있습니다. 🤫 **스위트룸에는 지하층으로 갈 수 있는 비밀 통로가 있다고 하던데...?**
 
 ❔ **지하층**
 
