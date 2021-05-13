@@ -21,7 +21,7 @@
 * 특별한 객실로의 은밀한 초대 💌
 
 ## 센티멘탈 호텔 층별 안내
-
+클릭하면 해당 층을 구경할 수 있습니다.
 ### 1️⃣ [🏨 메인 로비](https://jhoryong.github.io/sentimentalhotel/1st_floor_lobby), [🛋️ 라운지](https://jhoryong.github.io/sentimentalhotel/1st_floor_lounge)
 
 >체크인을 할 수 있는 리셉션과, 고급스러운 바가 있는 라운지가 있습니다.
