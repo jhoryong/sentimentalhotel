@@ -47,7 +47,7 @@
 
 >총 3개의 방이 있으며, 2명의 손님이 머물고 있습니다.
 
-**7층 - [🥂 VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor), [🌟 스위트룸](https://jhoryong.github.io/sentimentalhotel/7th_floor_701)**
+**7층 - [🍷 VIP 라운지](https://jhoryong.github.io/sentimentalhotel/7th_floor), [🌟 스위트룸](https://jhoryong.github.io/sentimentalhotel/7th_floor_701)**
 
 >센티멘탈 호텔의 VIP만이 사용할 수 있는 전용 라운지로써, 멋진 전망과 고급스러운 서비스를 제공하고 있습니다. VIP라운지를 통해 VIP만이 머물 수 있는 스위트룸으로 갈 수 있습니다. 스위트룸에 지하층으로 갈 수 있는 비밀 통로가 있다고 하던데...?
 
