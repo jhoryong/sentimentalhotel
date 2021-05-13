@@ -58,7 +58,7 @@
 ## 어떻게 하면 호텔에 갈 수 있나요?
 센티멘탈 호텔의 지배인과 함께 사건을 해결하고 지하층의 비밀을 알고 싶나요?
 
-마침 이 글을 읽은 당신에게 호텔 지배인이 할 말이 있다고 합니다. [지금 센티멘탈 호텔에 가 !](https://jhoryong.github.io/sentimentalhotel)
+마침 이 글을 읽은 당신에게 호텔 지배인이 할 말이 있다고 합니다. [지금 센티멘탈 호텔에 가 보세요!](https://jhoryong.github.io/sentimentalhotel)
 
 ---
 
