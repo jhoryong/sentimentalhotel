@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" height="100" src="https://jhoryong.github.io/sentimentalhotel/sh_logo.png">
+  <img width="100" height="100" src="https://github.com/jhoryong/sentimentalhotel/blob/master/sentimental-hotel.png">
 </p>
 
 # 센티멘탈 호텔 Sentimental Hotel
